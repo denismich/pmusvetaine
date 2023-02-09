@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="lt" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Permanentinis Makiažas Vilniuje | Permanentas | Antakių Permanentas | Lūpų Permanentas | Akių Pravedimas | 
+            Mikropigmentacija | Ilgalaikis Makiažas</title>
+        <link href="resources/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/style.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="resources/images/Indre Ivanovaite/Black N White/Indre-Ivanovaite.png">
+        <script src="https://kit.fontawesome.com/35141227fd.js" crossorigin="anonymous"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="resources/js/script.js"></script>
+        <script>
+            function sendEmail() {
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const regDate = document.getElementById('date').value;
+                const procedure = document.getElementById('procedure-select').value;
+                const message = document.getElementById('message').value;
+                const notification = `Registracijos procedūrai užklausa: <br><br>Vardas:  ${name} <br>El. paštas:  ${email} <br>Telefonas:  ${phone} <br>Data:  ${regDate} <br>Procedūra:  ${procedure} <br>Žinutė:  ${message}`
+                
+                // Get the modal
+                var modal = document.getElementById("myModal");
+                var errorModal = document.getElementById("errorModal");
+
+                // Get the form
+                var form = document.getElementById("myForm");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+                var errorSpan = document.getElementsByClassName("close")[1];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+                errorSpan.onclick = function() {
+                    errorModal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal || event.target == errorModal) {
+                        event.target.style.display = "none";
+                    }
+                }
+
+                Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Username : "dmichailovskij@gmail.com",
+                    Password : "DC60D8931E6730187B9F65E31FC2AEA7842F",
+                    To : 'dmichailovskij@gmail.com',
+                    From : "dmichailovskij@gmail.com",
+                    Subject : "Registracijos Procedūrai Užklausa",
+                    Body : notification
+                }).then(function(message) {
+                    // Show success message if email was sent successfully
+                    if (message === 'OK') {
+                        // Show the modal
+                        modal.style.display = "block";
+                    } else {
+                    throw new Error('Email was not sent');
+                    }
+                })
+                .catch(function(error) {
+                    // Show error message if email was not sent
+                    errorModal.style.display = "block";
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <!--<img class="header-logo" src="resources/images/Indre Ivanovaite/Black N White/Indre-Ivanovaite - Copy.png" alt="">
+                -->
+                <ul>
+                    <li><a href="">APIE</a></li>
+                    <li><a href="">PASLAUGOS</a></li>
+                    <li><a href="">KAINOS</a></li>
+                    <li><a href="">GALERIJA</a></li>
+                    <li><a href="">DUK</a></li>
+                    <li><a href="">ATSILIEPIMAI</a></li>
+                    <li><a href="">KONTAKTAI</a></li>
+                    <li><a href="">PRIEŽIŪRA</a></li>
+                </ul>
+                <div class="contact-info-container">
+                    <div class="contact-info">
+                        <a href="tel: +37068617394">
+                            <i class="fa-solid fa-phone"></i>
+                            +37068617394
+                            <span class="delimiter">|</span> 
+                        </a>
+                        <a href="https://www.facebook.com/mikropigmentacija.indreiva" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ivanovaite.indre" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@permanento.meistre" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                    <div class="location-info">
+                        <a href="#">
+                            <i class="fa-solid fa-location-dot"></i>
+                            CHIC Beauty House
+                            <span class="delimiter">|</span>
+                            Sėlių g. 10, Vilnius
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="banner">
+                <!--<video src="resources/videos/Untitled video - Made with Clipchamp.mp4" autoplay loop muted></video>-->
+                <img class="banner-photo" src="resources/images/Subject.png" alt="">
+                <div class="banner-content">
+                    <img class="banner-logo" src="resources/images/Indre Ivanovaite/Black N White/WhiteNoBackgroundCropped.png" alt="">
+                    <a class="banner-button" href="#">REGISTRUOKIS JAU DABAR</a>
+                </div>
+            </div>
+
+            <section class="procedures-section">
+                <h1 class="procedures-header">PASLAUGOS</h1>
+                <div class="procedures-container">
+                    <a class="procedure" href="#">
+                        <img src="resources/images/Procedures/brows.jpg" alt="Antakiai">
+                        <p>ANTAKIAI</p>
+                    </a>
+                    <a class="procedure" href="#">
+                        <img src="resources/images/Procedures/lips.jpg" alt="Lūpos">
+                        <p>LŪPOS</p>
+                    </a>
+                    <a class="procedure" href="#">
+                        <img src="resources/images/Procedures/eyes.jpg" alt="Akių pravedimas">
+                        <p>AKIŲ PRAVEDIMAS</p>
+                    </a>
+                    <a class="procedure" href="#">
+                        <img src="resources/images/priedai/young-woman-taking-care-her-eyebrows.jpg" alt="Antakių korekcija ir laminavimas">
+                        <p>ANTAKIŲ KOREKCIJA. <br> LAMINAVIMAS</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="about-me">
+                <img class="about-me-photo" src="resources/images/about-photo.jpg" alt="">
+                <div class="about-me-content">
+                    <h2>APIE MANE</h2>
+                    <p>Ilgalaikį makiažą suprantu, kaip labai natūralią, gražią ir individualias veido formas pabrėžiančią 
+                        kosmetikos techniką. Pasitikėjimas meistru, yra vienas pagrindinių dalykų šioje srityje. Aš garantuoju 
+                        savo atsakingumą, kruopštumą ir patirtį. Atlieku visas permanentinio makiažo procedūras – microblading, 
+                        Ombre/ pudros efekto antakius, lūpų ilgalaikį kontūrą ir tušavimą, akių vokų pravedimus. Esu baigusi 
+                        biomedicinines universitetines studijas. llgalaikio makiažo “Biotek” ir “Phibrows” kompanijų sertifikuota 
+                        meistrė. Turiu ilgalaikę tarptautinę patirtį ne tik grožio, bet ir sveikatos srityje, todėl užtikrinu, kad
+                         procedūros metu jausitės saugi, išgirsta, o po procedūros – dar labiau pasitikinti savimi.</p>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <div class="gallery-header">
+                    <h2>MANO DARBAI</h2>
+                    <div class="follow-buttons">
+                        <a class="follow-tiktok-button" href="https://www.tiktok.com/@permanento.meistre" target="_blank" rel="noopener">
+                            <span class="fa-brands fa-tiktok fa-xl"></span>
+                            <span class="follow-tiktok-text">SEKITE MANE TIKTOK</span>
+                        </a>
+                        <a class="follow-instagram-button" href="https://www.instagram.com/ivanovaite.indre" target="_blank" rel="noopener">
+                            <span class="fa-brands fa-instagram fa-2xl"></span>
+                            <span class="follow-instagram-text">SEKITE MANE INSTAGRAM</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery-photos">
+                    <img id="test" onclick="enlargeImg()" class="square" src="resources/images/Darbai/1.jpg" alt="">
+                    <img class="square" src="resources/images/Darbai/2.JPEG" alt="">
+                    <img class="square" src="resources/images/Darbai/13.JPEG" alt="">
+                    <img class="square" src="resources/images/Darbai/5.JPEG" alt="">
+                    <img class="rectangle" src="resources/images/Darbai/3.JPEG" alt="">
+                    <img class="rectangle" src="resources/images/Darbai/8.JPEG" alt="">
+                    <img class="rectangle" src="resources/images/Darbai/9.PNG" alt="">
+                    <img class="rectangle" src="resources/images/Darbai/10.jpg" alt="">
+                    <img class="square" src="resources/images/Darbai/6.JPEG" alt="">
+                    <img class="square" src="resources/images/Darbai/7.JPEG" alt="">
+                    <img class="square" src="resources/images/Darbai/11.JPEG" alt="">
+                    <img class="square" src="resources/images/Darbai/16.JPEG" alt="">
+                    <img class="rectangle" src="resources/images/Darbai/12.JPEG" alt="">
+                    <img class="rectangle" src="resources/images/Darbai/4.JPEG" alt="">
+                    <img class="rectangle" src="resources/images/Darbai/14.jpg" alt="">
+                    <img class="rectangle" src="resources/images/Darbai/15.jpg" alt="">
+                </div>
+            </section>
+
+            <section class="testimonials-section">
+                <h2 class="testimonials-header">KLIENTŲ ATSILIEPIMAI</h2>
+                 <!-- Slideshow container -->
+                <div class="slideshow-container">
+                    <div class="slideshow-inner">
+                        <div class="mySlides fade">
+                            <p class="text" id="01">
+                                „Indrė puiki specialistė, atsižvelgia į kliento norus. Lankausi jau trečius
+                                metus ir esu patenkinta. Visada išeinu tobulais antakiais. Kruopšti ir profesionali.“
+                                Iveta
+                            </p>
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <p class="text" id="02">„Meistrė Indrė labai profesionali, kultūringa, maloni ir draugiška, labai kruopšti
+                                ir tikrai išmananti savo darbą. Buvo labai malonus susitikimas, aš labai patenkinta atliktu darbu.
+                                Labai rekomenduoju specialistę Indrę. Ačiū“
+                                Inesa
+                            </p>
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <p class="text" id="03">„Labai norėjau gražių antakių, todėl atsakingai rinkausi meistrę. Labai 
+                                džiaugiuosi atradusi Indrę - ji pateisino visus mano lūkesčius. Darbą atliko itin kruopščiai, 
+                                švelniai, profesionaliai konsultavo. Šiek tiek bijojau skausmo, tačiau galiu patikinti, jog kentėti
+                                nereikėjo. Atsipalaidavau ir džiaugiausi laiku sau. Ačiū už profesionaliai atliktą darbą! Rekomenduoju!“
+                                Lina
+                            </p>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <p class="text" id="04">„Meistrė labai kruopščiai atlieka savo darbą bei labai maloniai ir šiltai 
+                                bendrauja. Viską nuosekliai paaiškina ir pasistengia, kad klientė jaustųsi komfortabiliai.“
+                                Aurėja
+                            </p>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <p class="text" id="05">„Labai ilgai galvojau apie šią procedūrą, bet pamačiau Indrės darbus, greitai
+                                abejonės dingo ir atsirado vizitas pas šią nuostabią meistrę. Merginos, pas Indrę ne eiti reikia,
+                                o bėgti!!!“
+                                Rūta
+                            </p>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <p class="text" id="06">„Esu labai laiminga, kad pagaliau atradau tokią meistrę! Pirmiausia, Indrė 
+                                visada pasitinka su šypsena, maloniai bendrauja, darbą atlieka nepriekaištingai, visada atsako
+                                į visus klausimus, susijusius su procedūra. Esu labai patenkinta!“
+                                Orinta
+                            </p>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <p class="text" id="07">„Pirmą kartą tvarkiausi antakius pas Indrę. Didelis ačiū už puikiai pagautą 
+                                formą, spalvą ir malonų bendravimą! Rekomenduoju!“
+                                Vaida
+                            </p>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <p class="text" id="08">„Labai rekomenduoju meistrę Indrę, ji yra be galo profesionali, kruopšti ir 
+                                atsakinga, o kartu ir labai maloni bei draugiška. Atskirą įvertinimą reiktų skirti jos vedamam 
+                                turiniui soc. medijose, kur taip galima susipažinti su jos darbais. Jau su nekantrumu laukiu 
+                                korekcijos!“
+                                Rasa
+                            </p>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <p class="text" id="09">„Sveiki! Norėjau labai padėkoti už tai, kaip dailiai sutvarkyti mano antakiai! 
+                                Tikrai ir pagirų sulaukiau ir neatsižiūriu“
+                            </p>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <p class="text" id="10">Sveiki, noriu padėkoti už kruopštumą ir rūpestį atliekant antakių permanentą. 
+                                Nuostabi forma!“
+                            </p>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <p class="text" id="11">„Lankiausi pas antakių meistrę Indrę. Tik geriausi atsiliepimai! Labai 
+                                patiko, kad patarė, išklausė ir davė rekomendacijų. Savo darbo profė. Ačiū Jums! Grįšiu dar :)“
+                                Diana
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                
+                <!-- The dots/circles -->
+                <div class="dots-container" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                    <span class="dot" onclick="currentSlide(9)"></span>
+                    <span class="dot" onclick="currentSlide(10)"></span>
+                    <span class="dot" onclick="currentSlide(11)"></span>
+                </div> 
+            </section>
+
+            <section class="registration">
+                <div class="registration-text">
+                    <h2>REGISTRACIJA</h2>
+                    <p>Užpildžius registracijos formą susisieksime per 24 valandas</p>
+                </div>
+                <div class="registration-form">
+                    <form  id="regForm" method="button" onsubmit="sendEmail(); this.reset(); return false;">
+                        <div>
+                            <input type="text" name="name" id="name" placeholder="Vardas" required>
+                            <input type="email" name="email" id="email" placeholder="El. paštas" required>
+                        </div>
+                        <div>
+                            <input type="tel" name="phone" id="phone" placeholder="Telefonas" required>
+                            <input type="date" name="date" id="date" required>
+                        </div>
+                        <select name="procedures" id="procedure-select" required>
+                            <option value="" disabled selected hidden>Pasirinkite procedūrą</option>
+                            <option value="Antakių permanentas">Antakių permanentas</option>
+                            <option value="Lūpų permanentas">Lūpų permanentas</option>
+                            <option value="Akių pravedimas">Akių pravedimas</option>
+                            <option value="Antakių korekcija/laminavimas">Antakių korekcija/laminavimas</option>
+                        </select>
+                        <textarea type="text" name="message" id="message" placeholder="Žinutė" rows="5"></textarea>
+                        <button id="submit" type="submit">REGISTRUOTIS</button>
+
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <p>Registracijos užklausa išsiųsta sėkmingai!</p>
+                                <p class="close">Uždaryti langą</p>
+                            </div>
+                        
+                        </div>
+                        <div id="errorModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <p>Nepavyko išsiųsti registracijos užklausos, prašome bandyti vėliau arba susisiekti su meistre
+                                    nurodytais kontaktais. Atsiprašome už nepatogumus.
+                                </p>
+                                <p class="close">Uždaryti langą</p>
+                            </div>
+                        
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="info">
+                <img src="resources/images/Indre Ivanovaite/Black N White/WhiteNoBackgroundCropped.png" alt="">
+                <div class="working-time">
+                    <h4>DARBO LAIKAS</h4>
+                    <p>Neporinėmis mėnesio dienomis: 10-20h</p>
+                    <p>Sekmadienis: Nedirbu</p>
+                </div>
+                <div class="contacts">
+                    <h4>KONTAKTAI</h4>
+                    <p>Tel. nr.: +37068617394</p>
+                    <p>Adresas: CHIC Beauty House, Sėlių g. 10, Vilnius</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/mikropigmentacija.indreiva" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ivanovaite.indre" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@permanento.meistre" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p style="float: left">Copyright © 2023. Developed by Denis Michailovskij. Visos autorinės teisės saugomos.</p>
+                <p style="float: right;">
+                    <a href="" target="_blank">Privatumo politika</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
