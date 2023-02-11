@@ -423,6 +423,7 @@ a.banner-button:hover {
 .gallery-photos img {
     width: 20%;
     margin: 0.5%;
+    cursor: pointer;
 }
 
 .gallery-photos img.square {
@@ -431,6 +432,47 @@ a.banner-button:hover {
 
 .gallery-photos img.rectangle {
     aspect-ratio: 3/4;
+}
+
+#full-screen-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+}
+
+#full-screen-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 90%;
+}
+
+#prev-button {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translate(0,-50%);
+  color: white;
+}
+
+#next-button {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translate(0,-50%);
+  color: white;
+}
+
+#prev-button:hover,
+#next-button:hover {
+  color: gray;
 }
 
 .follow-instagram-button,
@@ -673,12 +715,30 @@ a.banner-button:hover {
 
 .copyright a {
     color: gray;
-    
     text-decoration: none;
+}
+
+#goToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: hsl(271, 65%, 60%);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
 }
 
 main,
 footer {
     position: relative;
     top: 5rem;
+}
+
+.show {
+  display: flex !important;
 }

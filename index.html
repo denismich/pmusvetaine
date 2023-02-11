@@ -166,32 +166,38 @@
                     <h2>MANO DARBAI</h2>
                     <div class="follow-buttons">
                         <a class="follow-tiktok-button" href="https://www.tiktok.com/@permanento.meistre" target="_blank" rel="noopener">
-                            <span class="fa-brands fa-tiktok fa-xl"></span>
+                            <span class="fa-brands fa-tiktok fa-lg"></span>
                             <span class="follow-tiktok-text">SEKITE MANE TIKTOK</span>
                         </a>
                         <a class="follow-instagram-button" href="https://www.instagram.com/ivanovaite.indre" target="_blank" rel="noopener">
-                            <span class="fa-brands fa-instagram fa-2xl"></span>
+                            <span class="fa-brands fa-instagram fa-xl"></span>
                             <span class="follow-instagram-text">SEKITE MANE INSTAGRAM</span>
                         </a>
                     </div>
                 </div>
-                <div class="gallery-photos">
-                    <img id="test" onclick="enlargeImg()" class="square" src="resources/images/Darbai/1.jpg" alt="">
-                    <img class="square" src="resources/images/Darbai/2.JPEG" alt="">
-                    <img class="square" src="resources/images/Darbai/13.JPEG" alt="">
-                    <img class="square" src="resources/images/Darbai/5.JPEG" alt="">
-                    <img class="rectangle" src="resources/images/Darbai/3.JPEG" alt="">
-                    <img class="rectangle" src="resources/images/Darbai/8.JPEG" alt="">
-                    <img class="rectangle" src="resources/images/Darbai/9.PNG" alt="">
-                    <img class="rectangle" src="resources/images/Darbai/10.jpg" alt="">
-                    <img class="square" src="resources/images/Darbai/6.JPEG" alt="">
-                    <img class="square" src="resources/images/Darbai/7.JPEG" alt="">
-                    <img class="square" src="resources/images/Darbai/11.JPEG" alt="">
-                    <img class="square" src="resources/images/Darbai/16.JPEG" alt="">
-                    <img class="rectangle" src="resources/images/Darbai/12.JPEG" alt="">
-                    <img class="rectangle" src="resources/images/Darbai/4.JPEG" alt="">
-                    <img class="rectangle" src="resources/images/Darbai/14.jpg" alt="">
-                    <img class="rectangle" src="resources/images/Darbai/15.jpg" alt="">
+                <div class="gallery-photos" id="image-container">
+                    <img class="thumbnail square" src="resources/images/Darbai/1.jpg" alt="">
+                    <img class="thumbnail square" src="resources/images/Darbai/2.JPEG" alt="">
+                    <img class="thumbnail square" src="resources/images/Darbai/13.JPEG" alt="">
+                    <img class="thumbnail square" src="resources/images/Darbai/5.JPEG" alt="">
+                    <img class="thumbnail rectangle" src="resources/images/Darbai/3.JPEG" alt="">
+                    <img class="thumbnail rectangle" src="resources/images/Darbai/8.JPEG" alt="">
+                    <img class="thumbnail rectangle" src="resources/images/Darbai/9.PNG" alt="">
+                    <img class="thumbnail rectangle" src="resources/images/Darbai/10.jpg" alt="">
+                    <img class="thumbnail square" src="resources/images/Darbai/6.JPEG" alt="">
+                    <img class="thumbnail square" src="resources/images/Darbai/7.JPEG" alt="">
+                    <img class="thumbnail square" src="resources/images/Darbai/11.JPEG" alt="">
+                    <img class="thumbnail square" src="resources/images/Darbai/16.JPEG" alt="">
+                    <img class="thumbnail rectangle" src="resources/images/Darbai/12.JPEG" alt="">
+                    <img class="thumbnail rectangle" src="resources/images/Darbai/4.JPEG" alt="">
+                    <img class="thumbnail rectangle" src="resources/images/Darbai/14.jpg" alt="">
+                    <img class="thumbnail rectangle" src="resources/images/Darbai/15.jpg" alt="">
+                </div>
+
+                <div id="full-screen-container">
+                    <img id="full-screen-image">
+                    <i id="prev-button" class="fa-solid fa-chevron-left fa-2xl"></i>
+                    <i id="next-button" class="fa-solid fa-chevron-right fa-2xl"></i>
                 </div>
             </section>
 
@@ -384,6 +390,53 @@
                     <a href="" target="_blank">Privatumo politika</a>
                 </p>
             </div>
+            
+            <a id="goToTop" href="#">
+                <i class="fa-solid fa-chevron-up"></i>
+            </a>
         </footer>
+        <script>
+            const imageContainer = document.getElementById("image-container");
+            const fullScreenContainer = document.getElementById("full-screen-container");
+            const fullScreenImage = document.getElementById("full-screen-image");
+            const prevButton = document.getElementById("prev-button");
+            const nextButton = document.getElementById("next-button");
+
+            let currentImageIndex = 0;
+
+            imageContainer.addEventListener("click", function(event) {
+            if (event.target.tagName === "IMG") {
+                currentImageIndex = Array.from(imageContainer.children).indexOf(event.target);
+                fullScreenImage.src = event.target.src;
+                fullScreenContainer.style.display = "block";
+            }
+            });
+
+            fullScreenContainer.addEventListener("click", function(event) {
+            if (event.target === fullScreenContainer) {
+                fullScreenContainer.style.display = "none";
+            }
+            });
+
+            prevButton.addEventListener("click", function() {
+            currentImageIndex = (currentImageIndex + imageContainer.children.length - 1) % imageContainer.children.length;
+            fullScreenImage.src = imageContainer.children[currentImageIndex].src;
+            });
+
+            nextButton.addEventListener("click", function() {
+            currentImageIndex = (currentImageIndex + 1) % imageContainer.children.length;
+            fullScreenImage.src = imageContainer.children[currentImageIndex].src;
+            });
+
+            const elementToShow = document.getElementById("goToTop");
+  
+            window.addEventListener("scroll", function() {
+                if (window.scrollY > 1000) {
+                elementToShow.classList.add("show");
+                } else {
+                elementToShow.classList.remove("show");
+                }
+            });
+        </script>
     </body>
 </html>
