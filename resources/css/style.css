@@ -236,6 +236,12 @@ body {
     font-family: sans-serif;
 }
 
+::selection {
+  background-color:hsl(271, 65%, 60%);
+  color: white;
+  border-color:hsl(271, 65%, 60%);
+}
+
 header {
     background-color: white;
     position: fixed;
@@ -311,7 +317,7 @@ nav a {
     margin-bottom: 10%;
 }
 
-a.banner-button {
+button.banner-button {
     text-decoration: none;
     color: hsl(271, 76%, 80%);
     background-color: white;
@@ -319,9 +325,11 @@ a.banner-button {
     border-radius: 1rem;
     font-family: 'Open Sans';
     font-size: 1.25em;
+    border: none;
+    cursor: pointer;
 }
 
-a.banner-button:hover {
+button.banner-button:hover {
     background-color: hsl(271, 76%, 70%);
     color:white;
 }
@@ -394,6 +402,7 @@ a.banner-button:hover {
 .about-me-content p {
     font-family: 'Raleway';
     font-style: italic;
+    line-height: 1.5;
 }
 
 .gallery {
@@ -612,6 +621,12 @@ a.banner-button:hover {
     font-size: 1rem;
 }
 
+.registration-form input:focus,
+.registration-form textarea:focus,
+.registration-form select:focus {
+  outline:hsl(271, 65%, 60%) 2px solid;
+}
+
 #name,
 #phone {
     float: left;
@@ -630,6 +645,7 @@ a.banner-button:hover {
     height: 3rem;
     font-size: 1.1rem;
     font-family: 'Open Sans';
+    cursor: pointer;
 }
 
 /* The Modal (background) */
@@ -711,6 +727,7 @@ a.banner-button:hover {
 .copyright {
     padding: 0 10%;
     font-family: 'Open Sans';
+    font-size: 0.9em;
 }
 
 .copyright a {
@@ -731,6 +748,8 @@ a.banner-button:hover {
   align-items: center;
   text-decoration: none;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
 main,

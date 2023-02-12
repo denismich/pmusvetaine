@@ -121,7 +121,11 @@
                 <img class="banner-photo" src="resources/images/Subject.png" alt="">
                 <div class="banner-content">
                     <img class="banner-logo" src="resources/images/Indre Ivanovaite/Black N White/WhiteNoBackgroundCropped.png" alt="">
-                    <a class="banner-button" href="#regSection">REGISTRUOKIS JAU DABAR</a>
+                    <button class="banner-button" onclick="const target = document.getElementById('regSection');
+                    window.scrollTo({
+                      top: target.offsetTop,
+                      behavior: 'smooth'
+                    });">REGISTRUOKIS JAU DABAR</button>
                 </div>
             </div>
 
@@ -391,9 +395,12 @@
                 </p>
             </div>
             
-            <a id="goToTop" href="#">
+            <button id="goToTop" onclick="window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });">
                 <i class="fa-solid fa-chevron-up"></i>
-            </a>
+            </button>
         </footer>
         <script>
             const imageContainer = document.getElementById("image-container");
