@@ -591,6 +591,7 @@ button.banner-button:hover {
     color: #6a6a6a;
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
+    outline: none;
 }
 
 .registration-form select {
@@ -603,6 +604,7 @@ button.banner-button:hover {
     color: #6a6a6a;
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
+    outline: none;
 }
 
 ::-moz-placeholder {
@@ -619,12 +621,7 @@ button.banner-button:hover {
     color: #6a6a6a;
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
-}
-
-.registration-form input:focus,
-.registration-form textarea:focus,
-.registration-form select:focus {
-  outline:hsl(271, 65%, 60%) 2px solid;
+    outline: none;
 }
 
 #name,
