@@ -624,6 +624,7 @@ ul.options {
 .dropdown input {
   width: 100%;
   cursor: default;
+  caret-color: transparent;
 }
 
 .dropdown-input {

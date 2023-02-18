@@ -337,7 +337,7 @@
 
                         <div class="dropdown" id="custom-select">
                             <div class="dropdown-input">
-                                <input id="dropdown-placeholder" type="text" placeholder="Pasirinkite procedūrą" required/>
+                                <input id="dropdown-placeholder" type="text" placeholder="Pasirinkite procedūrą" required maxlength="0"/>
                                 <span id="dropdown-angle" class="fa fa-angle-down"></span>
                             </div>
                             <ul class="options">
@@ -513,15 +513,6 @@
             });
             // dropdown toggle
             dropdown.addEventListener('click', toggleDropdown);
-            input.addEventListener('focus', () => {
-                input.removeAttribute('required');
-                input.setAttribute('readonly', true);
-            });
-
-            input.addEventListener('blur', () => {
-                input.setAttribute('required', true);
-                input.removeAttribute('readonly');
-            });
         </script>
     </body>
 </html>
