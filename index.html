@@ -336,11 +336,11 @@
                         </select>
 
                         <div class="dropdown" id="custom-select">
-                            <div class="dropdown-input">
+                            <div id="dropdown-input" class="dropdown-input">
                                 <input id="dropdown-placeholder" type="text" placeholder="Pasirinkite procedūrą" required maxlength="0"/>
                                 <span id="dropdown-angle" class="fa fa-angle-down"></span>
                             </div>
-                            <ul class="options">
+                            <ul id="dropdown-options" class="options">
                                 <li class="option">Antakių permanentas</li>
                                 <li class="option">Lūpų permanentas</li>
                                 <li class="option">Akių pravedimas</li>
@@ -463,11 +463,11 @@
 
             // dropdown container
             const dropdown = document.querySelector('.dropdown');
-
+            const dropdownOptions = document.querySelector('#dropdown-options');
             // input
             const input = document.querySelector('#dropdown-placeholder');
             const angle = document.getElementById('dropdown-angle');
-
+            const dropdownInput = document.getElementById('dropdown-input');
             // dropdown list elements
             const listOfOptions = document.querySelectorAll('.option');
             const body = document.body;
@@ -513,6 +513,18 @@
             });
             // dropdown toggle
             dropdown.addEventListener('click', toggleDropdown);
+            dropdownInput.addEventListener('click', function() {
+                const inputRect = input.getBoundingClientRect();
+                const dropdownHeight = dropdownOptions.getBoundingClientRect().height;
+                const viewportHeight = window.innerHeight;
+                const spaceBelow = viewportHeight - inputRect.bottom;
+                
+                if (spaceBelow < dropdownHeight && inputRect.top > dropdownHeight) {
+                    dropdownOptions.style.top = '-' + inputRect.height/2 + 'px';
+                } else {
+                    dropdownOptions.style.top = dropdownHeight + inputRect.height * 0.75 + 'px';
+                }
+            });
         </script>
     </body>
 </html>
