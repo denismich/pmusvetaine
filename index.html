@@ -336,7 +336,10 @@
                         </select>
 
                         <div class="dropdown" id="custom-select">
-                            <input id="dropdown-placeholder" type="text" placeholder="Pasirinkite procedūrą" required/>
+                            <div class="dropdown-input">
+                                <input id="dropdown-placeholder" type="text" placeholder="Pasirinkite procedūrą" required/>
+                                <span id="dropdown-angle" class="fa fa-angle-down"></span>
+                            </div>
                             <ul class="options">
                                 <li class="option">Antakių permanentas</li>
                                 <li class="option">Lūpų permanentas</li>
@@ -463,6 +466,7 @@
 
             // input
             const input = document.querySelector('#dropdown-placeholder');
+            const angle = document.getElementById('dropdown-angle');
 
             // dropdown list elements
             const listOfOptions = document.querySelectorAll('.option');
@@ -474,6 +478,8 @@
             const toggleDropdown = (event) => {
             event.stopPropagation();
             dropdown.classList.toggle('opened');
+            angle.classList.toggle('fa-angle-up');
+            angle.classList.toggle('fa-angle-down');
             };
             // option selection from dropdown list
             // used "event.currentTarget" to specify the selected option
@@ -481,6 +487,8 @@
             const selectOption = (event) => {
             input.value = event.currentTarget.textContent;
             originalSelect.value = event.currentTarget.textContent;
+            angle.classList.add('fa-angle-up');
+            angle.classList.remove('fa-angle-down');
             };
 
             // we want the dropdown list to close when clicked outside of it
@@ -492,6 +500,8 @@
             if (dropdown.classList.contains('opened')) {
                 dropdown.classList.remove('opened');
             }
+            angle.classList.remove('fa-angle-up');
+            angle.classList.add('fa-angle-down');
             };
             // Event Listeners
             // if we click anywhere on "body" and dropdown list opened
