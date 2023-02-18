@@ -334,6 +334,17 @@
                             <option value="Akių pravedimas">Akių pravedimas</option>
                             <option value="Antakių korekcija/laminavimas">Antakių korekcija/laminavimas</option>
                         </select>
+
+                        <div class="dropdown" id="custom-select">
+                            <input id="dropdown-placeholder" type="text" placeholder="Pasirinkite procedūrą" required/>
+                            <ul class="options">
+                                <li class="option">Antakių permanentas</li>
+                                <li class="option">Lūpų permanentas</li>
+                                <li class="option">Akių pravedimas</li>
+                                <li class="option">Antakių korekcija/laminavimas</li>
+                            </ul>
+                        </div>
+
                         <textarea type="text" name="message" id="message" placeholder="Žinutė" rows="5"></textarea>
                         <button id="submit" type="submit">REGISTRUOTIS</button>
 
@@ -443,6 +454,63 @@
                 } else {
                 elementToShow.classList.remove("show");
                 }
+            });
+
+            // Variables
+
+            // dropdown container
+            const dropdown = document.querySelector('.dropdown');
+
+            // input
+            const input = document.querySelector('#dropdown-placeholder');
+
+            // dropdown list elements
+            const listOfOptions = document.querySelectorAll('.option');
+            const body = document.body;
+            const originalSelect = document.querySelector('#procedure-select');
+            // Functions
+            // basic toggle (open/close) function
+            // "classList.toggle(className)" toggles 'opened' class
+            const toggleDropdown = (event) => {
+            event.stopPropagation();
+            dropdown.classList.toggle('opened');
+            };
+            // option selection from dropdown list
+            // used "event.currentTarget" to specify the selected option
+            // after option is chosen, its "textContent" value being copied to input's value
+            const selectOption = (event) => {
+            input.value = event.currentTarget.textContent;
+            originalSelect.value = event.currentTarget.textContent;
+            };
+
+            // we want the dropdown list to close when clicked outside of it
+            // ex: no option was selected
+            // we do a simple check below
+            // if dropdown list is in opened state
+            // then remove the ".opened" class
+            const closeDropdownFromOutside = () => {
+            if (dropdown.classList.contains('opened')) {
+                dropdown.classList.remove('opened');
+            }
+            };
+            // Event Listeners
+            // if we click anywhere on "body" and dropdown list opened
+            // the dropdown will be closed
+            body.addEventListener('click', closeDropdownFromOutside);
+            // options selection
+            listOfOptions.forEach((option) => {
+            option.addEventListener('click', selectOption);
+            });
+            // dropdown toggle
+            dropdown.addEventListener('click', toggleDropdown);
+            input.addEventListener('focus', () => {
+                input.removeAttribute('required');
+                input.setAttribute('readonly', true);
+            });
+
+            input.addEventListener('blur', () => {
+                input.setAttribute('required', true);
+                input.removeAttribute('readonly');
             });
         </script>
     </body>
