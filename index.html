@@ -327,19 +327,15 @@
                             <input type="tel" name="phone" id="phone" placeholder="Telefonas" required>
                             <input type="date" name="date" id="date" required>
                         </div>
-                        <select name="procedures" id="procedure-select" required>
-                            <option value="" disabled selected hidden>Pasirinkite procedūrą</option>
-                            <option value="Antakių permanentas">Antakių permanentas</option>
-                            <option value="Lūpų permanentas">Lūpų permanentas</option>
-                            <option value="Akių pravedimas">Akių pravedimas</option>
-                            <option value="Antakių korekcija/laminavimas">Antakių korekcija/laminavimas</option>
-                        </select>
 
                         <div class="dropdown" id="custom-select">
-                            <div id="dropdown-input" class="dropdown-input">
-                                <input id="dropdown-placeholder" type="text" placeholder="Pasirinkite procedūrą" required maxlength="0"/>
-                                <span id="dropdown-angle" class="fa fa-angle-down"></span>
-                            </div>
+                            <select name="procedures" id="procedure-select" required onmousedown="(event) => {event.preventDefault();}">
+                                <option value="" disabled selected hidden>Pasirinkite procedūrą</option>
+                                <option value="Antakių permanentas">Antakių permanentas</option>
+                                <option value="Lūpų permanentas">Lūpų permanentas</option>
+                                <option value="Akių pravedimas">Akių pravedimas</option>
+                                <option value="Antakių korekcija/laminavimas">Antakių korekcija/laminavimas</option>
+                            </select>
                             <ul id="dropdown-options" class="options">
                                 <li class="option">Antakių permanentas</li>
                                 <li class="option">Lūpų permanentas</li>
@@ -485,7 +481,6 @@
             // used "event.currentTarget" to specify the selected option
             // after option is chosen, its "textContent" value being copied to input's value
             const selectOption = (event) => {
-            input.value = event.currentTarget.textContent;
             originalSelect.value = event.currentTarget.textContent;
             angle.classList.add('fa-angle-up');
             angle.classList.remove('fa-angle-down');
@@ -512,18 +507,34 @@
             option.addEventListener('click', selectOption);
             });
             // dropdown toggle
-            dropdown.addEventListener('click', toggleDropdown);
-            dropdownInput.addEventListener('click', function() {
-                const inputRect = input.getBoundingClientRect();
+            originalSelect.addEventListener('click', toggleDropdown);
+            /*originalSelect.addEventListener('click', function() {
+                const inputRect = originalSelect.getBoundingClientRect();
                 const dropdownHeight = dropdownOptions.getBoundingClientRect().height;
-                const viewportHeight = window.innerHeight;
+                const viewportHeight = document.documentElement.clientHeight;
                 const spaceBelow = viewportHeight - inputRect.bottom;
-                
-                if (spaceBelow < dropdownHeight && inputRect.top > dropdownHeight) {
-                    dropdownOptions.style.top = '-' + inputRect.height/2 + 'px';
+                const spaceAbove = inputRect.top;
+
+                // Set the top position of the dropdown based on available space
+                if (spaceBelow >= dropdownHeight) {
+                    dropdownOptions.style.top = inputRect.bottom + 'px';
+                } else if (spaceAbove >= dropdownHeight) {
+                    dropdownOptions.style.top = (inputRect.top - dropdownHeight) + 'px';
+                } else if (spaceBelow > spaceAbove) {
+                    dropdownOptions.style.top = inputRect.bottom + 'px';
                 } else {
-                    dropdownOptions.style.top = dropdownHeight + inputRect.height * 0.75 + 'px';
+                    dropdownOptions.style.top = (inputRect.top - dropdownHeight) + 'px';
                 }
+            });*/
+
+            const mySelect = document.getElementById('procedure-select');
+
+            mySelect.addEventListener('mousedown', (event) => {
+                event.preventDefault(); // prevent default behavior of showing the dropdown list
+            });
+
+            mySelect.addEventListener('click', () => {
+                mySelect.blur(); // remove focus from the select element
             });
         </script>
     </body>

@@ -607,7 +607,6 @@ button.banner-button:hover {
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     outline: none;
-    display: none;
 }
 
 ul.options {
@@ -624,7 +623,6 @@ ul.options {
 .dropdown input {
   width: 100%;
   cursor: default;
-  caret-color: transparent;
 }
 
 .dropdown-input {
