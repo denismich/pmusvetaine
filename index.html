@@ -518,12 +518,12 @@
 
                 // Set the top position of the dropdown based on available space
                 if (spaceBelow >= dropdownHeight) {
-                    dropdownOptions.style.top = distance2 + 'px';
+                    dropdownOptions.style.top = distance + 'px';
                 } else if (spaceAbove >= dropdownHeight) {
                     dropdownOptions.style.top = distance2 + 'px';
                 } else {
                     // Not enough space below, position above the select element
-                    dropdownOptions.style.top = distance2 + 'px';
+                    dropdownOptions.style.top = distance + 'px';
                 }
             });
             const mySelect = document.getElementById('procedure-select');
