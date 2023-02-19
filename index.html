@@ -502,6 +502,7 @@
             // dropdown toggle
             originalSelect.addEventListener('click', toggleDropdown);
             originalSelect.addEventListener('click', function() {
+                dropdownOptions.style.top = '0';
                 const inputRect = originalSelect.getBoundingClientRect();
                 const dropdownRect = dropdownOptions.getBoundingClientRect();
                 const dropdownHeight = dropdownOptions.getBoundingClientRect().height;
