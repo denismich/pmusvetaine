@@ -507,7 +507,7 @@
                 const inputRect = originalSelect.getBoundingClientRect();
                 const dropdownRect = dropdownOptions.getBoundingClientRect();
                 const dropdownHeight = dropdownOptions.getBoundingClientRect().height;
-                const viewportHeight = document.documentElement.clientHeight;
+                const viewportHeight = window.innerHeight;
                 const spaceBelow = viewportHeight - inputRect.bottom;
                 const spaceAbove = inputRect.top;
                 const distance = inputRect.bottom - dropdownRect.top;
