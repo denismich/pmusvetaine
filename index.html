@@ -525,8 +525,8 @@
                     // Not enough space below, position above the select element
                     dropdownOptions.style.top = distance + 'px';
                 }
+                dropdownOptions.style.top = '0';
             });
-            dropdownOptions.style.top = '0';
             const mySelect = document.getElementById('procedure-select');
 
             mySelect.addEventListener('mousedown', (event) => {
