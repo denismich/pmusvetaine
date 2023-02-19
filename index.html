@@ -462,7 +462,6 @@
             const dropdownOptions = document.querySelector('#dropdown-options');
             // input
             const input = document.querySelector('#dropdown-placeholder');
-            const angle = document.getElementById('dropdown-angle');
             const dropdownInput = document.getElementById('dropdown-input');
             // dropdown list elements
             const listOfOptions = document.querySelectorAll('.option');
@@ -474,16 +473,12 @@
             const toggleDropdown = (event) => {
             event.stopPropagation();
             dropdown.classList.toggle('opened');
-            angle.classList.toggle('fa-angle-up');
-            angle.classList.toggle('fa-angle-down');
             };
             // option selection from dropdown list
             // used "event.currentTarget" to specify the selected option
             // after option is chosen, its "textContent" value being copied to input's value
             const selectOption = (event) => {
             originalSelect.value = event.currentTarget.textContent;
-            angle.classList.add('fa-angle-up');
-            angle.classList.remove('fa-angle-down');
             };
 
             // we want the dropdown list to close when clicked outside of it
@@ -495,8 +490,6 @@
             if (dropdown.classList.contains('opened')) {
                 dropdown.classList.remove('opened');
             }
-            angle.classList.remove('fa-angle-up');
-            angle.classList.add('fa-angle-down');
             };
             // Event Listeners
             // if we click anywhere on "body" and dropdown list opened
@@ -508,25 +501,27 @@
             });
             // dropdown toggle
             originalSelect.addEventListener('click', toggleDropdown);
-            /*originalSelect.addEventListener('click', function() {
+            originalSelect.addEventListener('click', function() {
                 const inputRect = originalSelect.getBoundingClientRect();
+                const dropdownRect = dropdownOptions.getBoundingClientRect();
                 const dropdownHeight = dropdownOptions.getBoundingClientRect().height;
                 const viewportHeight = document.documentElement.clientHeight;
                 const spaceBelow = viewportHeight - inputRect.bottom;
                 const spaceAbove = inputRect.top;
+                const distance = inputRect.bottom - dropdownRect.top;
+                const distance2 = inputRect.top - dropdownRect.bottom;
 
                 // Set the top position of the dropdown based on available space
                 if (spaceBelow >= dropdownHeight) {
-                    dropdownOptions.style.top = inputRect.bottom + 'px';
+                    dropdownOptions.style.top = distance + 'px';
                 } else if (spaceAbove >= dropdownHeight) {
-                    dropdownOptions.style.top = (inputRect.top - dropdownHeight) + 'px';
-                } else if (spaceBelow > spaceAbove) {
-                    dropdownOptions.style.top = inputRect.bottom + 'px';
+                    dropdownOptions.style.top = distance2 + 'px';
                 } else {
-                    dropdownOptions.style.top = (inputRect.top - dropdownHeight) + 'px';
+                    // Not enough space below, position above the select element
+                    dropdownOptions.style.top = distance + 'px';
                 }
-            });*/
-
+            });
+            
             const mySelect = document.getElementById('procedure-select');
 
             mySelect.addEventListener('mousedown', (event) => {

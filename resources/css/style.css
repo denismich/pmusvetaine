@@ -652,6 +652,7 @@ ul.options {
   position: absolute;
   background-color: white;
   visibility: hidden;
+  top: 0;
 }
 
 .dropdown .options .option {
