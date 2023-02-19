@@ -523,6 +523,28 @@
                     dropdownOptions.style.top = distance + 'px';
                 }
             });
+
+            originalSelect.addEventListener('touchstart', function() {
+                dropdownOptions.style.top = '0';
+                const inputRect = originalSelect.getBoundingClientRect();
+                const dropdownRect = dropdownOptions.getBoundingClientRect();
+                const dropdownHeight = dropdownOptions.getBoundingClientRect().height;
+                const viewportHeight = document.documentElement.clientHeight;
+                const spaceBelow = viewportHeight - inputRect.bottom;
+                const spaceAbove = inputRect.top;
+                const distance = inputRect.bottom - dropdownRect.top;
+                const distance2 = inputRect.top - dropdownRect.bottom;
+
+                // Set the top position of the dropdown based on available space
+                if (spaceBelow >= dropdownHeight) {
+                    dropdownOptions.style.top = distance + 'px';
+                } else if (spaceAbove >= dropdownHeight) {
+                    dropdownOptions.style.top = distance2 + 'px';
+                } else {
+                    // Not enough space below, position above the select element
+                    dropdownOptions.style.top = distance + 'px';
+                }
+            });
             
             const mySelect = document.getElementById('procedure-select');
 
