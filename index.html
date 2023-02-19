@@ -473,6 +473,9 @@
             const toggleDropdown = (event) => {
             event.stopPropagation();
             dropdown.classList.toggle('opened');
+            if (dropdownOptions.style.top !== '0') {
+                dropdownOptions.style.top === '0';
+            }
             };
             // option selection from dropdown list
             // used "event.currentTarget" to specify the selected option
