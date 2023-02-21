@@ -510,12 +510,12 @@
                 const inputRect = originalSelect.getBoundingClientRect();
                 const dropdownRect = dropdownOptions.getBoundingClientRect();
                 const dropdownHeight = dropdownOptions.getBoundingClientRect().height;
-                const viewportHeight = window.innerHeight;
+                const viewportHeight = document.documentElement.clientHeight;
                 const spaceBelow = viewportHeight - inputRect.bottom;
                 const spaceAbove = inputRect.top;
                 const distance = inputRect.bottom - dropdownRect.top;
                 const distance2 = inputRect.top - dropdownRect.bottom;
-
+                
                 // Set the top position of the dropdown based on available space
                 if (spaceBelow >= dropdownHeight) {
                     dropdownOptions.style.top = distance + 'px';
