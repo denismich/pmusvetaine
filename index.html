@@ -70,6 +70,7 @@
                 });
             }
         </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
         <header>
@@ -517,13 +518,29 @@
                 const distance2 = inputRect.top - dropdownRect.bottom;
                 
                 // Set the top position of the dropdown based on available space
-                if (spaceBelow >= dropdownHeight) {
+                if (spaceBelow >= dropdownHeight || spaceAbove < dropdownHeight) {
                     dropdownOptions.style.top = distance + 'px';
-                } else if (spaceAbove >= dropdownHeight) {
-                    dropdownOptions.style.top = distance2 + 'px';
                 } else {
-                    // Not enough space below, position above the select element
+                    dropdownOptions.style.top = distance2 + 'px';
+                }
+            });
+
+            originalSelect.addEventListener('touchstart', function() {
+                dropdownOptions.style.top = '0';
+                const inputRect = originalSelect.getBoundingClientRect();
+                const dropdownRect = dropdownOptions.getBoundingClientRect();
+                const dropdownHeight = dropdownOptions.getBoundingClientRect().height;
+                const viewportHeight = pageYOffset + document.documentElement.clientHeight;
+                const spaceBelow = viewportHeight - $(mySelect).offset().top - mySelect.getBoundingClientRect().height;
+                const spaceAbove = $(mySelect).offset().top - pageYOffset;
+                const distance = inputRect.bottom - dropdownRect.top;
+                const distance2 = inputRect.top - dropdownRect.bottom;
+                
+                // Set the top position of the dropdown based on available space
+                if (spaceBelow >= dropdownHeight || spaceAbove < dropdownHeight) {
                     dropdownOptions.style.top = distance + 'px';
+                } else {
+                    dropdownOptions.style.top = distance2 + 'px';
                 }
             });
             const mySelect = document.getElementById('procedure-select');
