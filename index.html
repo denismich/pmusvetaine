@@ -511,9 +511,9 @@
                 const inputRect = originalSelect.getBoundingClientRect();
                 const dropdownRect = dropdownOptions.getBoundingClientRect();
                 const dropdownHeight = dropdownOptions.getBoundingClientRect().height;
-                const viewportHeight = document.documentElement.clientHeight;
-                const spaceBelow = viewportHeight - inputRect.bottom;
-                const spaceAbove = inputRect.top;
+                const viewportHeight = pageYOffset + document.documentElement.clientHeight;
+                const spaceBelow = viewportHeight - $(mySelect).offset().top - mySelect.getBoundingClientRect().height;
+                const spaceAbove = $(mySelect).offset().top - pageYOffset;
                 const distance = inputRect.bottom - dropdownRect.top;
                 const distance2 = inputRect.top - dropdownRect.bottom;
                 
