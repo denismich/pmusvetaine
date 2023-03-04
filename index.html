@@ -6,77 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Permanentinis Makiažas Vilniuje | Permanentas | Antakių Permanentas | Lūpų Permanentas | Akių Pravedimas | 
             Mikropigmentacija | Ilgalaikis Makiažas</title>
+        <link rel="icon" type="image/x-icon" href="resources/images/page-title-icon.png">
         <link href="resources/css/reset.css" rel="stylesheet" type="text/css">
         <link href="resources/css/style.css" rel="stylesheet" type="text/css">
-        <link rel="icon" type="image/x-icon" href="resources/images/Indre Ivanovaite/Black N White/Indre-Ivanovaite black fully cropped.png">
+        <script src="resources/js/script.js" defer></script>
         <script src="https://kit.fontawesome.com/35141227fd.js" crossorigin="anonymous"></script>
         <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script src="resources/js/script.js"></script>
-        <script>
-            function sendEmail() {
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                const regDate = document.getElementById('date').value;
-                const procedure = document.getElementById('procedure-select').value;
-                const message = document.getElementById('message').value;
-                const notification = `Registracijos procedūrai užklausa: <br><br>Vardas:  ${name} <br>El. paštas:  ${email} <br>Telefonas:  ${phone} <br>Data:  ${regDate} <br>Procedūra:  ${procedure} <br>Žinutė:  ${message}`
-                
-                // Get the modal
-                var modal = document.getElementById("myModal");
-                var errorModal = document.getElementById("errorModal");
-
-                // Get the form
-                var form = document.getElementById("myForm");
-
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close")[0];
-                var errorSpan = document.getElementsByClassName("close")[1];
-
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function() {
-                    modal.style.display = "none";
-                }
-
-                errorSpan.onclick = function() {
-                    errorModal.style.display = "none";
-                }
-
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function(event) {
-                    if (event.target == modal || event.target == errorModal) {
-                        event.target.style.display = "none";
-                    }
-                }
-
-                Email.send({
-                    SecureToken: "90677d85-8654-4537-91d0-eacde4cbff0d",
-                    To : 'dmichailovskij@gmail.com',
-                    From : "dmichailovskij@gmail.com",
-                    Subject : "Registracijos Procedūrai Užklausa",
-                    Body : notification
-                }).then(function(message) {
-                    // Show success message if email was sent successfully
-                    if (message === 'OK') {
-                        // Show the modal
-                        modal.style.display = "block";
-                    } else {
-                    throw new Error('Email was not sent');
-                    }
-                })
-                .catch(function(error) {
-                    // Show error message if email was not sent
-                    errorModal.style.display = "block";
-                });
-            }
-        </script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
         <header>
             <nav>
-                <!--<img class="header-logo" src="resources/images/Indre Ivanovaite/Black N White/Indre-Ivanovaite - Copy.png" alt="">
-                -->
                 <ul>
                     <li><a href="">APIE</a></li>
                     <li><a href="">PASLAUGOS</a></li>
@@ -87,46 +26,41 @@
                     <li><a href="">KONTAKTAI</a></li>
                     <li><a href="">PRIEŽIŪRA</a></li>
                 </ul>
-                <div class="contact-info-container">
-                    <div class="contact-info">
-                        <a href="tel: +37068617394">
-                            <i class="fa-solid fa-phone"></i>
-                            +37068617394
-                            <span class="delimiter">|</span> 
-                        </a>
-                        <a href="https://www.instagram.com/ivanovaite.indre" target="_blank" rel="noopener">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@permanento.meistre" target="_blank" rel="noopener">
-                            <i class="fa-brands fa-tiktok"></i>
-                        </a>
-                        <a href="https://www.facebook.com/mikropigmentacija.indreiva" target="_blank" rel="noopener">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                    </div>
-                    <div class="location-info">
-                        <a href="#">
-                            <i class="fa-solid fa-location-dot"></i>
-                            CHIC Beauty House
-                            <span class="delimiter">|</span>
-                            Sėlių g. 10, Vilnius
-                        </a>
-                    </div>
-                </div>
             </nav>
+            <div class="contact-info-container">
+                <div class="contact-info">
+                    <a href="tel:+37068617394">
+                        <i class="fa-solid fa-phone contact-info-icon"></i>
+                        +37068617394 
+                    </a>
+                    <span class="contact-info-delimiter">|</span>
+                    <a href="https://www.instagram.com/ivanovaite.indre" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-instagram contact-info-icon"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@permanento.meistre" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-tiktok contact-info-icon"></i>
+                    </a>
+                    <a href="https://www.facebook.com/mikropigmentacija.indreiva" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-facebook-f contact-info-icon"></i>
+                    </a>
+                </div>
+                <div class="location-info">
+                    <a href="#">
+                        <i class="fa-solid fa-location-dot contact-info-icon"></i>
+                        CHIC Beauty House
+                        <span class="contact-info-delimiter">|</span>
+                        Sėlių g. 10, Vilnius
+                    </a>
+                </div>
+            </div>
         </header>
 
         <main>
             <div class="banner">
-                <!--<video src="resources/videos/Untitled video - Made with Clipchamp.mp4" autoplay loop muted></video>-->
-                <img class="banner-photo" src="resources/images/Subject.png" alt="">
-                <div class="banner-content">
-                    <img class="banner-logo" src="resources/images/Indre Ivanovaite/Black N White/WhiteNoBackgroundCropped.png" alt="">
-                    <button class="banner-button" onclick="const target = document.getElementById('regSection');
-                    window.scrollTo({
-                      top: target.offsetTop,
-                      behavior: 'smooth'
-                    });">REGISTRUOKIS JAU DABAR</button>
+                <img class="banner-photo" src="resources/images/banner-photo.png" alt="">
+                <div class="banner-logo-container">
+                    <img class="banner-logo" src="resources/images/banner-logo.png" alt="">
+                    <button id="banner-registration-button">REGISTRUOKIS JAU DABAR</button>
                 </div>
             </div>
 
@@ -135,19 +69,19 @@
                 <div class="procedures-container">
                     <a class="procedure" href="#">
                         <img src="resources/images/Procedures/brows.jpg" alt="Antakiai">
-                        <p>ANTAKIAI</p>
+                        <h4>ANTAKIAI</h4>
                     </a>
                     <a class="procedure" href="#">
                         <img src="resources/images/Procedures/lips.jpg" alt="Lūpos">
-                        <p>LŪPOS</p>
+                        <h4>LŪPOS</h4>
                     </a>
                     <a class="procedure" href="#">
                         <img src="resources/images/Procedures/eyes.jpg" alt="Akių pravedimas">
-                        <p>AKIŲ PRAVEDIMAS</p>
+                        <h4>AKIŲ PRAVEDIMAS</h4>
                     </a>
                     <a class="procedure" href="#">
                         <img src="resources/images/priedai/young-woman-taking-care-her-eyebrows.jpg" alt="Antakių korekcija ir laminavimas">
-                        <p>ANTAKIŲ KOREKCIJA. <br> LAMINAVIMAS</p>
+                        <h4>ANTAKIŲ KOREKCIJA. <br> LAMINAVIMAS</h4>
                     </a>
                 </div>
             </section>
@@ -170,174 +104,172 @@
                 <div class="gallery-header">
                     <h2>MANO DARBAI</h2>
                     <div class="follow-buttons">
-                        <a class="follow-tiktok-button" href="https://www.tiktok.com/@permanento.meistre" target="_blank" rel="noopener">
-                            <span class="fa-brands fa-tiktok fa-lg"></span>
+                        <a class="follow-button tiktok" href="https://www.tiktok.com/@permanento.meistre" target="_blank" rel="noopener">
+                            <span class="fa-brands fa-tiktok fa-lg follow-button-icon"></span>
                             <span class="follow-tiktok-text">SEKITE MANE TIKTOK</span>
                         </a>
-                        <a class="follow-instagram-button" href="https://www.instagram.com/ivanovaite.indre" target="_blank" rel="noopener">
-                            <span class="fa-brands fa-instagram fa-xl"></span>
+                        <a class="follow-button instagram" href="https://www.instagram.com/ivanovaite.indre" target="_blank" rel="noopener">
+                            <span class="fa-brands fa-instagram fa-xl follow-button-icon"></span>
                             <span class="follow-instagram-text">SEKITE MANE INSTAGRAM</span>
                         </a>
                     </div>
                 </div>
-                <div class="gallery-photos" id="image-container">
-                    <img class="thumbnail square" src="resources/images/Darbai/1.jpg" alt="">
-                    <img class="thumbnail square" src="resources/images/Darbai/2.JPEG" alt="">
-                    <img class="thumbnail square" src="resources/images/Darbai/13.JPEG" alt="">
-                    <img class="thumbnail square" src="resources/images/Darbai/5.JPEG" alt="">
-                    <img class="thumbnail rectangle" src="resources/images/Darbai/3.JPEG" alt="">
-                    <img class="thumbnail rectangle" src="resources/images/Darbai/8.JPEG" alt="">
-                    <img class="thumbnail rectangle" src="resources/images/Darbai/9.PNG" alt="">
-                    <img class="thumbnail rectangle" src="resources/images/Darbai/10.jpg" alt="">
-                    <img class="thumbnail square" src="resources/images/Darbai/6.JPEG" alt="">
-                    <img class="thumbnail square" src="resources/images/Darbai/7.JPEG" alt="">
-                    <img class="thumbnail square" src="resources/images/Darbai/11.JPEG" alt="">
-                    <img class="thumbnail square" src="resources/images/Darbai/16.JPEG" alt="">
-                    <img class="thumbnail rectangle" src="resources/images/Darbai/12.JPEG" alt="">
-                    <img class="thumbnail rectangle" src="resources/images/Darbai/4.JPEG" alt="">
-                    <img class="thumbnail rectangle" src="resources/images/Darbai/14.jpg" alt="">
-                    <img class="thumbnail rectangle" src="resources/images/Darbai/15.jpg" alt="">
+
+                <div id="gallery-photos-container">
+                    <img class="gallery-photo square" src="resources/images/Darbai/1.jpg" alt="">
+                    <img class="gallery-photo square" src="resources/images/Darbai/2.JPEG" alt="">
+                    <img class="gallery-photo square" src="resources/images/Darbai/13.JPEG" alt="">
+                    <img class="gallery-photo square" src="resources/images/Darbai/5.JPEG" alt="">
+                    <img class="gallery-photo rectangle" src="resources/images/Darbai/3.JPEG" alt="">
+                    <img class="gallery-photo rectangle" src="resources/images/Darbai/8.JPEG" alt="">
+                    <img class="gallery-photo rectangle" src="resources/images/Darbai/9.PNG" alt="">
+                    <img class="gallery-photo rectangle" src="resources/images/Darbai/10.jpg" alt="">
+                    <img class="gallery-photo square" src="resources/images/Darbai/6.JPEG" alt="">
+                    <img class="gallery-photo square" src="resources/images/Darbai/7.JPEG" alt="">
+                    <img class="gallery-photo square" src="resources/images/Darbai/11.JPEG" alt="">
+                    <img class="gallery-photo square" src="resources/images/Darbai/16.JPEG" alt="">
+                    <img class="gallery-photo rectangle" src="resources/images/Darbai/12.JPEG" alt="">
+                    <img class="gallery-photo rectangle" src="resources/images/Darbai/4.JPEG" alt="">
+                    <img class="gallery-photo rectangle" src="resources/images/Darbai/14.jpg" alt="">
+                    <img class="gallery-photo rectangle" src="resources/images/Darbai/15.jpg" alt="">
                 </div>
 
                 <div id="full-screen-container">
-                    <img id="full-screen-image">
-                    <i id="prev-button" class="fa-solid fa-chevron-left fa-2xl"></i>
-                    <i id="next-button" class="fa-solid fa-chevron-right fa-2xl"></i>
+                    <img id="full-screen-image" src="#" alt="">
+                    <i id="prev-button" class="full-screen-nav fa-solid fa-chevron-left fa-2xl"></i>
+                    <i id="next-button" class="full-screen-nav fa-solid fa-chevron-right fa-2xl"></i>
                 </div>
             </section>
 
             <section class="testimonials-section">
                 <h2 class="testimonials-header">KLIENTŲ ATSILIEPIMAI</h2>
-                 <!-- Slideshow container -->
-                <div class="slideshow-container">
-                    <div class="slideshow-inner">
-                        <div class="mySlides fade">
-                            <p class="text" id="01">
-                                „Indrė puiki specialistė, atsižvelgia į kliento norus. Lankausi jau trečius
-                                metus ir esu patenkinta. Visada išeinu tobulais antakiais. Kruopšti ir profesionali.“
-                                Iveta
-                            </p>
-                        </div>
-                    
-                        <div class="mySlides fade">
-                            <p class="text" id="02">„Meistrė Indrė labai profesionali, kultūringa, maloni ir draugiška, labai kruopšti
-                                ir tikrai išmananti savo darbą. Buvo labai malonus susitikimas, aš labai patenkinta atliktu darbu.
-                                Labai rekomenduoju specialistę Indrę. Ačiū“
-                                Inesa
-                            </p>
-                        </div>
-                    
-                        <div class="mySlides fade">
-                            <p class="text" id="03">„Labai norėjau gražių antakių, todėl atsakingai rinkausi meistrę. Labai 
-                                džiaugiuosi atradusi Indrę - ji pateisino visus mano lūkesčius. Darbą atliko itin kruopščiai, 
-                                švelniai, profesionaliai konsultavo. Šiek tiek bijojau skausmo, tačiau galiu patikinti, jog kentėti
-                                nereikėjo. Atsipalaidavau ir džiaugiausi laiku sau. Ačiū už profesionaliai atliktą darbą! Rekomenduoju!“
-                                Lina
-                            </p>
-                        </div>
+                <div id="slideshow-container">
+                    <div class="slide fade">
+                        <p class="slide-text" id="01">
+                            „Indrė puiki specialistė, atsižvelgia į kliento norus. Lankausi jau trečius
+                            metus ir esu patenkinta. Visada išeinu tobulais antakiais. Kruopšti ir profesionali.“
+                            Iveta
+                        </p>
+                    </div>
+                
+                    <div class="slide fade">
+                        <p class="slide-text" id="02">„Meistrė Indrė labai profesionali, kultūringa, maloni ir draugiška, labai kruopšti
+                            ir tikrai išmananti savo darbą. Buvo labai malonus susitikimas, aš labai patenkinta atliktu darbu.
+                            Labai rekomenduoju specialistę Indrę. Ačiū“
+                            Inesa
+                        </p>
+                    </div>
+                
+                    <div class="slide fade">
+                        <p class="slide-text" id="03">„Labai norėjau gražių antakių, todėl atsakingai rinkausi meistrę. Labai 
+                            džiaugiuosi atradusi Indrę - ji pateisino visus mano lūkesčius. Darbą atliko itin kruopščiai, 
+                            švelniai, profesionaliai konsultavo. Šiek tiek bijojau skausmo, tačiau galiu patikinti, jog kentėti
+                            nereikėjo. Atsipalaidavau ir džiaugiausi laiku sau. Ačiū už profesionaliai atliktą darbą! Rekomenduoju!“
+                            Lina
+                        </p>
+                    </div>
 
-                        <div class="mySlides fade">
-                            <p class="text" id="04">„Meistrė labai kruopščiai atlieka savo darbą bei labai maloniai ir šiltai 
-                                bendrauja. Viską nuosekliai paaiškina ir pasistengia, kad klientė jaustųsi komfortabiliai.“
-                                Aurėja
-                            </p>
-                        </div>
+                    <div class="slide fade">
+                        <p class="slide-text" id="04">„Meistrė labai kruopščiai atlieka savo darbą bei labai maloniai ir šiltai 
+                            bendrauja. Viską nuosekliai paaiškina ir pasistengia, kad klientė jaustųsi komfortabiliai.“
+                            Aurėja
+                        </p>
+                    </div>
 
-                        <div class="mySlides fade">
-                            <p class="text" id="05">„Labai ilgai galvojau apie šią procedūrą, bet pamačiau Indrės darbus, greitai
-                                abejonės dingo ir atsirado vizitas pas šią nuostabią meistrę. Merginos, pas Indrę ne eiti reikia,
-                                o bėgti!!!“
-                                Rūta
-                            </p>
-                        </div>
+                    <div class="slide fade">
+                        <p class="slide-text" id="05">„Labai ilgai galvojau apie šią procedūrą, bet pamačiau Indrės darbus, greitai
+                            abejonės dingo ir atsirado vizitas pas šią nuostabią meistrę. Merginos, pas Indrę ne eiti reikia,
+                            o bėgti!!!“
+                            Rūta
+                        </p>
+                    </div>
 
-                        <div class="mySlides fade">
-                            <p class="text" id="06">„Esu labai laiminga, kad pagaliau atradau tokią meistrę! Pirmiausia, Indrė 
-                                visada pasitinka su šypsena, maloniai bendrauja, darbą atlieka nepriekaištingai, visada atsako
-                                į visus klausimus, susijusius su procedūra. Esu labai patenkinta!“
-                                Orinta
-                            </p>
-                        </div>
+                    <div class="slide fade">
+                        <p class="slide-text" id="06">„Esu labai laiminga, kad pagaliau atradau tokią meistrę! Pirmiausia, Indrė 
+                            visada pasitinka su šypsena, maloniai bendrauja, darbą atlieka nepriekaištingai, visada atsako
+                            į visus klausimus, susijusius su procedūra. Esu labai patenkinta!“
+                            Orinta
+                        </p>
+                    </div>
 
-                        <div class="mySlides fade">
-                            <p class="text" id="07">„Pirmą kartą tvarkiausi antakius pas Indrę. Didelis ačiū už puikiai pagautą 
-                                formą, spalvą ir malonų bendravimą! Rekomenduoju!“
-                                Vaida
-                            </p>
-                        </div>
+                    <div class="slide fade">
+                        <p class="slide-text" id="07">„Pirmą kartą tvarkiausi antakius pas Indrę. Didelis ačiū už puikiai pagautą 
+                            formą, spalvą ir malonų bendravimą! Rekomenduoju!“
+                            Vaida
+                        </p>
+                    </div>
 
-                        <div class="mySlides fade">
-                            <p class="text" id="08">„Labai rekomenduoju meistrę Indrę, ji yra be galo profesionali, kruopšti ir 
-                                atsakinga, o kartu ir labai maloni bei draugiška. Atskirą įvertinimą reiktų skirti jos vedamam 
-                                turiniui soc. medijose, kur taip galima susipažinti su jos darbais. Jau su nekantrumu laukiu 
-                                korekcijos!“
-                                Rasa
-                            </p>
-                        </div>
+                    <div class="slide fade">
+                        <p class="slide-text" id="08">„Labai rekomenduoju meistrę Indrę, ji yra be galo profesionali, kruopšti ir 
+                            atsakinga, o kartu ir labai maloni bei draugiška. Atskirą įvertinimą reiktų skirti jos vedamam 
+                            turiniui soc. medijose, kur taip galima susipažinti su jos darbais. Jau su nekantrumu laukiu 
+                            korekcijos!“
+                            Rasa
+                        </p>
+                    </div>
 
-                        <div class="mySlides fade">
-                            <p class="text" id="09">„Sveiki! Norėjau labai padėkoti už tai, kaip dailiai sutvarkyti mano antakiai! 
-                                Tikrai ir pagirų sulaukiau ir neatsižiūriu“
-                            </p>
-                        </div>
+                    <div class="slide fade">
+                        <p class="slide-text" id="09">„Sveiki! Norėjau labai padėkoti už tai, kaip dailiai sutvarkyti mano antakiai! 
+                            Tikrai ir pagirų sulaukiau ir neatsižiūriu“
+                        </p>
+                    </div>
 
-                        <div class="mySlides fade">
-                            <p class="text" id="10">Sveiki, noriu padėkoti už kruopštumą ir rūpestį atliekant antakių permanentą. 
-                                Nuostabi forma!“
-                            </p>
-                        </div>
+                    <div class="slide fade">
+                        <p class="slide-text" id="10">Sveiki, noriu padėkoti už kruopštumą ir rūpestį atliekant antakių permanentą. 
+                            Nuostabi forma!“
+                        </p>
+                    </div>
 
-                        <div class="mySlides fade">
-                            <p class="text" id="11">„Lankiausi pas antakių meistrę Indrę. Tik geriausi atsiliepimai! Labai 
-                                patiko, kad patarė, išklausė ir davė rekomendacijų. Savo darbo profė. Ačiū Jums! Grįšiu dar :)“
-                                Diana
-                            </p>
-                        </div>
+                    <div class="slide fade">
+                        <p class="slide-text" id="11">„Lankiausi pas antakių meistrę Indrę. Tik geriausi atsiliepimai! Labai 
+                            patiko, kad patarė, išklausė ir davė rekomendacijų. Savo darbo profė. Ačiū Jums! Grįšiu dar :)“
+                            Diana
+                        </p>
                     </div>
                 </div>
+                
                 <br>
                 
-                <!-- The dots/circles -->
-                <div class="dots-container" style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
-                    <span class="dot" onclick="currentSlide(6)"></span>
-                    <span class="dot" onclick="currentSlide(7)"></span>
-                    <span class="dot" onclick="currentSlide(8)"></span>
-                    <span class="dot" onclick="currentSlide(9)"></span>
-                    <span class="dot" onclick="currentSlide(10)"></span>
-                    <span class="dot" onclick="currentSlide(11)"></span>
+                <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                 </div> 
             </section>
 
-            <section class="registration" id="regSection">
-                <div class="registration-text">
+            <section id="registration-section">
+                <div class="registration-header">
                     <h2>REGISTRACIJA</h2>
                     <p>Užpildžius registracijos formą susisieksime per 24 valandas</p>
                 </div>
-                <div class="registration-form">
-                    <form  id="regForm" method="button" onsubmit="sendEmail(); this.reset(); return false;">
+                <div class="registration-form-container">
+                    <form id="registration-form" method="POST" onsubmit="sendEmail(); this.reset(); return false;">
                         <div>
-                            <input type="text" name="name" id="name" placeholder="Vardas" required>
-                            <input type="email" name="email" id="email" placeholder="El. paštas" required>
+                            <input type="text" name="name" id="name" class="input-field" placeholder="Vardas" required>
+                            <input type="email" name="email" id="email" class="input-field" placeholder="El. paštas" required>
                         </div>
                         <div>
-                            <input type="tel" name="phone" id="phone" placeholder="Telefonas" required>
-                            <input type="date" name="date" id="date" required>
+                            <input type="tel" name="phone" id="phone" class="input-field" placeholder="Telefonas" required>
+                            <input type="date" name="date" id="date" class="input-field" required>
                         </div>
 
-                        <div class="dropdown" id="custom-select">
-                            <select name="procedures" id="procedure-select" required onmousedown="(event) => {event.preventDefault();}">
+                        <div class="registration-select-container">
+                            <select name="procedure" id="procedure" class="input-field" required>
                                 <option value="" disabled selected hidden>Pasirinkite procedūrą</option>
                                 <option value="Antakių permanentas">Antakių permanentas</option>
                                 <option value="Lūpų permanentas">Lūpų permanentas</option>
                                 <option value="Akių pravedimas">Akių pravedimas</option>
                                 <option value="Antakių korekcija/laminavimas">Antakių korekcija/laminavimas</option>
                             </select>
-                            <ul id="dropdown-options" class="options">
+                            <ul id="custom-dropdown">
                                 <li class="option">Antakių permanentas</li>
                                 <li class="option">Lūpų permanentas</li>
                                 <li class="option">Akių pravedimas</li>
@@ -345,43 +277,37 @@
                             </ul>
                         </div>
 
-                        <textarea type="text" name="message" id="message" placeholder="Žinutė" rows="5"></textarea>
+                        <textarea name="message" id="message" class="input-field" placeholder="Žinutė" rows="5"></textarea>
                         <button id="submit" type="submit">REGISTRUOTIS</button>
 
-                        <div id="myModal" class="modal">
-
-                            <!-- Modal content -->
+                        <div id="success-modal" class="modal">
                             <div class="modal-content">
                                 <p>Registracijos užklausa išsiųsta sėkmingai!</p>
-                                <p class="close">Uždaryti langą</p>
+                                <p class="modal-close-button">Uždaryti langą</p>
                             </div>
-                        
                         </div>
-                        <div id="errorModal" class="modal">
-
-                            <!-- Modal content -->
+                        <div id="error-modal" class="modal">
                             <div class="modal-content">
                                 <p>Nepavyko išsiųsti registracijos užklausos, prašome bandyti vėliau arba susisiekti su meistre
                                     nurodytais kontaktais. Atsiprašome už nepatogumus.
                                 </p>
-                                <p class="close">Uždaryti langą</p>
+                                <p class="modal-close-button">Uždaryti langą</p>
                             </div>
-                        
                         </div>
                     </form>
                 </div>
             </section>
         </main>
-        
+
         <footer>
-            <div class="info">
-                <img src="resources/images/Indre Ivanovaite/Black N White/WhiteNoBackgroundCropped.png" alt="">
+            <div class="working-info-container">
+                <img src="resources/images/banner-logo.png" alt="">
                 <div class="working-time">
                     <h4>DARBO LAIKAS</h4>
                     <p>Neporinėmis mėnesio dienomis: 10-20h</p>
                     <p>Sekmadienis: Nedirbu</p>
                 </div>
-                <div class="contacts">
+                <div class="working-contacts">
                     <h4>KONTAKTAI</h4>
                     <p>Tel. nr.: +37068617394</p>
                     <p>Adresas: CHIC Beauty House, Sėlių g. 10, Vilnius</p>
@@ -399,141 +325,16 @@
                 </div>
             </div>
             
-            <div class="copyright">
-                <p style="float: left">Copyright © 2023. Developed by Denis Michailovskij. Visos autorinės teisės saugomos.</p>
-                <p style="float: right;">
+            <div class="copyright-privacy-info">
+                <p class="copyright">Copyright © 2023. Developed by Denis Michailovskij. Visos autorinės teisės saugomos.</p>
+                <p class="privacy-policy">
                     <a href="" target="_blank">Privatumo politika</a>
                 </p>
             </div>
-            
-            <button id="goToTop" onclick="window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-              });">
-                <i class="fa-solid fa-chevron-up"></i>
-            </button>
         </footer>
-        <script>
-            const imageContainer = document.getElementById("image-container");
-            const fullScreenContainer = document.getElementById("full-screen-container");
-            const fullScreenImage = document.getElementById("full-screen-image");
-            const prevButton = document.getElementById("prev-button");
-            const nextButton = document.getElementById("next-button");
 
-            let currentImageIndex = 0;
-
-            imageContainer.addEventListener("click", function(event) {
-            if (event.target.tagName === "IMG") {
-                currentImageIndex = Array.from(imageContainer.children).indexOf(event.target);
-                fullScreenImage.src = event.target.src;
-                fullScreenContainer.style.display = "block";
-            }
-            });
-
-            fullScreenContainer.addEventListener("click", function(event) {
-            if (event.target === fullScreenContainer) {
-                fullScreenContainer.style.display = "none";
-            }
-            });
-
-            prevButton.addEventListener("click", function() {
-            currentImageIndex = (currentImageIndex + imageContainer.children.length - 1) % imageContainer.children.length;
-            fullScreenImage.src = imageContainer.children[currentImageIndex].src;
-            });
-
-            nextButton.addEventListener("click", function() {
-            currentImageIndex = (currentImageIndex + 1) % imageContainer.children.length;
-            fullScreenImage.src = imageContainer.children[currentImageIndex].src;
-            });
-
-            const elementToShow = document.getElementById("goToTop");
-  
-            window.addEventListener("scroll", function() {
-                if (window.scrollY > 1000) {
-                elementToShow.classList.add("show");
-                } else {
-                elementToShow.classList.remove("show");
-                }
-            });
-
-            // Variables
-
-            // dropdown container
-            const dropdown = document.querySelector('.dropdown');
-            const dropdownOptions = document.querySelector('#dropdown-options');
-            // input
-            const input = document.querySelector('#dropdown-placeholder');
-            const dropdownInput = document.getElementById('dropdown-input');
-            // dropdown list elements
-            const listOfOptions = document.querySelectorAll('.option');
-            const body = document.body;
-            const originalSelect = document.querySelector('#procedure-select');
-            // Functions
-            // basic toggle (open/close) function
-            // "classList.toggle(className)" toggles 'opened' class
-            const toggleDropdown = (event) => {
-            event.stopPropagation();
-            dropdown.classList.toggle('opened');
-            if (dropdownOptions.style.top !== '0') {
-                dropdownOptions.style.top === '0';
-            }
-            };
-            // option selection from dropdown list
-            // used "event.currentTarget" to specify the selected option
-            // after option is chosen, its "textContent" value being copied to input's value
-            const selectOption = (event) => {
-            originalSelect.value = event.currentTarget.textContent;
-            };
-
-            // we want the dropdown list to close when clicked outside of it
-            // ex: no option was selected
-            // we do a simple check below
-            // if dropdown list is in opened state
-            // then remove the ".opened" class
-            const closeDropdownFromOutside = () => {
-            if (dropdown.classList.contains('opened')) {
-                dropdown.classList.remove('opened');
-            }
-            dropdownOptions.style.top = '0';
-            };
-            // Event Listeners
-            // if we click anywhere on "body" and dropdown list opened
-            // the dropdown will be closed
-            body.addEventListener('click', closeDropdownFromOutside);
-            // options selection
-            listOfOptions.forEach((option) => {
-            option.addEventListener('click', selectOption);
-            });
-            // dropdown toggle
-            originalSelect.addEventListener('click', toggleDropdown);
-            originalSelect.addEventListener('click', function() {
-                dropdownOptions.style.top = '0';
-                const inputRect = originalSelect.getBoundingClientRect();
-                const dropdownRect = dropdownOptions.getBoundingClientRect();
-                const dropdownHeight = dropdownOptions.getBoundingClientRect().height;
-                const viewportHeight = document.documentElement.clientHeight;
-                const spaceBelow = viewportHeight - inputRect.bottom;
-                const spaceAbove = inputRect.top;
-                const distance = inputRect.bottom - dropdownRect.top;
-                const distance2 = inputRect.top - dropdownRect.bottom;
-                
-                // Set the top position of the dropdown based on available space
-                if (spaceBelow >= dropdownHeight || spaceAbove < dropdownHeight) {
-                    dropdownOptions.style.top = distance + 'px';
-                } else {
-                    dropdownOptions.style.top = distance2 + 'px';
-                }
-            });
-
-            const mySelect = document.getElementById('procedure-select');
-
-            mySelect.addEventListener('mousedown', (event) => {
-                event.preventDefault(); // prevent default behavior of showing the dropdown list
-            });
-
-            mySelect.addEventListener('click', () => {
-                mySelect.blur(); // remove focus from the select element
-            });
-        </script>
+        <button id="scroll-to-top-button">
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
     </body>
 </html>

@@ -1,446 +1,302 @@
-/* latin */
-@font-face {
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
 /* latin-ext */
 @font-face {
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-/* latin-ext */
-@font-face {
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-/* latin-ext */
-@font-face {
-    font-family: 'Raleway';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/raleway/v28/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4WjMDr0fIA9c.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Raleway';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/raleway/v28/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4WjMDrMfIA.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-/* latin-ext */
-@font-face {
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDZbtPY_Q.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-
-/* latin-ext */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw3aXpsog.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-/* latin-ext */
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lqDY.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-/* latin-ext */
-@font-face {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCGPrEHJA.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrE.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVIGxA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 
 /* latin */
 @font-face {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* latin-ext */
 @font-face {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* latin-ext */
 @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVIGxA.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgFE_.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* latin-ext */
 @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4uaVIGxA.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-stretch: 100%;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVI.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCGPrEHJA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* latin-ext */
 @font-face {
-    font-family: 'Dancing Script';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/dancingscript/v24/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7B1i03ROp8ltA.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Dancing Script';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/dancingscript/v24/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7B1i03Sup8.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v28/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4WjMDr0fIA9c.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 
-/* latin-ext */
+/* latin */
 @font-face {
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/notosans/v27/o-0IIpQlx3QUlC5A4PNr6zRAW_0.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/notosans/v27/o-0IIpQlx3QUlC5A4PNr5TRA.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-body {
-    font-family: sans-serif;
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v28/1Pt_g8zYS_SKggPNyCgSQamb1W0lwk4S4WjMDrMfIA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 ::selection {
   background-color:hsl(271, 65%, 60%);
   color: white;
-  border-color:hsl(271, 65%, 60%);
 }
 
 header {
-    background-color: white;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
+  background-color: white;
+  position: fixed;
+  z-index: 10;
+  height: 5.25vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
 }
 
-.header-logo {
-    height: 80%;
+header a {
+  color: black;
+  text-decoration: none;
 }
 
-nav {
-    height: 5rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-family: 'Open Sans', sans-serif;
-}
-
-nav ul {
-    display: inline;
-}
-
-nav li {
-    display: inline;
-    padding: 1rem;
-}
-
-nav a {
-    color: black;
-    text-decoration: none;
-}
-
-.delimiter {
-    margin: 0 0.125rem;
-}
-
-.fa-brands,
-.fa-solid {
-    margin: 0 0.25rem;
+header nav li {
+  display: inline;
+  padding: 1rem;
 }
 
 .contact-info-container {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.contact-info-icon,
+.follow-button-icon {
+  margin: 0 0.25rem;
+}
+
+.contact-info-delimiter {
+  margin: 0 0.125rem;
 }
 
 .banner {
-    height: 500px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    background-color: hsl(271, 76%, 80%);
-    padding-right: 5%;
-}
-
-.banner-content {
-    height: 100%;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 32.5vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  background-color: hsl(271, 76%, 80%);
+  padding-right: 5%;
 }
 
 .banner-photo {
-    height: 95%;
+  height: 95%;
+}
+
+.banner-logo-container {
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner-logo {
-    height: 55%;
-    margin-bottom: 10%;
+  height: 55%;
+  margin-bottom: 10%;
 }
 
-button.banner-button {
-    text-decoration: none;
-    color: hsl(271, 76%, 80%);
-    background-color: white;
-    padding: 0.75rem 1rem;
-    border-radius: 1rem;
-    font-family: 'Open Sans';
-    font-size: 1.25em;
-    border: none;
-    cursor: pointer;
+#banner-registration-button {
+  color: hsl(271, 76%, 80%);
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
 }
 
-button.banner-button:hover {
-    background-color: hsl(271, 76%, 70%);
-    color:white;
-}
-
-.procedures-container {
-    display: flex;
-    justify-content: space-around;
+#banner-registration-button:hover {
+  background-color: hsl(271, 76%, 70%);
+  color:white;
 }
 
 .procedures-header {
-    text-align: center;
-    padding-top: 4%;
-    font-size: 3rem;
-    font-family: 'Playfair Display';
+  text-align: center;
+  padding-top: 4%;
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.procedures-container {
+  display: flex;
+  justify-content: space-around;
 }
 
 .procedure {
-    width: 23%;
-    margin: 5% 0;
-    color: black;
-    text-decoration: none;
-    text-align: center;
-    font-size: 2em;
+  width: 23%;
+  margin: 5% 0;
+  color: black;
+  text-align: center;
+  text-decoration: none;
 }
 
 .procedure img {
-    width: 100%;
-    aspect-ratio: 3/2;
+  width: 100%;
+  aspect-ratio: 3/2;
 }
 
-.procedure p {
-    margin-top: 1em;
-    font-family: 'Raleway';
+.procedure h4 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-top: 1em;
+  font-family: 'Raleway', sans-serif;
 }
 
 .about-me {
-    padding: 5% 0;
-    background-color: hsl(271, 76%, 80%);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 5% 0;
+  background-color: hsl(271, 76%, 80%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-me-photo {
-    width: 35%;
-    margin-right: 5%;
-    box-shadow: 1rem 1rem 1rem hsl(271, 65%, 60%);
+  width: 35%;
+  margin-right: 5%;
+  box-shadow: 16px 16px 16px hsl(271, 65%, 60%);
 }
 
 .about-me-content {
-    display: inline-block;
-    text-align: center;
-    width: 40%;
-    font-size: 1.5em;
-}
-
-.about-me-content h2,
-.about-me-content p {
-    display: inline-block;
-    width: 100%;
-    margin: 1rem 0 2rem;
+  display: inline-block;
+  text-align: center;
+  width: 40%;
 }
 
 .about-me-content h2 {
-    font-family: 'Playfair Display';
-    font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 1rem 0 3rem;
 }
 
 .about-me-content p {
-    font-family: 'Raleway';
-    font-style: italic;
-    line-height: 1.5;
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .gallery {
-    padding: 5%;
+  padding: 5%;
 }
 
 .gallery-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4%;
-    padding: 0 8.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 8.5% 4%;
 }
 
 .gallery-header h2 {
-    font-size: 3rem;
-    font-family: 'Playfair Display';
-    font-weight: 500;
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
 }
 
-.gallery-photos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.follow-button {
+    padding: 1rem;
+    margin: 0 0.5rem;
+    color: white;
+    text-decoration: none;
+    background-color: hsl(271, 76%, 80%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
 }
 
-.gallery-photos img {
-    width: 20%;
-    margin: 0.5%;
-    cursor: pointer;
+#gallery-photos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.gallery-photos img.square {
-    aspect-ratio: 1;
+.gallery-photo {
+  width: 20%;
+  margin: 0.5%;
+  cursor: pointer;
 }
 
-.gallery-photos img.rectangle {
-    aspect-ratio: 3/4;
+.gallery-photo.square {
+  aspect-ratio: 1/1;
+}
+
+.gallery-photo.rectangle {
+  aspect-ratio: 3/4;
 }
 
 #full-screen-container {
@@ -450,7 +306,7 @@ button.banner-button:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: hsla(0, 0%, 0%, 0.9);
   z-index: 10;
 }
 
@@ -463,229 +319,135 @@ button.banner-button:hover {
   max-height: 90%;
 }
 
-#prev-button {
+.full-screen-nav {
   position: absolute;
   top: 50%;
-  left: 2%;
   transform: translate(0,-50%);
   color: white;
 }
 
-#next-button {
-  position: absolute;
-  top: 50%;
-  right: 2%;
-  transform: translate(0,-50%);
-  color: white;
-}
-
-#prev-button:hover,
-#next-button:hover {
+.full-screen-nav:hover {
   color: gray;
 }
 
-.follow-instagram-button,
-.follow-tiktok-button {
-    padding: 1rem;
-    margin: 0 0.5rem;
-    color: white;
-    text-decoration: none;
-    background-color: hsl(271, 76%, 80%);
-    font-family: 'Open Sans';
-    font-size: 1.1em;
+#prev-button {
+  left: 2%;
+}
+
+#next-button {
+  right: 2%;
 }
 
 .testimonials-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 5% 0;
-    background-color: hsl(271, 76%, 80%);
-    color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5% 0;
+  background-color: hsl(271, 76%, 80%);
+  color: white;
 }
 
 .testimonials-header {
-    font-size: 3rem;
-    font-family: 'Playfair Display';
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
 }
 
-/* Slideshow container */
-.slideshow-container {
-    position: relative;
-    height: 18rem;
-  }
-  
-  /*Make testimonials hidden by default*/
-  .mySlides {
-    display: none;
-    margin: 5rem 20rem;
-    font-size: 1.5em;
-    text-align: center;
-    font-style: italic;
-    font-family: 'Raleway';
-  }
-
-  /* The dots/bullets/indicators */
-  .dots-container {
-    height: 2rem;
-  }
-
-  .dot {
-    cursor: pointer;
-    height: 0.75rem;
-    width: 0.75rem;
-    margin: 0 2px;
-    background-color: #717171;
-    border-radius: 50%;
-    display: inline-block;
-    transition: all 0.6s linear;
-    vertical-align: middle;
-  }
-  
-  .active {
-    background-color: white;
-    height: 1rem;
-    width: 1rem;
-  }
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-.registration {
-    padding: 5%;
+#slideshow-container {
+  height: 18em;
 }
 
-.registration-form {
-    width: 45%;
-    margin: 0 auto;
+.slide {
+  display: none;
+  margin: 5.25vw 21vw;
+  font-size: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Raleway', sans-serif;
 }
 
-.registration-text {
-    text-align: center;
-    margin-top: 0.5%;
-    font-family: 'Playfair Display';
-    font-size: 1.5rem;
+.slide.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-.registration-text p {
-    margin: 1rem 0 2.5rem;
-    font-size: 1rem;
-    font-family: 'Raleway';
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
-.registration-form input {
-    padding: 1.5%;
-    margin: 1.5% 0;
-    width: 48%;
-    height: 3rem;
-    border: 1px solid rgba(44,44,44, 0.15);
-    color: #6a6a6a;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
-    outline: none;
-    position: relative;
-    z-index: 5;
+.dots-container {
+  height: 2rem;
 }
 
-.registration-form select {
-    padding: 0 1.5%;
-    margin: 1.5% 0;
-    width: 100%;
-    height: 3rem;
-    background-color: white;
-    border: 1px solid rgba(44,44,44, 0.15);
-    color: #6a6a6a;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
-    outline: none;
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2.25px;
+  background-color: #717171;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.6s linear;
 }
 
-ul.options {
-  list-style: none;
+.dot.active {
+  background-color: white;
+  height: 1rem;
+  width: 1rem;
+}
+
+#registration-section {
+  padding: 5.5% 5% 5%;
+}
+
+.registration-header {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.registration-header p {
+  margin: 1rem 0 2.5rem;
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.registration-form-container {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.registration-form-container .input-field {
+  padding: 1.5%;
+  margin: 1.5% 0;
+  border: 1px solid hsla(0, 0%, 17%, 0.15);
+  color: hsl(0, 0%, 42%);
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
-  border: 2px solid rgba(44,44,44, 0.15);
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown input {
-  width: 100%;
-  cursor: default;
-}
-
-.dropdown-input {
-  position: relative;
-}
-
-.dropdown-input .fa-angle-down {
-  position: absolute;
-  right: 10px;
-  top: 83%;
-  transform: translate(0, -50%);
-  z-index: 5;
-  color: #6a6a6a;
-}
-
-.dropdown-input .fa-angle-up {
-  position: absolute;
-  right: 10px;
-  top: 83%;
-  transform: translate(0, -50%);
-  z-index: 5;
-  color: #6a6a6a;
-}
-
-.dropdown .options {
-  width: 100%;
-  position: absolute;
+  outline: none;
   background-color: white;
-  visibility: hidden;
-  top: 0;
 }
 
-.dropdown .options .option {
-  padding: 10px;
-}
-
-.dropdown .options .option:hover {
-  color: white;
-  background: hsl(271, 65%, 60%);
-}
-
-/* opened state of dropdown list */
-.dropdown.opened .options {
+.registration-form-container .input-field::placeholder {
   opacity: 1;
-  visibility: visible;
+}
+
+.registration-form-container input {
+  width: 48%;
+  height: 3rem;
+  position: relative;
   z-index: 5;
 }
 
-::-moz-placeholder {
-    opacity: 1 !important;
-    color: inherit !important;
+.registration-form-container select {
+  width: 100%;
+  height: 3rem;
 }
 
-.registration-form textarea {
-    padding: 1.5%;
-    margin: 1.5% 0;
-    width: 100%;
-    border: 1px solid rgba(44,44,44, 0.15);
-    resize: none;
-    color: #6a6a6a;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
-    outline: none;
+.registration-form-container textarea {
+  width: 100%;
+  resize: none;
 }
 
 #name,
@@ -698,127 +460,157 @@ ul.options {
     float: right;
 }
 
+.registration-select-container {
+  position: relative;
+}
+
+#custom-dropdown {
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  visibility: hidden;
+  list-style: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  border: 2px solid hsla(0, 0%, 17%, 0.15);
+}
+
+#custom-dropdown.opened {
+  visibility: visible;
+  z-index: 5;
+}
+
+#custom-dropdown .option {
+  padding: 10px;
+}
+
+#custom-dropdown .option:hover {
+  color: white;
+  background: hsl(271, 65%, 60%);
+}
+
 #submit {
-    color: white;
-    background-color:hsl(271, 76%, 80%);
-    border: none;
-    width: 35%;
-    height: 3rem;
-    font-size: 1.1rem;
-    font-family: 'Open Sans';
-    cursor: pointer;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed; /* Stay in place */
-  z-index: 10; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  text-align: center;
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
+  color: white;
+  background-color:hsl(271, 76%, 80%);
+  border: none;
+  width: 35%;
+  height: 3rem;
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
   cursor: pointer;
 }
 
-.info {
-    background-color:hsl(271, 76%, 80%);
-    color: white;
-    padding: 2.5%;
-    display: flex;
-    justify-content: space-around;
-    align-items:start;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.4);
+  font-family: 'Open Sans', sans-serif;
 }
 
-.info h4 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    font-family: 'Playfair Display';
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 1.25rem;
+  border: 1px solid hsl(0, 0%, 53%);
+  width: 80%;
+  text-align: center;
 }
 
-.info p {
-    line-height: 2;
-    font-family: 'Open Sans';
+.modal-close-button {
+  color: hsl(0, 0%, 67%);
+  font-weight: bold;
+  margin-top: 1.25rem;
 }
 
-.info img {
-    width: 15%;
-    height: 90%;
+.modal-close-button:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.working-info-container {
+  background-color:hsl(271, 76%, 80%);
+  color: white;
+  padding: 2.5%;
+  display: flex;
+  justify-content: space-around;
+  align-items:start;
+}
+
+.working-info-container img {
+  width: 15%;
+  height: 90%;
+}
+
+.working-info-container h4 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.working-info-container p {
+  line-height: 2;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .social-links {
-    display: flex;
-    justify-content: start;
-    font-size: 1.5em;
-    margin-top: 0.5em;
-    width: 50%;
+  display: flex;
+  justify-content: start;
+  font-size: 1.5rem;
+  margin-top: 0.75rem;
+  width: 50%;
 }
 
 .social-links i {
-    color: white;
-    margin-right: 0.5em;
+  color: white;
+  margin-right: 1rem;
+}
+
+.copyright-privacy-info {
+  padding: 0 10%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
 }
 
 .copyright {
-    padding: 0 10%;
-    font-family: 'Open Sans';
-    font-size: 0.9em;
+  float: left;
 }
 
-.copyright a {
-    color: gray;
-    text-decoration: none;
+.privacy-policy {
+  float: right;
 }
 
-#goToTop {
+.copyright-privacy-info a {
+  color: gray;
+  text-decoration: none;
+}
+
+#scroll-to-top-button {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 4rem;
-  height: 4rem;
+  bottom: 2.1vw;
+  right: 2.1vw;
+  width: 4.2vw;
+  height: 4.2vw;
   border-radius: 50%;
   background-color: hsl(271, 65%, 60%);
   display: none;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
   color: white;
   border: none;
   cursor: pointer;
 }
 
-main,
-footer {
-    position: relative;
-    top: 5rem;
+#scroll-to-top-button.show {
+  display: flex;
 }
 
-.show {
-  display: flex !important;
+main,
+footer {
+  position: relative;
+  top: 5.25vw;
 }
