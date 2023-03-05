@@ -115,20 +115,18 @@ header {
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   width: 100%;
+  border-bottom: 1px solid hsla(0, 0%, 50%, 0.1);
 }
 
 #header-nav-icon {
   font-size: 3.5rem;
-  color:hsl(271, 76%, 80%);
+  color:white;
+  background-color: hsl(271, 76%, 70%);
   display: none;
   height: 100%;
   padding: 1rem;
   align-items: center;
-}
-
-#header-nav-icon:hover {
-  color: white;
-  background-color: hsl(271, 76%, 70%);
+  cursor: pointer;
 }
 
 header a {
@@ -180,6 +178,10 @@ header a {
 
   header a {
     color: white;
+  }
+
+  header a::selection {
+    background-color: transparent;
   }
 }
 
@@ -707,4 +709,11 @@ main,
 footer {
   position: relative;
   top: 5.25vw;
+}
+
+@media only screen and (max-width: 430px) {
+  main,
+  footer {
+    top: 10vw;
+  }
 }
