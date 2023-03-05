@@ -1,6 +1,9 @@
 //Header navigation bar icon
-document.querySelector('#header-nav-icon').addEventListener('click', () => 
-  document.querySelector('#header-nav-menu').classList.toggle('visible'));
+const headerNavIcon = document.querySelector('#header-nav-icon');
+headerNavIcon.addEventListener('click', () => {
+  document.querySelector('#header-nav-menu').classList.toggle('visible');
+  headerNavIcon.classList.toggle('open');
+});
 
 //Banner registration button
 document.querySelector('#banner-registration-button').addEventListener('click', () => window.scrollTo({

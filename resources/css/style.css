@@ -115,18 +115,22 @@ header {
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   width: 100%;
-  border-bottom: 1px solid hsla(0, 0%, 50%, 0.1);
+  border-bottom: 2px solid hsla(0, 0%, 50%, 0.1);
 }
 
 #header-nav-icon {
   font-size: 3.5rem;
-  color:white;
-  background-color: hsl(271, 76%, 70%);
+  color: hsl(271, 76%, 80%);
   display: none;
   height: 100%;
   padding: 1rem;
   align-items: center;
   cursor: pointer;
+}
+
+#header-nav-icon.open {
+  color:white;
+  background-color: hsl(271, 76%, 70%);
 }
 
 header a {
