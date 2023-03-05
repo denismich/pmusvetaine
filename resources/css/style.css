@@ -118,12 +118,17 @@ header {
   border-bottom: 2px solid hsla(0, 0%, 50%, 0.1);
 }
 
+header a {
+  color: black;
+  text-decoration: none;
+}
+
 #header-nav-icon {
   font-size: 3.5rem;
   color: hsl(271, 76%, 80%);
   display: none;
   height: 100%;
-  padding: 1rem;
+  padding: 1rem 2rem;
   align-items: center;
   cursor: pointer;
 }
@@ -133,20 +138,19 @@ header {
   background-color: hsl(271, 76%, 70%);
 }
 
-header a {
-  color: black;
-  text-decoration: none;
-}
-
 #header-nav-menu li {
   display: inline;
+  cursor: pointer;
+}
+
+#header-nav-menu a {
   padding: 1rem;
 }
 
 @media only screen and (max-width: 430px) {
   header {
     justify-content: flex-end;
-    height: 10vw;
+    height: 45px;
   }
 
   header nav {
@@ -164,7 +168,7 @@ header a {
   #header-nav-menu {
     display: none;
     position: absolute;
-    top: 10vw;
+    top: 43px;
     left: 0;
     text-align: center;
     width: 100%;
@@ -190,6 +194,12 @@ header a {
 
   header a::selection {
     background-color: transparent;
+  }
+
+  #header-nav-menu a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -722,6 +732,6 @@ footer {
 @media only screen and (max-width: 430px) {
   main,
   footer {
-    top: 10vw;
+    top: 45px;
   }
 }
