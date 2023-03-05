@@ -1,3 +1,7 @@
+//Header navigation bar icon
+document.querySelector('#header-nav-icon').addEventListener('click', () => 
+  document.querySelector('#header-nav-menu').classList.toggle('visible'));
+
 //Banner registration button
 document.querySelector('#banner-registration-button').addEventListener('click', () => window.scrollTo({
   top: document.querySelector('#registration-section').offsetTop,

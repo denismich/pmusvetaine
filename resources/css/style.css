@@ -122,9 +122,61 @@ header a {
   text-decoration: none;
 }
 
-header nav li {
+#header-nav-menu li {
   display: inline;
   padding: 1rem;
+}
+
+@media only screen and (max-width: 430px) {
+  header {
+    justify-content: flex-end;
+    height: 10vw;
+  }
+
+  header nav {
+    height: 100%;
+  }
+
+  #header-nav-icon {
+    font-size: 3.5rem;
+    color:hsl(271, 76%, 80%);
+    display: inline-flex;
+    height: 100%;
+    padding: 1rem;
+    align-items: center;
+  }
+  
+  #header-nav-icon:hover {
+    color: white;
+    background-color: hsl(271, 76%, 70%);
+  }
+
+  #header-nav-menu {
+    display: none;
+    position: absolute;
+    top: 10vw;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  #header-nav-menu.visible {
+    display: block;
+  }
+
+  #header-nav-menu li {
+    display: block;
+    background-color: hsl(271, 76%, 80%);
+    font-size: 2rem;
+  }
+
+  #header-nav-menu li:hover {
+    background-color: hsl(271, 76%, 70%);
+  }
+
+  header a {
+    color: white;
+  }
 }
 
 .contact-info-container {
