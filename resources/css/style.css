@@ -286,12 +286,13 @@ header a {
   }
 
   .banner-logo {
-    width: 90%;
+    width: 50%;
     height: auto;
+    margin-bottom: 7.5%;
   }
 
   #banner-registration-button {
-    width: 90%;
+    width: 60%;
     font-size: 2rem;
   }
 }
@@ -326,6 +327,50 @@ header a {
   font-weight: normal;
   margin-top: 1em;
   font-family: 'Raleway', sans-serif;
+}
+
+@media only screen and (max-width: 430px) {
+  .procedures-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5% 0;
+  }
+
+  .procedure {
+    width: 90%;
+    margin: 2.5% 0;
+  }
+
+  .procedure img {
+    display: none;
+  }
+
+  .procedure h4 {
+    aspect-ratio: 3/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: white;
+    background-size: cover;
+    margin-top: 0;
+  }
+
+  #brows {
+    background-image: url('../images/Procedures/brows.jpg');
+  }
+
+  #lips {
+    background-image: url('../images/Procedures/lips.jpg');
+  }
+
+  #eyes {
+    background-image: url('../images/Procedures/eyes.jpg');
+  }
+
+  #brows-correction {
+    background-image: url('../images/priedai/young-woman-taking-care-her-eyebrows.jpg');
+  }
 }
 
 .about-me {
