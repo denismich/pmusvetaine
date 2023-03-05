@@ -157,6 +157,10 @@ header a {
     display: inline-flex;
   }
 
+  #header-nav-icon::selection {
+    background-color: transparent;
+  }
+
   #header-nav-menu {
     display: none;
     position: absolute;
