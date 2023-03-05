@@ -117,6 +117,20 @@ header {
   width: 100%;
 }
 
+#header-nav-icon {
+  font-size: 3.5rem;
+  color:hsl(271, 76%, 80%);
+  display: none;
+  height: 100%;
+  padding: 1rem;
+  align-items: center;
+}
+
+#header-nav-icon:hover {
+  color: white;
+  background-color: hsl(271, 76%, 70%);
+}
+
 header a {
   color: black;
   text-decoration: none;
@@ -138,17 +152,7 @@ header a {
   }
 
   #header-nav-icon {
-    font-size: 3.5rem;
-    color:hsl(271, 76%, 80%);
     display: inline-flex;
-    height: 100%;
-    padding: 1rem;
-    align-items: center;
-  }
-  
-  #header-nav-icon:hover {
-    color: white;
-    background-color: hsl(271, 76%, 70%);
   }
 
   #header-nav-menu {
