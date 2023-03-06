@@ -353,7 +353,7 @@ header a {
 
   .procedure img {
     filter: brightness(60%);
-    aspect-ratio: 1.75;
+    aspect-ratio: 7/4;
   }
 
   .procedure h4 {
@@ -364,6 +364,7 @@ header a {
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 0;
+    font-family: 'Playfair Display', serif;
   }
 }
 
