@@ -345,6 +345,7 @@ header a {
     margin-top: 1%;
     margin-bottom: 0;
     position: relative;
+    display: flex;
   }
 
   .procedure:nth-last-of-type(1) {
