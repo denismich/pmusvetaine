@@ -333,43 +333,36 @@ header a {
   .procedures-container {
     flex-direction: column;
     align-items: center;
-    padding: 2.5% 0;
+    padding: 0;
   }
 
-  .procedure {
-    width: 90%;
-    margin: 2.5% 0;
-  }
-
-  .procedure img {
+  .procedures-header {
     display: none;
   }
 
+  .procedure {
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .procedure:nth-last-of-type(1) {
+    margin-bottom: 1%;
+  }
+
+  .procedure img {
+    filter: brightness(75%);
+  }
+
   .procedure h4 {
-    aspect-ratio: 3/2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
+    font-size: 6rem;
     color: white;
-    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin-top: 0;
-  }
-
-  #brows {
-    background-image: url('../images/Procedures/brows.jpg');
-  }
-
-  #lips {
-    background-image: url('../images/Procedures/lips.jpg');
-  }
-
-  #eyes {
-    background-image: url('../images/Procedures/eyes.jpg');
-  }
-
-  #brows-correction {
-    background-image: url('../images/priedai/young-woman-taking-care-her-eyebrows.jpg');
   }
 }
 
