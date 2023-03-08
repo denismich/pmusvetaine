@@ -190,6 +190,7 @@ header a {
     display: block;
     background-color: hsl(271, 76%, 80%);
     font-size: 2rem;
+    border-bottom: 2px solid hsla(271, 76%, 70%, 0.4);
   }
 
   #header-nav-menu li:hover {
@@ -410,6 +411,29 @@ header a {
   }
 }
 
+@media only screen and (max-width: 430px) {
+  .about-me {
+    flex-direction: column-reverse;
+  }
+
+  .about-me-content {
+    width: 80%;
+  }
+
+  .about-me-content h2 {
+    font-size: 5rem;
+  }
+
+  .about-me-content p {
+    font-size: 2rem;
+  }
+
+  .about-me-photo {
+    margin: 3rem auto;
+    width: 80%;
+  }
+}
+
 .gallery {
   padding: 5%;
 }
@@ -500,6 +524,39 @@ header a {
 
 #next-button {
   right: 2%;
+}
+
+@media only screen and (max-width: 430px) {
+  .gallery-header {
+    flex-direction: column;
+    margin: 0 0 3rem;
+  }
+
+  .gallery-header h2 {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .follow-buttons {
+    display: inline-block;
+    width: 80%;
+  }
+
+  .follow-button {
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .gallery-photo {
+    width: 80%;
+    margin-bottom: 3rem;
+  }
+
+  .full-screen-nav {
+    font-size: 5rem !important;
+  }
 }
 
 .testimonials-section {
