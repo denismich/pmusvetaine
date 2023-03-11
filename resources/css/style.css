@@ -950,6 +950,7 @@ header a {
   color: white;
   border: none;
   cursor: pointer;
+  opacity: 0.75;
 }
 
 #scroll-to-top-button.show {
