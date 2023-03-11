@@ -798,6 +798,7 @@ header a {
   .registration-form-container .input-field {
     font-size: 2rem;
     padding: 3%;
+    width: 100%;
   }
 
   .registration-form-container input {
