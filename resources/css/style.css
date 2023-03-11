@@ -779,6 +779,47 @@ header a {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 430px) {
+  .registration-header {
+    font-size: 2.5rem;
+  }
+  
+  .registration-header p {
+    font-size: 2rem;
+  }
+  
+  .registration-form-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .registration-form-container .input-field {
+    font-size: 2rem;
+    padding: 3%;
+  }
+
+  .registration-form-container input {
+    height: 2em;
+  }
+
+  .registration-form-container select {
+    height: 2em;
+    padding: 0 2% !important;
+  }
+
+  #custom-dropdown {
+    font-size: 2rem;
+    border-width: 1px;
+  }
+
+  #submit {
+    font-size: 2rem;
+    height: auto;
+    width: auto;
+    padding: 0.5em 1em;
+  }
+}
+
 .working-info-container {
   background-color:hsl(271, 76%, 80%);
   color: white;
