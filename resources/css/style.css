@@ -105,7 +105,7 @@ body {
 }
 
 ::selection {
-  background-color:hsl(271, 65%, 60%);
+  background-color:hsl(271, 65%, 50%);
   color: white;
 }
 
@@ -129,7 +129,7 @@ header a {
 
 #header-nav-icon {
   font-size: 3.5rem;
-  color: hsl(271, 76%, 80%);
+  color: hsl(271, 76%, 70%);
   display: none;
   height: 100%;
   padding: 1rem 2rem;
@@ -188,13 +188,13 @@ header a {
 
   #header-nav-menu li {
     display: block;
-    background-color: hsl(271, 76%, 80%);
+    background-color: hsl(271, 76%, 70%);
     font-size: 2rem;
-    border-bottom: 2px solid hsla(271, 76%, 70%, 0.4);
+    border-bottom: 2px solid hsla(271, 76%, 60%, 0.4);
   }
 
   #header-nav-menu li:hover {
-    background-color: hsl(271, 76%, 70%);
+    background-color: hsl(271, 76%, 60%);
   }
 
   header a {
@@ -239,7 +239,7 @@ header a {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
-  background-color: hsl(271, 76%, 80%);
+  background-color: hsl(271, 76%, 70%);
   padding-right: 5%;
 }
 
@@ -261,7 +261,7 @@ header a {
 }
 
 #banner-registration-button {
-  color: hsl(271, 76%, 80%);
+  color: hsl(271, 76%, 70%);
   background-color: white;
   padding: 0.75rem 1rem;
   border-radius: 1rem;
@@ -272,7 +272,7 @@ header a {
 }
 
 #banner-registration-button:hover {
-  background-color: hsl(271, 76%, 70%);
+  background-color: hsl(271, 76%, 60%);
   color:white;
 }
 
@@ -372,7 +372,7 @@ header a {
 
 .about-me {
   padding: 5% 0;
-  background-color: hsl(271, 76%, 80%);
+  background-color: hsl(271, 76%, 70%);
   color: white;
   display: flex;
   justify-content: center;
@@ -456,7 +456,7 @@ header a {
     margin: 0 0.5rem;
     color: white;
     text-decoration: none;
-    background-color: hsl(271, 76%, 80%);
+    background-color: hsl(271, 76%, 70%);
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1rem;
 }
@@ -565,7 +565,7 @@ header a {
   align-items: center;
   flex-direction: column;
   padding: 5% 0;
-  background-color: hsl(271, 76%, 80%);
+  background-color: hsl(271, 76%, 70%);
   color: white;
 }
 
@@ -739,7 +739,7 @@ header a {
 
 #submit {
   color: white;
-  background-color:hsl(271, 76%, 80%);
+  background-color:hsl(271, 76%, 70%);
   border: none;
   width: 35%;
   height: 3rem;
@@ -827,7 +827,7 @@ header a {
 }
 
 .working-info-container {
-  background-color:hsl(271, 76%, 80%);
+  background-color:hsl(271, 76%, 70%);
   color: white;
   padding: 2.5%;
   display: flex;
@@ -883,7 +883,7 @@ header a {
   }
 
   .working-info-container h4 {
-    font-size: 3.75rem;
+    font-size: 3rem;
   }
 
   .working-info-container p {
@@ -895,7 +895,8 @@ header a {
   }
 
   .social-links {
-    font-size: 4rem;
+    font-size: 3.25rem;
+    margin-top: 2rem;
   }
 
   .social-links i {
@@ -941,7 +942,7 @@ header a {
   width: 4.2vw;
   height: 4.2vw;
   border-radius: 50%;
-  background-color: hsl(271, 65%, 60%);
+  background-color: hsl(271, 65%, 50%);
   display: none;
   justify-content: center;
   align-items: center;
