@@ -142,13 +142,13 @@ const sendEmail = () => {
       Body : notification
   }).then(message => {
     if (message === 'OK') {
-      successModal.style.display = 'block';
+      successModal.style.display = 'flex';
     } else {
       throw new Error('Email was not sent');
     }
   })
   .catch(error => {
-    errorModal.style.display = 'block';
+    errorModal.style.display = 'flex';
   });
 }
 
