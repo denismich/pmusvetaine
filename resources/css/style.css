@@ -171,7 +171,7 @@ header a {
   padding: 1rem;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   #header-nav-menu li {
     font-size: 1.25rem;
   }
@@ -241,7 +241,7 @@ header a {
   height: 100%;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .contact-info-container {
     display: none;
   }
@@ -298,7 +298,7 @@ header a {
   color:white;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   #banner-registration-button {
     font-size: 1.5rem;
   }
@@ -358,7 +358,7 @@ header a {
   font-family: 'Raleway', sans-serif;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .procedures-container {
     padding: 0;
     flex-wrap: wrap;
@@ -472,7 +472,7 @@ header a {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .about-me {
     flex-direction: column-reverse;
   }
@@ -597,7 +597,7 @@ header a {
   right: 2%;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .gallery-header {
     flex-direction: column;
     margin: 0 0 3rem;
@@ -727,7 +727,7 @@ header a {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .testimonials-header {
     font-size: 3rem;
   }
@@ -885,7 +885,7 @@ header a {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .registration-header h2 {
     font-size: 3rem;
   }
@@ -989,7 +989,7 @@ header a {
   margin-right: 1rem;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .working-info-container {
     padding: 5%;
   }
@@ -1065,7 +1065,7 @@ header a {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .copyright-privacy-info {
     font-size: 1.25rem;
     padding: 0 5%;
@@ -1111,7 +1111,7 @@ footer {
   top: 5.25vw;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   #scroll-to-top-button {
     width: 7.5vw;
     height: 7.5vw;
