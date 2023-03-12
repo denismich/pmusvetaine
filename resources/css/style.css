@@ -441,10 +441,10 @@ header a {
 }
 
 .about-me-photo {
-  width: 35%;
+  max-width: 35%;
   margin-right: 5%;
   box-shadow: 16px 16px 16px hsl(271, 65%, 60%);
-  max-height: 90vh;
+  max-height: 80vh;
 }
 
 .about-me-content {
@@ -492,7 +492,7 @@ header a {
 
   .about-me-photo {
     margin: 3rem auto;
-    width: 80%;
+    max-width: 80%;
   }
 }
 
@@ -549,7 +549,6 @@ header a {
   width: 20%;
   margin: 0.5%;
   cursor: pointer;
-  max-height: 90vh;
 }
 
 .gallery-photo.square {
