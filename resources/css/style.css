@@ -104,7 +104,7 @@ html {
   font-size: 1.05vw;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1050px) {
   html {
       font-size: 1.35vw;
   }
@@ -171,7 +171,13 @@ header a {
   padding: 1rem;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
+  #header-nav-menu li {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   header {
     justify-content: flex-end;
     height: 45px;
@@ -235,7 +241,7 @@ header a {
   height: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .contact-info-container {
     display: none;
   }
@@ -292,7 +298,13 @@ header a {
   color:white;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
+  #banner-registration-button {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .banner {
     padding: 5%;
     height: auto;
@@ -346,10 +358,10 @@ header a {
   font-family: 'Raleway', sans-serif;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
   .procedures-container {
-    flex-direction: column;
     padding: 0;
+    flex-wrap: wrap;
   }
 
   .procedures-header {
@@ -357,15 +369,21 @@ header a {
   }
 
   .procedure {
-    width: 100%;
-    margin-top: 1%;
+    width: 49.75%;
+    margin-top: 0.5%;
     margin-bottom: 0;
     position: relative;
     display: flex;
   }
 
-  .procedure:nth-last-of-type(1) {
-    margin-bottom: 1%;
+  .procedure:nth-last-of-type(1),
+  .procedure:nth-last-of-type(2) {
+    margin-bottom: 0.5%;
+  }
+
+  .procedure:nth-last-of-type(2),
+  .procedure:nth-last-of-type(4) {
+    margin-right: 0.5%;
   }
 
   .procedure img {
@@ -374,7 +392,7 @@ header a {
   }
 
   .procedure h4 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
     position: absolute;
     top: 50%;
@@ -382,6 +400,34 @@ header a {
     transform: translate(-50%, -50%);
     margin-top: 0;
     font-family: 'Playfair Display', serif;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .procedures-container {
+    flex-direction: column;
+  }
+
+  .procedure {
+    width: 100%;
+    margin-top: 1%;
+  }
+
+  .procedure:nth-last-of-type(2) {
+    margin-bottom: 1%;
+  }
+
+  .procedure:nth-last-of-type(2) {
+    margin-bottom: 0;
+  }
+
+  .procedure:nth-last-of-type(2),
+  .procedure:nth-last-of-type(4) {
+    margin-right: 0;
+  }
+
+  .procedure h4 {
+    font-size: 4rem;
   }
 }
 
@@ -420,13 +466,13 @@ header a {
   margin-bottom: 2rem;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1050px) {
   .about-me-content p {
     font-size: 1.1rem;
   }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
   .about-me {
     flex-direction: column-reverse;
   }
@@ -436,7 +482,7 @@ header a {
   }
 
   .about-me-content h2 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .about-me-content p {
@@ -446,6 +492,16 @@ header a {
   .about-me-photo {
     margin: 3rem auto;
     width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-me-content h2 {
+    font-size: 5rem;
+  }
+
+  .about-me-content p {
+    font-size: 2rem;
   }
 }
 
@@ -476,7 +532,7 @@ header a {
     font-size: 1.1rem;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1050px) {
   .follow-button {
     font-size: 0.9rem;
   }
@@ -541,26 +597,50 @@ header a {
   right: 2%;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
   .gallery-header {
     flex-direction: column;
     margin: 0 0 3rem;
   }
 
   .gallery-header h2 {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 3rem;
   }
 
   .follow-buttons {
     width: 80%;
+    text-align: center;
+  }
+
+  .follow-button {
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.75rem;
+  }
+
+  .gallery-photo {
+    width: 40%;
+  }
+
+  .full-screen-nav {
+    font-size: 4rem !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .gallery-header h2 {
+    font-size: 5rem;
+  }
+
+  .follow-buttons {
+    width: 60%;
   }
 
   .follow-button {
     display: block;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .gallery-photo {
@@ -635,7 +715,7 @@ header a {
   width: 16px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1050px) {
   .dot {
     height: 8px;
     width: 8px;
@@ -647,13 +727,23 @@ header a {
   }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
+  .testimonials-header {
+    font-size: 3rem;
+  }
+
+  .slide {
+    margin: 4vw 10vw 5.25vw;
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .testimonials-header {
     font-size: 3.75rem;
   }
   
   .slide {
-    margin: 4vw 10vw 5.25vw;
     font-size: 1.75rem;
   }
 }
@@ -795,17 +885,17 @@ header a {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
   .registration-header h2 {
-    font-size: 3.75rem;
+    font-size: 3rem;
   }
   
   .registration-header p {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   
   .registration-form-container {
-    width: 80%;
+    width: 70%;
   }
 
   .registration-form-container .input-field {
@@ -840,13 +930,27 @@ header a {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .registration-header h2 {
+    font-size: 3.75rem;
+  }
+  
+  .registration-header p {
+    font-size: 2rem;
+  }
+
+  .registration-form-container {
+    width: 80%;
+  }
+}
+
 .working-info-container {
   background-color:hsl(271, 76%, 70%);
   color: white;
   padding: 2.5%;
   display: flex;
   justify-content: space-around;
-  align-items:start;
+  align-items: start;
 }
 
 .working-info-container img {
@@ -854,7 +958,7 @@ header a {
   height: 90%;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1050px) {
   .working-info-container img {
     width: 18%;
     height: auto;
@@ -885,17 +989,50 @@ header a {
   margin-right: 1rem;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
   .working-info-container {
-    padding: 7% 10%;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 5%;
   }
 
   .working-info-container img {
     display: none;
   }
 
+  .working-info-container h4 {
+    font-size: 2.25rem;
+  }
+
+  .working-info-container p {
+    font-size: 1.5rem;
+  }
+
+  .social-links {
+    font-size: 2.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links i {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .working-info-container {
+    padding: 7% 10%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .working-contacts {
+    margin-top: 2rem;
+  }
+
+  .social-links {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 475px) {
   .working-info-container h4 {
     font-size: 3rem;
   }
@@ -904,17 +1041,8 @@ header a {
     font-size: 2rem;
   }
 
-  .working-contacts {
-    margin-top: 2rem;
-  }
-
   .social-links {
     font-size: 3.25rem;
-    margin-top: 2rem;
-  }
-
-  .social-links i {
-    margin-right: 2rem;
   }
 }
 
@@ -937,7 +1065,14 @@ header a {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
+  .copyright-privacy-info {
+    font-size: 1.25rem;
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .copyright-privacy-info {
     font-size: 1.5rem;
     text-align: center;
@@ -976,12 +1111,19 @@ footer {
   top: 5.25vw;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
+  #scroll-to-top-button {
+    width: 7.5vw;
+    height: 7.5vw;
+  }
+}
+ 
+@media only screen and (max-width: 600px) {
   #scroll-to-top-button {
     width: 10vw;
     height: 10vw;
   }
-  
+
   main,
   footer {
     top: 45px;
