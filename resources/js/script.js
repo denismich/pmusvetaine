@@ -1,14 +1,20 @@
 //Header navigation bar icon
 const headerNavIcon = document.querySelector('#header-nav-icon');
-headerNavIcon.addEventListener('click', () => {
+headerNavIcon.addEventListener('click', function() {
   document.querySelector('#header-nav-menu').classList.toggle('visible');
   headerNavIcon.classList.toggle('open');
 });
 
 //Banner registration button
-document.querySelector('#banner-registration-button').addEventListener('click', function() { window.scroll(
-  0, 500//document.querySelector('#registration-section').offsetTop
-  )});
+document.querySelector('#banner-registration-button').addEventListener('click', function() {
+  try {
+  window.scrollTo({
+  top: document.querySelector('#registration-section').offsetTop,
+  behavior: 'smooth'
+});
+} catch {
+  window.scrollTo(0, document.querySelector('#registration-section').offsetTop)
+}});
 
 //Gallery images enlarging
 const imageContainer = document.querySelector('#gallery-photos-container');
