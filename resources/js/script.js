@@ -6,9 +6,9 @@ headerNavIcon.addEventListener('click', () => {
 });
 
 //Banner registration button
-document.querySelector('#banner-registration-button').addEventListener('click', () => window.scroll(
+document.querySelector('#banner-registration-button').addEventListener('click', function() { window.scroll(
   0, 500//document.querySelector('#registration-section').offsetTop
-  ));
+  )});
 
 //Gallery images enlarging
 const imageContainer = document.querySelector('#gallery-photos-container');
