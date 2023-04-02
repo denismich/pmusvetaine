@@ -11,7 +11,7 @@ document.querySelector('#banner-registration-button').addEventListener('click', 
   window.scrollTo({
   top: document.querySelector('#registration-section').offsetTop,
   behavior: 'smooth'
-});
+})
 } catch {
   window.scrollTo(0, document.querySelector('#registration-section').offsetTop)
 }});
