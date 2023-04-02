@@ -173,7 +173,7 @@ header a {
   cursor: pointer;
 }
 
-#header-nav-icon:hover {
+#header-nav-icon {
   background-color: white;
 }
 
@@ -405,7 +405,7 @@ header a {
 
 .procedure img {
   width: 100%;
-  aspect-ratio: 3/2;
+  height: 15.33vw;
 }
 
 .procedure h4 {
@@ -449,7 +449,7 @@ header a {
   .procedure img {
     -webkit-filter: brightness(60%);
             filter: brightness(60%);
-    aspect-ratio: 7/4;
+    height: 28.43vw;
   }
 
   .procedure h4 {
@@ -494,6 +494,10 @@ header a {
 
   .procedure h4 {
     font-size: 4rem;
+  }
+
+  .procedure img {
+    height: 57.14vw;
   }
 }
 
@@ -639,11 +643,11 @@ header a {
 }
 
 .gallery-photo.square {
-  aspect-ratio: 1/1;
+  height: 18vw;
 }
 
 .gallery-photo.rectangle {
-  aspect-ratio: 3/4;
+  height: 24vw;
 }
 
 #full-screen-container {
@@ -719,6 +723,14 @@ header a {
     width: 40%;
   }
 
+  .gallery-photo.square {
+    height: 36vw;
+  }
+
+  .gallery-photo.rectangle {
+    height: 48vw;
+  }
+
   .full-screen-nav {
     font-size: 4rem !important;
   }
@@ -741,6 +753,14 @@ header a {
   .gallery-photo {
     width: 80%;
     margin-bottom: 3rem;
+  }
+
+  .gallery-photo.square {
+    height: 72vw;
+  }
+
+  .gallery-photo.rectangle {
+    height: 96vw;
   }
 
   .full-screen-nav {
@@ -928,6 +948,7 @@ header a {
 .registration-form-container select {
   width: 100%;
   height: 3rem;
+  appearance: unset;
 }
 
 .registration-form-container textarea {
