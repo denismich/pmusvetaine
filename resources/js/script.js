@@ -6,10 +6,10 @@ headerNavIcon.addEventListener('click', () => {
 });
 
 //Banner registration button
-document.querySelector('#banner-registration-button').addEventListener('click', () => window.scrollTo({
+document.querySelector('#banner-registration-button').addEventListener('click', () => typeof window.scroll === 'function' ? window.scrollTo({
   top: document.querySelector('#registration-section').offsetTop,
   behavior: 'smooth'
-}));
+}) : window.scrollTo(0, document.querySelector('#registration-section').offsetTop));
 
 //Gallery images enlarging
 const imageContainer = document.querySelector('#gallery-photos-container');
