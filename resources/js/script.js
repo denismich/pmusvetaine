@@ -147,7 +147,7 @@ const sendEmail = function() {
     Procedūra:  ${procedure} <br>Žinutė:  ${message}`;
 
   Email.send({
-      SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0 d',
+      SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
       To : 'dmichailovskij@gmail.com',
       From : 'dmichailovskij@gmail.com',
       Subject : 'Registracijos Procedūrai Užklausa',
