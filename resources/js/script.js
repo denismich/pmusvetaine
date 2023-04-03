@@ -1,3 +1,5 @@
+"use strict";
+
 //Header navigation bar icon
 const headerNavIcon = document.querySelector('#header-nav-icon');
 headerNavIcon.addEventListener('click', function() {
