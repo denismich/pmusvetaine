@@ -171,7 +171,9 @@ const closeModalFromOutside = function(event) {
   }
 }
 
-modalCloseButtons.forEach(function(button) {button.addEventListener('click', closeModal)});
+for(let i = 0; i < modalCloseButtons.length; i++) {
+  modalCloseButtons[i].addEventListener('click', closeModal);
+}
 
 document.body.addEventListener('click', closeModalFromOutside);
 
