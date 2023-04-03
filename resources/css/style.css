@@ -1076,6 +1076,10 @@ header a {
     border-width: 1px;
   }
 
+  #date {
+    padding: 1.5%;
+  }
+
   #submit {
     font-size: 2rem;
     height: auto;
