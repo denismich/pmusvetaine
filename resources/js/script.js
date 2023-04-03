@@ -64,10 +64,10 @@ const showSlides = function(n) {
   n > slides.length && (slideIndex = 1);
   n < 1 && (slideIndex = slides.length);
 
-  for (const slide of slides) {
+  for (let slide of slides) {
       slide.style.display = 'none';
   }
-  for (const dot of dots) {
+  for (let dot of dots) {
       dot.classList.remove('active');
   }
   slides[slideIndex-1].style.display = 'block';
