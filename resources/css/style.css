@@ -167,9 +167,9 @@ header a {
   display: none;
   height: 100%;
   padding: 1rem 2rem;
-  -webkit-box-align: center;
+  /*-webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: center;*/
   cursor: pointer;
 }
 
