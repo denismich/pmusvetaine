@@ -120,7 +120,9 @@ select.addEventListener('click', toggleDropdown);
 
 document.body.addEventListener('click', closeDropdownFromOutside);
 
-dropdownOptions.forEach(function(option) {option.addEventListener('click', selectOption)});
+for(let i = 0; i < dropdownOptions.length; i++) {
+  dropdownOptions[i].addEventListener('click', selectOption);
+}
 
 //Email sending on registration
 const form = document.querySelector('#registration-form');
