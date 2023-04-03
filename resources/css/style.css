@@ -212,7 +212,7 @@ header a {
   #header-nav-icon {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
-    display: inline;
+    display: inline-flex;
   }
 
   #header-nav-icon::-moz-selection {
