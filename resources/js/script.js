@@ -55,7 +55,7 @@ const dots = document.getElementsByClassName('dot');
 let slideIndex = 1;
 let myTimer;
 
-const showSlides = n => {
+const showSlides = function(n) {
   clearInterval(myTimer);
   myTimer = setInterval(function() {showSlides(slideIndex += 1)}, 4000);
 
@@ -75,7 +75,7 @@ const showSlides = n => {
 }
 
 const pause = function() {clearInterval(myTimer)};
-const resume = function() {myTimer = setInterval(() => showSlides(slideIndex += 1), 4000)};
+const resume = function() {myTimer = setInterval(function() {showSlides(slideIndex += 1)}, 4000)};
 
 window.addEventListener('load', function() {
   showSlides(slideIndex);
