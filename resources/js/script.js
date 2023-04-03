@@ -22,12 +22,16 @@ document.querySelector('#banner-registration-button').addEventListener('click', 
 const imageContainer = document.querySelector('#gallery-photos-container');
 const fullScreenContainer = document.querySelector('#full-screen-container');
 const fullScreenImage = document.querySelector('#full-screen-image');
+const imageArray = [];
+for(let i = 0; i < imageContainer.children.length; i++) {
+  imageArray.push(imageContainer.children[i]);
+}
 
 let currentImageIndex = 0;
 
 imageContainer.addEventListener('click', function(event) {
   if (event.target.tagName === 'IMG') {
-      currentImageIndex = Array.from(imageContainer.children).indexOf(event.target);
+      currentImageIndex = imageArray.indexOf(event.target);
       fullScreenImage.src = event.target.src;
       fullScreenContainer.style.display = 'block';
   }
