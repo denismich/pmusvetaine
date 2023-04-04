@@ -938,6 +938,11 @@ header a {
   opacity: 1;
 }
 
+.registration-form-container select::-webkit-input-placeholder {
+  opacity: 1;
+  color: hsl(0, 0%, 42%);
+}
+
 .registration-form-container input {
   width: 48%;
   height: 3rem;
