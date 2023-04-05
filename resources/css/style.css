@@ -919,6 +919,7 @@ header a {
 }
 
 .registration-form-container .input-field::-webkit-input-placeholder {
+  color:hsl(0, 0%, 42%);
   opacity: 1;
 }
 
