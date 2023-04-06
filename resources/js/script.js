@@ -92,8 +92,8 @@ window.addEventListener('load', function() {
   slideshowContainer.addEventListener('mouseleave', resume)
 });
 
-for (var i = 0; i < dots.length; i++) {
-  dots[i].addEventListener('click', function() {showSlides(slideIndex = i + 1)});
+for (let i = 0; i < dots.length; i++) {
+  dots[i].addEventListener('click', function() {showSlides(slideIndex = i + 1);});
 }
 
 //Registration form select dropdown
