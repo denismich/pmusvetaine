@@ -22,7 +22,7 @@ document.querySelector('#banner-registration-button').addEventListener('click', 
 }});
 
 //Gallery images enlarging
-/*var imageContainer = document.querySelector('#gallery-photos-container');
+var imageContainer = document.querySelector('#gallery-photos-container');
 var fullScreenContainer = document.querySelector('#full-screen-container');
 var fullScreenImage = document.querySelector('#full-screen-image');
 var imageArray = [];
@@ -57,7 +57,7 @@ document.querySelector('#next-button').addEventListener('click', function() {
 });
 
 //Testimonials slides
-var dots = document.getElementsByClassName('dot');
+/*var dots = document.getElementsByClassName('dot');
 
 var slideIndex = 1;
 var myTimer;
