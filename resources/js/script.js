@@ -57,7 +57,7 @@ document.querySelector('#next-button').addEventListener('click', function() {
 });
 
 //Testimonials slides
-/*var dots = document.getElementsByClassName('dot');
+var dots = document.getElementsByClassName('dot');
 
 var slideIndex = 1;
 var myTimer;
@@ -97,7 +97,7 @@ for (var i = 0; i < dots.length; i++) {
 }
 
 //Registration form select dropdown
-var select = document.querySelector('#procedure');
+/*var select = document.querySelector('#procedure');
 var dropdown = document.querySelector('#custom-dropdown');
 var dropdownOptions = document.querySelectorAll('#custom-dropdown .option');
 
