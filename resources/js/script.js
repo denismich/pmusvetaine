@@ -6,8 +6,9 @@
 //Header navigation bar icon
 const headerNavIcon = document.querySelector('#header-nav-icon');
 headerNavIcon.addEventListener('click', function() {
-  document.querySelector('#header-nav-menu').classList.toggle('visible');
-  headerNavIcon.classList.toggle('open');
+  headerNavIcon.style.backgroundColor = 'red';
+  /*document.querySelector('#header-nav-menu').classList.toggle('visible');
+  headerNavIcon.classList.toggle('open');*/
 });
 
 //Banner registration button
