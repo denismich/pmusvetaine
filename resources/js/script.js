@@ -11,7 +11,7 @@ headerNavIcon.addEventListener('click', function() {
 });
 
 //Banner registration button
-/*document.querySelector('#banner-registration-button').addEventListener('click', function() {
+document.querySelector('#banner-registration-button').addEventListener('click', function() {
   try {
   window.scrollTo({
   top: document.querySelector('#registration-section').offsetTop,
@@ -22,7 +22,7 @@ headerNavIcon.addEventListener('click', function() {
 }});
 
 //Gallery images enlarging
-var imageContainer = document.querySelector('#gallery-photos-container');
+/*var imageContainer = document.querySelector('#gallery-photos-container');
 var fullScreenContainer = document.querySelector('#full-screen-container');
 var fullScreenImage = document.querySelector('#full-screen-image');
 var imageArray = [];
