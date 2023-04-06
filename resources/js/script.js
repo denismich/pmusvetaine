@@ -11,7 +11,7 @@ headerNavIcon.addEventListener('click', function() {
 });
 
 //Banner registration button
-document.querySelector('#banner-registration-button').addEventListener('click', function() {
+/*document.querySelector('#banner-registration-button').addEventListener('click', function() {
   try {
   window.scrollTo({
   top: document.querySelector('#registration-section').offsetTop,
@@ -198,4 +198,4 @@ scrollToTopButton.addEventListener('click', function() {
   } catch(err) {
     window.scrollTo(0, 0)
   }
-  });
+  });*/
