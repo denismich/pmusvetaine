@@ -92,7 +92,7 @@ window.addEventListener('load', function() {
   slideshowContainer.addEventListener('mouseleave', resume)
 });
 
-for (let i = 0; i < dots.length; i++) {
+for (var i = 0; i < dots.length; i++) {
   dots[i].addEventListener('click', function() {showSlides(slideIndex = i + 1);});
 }
 
