@@ -148,8 +148,7 @@ var sendEmail = function() {
   var visitDate = document.querySelector('#date').value;
   var procedure = document.querySelector('#procedure').value;
   var message = document.querySelector('#message').value;
-  var notification = `Registracijos procedūrai užklausa: <br><br>Vardas:  ${name} <br>El. paštas:  ${email} <br>Telefonas:  ${phone} <br>Data:  ${visitDate} <br>
-    Procedūra:  ${procedure} <br>Žinutė:  ${message}`;
+  var notification = `Registracijos procedūrai užklausa: <br><br>Vardas:  `;
 
   Email.send({
       SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
