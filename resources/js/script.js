@@ -151,7 +151,10 @@ var sendEmail = function() {
   var notification = 'Registracijos procedūrai užklausa: <br><br>Vardas:  '+ name + '<br>El. paštas:  ' + email + '<br>Telefonas:  ' + phone + '<br>Data:  ' + visitDate + '<br>Procedūra:  ' + procedure + '<br>Žinutė:  ' + message;
 
   Email.send({
-      SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
+      Host : "smtp.elasticemail.com",
+      Username : "dmichailovskij@gmail.com",
+      Password : "F9762625EE638A1F582C8D22C1AC1B88E841",
+      //SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
       To : 'dmichailovskij@gmail.com',
       From : 'dmichailovskij@gmail.com',
       Subject : 'Registracijos Procedūrai Užklausa',
