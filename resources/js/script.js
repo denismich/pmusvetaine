@@ -134,7 +134,7 @@ for(var i = 0; i < dropdownOptions.length; i++) {
 }
 
 //Email sending on registration
-/*var form = document.querySelector('#registration-form');
+var form = document.querySelector('#registration-form');
 
 var successModal = document.querySelector('#success-modal');
 var errorModal = document.querySelector('#error-modal');
@@ -185,7 +185,7 @@ for(var i = 0; i < modalCloseButtons.length; i++) {
 }
 
 document.body.addEventListener('click', closeModalFromOutside);
-*/
+
 //Button for scrolling to top
 var scrollToTopButton = document.querySelector('#scroll-to-top-button');
 
