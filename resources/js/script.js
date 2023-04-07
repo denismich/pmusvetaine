@@ -99,7 +99,7 @@ for (var i = 0; i < dots.length; i++) {
 }
 
 //Registration form select dropdown
-/*var select = document.querySelector('#procedure');
+var select = document.querySelector('#procedure');
 var dropdown = document.querySelector('#custom-dropdown');
 var dropdownOptions = document.querySelectorAll('#custom-dropdown .option');
 
@@ -134,7 +134,7 @@ for(var i = 0; i < dropdownOptions.length; i++) {
 }
 
 //Email sending on registration
-var form = document.querySelector('#registration-form');
+/*var form = document.querySelector('#registration-form');
 
 var successModal = document.querySelector('#success-modal');
 var errorModal = document.querySelector('#error-modal');
