@@ -185,7 +185,7 @@ for(var i = 0; i < modalCloseButtons.length; i++) {
 }
 
 document.body.addEventListener('click', closeModalFromOutside);
-
+*/
 //Button for scrolling to top
 var scrollToTopButton = document.querySelector('#scroll-to-top-button');
 
@@ -200,4 +200,4 @@ scrollToTopButton.addEventListener('click', function() {
   } catch(err) {
     window.scrollTo(0, 0)
   }
-  });*/
+  });
