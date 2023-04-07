@@ -83,7 +83,7 @@ var showSlides = function(n) {
 var pause = function() {clearInterval(myTimer)};
 var resume = function() {myTimer = setInterval(function() {showSlides(slideIndex += 1)}, 4000)};
 
-window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
   showSlides(slideIndex);
 
   var slideshowContainer = document.querySelector('#slideshow-container');
