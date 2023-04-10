@@ -1,7 +1,34 @@
 "use strict";
 
 /* SmtpJS.com - v3.0.0 */
-var Email = { send: function (a) { return new Promise(function (n, e) { a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) }) }, ajaxPost: function (e, n, t) { var a = Email.createCORSRequest("POST", e); a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () { var e = a.responseText; null != t && t(e) }, a.send(n) }, ajax: function (e, n) { var t = Email.createCORSRequest("GET", e); t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send() }, createCORSRequest: function (e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t } };
+var Email = { send: function (a) {
+  return new Promise(function (n, e) {
+    a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send";
+    var t = JSON.stringify(a);
+    Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) {
+      n(e);
+    });
+  });
+}, 
+ajaxPost: function (e, n, t) {
+  var a = Email.createCORSRequest("POST", e);
+  a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () {
+    var e = a.responseText;
+    null != t && t(e);
+  }, a.send(n);
+},
+ajax: function (e, n) {
+  var t = Email.createCORSRequest("GET", e);
+  t.onload = function () {
+    var e = t.responseText;
+    null != n && n(e)
+  }, t.send()
+},
+createCORSRequest: function (e, n) {
+  var t = new XMLHttpRequest;
+  return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t;
+}
+};
 
 //Header navigation bar icon
 var headerNavIcon = document.querySelector('#header-nav-icon');
@@ -151,10 +178,10 @@ var sendEmail = function() {
   var notification = 'Registracijos procedūrai užklausa: <br><br>Vardas:  '+ name + '<br>El. paštas:  ' + email + '<br>Telefonas:  ' + phone + '<br>Data:  ' + visitDate + '<br>Procedūra:  ' + procedure + '<br>Žinutė:  ' + message;
 
   Email.send({
-      Host : "smtp.elasticemail.com",
+      /*Host : "smtp.elasticemail.com",
       Username : "dmichailovskij@gmail.com",
-      Password : "F9762625EE638A1F582C8D22C1AC1B88E841",
-      //SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
+      Password : "F9762625EE638A1F582C8D22C1AC1B88E841",*/
+      SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
       To : 'dmichailovskij@gmail.com',
       From : 'dmichailovskij@gmail.com',
       Subject : 'Registracijos Procedūrai Užklausa',
