@@ -32,7 +32,7 @@ createCORSRequest: function (e, n) {
   return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t;
 }
 };
-console.log(typeof Promise);
+
 //Header navigation bar icon
 var headerNavIcon = document.querySelector('#header-nav-icon');
 headerNavIcon.addEventListener('click', function() {
