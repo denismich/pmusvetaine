@@ -125,9 +125,6 @@ for (var i = 0; i < dots.length; i++) {
   })(i);
 }
 
-//Registration form date placeholder
-document.querySelector('#date').placeholder = 'Data';
-
 //Registration form select dropdown
 var select = document.querySelector('#procedure');
 var dropdown = document.querySelector('#custom-dropdown');
