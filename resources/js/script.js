@@ -26,16 +26,7 @@ ajax: function (e, n) {
 },
 createCORSRequest: function (e, n) {
   var t = new XMLHttpRequest;
-  if ("withCredentials" in t) {
-    t.withCredentials = false; // disable SSL verification
-    t.open(e, n, true);
-  } else if (typeof XDomainRequest != "undefined") {
-    t = new XDomainRequest();
-    t.open(e, n);
-  } else {
-    t = null;
-  }
-  return t;
+  return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t;
 }
 };
 
