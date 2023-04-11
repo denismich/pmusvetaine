@@ -1128,6 +1128,10 @@ header a {
   height: 10.26vw;
 }
 
+.working-info-container a {
+  color: white;
+}
+
 @media only screen and (max-width: 1050px) {
   .working-info-container img {
     width: 18%;
@@ -1288,6 +1292,10 @@ header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+#scroll-to-top-button i {
+  margin: 0 auto;
 }
 
 main,
