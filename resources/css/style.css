@@ -925,6 +925,7 @@ header a {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  border-radius: 0;
 }
 
 .registration-form-container .input-field::-webkit-input-placeholder {
@@ -958,7 +959,6 @@ header a {
 .registration-form-container select {
   width: 100%;
   height: 3rem;
-  border-radius: 0;
 }
 
 .registration-form-container textarea {
