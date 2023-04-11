@@ -25,9 +25,6 @@ ajax: function (e, n) {
   }, t.send()
 },
 createCORSRequest: function (e, n) {
-  if (!XMLHttpRequest) {
-    XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-  };
   var t = new XMLHttpRequest;
   return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t;
 }
