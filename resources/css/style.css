@@ -380,6 +380,10 @@ header a {
   }
 }
 
+.procedures-section {
+  background-color: white;
+}
+
 .procedures-header {
   text-align: center;
   padding-top: 4%;
@@ -588,6 +592,7 @@ header a {
 
 .gallery {
   padding: 5%;
+  background-color: white;
 }
 
 .gallery-header {
@@ -887,6 +892,7 @@ header a {
 
 #registration-section {
   padding: 5.5% 5% 5%;
+  background-color: white;
 }
 
 .registration-header h2 {
@@ -916,6 +922,9 @@ header a {
   font-size: 1rem;
   outline: none;
   background-color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .registration-form-container .input-field::-webkit-input-placeholder {
@@ -949,8 +958,6 @@ header a {
 .registration-form-container select {
   width: 100%;
   height: 3rem;
-  -webkit-appearance: none;
-  appearance: none;
   border-radius: 0;
 }
 
@@ -1233,6 +1240,7 @@ header a {
   padding: 0 10%;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9rem;
+  background-color: white;
 }
 
 .copyright {
