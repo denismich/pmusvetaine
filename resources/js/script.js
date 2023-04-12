@@ -178,26 +178,23 @@ var sendEmail = function() {
   var procedure = document.querySelector('#procedure').value;
   var message = document.querySelector('#message').value;
   var notification = 'Registracijos procedūrai užklausa: <br><br>Vardas:  '+ name + '<br>El. paštas:  ' + email + '<br>Telefonas:  ' + phone + '<br>Data:  ' + visitDate + '<br>Procedūra:  ' + procedure + '<br>Žinutė:  ' + message;
-  try {
-    Email.send({
+  
+  Email.send({
       SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
       To : 'dmichailovskij@gmail.com',
       From : 'dmichailovskij@gmail.com',
       Subject : 'Registracijos Procedūrai Užklausa',
       Body : notification
-    }).then(function(message) {
-      if (message === 'OK') {
-        successModal.style.display = 'flex';
-      } else {
-        throw new Error('Email was not sent');
-      }
-    })
-    .catch(function(error) {
-      errorModal.style.display = 'flex';
-    });
-  } catch(error) {
-    console.log(error);
-  }
+  }).then(function(message) {
+    if (message === 'OK') {
+      successModal.style.display = 'flex';
+    } else {
+      throw new Error('Email was not sent');
+    }
+  })
+  .catch(function(error) {
+    errorModal.style.display = 'flex';
+  });
 }
 
 var closeModal = function() {
