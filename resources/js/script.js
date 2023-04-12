@@ -5,6 +5,7 @@ var Email = { send: function (a) {
   return new Promise(function (n, e) {
     a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send";
     var t = JSON.stringify(a);
+    setTimeout(function() {}, 1000);
     Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) {
       n(e);
     });
@@ -26,21 +27,8 @@ ajax: function (e, n) {
 },
 createCORSRequest: function (e, n) {
   var t = new XMLHttpRequest;
-
-  // add this line
-  t._restrictedHeaders = {};
-
-  if ("withCredentials" in t) {
-    t.open(e, n, !0);
-  } else if ("undefined" != typeof XDomainRequest) {
-    t = new XDomainRequest;
-    t.open(e, n);
-  } else {
-    t = null;
-  }
-
-  return t;
-} 
+  return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t;
+}
 };
 
 //Header navigation bar icon
