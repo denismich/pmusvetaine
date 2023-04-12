@@ -187,10 +187,8 @@ var sendEmail = function() {
       Body : notification
   }).then(function(message) {
     if (message === 'OK') {
-      console.log('Promise then works OK');
       successModal.style.display = 'flex';
     } else {
-      console.log('Promise catch works OK');
       throw new Error('Email was not sent');
     }
   })
