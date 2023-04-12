@@ -1,11 +1,20 @@
 "use strict";
 
+function syncSetTimeout(callback, delay) {
+  const start = Date.now();
+  let elapsed = 0;
+  while (elapsed < delay) {
+    elapsed = Date.now() - start;
+  }
+  callback();
+}
+
 /* SmtpJS.com - v3.0.0 */
 var Email = { send: function (a) {
+  syncSetTimeout(function() {}, 1000);
   return new Promise(function (n, e) {
     a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send";
     var t = JSON.stringify(a);
-    setTimeout(function() {}, 1000);
     Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) {
       n(e);
     });
