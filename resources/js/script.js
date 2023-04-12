@@ -40,7 +40,7 @@ createCORSRequest: function (e, n) {
   }
 
   return t;
-}
+} 
 };
 
 //Header navigation bar icon
