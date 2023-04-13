@@ -1,10 +1,5 @@
 "use strict";
 
-//xhr2-script
-document.querySelector('#xhr2-script').addEventListener('error', function(error) {
-  console.log(error);
-});
-
 /* SmtpJS.com - v3.0.0 */
 var Email = { send: function (a) {
   return new Promise(function (n, e) {
@@ -184,22 +179,26 @@ var sendEmail = function() {
   var message = document.querySelector('#message').value;
   var notification = 'Registracijos procedūrai užklausa: <br><br>Vardas:  '+ name + '<br>El. paštas:  ' + email + '<br>Telefonas:  ' + phone + '<br>Data:  ' + visitDate + '<br>Procedūra:  ' + procedure + '<br>Žinutė:  ' + message;
   
-  Email.send({
-      SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
-      To : 'dmichailovskij@gmail.com',
-      From : 'dmichailovskij@gmail.com',
-      Subject : 'Registracijos Procedūrai Užklausa',
-      Body : notification
-  }).then(function(message) {
-    if (message === 'OK') {
-      successModal.style.display = 'flex';
-    } else {
-      throw new Error('Email was not sent');
-    }
-  })
-  .catch(function(error) {
-    errorModal.style.display = 'flex';
-  });
+  try {
+    Email.send({
+        SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
+        To : 'dmichailovskij@gmail.com',
+        From : 'dmichailovskij@gmail.com',
+        Subject : 'Registracijos Procedūrai Užklausa',
+        Body : notification
+    }).then(function(message) {
+      if (message === 'OK') {
+        successModal.style.display = 'flex';
+      } else {
+        throw new Error('Email was not sent');
+      }
+    })
+    .catch(function(error) {
+      errorModal.style.display = 'flex';
+    });
+  } catch(error) {
+    console.log(error);
+  }
 }
 
 var closeModal = function() {
