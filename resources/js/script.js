@@ -1,5 +1,10 @@
 "use strict";
 
+//xhr2-script
+document.querySelector('#xhr2-script').addEventListener('error', function(error) {
+  console.log(error);
+});
+
 /* SmtpJS.com - v3.0.0 */
 var Email = { send: function (a) {
   return new Promise(function (n, e) {
