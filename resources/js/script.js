@@ -12,17 +12,26 @@ var Email = { send: function (a) {
 }, 
 ajaxPost: function (e, n, t) {
   var a = Email.createCORSRequest("POST", e);
-  a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () {
+  a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), 
+  a.onload = function () {
     var e = a.responseText;
     null != t && t(e);
-  }, a.send(n);
+  },
+  a.onerror = function () {
+    console.log("An error sucessfully reported");
+  },
+  a.send(n);
 },
 ajax: function (e, n) {
   var t = Email.createCORSRequest("GET", e);
   t.onload = function () {
     var e = t.responseText;
     null != n && n(e)
-  }, t.send()
+  }, 
+  t.onerror = function () {
+    console.log("An error sucessfully reported");
+  },
+  t.send()
 },
 createCORSRequest: function (e, n) {
   var t = new XMLHttpRequest;
@@ -179,26 +188,22 @@ var sendEmail = function() {
   var message = document.querySelector('#message').value;
   var notification = 'Registracijos procedūrai užklausa: <br><br>Vardas:  '+ name + '<br>El. paštas:  ' + email + '<br>Telefonas:  ' + phone + '<br>Data:  ' + visitDate + '<br>Procedūra:  ' + procedure + '<br>Žinutė:  ' + message;
   
-  try {
-    Email.send({
-        SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
-        To : 'dmichailovskij@gmail.com',
-        From : 'dmichailovskij@gmail.com',
-        Subject : 'Registracijos Procedūrai Užklausa',
-        Body : notification
-    }).then(function(message) {
-      if (message === 'OK') {
-        successModal.style.display = 'flex';
-      } else {
-        throw new Error('Email was not sent');
-      }
-    })
-    .catch(function(error) {
-      errorModal.style.display = 'flex';
-    });
-  } catch(error) {
-    console.log(error);
-  }
+  Email.send({
+      SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
+      To : 'dmichailovskij@gmail.com',
+      From : 'dmichailovskij@gmail.com',
+      Subject : 'Registracijos Procedūrai Užklausa',
+      Body : notification
+  }).then(function(message) {
+    if (message === 'OK') {
+      successModal.style.display = 'flex';
+    } else {
+      throw new Error('Email was not sent');
+    }
+  })
+  .catch(function(error) {
+    errorModal.style.display = 'flex';
+  });
 }
 
 var closeModal = function() {
