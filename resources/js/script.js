@@ -18,7 +18,7 @@ ajaxPost: function (e, n, t) {
     null != t && t(e);
   },
   a.onerror = function () {
-    console.log('An error has occured');
+    errorModal.style.display = 'flex';
   }, a.send(n);
 },
 ajax: function (e, n) {
@@ -28,7 +28,7 @@ ajax: function (e, n) {
     null != n && n(e)
   },
   t.onerror = function () {
-    console.log('An error has occured');
+    errorModal.style.display = 'flex';
   }, t.send()
 },
 createCORSRequest: function (e, n) {
