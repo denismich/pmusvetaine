@@ -1,23 +1,13 @@
 "use strict";
 
 /* SmtpJS.com - v3.0.0 */
-var Email = { send: function(a) {
-  return new Promise(function(n, e) {
-    a.nocache = Math.floor(1e6 * Math.random() + 1),
-    a.Action = "Send";
+var Email = { send: function (a) {
+  return new Promise(function (n, e) {
+    a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send";
     var t = JSON.stringify(a);
-
-    Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (response) {
-      if (response === 'OK') {
-        n(response);
-      } else {
-        e(response);
-      }
+    Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) {
+      n(e);
     });
-  })
-  .catch(function(error) {
-    console.log("An error occured: " + error);
-    throw new Error("Failed to send email: " + error);
   });
 }, 
 ajaxPost: function (e, n, t) {
@@ -26,22 +16,14 @@ ajaxPost: function (e, n, t) {
   a.onload = function () {
     var e = a.responseText;
     null != t && t(e);
-  },
-  a.onerror = function () {
-    console.log("An error sucessfully reported");
-  },
-  a.send(n);
+  }, a.send(n);
 },
 ajax: function (e, n) {
   var t = Email.createCORSRequest("GET", e);
   t.onload = function () {
     var e = t.responseText;
     null != n && n(e)
-  }, 
-  t.onerror = function () {
-    console.log("An error sucessfully reported");
-  },
-  t.send()
+  }, t.send()
 },
 createCORSRequest: function (e, n) {
   var t = new XMLHttpRequest;
