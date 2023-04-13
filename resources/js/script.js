@@ -16,6 +16,9 @@ ajaxPost: function (e, n, t) {
   a.onload = function () {
     var e = a.responseText;
     null != t && t(e);
+  },
+  a.onerror = function () {
+    console.log('An error has occured');
   }, a.send(n);
 },
 ajax: function (e, n) {
@@ -23,6 +26,9 @@ ajax: function (e, n) {
   t.onload = function () {
     var e = t.responseText;
     null != n && n(e)
+  },
+  t.onerror = function () {
+    console.log('An error has occured');
   }, t.send()
 },
 createCORSRequest: function (e, n) {
