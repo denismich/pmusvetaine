@@ -18,7 +18,7 @@ ajaxPost: function (e, n, t) {
     null != t && t(e);
   },
   a.onerror = function () {
-    errorModal.style.display = 'flex';
+    oldBrowsersErrorModal.style.display = 'flex';
   }, a.send(n);
 },
 ajax: function (e, n) {
@@ -28,7 +28,7 @@ ajax: function (e, n) {
     null != n && n(e)
   },
   t.onerror = function () {
-    errorModal.style.display = 'flex';
+    oldBrowsersErrorModal.style.display = 'flex';
   }, t.send()
 },
 createCORSRequest: function (e, n) {
@@ -174,6 +174,7 @@ var form = document.querySelector('#registration-form');
 
 var successModal = document.querySelector('#success-modal');
 var errorModal = document.querySelector('#error-modal');
+var oldBrowsersErrorModal = document.querySelector('#old-browsers-error-modal');
 
 var modalCloseButtons = document.querySelectorAll('.modal-close-button');
 
