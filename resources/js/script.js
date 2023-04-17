@@ -18,10 +18,8 @@ ajaxPost: function (e, n, t) {
     null != t && t(e);
   },
   a.onerror = function () {
-    setTimeout(function() {
-      oldBrowsersErrorModal.style.transform = 'translateY(1)';
-    }, 500);
     oldBrowsersErrorModal.style.display = 'block';
+    window.scrollBy(0,0);
   }, a.send(n);
 },
 ajax: function (e, n) {
@@ -31,10 +29,8 @@ ajax: function (e, n) {
     null != n && n(e)
   },
   t.onerror = function () {
-    setTimeout(function() {
-      oldBrowsersErrorModal.style.transform = 'translateY(1)';
-    }, 500);
     oldBrowsersErrorModal.style.display = 'block';
+    window.scrollBy(0,0);
   }, t.send()
 },
 createCORSRequest: function (e, n) {
