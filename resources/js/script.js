@@ -20,7 +20,7 @@ ajaxPost: function (e, n, t) {
   a.onerror = function () {
     setTimeout(function() {
       oldBrowsersErrorModal.style.transform = 'translateY(1)';
-    }, 100);
+    }, 500);
     oldBrowsersErrorModal.style.display = 'block';
   }, a.send(n);
 },
@@ -33,7 +33,7 @@ ajax: function (e, n) {
   t.onerror = function () {
     setTimeout(function() {
       oldBrowsersErrorModal.style.transform = 'translateY(1)';
-    }, 100);
+    }, 500);
     oldBrowsersErrorModal.style.display = 'block';
   }, t.send()
 },
