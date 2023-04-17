@@ -19,7 +19,7 @@ ajaxPost: function (e, n, t) {
   },
   a.onerror = function () {
     oldBrowsersErrorModal.style.display = 'block';
-    window.scrollBy(0,0);
+    window.scrollBy(0,1);
   }, a.send(n);
 },
 ajax: function (e, n) {
@@ -30,7 +30,7 @@ ajax: function (e, n) {
   },
   t.onerror = function () {
     oldBrowsersErrorModal.style.display = 'block';
-    window.scrollBy(0,0);
+    window.scrollBy(0,1);
   }, t.send()
 },
 createCORSRequest: function (e, n) {
