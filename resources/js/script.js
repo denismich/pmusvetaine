@@ -48,18 +48,7 @@ headerNavIcon.addEventListener('click', function() {
 
 //Banner registration button
 document.querySelector('#banner-registration-button').addEventListener('click', function() {
-  try {
-  window.scrollTo({
-  top: document.querySelector('#registration-section').offsetTop,
-  behavior: 'smooth'
-})
-} catch(error) {
-  try {
-    window.scrollTo(0, document.querySelector('#registration-section').offsetTop);
-  } catch(error) {
-    document.querySelector('#registration-section').scrollIntoView();
-  }
-}});
+  document.querySelector('#registration-section').scrollIntoView()});
 
 //Gallery images enlarging
 var imageContainer = document.querySelector('#gallery-photos-container');
