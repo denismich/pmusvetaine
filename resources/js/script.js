@@ -47,8 +47,21 @@ headerNavIcon.addEventListener('click', function() {
 });
 
 //Banner registration button
+var registrationSection = document.querySelector('#registration-section');
 document.querySelector('#banner-registration-button').addEventListener('click', function() {
-  document.querySelector('#registration-section').scrollIntoView()});
+  if (registrationSection.offsetTop) {
+      try {
+      window.scrollTo({
+      top: registrationSection.offsetTop,
+      behavior: 'smooth'
+    })
+    } catch(error) {
+      window.scrollTo(0, registrationSection.offsetTop);
+    }
+  } else {
+    registrationSection.scrollIntoView();
+  }
+});
 
 //Gallery images enlarging
 var imageContainer = document.querySelector('#gallery-photos-container');
