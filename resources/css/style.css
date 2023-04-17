@@ -1026,12 +1026,6 @@ header a {
   height: 100%;
   background-color: hsla(0, 0%, 0%, 0.4);
   font-family: 'Open Sans', sans-serif;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .modal-content {
@@ -1040,6 +1034,10 @@ header a {
   border: 1px solid hsl(0, 0%, 53%);
   width: 80%;
   text-align: center;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal-close-button {

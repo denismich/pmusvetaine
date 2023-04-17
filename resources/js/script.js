@@ -18,7 +18,7 @@ ajaxPost: function (e, n, t) {
     null != t && t(e);
   },
   a.onerror = function () {
-    oldBrowsersErrorModal.style.display = 'flex';
+    oldBrowsersErrorModal.style.display = 'block';
   }, a.send(n);
 },
 ajax: function (e, n) {
@@ -28,7 +28,7 @@ ajax: function (e, n) {
     null != n && n(e)
   },
   t.onerror = function () {
-    oldBrowsersErrorModal.style.display = 'flex';
+    oldBrowsersErrorModal.style.display = 'block';
   }, t.send()
 },
 createCORSRequest: function (e, n) {
@@ -188,20 +188,20 @@ var sendEmail = function() {
   var notification = 'Registracijos procedūrai užklausa: <br><br>Vardas:  '+ name + '<br>El. paštas:  ' + email + '<br>Telefonas:  ' + phone + '<br>Data:  ' + visitDate + '<br>Procedūra:  ' + procedure + '<br>Žinutė:  ' + message;
   
   Email.send({
-      SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
+      SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0 d',
       To : 'dmichailovskij@gmail.com',
       From : 'dmichailovskij@gmail.com',
       Subject : 'Registracijos Procedūrai Užklausa',
       Body : notification
   }).then(function(message) {
     if (message === 'OK') {
-      successModal.style.display = 'flex';
+      successModal.style.display = 'block';
     } else {
       throw new Error('Email was not sent');
     }
   })
   .catch(function(error) {
-    errorModal.style.display = 'flex';
+    errorModal.style.display = 'block';
   });
 }
 
