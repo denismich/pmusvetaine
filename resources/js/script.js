@@ -190,9 +190,9 @@ var sendEmail = function() {
   var message = document.querySelector('#message').value;
   var notification = 'Registracijos procedūrai užklausa: <br><br>Vardas:  '+ name + '<br>El. paštas:  ' + email + '<br>Telefonas:  ' + phone + '<br>Data:  ' + visitDate + '<br>Procedūra:  ' + procedure + '<br>Žinutė:  ' + message;
   
-  if (!name || !email || !phone || !visitDate || !procedure) {
-    document.body.offsetHeight;
+  if (!name || !email || !phone || !visitDate || !procedure || procedure === 'Pasirinkite procedūrą') {
     validationErrorModal.style.display = 'block';
+    window.scrollBy(0,1);
     return;
   }
 
