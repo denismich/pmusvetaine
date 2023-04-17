@@ -253,7 +253,7 @@
                     <p>Užpildžius registracijos formą susisieksime per 24 valandas</p>
                 </div>
                 <div class="registration-form-container">
-                    <form id="registration-form" method="POST" onsubmit="sendEmail(); this.reset(); return false;">
+                    <form id="registration-form" method="POST" onsubmit="sendEmail(); return false;">
                         <div>
                             <input type="text" name="name" id="name" class="input-field" placeholder="Vardas" required>
                             <input type="email" name="email" id="email" class="input-field" placeholder="El. paštas" required>

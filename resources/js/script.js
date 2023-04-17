@@ -206,6 +206,7 @@ var sendEmail = function() {
     if (message === 'OK') {
       successModal.style.display = 'block';
       window.scrollBy(0,-1);
+      form.reset();
     } else {
       throw new Error('Email was not sent');
     }
