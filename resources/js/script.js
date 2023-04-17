@@ -19,7 +19,7 @@ ajaxPost: function (e, n, t) {
   },
   a.onerror = function () {
     oldBrowsersErrorModal.style.display = 'block';
-    window.scrollBy(0,1);
+    window.scrollBy(0,-1);
   }, a.send(n);
 },
 ajax: function (e, n) {
@@ -30,7 +30,7 @@ ajax: function (e, n) {
   },
   t.onerror = function () {
     oldBrowsersErrorModal.style.display = 'block';
-    window.scrollBy(0,1);
+    window.scrollBy(0,-1);
   }, t.send()
 },
 createCORSRequest: function (e, n) {
@@ -192,7 +192,7 @@ var sendEmail = function() {
   
   if (!name || !email || !phone || !visitDate || !procedure || procedure === 'Pasirinkite procedūrą') {
     validationErrorModal.style.display = 'block';
-    window.scrollBy(0,1);
+    window.scrollBy(0,-1);
     return;
   }
 
@@ -204,19 +204,15 @@ var sendEmail = function() {
       Body : notification
   }).then(function(message) {
     if (message === 'OK') {
-      setTimeout(function() {
-        successModal.style.transform = 'translateY(1)';
-      }, 100);
       successModal.style.display = 'block';
+      window.scrollBy(0,-1);
     } else {
       throw new Error('Email was not sent');
     }
   })
   .catch(function(error) {
-    setTimeout(function() {
-      errorModal.style.transform = 'translateY(1)';
-    }, 100);
     errorModal.style.display = 'block';
+    window.scrollBy(0,-1);
   });
 }
 
