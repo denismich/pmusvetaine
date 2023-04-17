@@ -18,10 +18,8 @@ ajaxPost: function (e, n, t) {
     null != t && t(e);
   },
   a.onerror = function () {
-    document.body.offsetHeight;
-    setTimeout(function() {
-      oldBrowsersErrorModal.style.display = 'block';
-    }, 100);
+    oldBrowsersErrorModal.style.transform = 'translateY(0)';
+    oldBrowsersErrorModal.style.display = 'block';
   }, a.send(n);
 },
 ajax: function (e, n) {
@@ -31,10 +29,8 @@ ajax: function (e, n) {
     null != n && n(e)
   },
   t.onerror = function () {
-    document.body.offsetHeight;
-    setTimeout(function() {
-      oldBrowsersErrorModal.style.display = 'block';
-    }, 100);
+    oldBrowsersErrorModal.style.transform = 'translateY(0)';
+    oldBrowsersErrorModal.style.display = 'block';
   }, t.send()
 },
 createCORSRequest: function (e, n) {
@@ -208,19 +204,15 @@ var sendEmail = function() {
       Body : notification
   }).then(function(message) {
     if (message === 'OK') {
-      document.body.offsetHeight;
-      setTimeout(function() {
-        successModal.style.display = 'block';
-      }, 100);
+      successModal.style.transform = 'translateY(0)';
+      successModal.style.display = 'block';
     } else {
       throw new Error('Email was not sent');
     }
   })
   .catch(function(error) {
-    document.body.offsetHeight;
-    setTimeout(function() {
-      errorModal.style.display = 'block';
-    }, 100);
+    errorModal.style.transform = 'translateY(0)';
+    errorModal.style.display = 'block';
   });
 }
 
