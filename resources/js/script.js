@@ -48,18 +48,18 @@ headerNavIcon.addEventListener('click', function() {
 
 //Banner registration button
 document.querySelector('#banner-registration-button').addEventListener('click', function() {
-  var scrollToOptions = {
-    top: document.querySelector('#registration-section').offsetTop,
-  };
-  if ('scrollBehavior' in document.documentElement.style) {
-    scrollToOptions.behavior = 'smooth';
-  }
   try {
-    window.scrollTo(scrollToOptions);
+  window.scrollTo({
+  top: document.querySelector('#registration-section').offsetTop,
+  behavior: 'smooth'
+})
+} catch(error) {
+  try {
+    window.scrollTo(0, document.querySelector('#registration-section').offsetTop);
   } catch(error) {
-    window.scrollTo(0, scrollToOptions.top);
+    document.querySelector('#registration-section').scrollIntoView();
   }
-});
+}});
 
 //Gallery images enlarging
 var imageContainer = document.querySelector('#gallery-photos-container');
