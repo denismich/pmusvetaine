@@ -18,9 +18,8 @@ ajaxPost: function (e, n, t) {
     null != t && t(e);
   },
   a.onerror = function () {
-    setTimeout(function() {
-      oldBrowsersErrorModal.style.display = 'block';
-    }, 100);
+    document.body.offsetHeight;
+    oldBrowsersErrorModal.style.display = 'block';
   }, a.send(n);
 },
 ajax: function (e, n) {
@@ -30,9 +29,8 @@ ajax: function (e, n) {
     null != n && n(e)
   },
   t.onerror = function () {
-    setTimeout(function() {
-      oldBrowsersErrorModal.style.display = 'block';
-    }, 100);
+    document.body.offsetHeight;
+    oldBrowsersErrorModal.style.display = 'block';
   }, t.send()
 },
 createCORSRequest: function (e, n) {
@@ -179,6 +177,7 @@ var form = document.querySelector('#registration-form');
 var successModal = document.querySelector('#success-modal');
 var errorModal = document.querySelector('#error-modal');
 var oldBrowsersErrorModal = document.querySelector('#old-browsers-error-modal');
+var validationErrorModal = document.querySelector('#validation-error-modal');
 
 var modalCloseButtons = document.querySelectorAll('.modal-close-button');
 
@@ -191,6 +190,12 @@ var sendEmail = function() {
   var message = document.querySelector('#message').value;
   var notification = 'Registracijos procedūrai užklausa: <br><br>Vardas:  '+ name + '<br>El. paštas:  ' + email + '<br>Telefonas:  ' + phone + '<br>Data:  ' + visitDate + '<br>Procedūra:  ' + procedure + '<br>Žinutė:  ' + message;
   
+  if (!name || !email || !phone || !visitDate || !procedure) {
+    document.body.offsetHeight;
+    validationErrorModal.style.display = 'block';
+    return;
+  }
+
   Email.send({
       SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0 d',
       To : 'dmichailovskij@gmail.com',
@@ -199,17 +204,15 @@ var sendEmail = function() {
       Body : notification
   }).then(function(message) {
     if (message === 'OK') {
-      setTimeout(function() {
-        successModal.style.display = 'block';
-      }, 100);
+      document.body.offsetHeight;
+      successModal.style.display = 'block';
     } else {
       throw new Error('Email was not sent');
     }
   })
   .catch(function(error) {
-    setTimeout(function() {
-      errorModal.style.display = 'block';
-    }, 100);
+    document.body.offsetHeight;
+    errorModal.style.display = 'block';
   });
 }
 
@@ -217,6 +220,7 @@ var closeModal = function() {
   successModal.style.display = 'none';
   errorModal.style.display = 'none';
   oldBrowsersErrorModal.style.display = 'none';
+  validationErrorModal.style.display = 'none';
 }
 
 var closeModalFromOutside = function(event) {
