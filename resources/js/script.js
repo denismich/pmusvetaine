@@ -208,6 +208,7 @@ var sendEmail = function() {
 var closeModal = function() {
   successModal.style.display = 'none';
   errorModal.style.display = 'none';
+  oldBrowsersErrorModal.style.display = 'none';
 }
 
 var closeModalFromOutside = function(event) {
