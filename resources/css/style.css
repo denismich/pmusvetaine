@@ -291,6 +291,12 @@ header a {
   margin: 0 0.25rem;
 }
 
+.contact-info-icon.svg-tiktok-icon {
+  height: 1rem;
+  width: auto;
+  vertical-align: -0.15vw;
+}
+
 .contact-info-delimiter {
   margin: 0 0.125rem;
 }
@@ -624,9 +630,34 @@ header a {
     font-size: 1.1rem;
 }
 
+.follow-button .svg-tiktok-icon {
+  background-color: hsl(271, 76%, 70%);
+  height: 1.4rem;
+  width: auto;
+  vertical-align: -0.3vw;
+}
+
 @media only screen and (max-width: 1050px) {
   .follow-button {
     font-size: 0.9rem;
+  }
+
+  .follow-button .svg-tiktok-icon {
+    height: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .follow-button .svg-tiktok-icon {
+    height: 2.2rem;
+    vertical-align: -0.6vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .follow-button .svg-tiktok-icon {
+    height: 2.5rem;
+    vertical-align: -0.8vw;
   }
 }
 
@@ -1137,6 +1168,12 @@ header a {
   color: white;
 }
 
+.working-contacts .svg-tiktok-icon {
+  height: 1.5rem;
+  width: auto;
+  vertical-align: -0.2vw;
+}
+
 @media only screen and (max-width: 1050px) {
   .working-info-container img {
     width: 18%;
@@ -1167,7 +1204,8 @@ header a {
   width: 50%;
 }
 
-.social-links i {
+.social-links i,
+.social-links svg {
   color: white;
   margin-right: 1rem;
 }
@@ -1194,8 +1232,14 @@ header a {
     margin-top: 1.5rem;
   }
 
-  .social-links i {
+  .social-links i,
+  .social-links svg {
     margin-right: 2rem;
+  }
+
+  .working-contacts .svg-tiktok-icon {
+    height: 2.25rem;
+    vertical-align: -0.35vw;
   }
 }
 
@@ -1231,6 +1275,11 @@ header a {
 
   .social-links {
     font-size: 3.25rem;
+  }
+
+  .working-contacts .svg-tiktok-icon {
+    height: 3.25rem;
+    vertical-align: -0.8vw;
   }
 }
 
