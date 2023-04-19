@@ -637,6 +637,12 @@ header a {
   vertical-align: -0.3vw;
 }
 
+.follow-button .fa-instagram {
+  font-size: 1.5em;
+  line-height: .0467em;
+  vertical-align: -.125em;
+}
+
 @media only screen and (max-width: 1050px) {
   .follow-button {
     font-size: 0.9rem;
@@ -708,13 +714,16 @@ header a {
   max-height: 90%;
 }
 
-.full-screen-nav {
+.full-screen-nav.fa {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(0,-50%);
       -ms-transform: translate(0,-50%);
           transform: translate(0,-50%);
   color: white;
+  font-size: 2em;
+  line-height: .03125em;
+  vertical-align: -.1875em;
 }
 
 .full-screen-nav:hover {
