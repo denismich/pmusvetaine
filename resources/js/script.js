@@ -54,6 +54,7 @@ document.querySelector('#banner-registration-button').addEventListener('click', 
   } catch(error) {
       registrationSection.scrollIntoView();
   }
+  setTimeout(function() {document.querySelector('#name').focus()}, 500);
 });
 
 //Gallery images enlarging
@@ -75,9 +76,36 @@ imageContainer.addEventListener('click', function(event) {
   }
 });
 
+imageContainer.addEventListener('keydown', function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    event.target.click();
+  }
+})
+
 fullScreenContainer.addEventListener('click', function(event) {
   if (event.target === fullScreenContainer) {
       fullScreenContainer.style.display = 'none';
+  }
+});
+
+window.addEventListener('keydown', function(event) {
+  if (fullScreenContainer.style.display === 'block') {
+    if (event.keyCode === 27) {
+      event.preventDefault();
+      fullScreenContainer.style.display = 'none';
+    }
+    if (event.keyCode === 9 || event.keyCode === 32 || event.keyCode === 38 || event.keyCode === 40) {
+      event.preventDefault();
+    }
+    if (event.keyCode === 39) {
+      event.preventDefault();
+      document.querySelector('#next-button').click();
+    }
+    if (event.keyCode === 37) {
+      event.preventDefault();
+      document.querySelector('#prev-button').click();
+    }
   }
 });
 
@@ -163,6 +191,12 @@ var selectOption = function(event) {select.value = event.currentTarget.textConte
 select.addEventListener('mousedown', function(event) {event.preventDefault()});
 
 select.addEventListener('click', toggleDropdown);
+
+select.addEventListener('keydown', function(event) {
+  if (event.keyCode === 13) {
+    toggleDropdown();
+  }
+})
 
 document.body.addEventListener('click', closeDropdownFromOutside);
 
