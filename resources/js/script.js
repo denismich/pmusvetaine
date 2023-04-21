@@ -79,7 +79,9 @@ imageContainer.addEventListener('click', function(event) {
 imageContainer.addEventListener('keydown', function(event) {
   if (event.keyCode === 13) {
     event.preventDefault();
-    event.target.click();
+    if (fullScreenContainer.style.display !== 'block') {
+      event.target.click();
+    }
   }
 })
 
@@ -189,6 +191,7 @@ var closeDropdownFromOutside = function(event) {event.target !== select && dropd
 var selectOption = function(event) {select.value = event.currentTarget.textContent};
 
 select.addEventListener('mousedown', function(event) {event.preventDefault()});
+select.addEventListener('keydown', function(event) {event.preventDefault()});
 
 select.addEventListener('click', toggleDropdown);
 
