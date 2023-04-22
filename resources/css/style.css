@@ -243,7 +243,8 @@ header a {
     border-bottom: 2px solid hsla(271, 76%, 60%, 0.4);
   }
 
-  #header-nav-menu li:hover {
+  #header-nav-menu a:hover,
+  #header-nav-menu a:focus {
     background-color: hsl(271, 76%, 60%);
   }
 
@@ -1040,9 +1041,12 @@ header a {
   padding: 10px;
 }
 
-#custom-dropdown .option:hover {
+#custom-dropdown .option:hover,
+#custom-dropdown .option:focus {
   color: white;
   background: hsl(271, 65%, 60%);
+  border: none;
+  outline: none;
 }
 
 #submit {
@@ -1077,7 +1081,9 @@ header a {
   position: relative;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .modal-close-button {

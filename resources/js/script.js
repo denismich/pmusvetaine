@@ -20,6 +20,7 @@ ajaxPost: function (e, n, t) {
   a.onerror = function () {
     oldBrowsersErrorModal.style.display = 'block';
     window.scrollBy(0,-1);
+    oldBrowsersErrorModal.focus();
   }, a.send(n);
 },
 ajax: function (e, n) {
@@ -31,6 +32,7 @@ ajax: function (e, n) {
   t.onerror = function () {
     oldBrowsersErrorModal.style.display = 'block';
     window.scrollBy(0,-1);
+    oldBrowsersErrorModal.focus();
   }, t.send()
 },
 createCORSRequest: function (e, n) {
@@ -41,10 +43,68 @@ createCORSRequest: function (e, n) {
 
 //Header navigation bar icon
 var headerNavIcon = document.querySelector('#header-nav-icon');
+var headerNavMenu = document.querySelector('#header-nav-menu');
+
 headerNavIcon.addEventListener('click', function() {
   document.querySelector('#header-nav-menu').classList.toggle('visible');
   headerNavIcon.classList.toggle('open');
 });
+var navLinks = document.querySelectorAll('.nav-link');
+
+headerNavIcon.addEventListener('keydown', function(event) {
+  if (event.keyCode === 13 || event.keyCode === 32) {
+    event.preventDefault();
+    headerNavIcon.click();
+  }
+  if (headerNavIcon.classList.contains('open')) {
+    if (event.keyCode === 9) {
+      event.preventDefault();
+    }
+    if (event.keyCode === 27) {
+      headerNavIcon.classList.remove('open');
+      headerNavMenu.classList.remove('visible');
+    }
+    if (event.keyCode === 38) {
+      event.preventDefault();
+      navLinks[navLinks.length-1].focus();
+    }
+    if (event.keyCode === 40) {
+      event.preventDefault();
+      navLinks[0].focus();
+    }
+  }
+})
+
+for(var i = 0; i < navLinks.length; i++) {
+  (function(index) {
+    navLinks[index].addEventListener('keydown', function(event) {
+      if (event.keyCode === 9 || event.keyCode === 32) {
+        event.preventDefault();
+      }
+      if (event.keyCode === 27) {
+        headerNavIcon.classList.remove('open');
+        headerNavMenu.classList.remove('visible');
+        headerNavIcon.focus();
+      }
+      if(event.keyCode === 38) {
+        event.preventDefault();
+        if (index !== 0) {
+          navLinks[index-1].focus();
+        } else {
+          navLinks[navLinks.length-1].focus();
+        }
+      }
+      if (event.keyCode === 40) {
+        event.preventDefault();
+        if (index < navLinks.length - 1) {
+          navLinks[index+1].focus();
+        } else {
+          navLinks[0].focus();
+        }
+      }
+    });
+  })(i);
+}
 
 //Banner registration button
 var registrationSection = document.querySelector('#registration-section');
@@ -81,6 +141,8 @@ imageContainer.addEventListener('keydown', function(event) {
     event.preventDefault();
     if (fullScreenContainer.style.display !== 'block') {
       event.target.click();
+    } else {
+      document.querySelector('#next-button').click();
     }
   }
 })
@@ -162,6 +224,11 @@ window.addEventListener('DOMContentLoaded', function() {
 for (var i = 0; i < dots.length; i++) {
   (function(index) {
     dots[index].addEventListener('click', function() {showSlides(slideIndex = index + 1)});
+    dots[index].addEventListener('keydown', function(event) {
+      if (event.keyCode === 13) {
+        showSlides(slideIndex = index + 1);
+      }
+    });
   })(i);
 }
 
@@ -191,20 +258,58 @@ var closeDropdownFromOutside = function(event) {event.target !== select && dropd
 var selectOption = function(event) {select.value = event.currentTarget.textContent};
 
 select.addEventListener('mousedown', function(event) {event.preventDefault()});
-select.addEventListener('keydown', function(event) {event.preventDefault()});
-
-select.addEventListener('click', toggleDropdown);
-
 select.addEventListener('keydown', function(event) {
-  if (event.keyCode === 13) {
+  if (event.keyCode === 13 || event.keyCode === 32) {
+    event.preventDefault();
     toggleDropdown();
   }
-})
+  if (event.keyCode === 27) {
+    dropdown.classList.remove('opened');
+  }
+  if (event.keyCode === 38) {
+    event.preventDefault();
+    dropdownOptions[dropdownOptions.length-1].focus();
+  }
+  if (event.keyCode === 40) {
+    event.preventDefault();
+    dropdownOptions[0].focus();
+  }
+});
+
+select.addEventListener('click', toggleDropdown);
 
 document.body.addEventListener('click', closeDropdownFromOutside);
 
 for(var i = 0; i < dropdownOptions.length; i++) {
   dropdownOptions[i].addEventListener('click', selectOption);
+  (function(index) {
+    dropdownOptions[index].addEventListener('keydown', function(event) {
+      if (event.keyCode === 9 || event.keyCode === 32) {
+        event.preventDefault();
+      }
+      if (event.keyCode === 13 || event.keyCode === 27) {
+        selectOption(event);
+        closeDropdownFromOutside(event);
+        select.focus();
+      }
+      if(event.keyCode === 38) {
+        event.preventDefault();
+        if (index !== 0) {
+          dropdownOptions[index-1].focus();
+        } else {
+          dropdownOptions[dropdownOptions.length-1].focus();
+        }
+      }
+      if (event.keyCode === 40) {
+        event.preventDefault();
+        if (index < dropdownOptions.length - 1) {
+          dropdownOptions[index+1].focus();
+        } else {
+          dropdownOptions[0].focus();
+        }
+      }
+    });
+  })(i);
 }
 
 //Email sending on registration
@@ -215,6 +320,7 @@ var errorModal = document.querySelector('#error-modal');
 var oldBrowsersErrorModal = document.querySelector('#old-browsers-error-modal');
 var validationErrorModal = document.querySelector('#validation-error-modal');
 
+var modals = document.querySelectorAll('.modal');
 var modalCloseButtons = document.querySelectorAll('.modal-close-button');
 
 var sendEmail = function() {
@@ -229,11 +335,12 @@ var sendEmail = function() {
   if (!name || !email || !phone || !visitDate || !procedure || procedure === 'Pasirinkite procedūrą') {
     validationErrorModal.style.display = 'block';
     window.scrollBy(0,-1);
+    validationErrorModal.focus();
     return;
   }
 
   Email.send({
-      SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0d',
+      SecureToken: '90677d85-8654-4537-91d0-eacde4cbff0 d',
       To : 'dmichailovskij@gmail.com',
       From : 'dmichailovskij@gmail.com',
       Subject : 'Registracijos Procedūrai Užklausa',
@@ -242,6 +349,7 @@ var sendEmail = function() {
     if (message === 'OK') {
       successModal.style.display = 'block';
       window.scrollBy(0,-1);
+      successModal.focus();
       form.reset();
     } else {
       throw new Error('Email was not sent');
@@ -250,6 +358,7 @@ var sendEmail = function() {
   .catch(function(error) {
     errorModal.style.display = 'block';
     window.scrollBy(0,-1);
+    errorModal.focus();
   });
 }
 
@@ -258,10 +367,12 @@ var closeModal = function() {
   errorModal.style.display = 'none';
   oldBrowsersErrorModal.style.display = 'none';
   validationErrorModal.style.display = 'none';
+  document.querySelector('#submit').focus();
 }
 
 var closeModalFromOutside = function(event) {
-  if (event.target === successModal || event.target === errorModal) {
+  if (event.target === successModal || event.target === errorModal || event.target === oldBrowsersErrorModal || 
+    event.target === validationErrorModal) {
     closeModal();
   }
 }
@@ -271,6 +382,32 @@ for(var i = 0; i < modalCloseButtons.length; i++) {
 }
 
 document.body.addEventListener('click', closeModalFromOutside);
+
+window.addEventListener('keydown', function(event) {
+  if (successModal.style.display === 'block' || errorModal.style.display === 'block' || 
+  oldBrowsersErrorModal.style.display === 'block' || validationErrorModal.style.display === 'block') {
+    if (event.keyCode === 32 || event.keyCode === 38 || event.keyCode === 40) {
+      event.preventDefault();
+    }
+    if (event.keyCode === 27) {
+      closeModal();
+    }
+    if (event.keyCode === 9) {
+      event.preventDefault();
+      for (var i = 0; i < modalCloseButtons.length; i++) {
+        if (modals[i].style.display === 'block') {
+          modalCloseButtons[i].focus();
+          modalCloseButtons[i].addEventListener('keydown', function(e) {
+            if (e.keyCode === 13 || e.keyCode === 32) {
+              e.preventDefault();
+              closeModal();
+            }
+          });
+        }
+      }
+    }
+  }
+});
 
 //Button for scrolling to top
 var scrollToTopButton = document.querySelector('#scroll-to-top-button');
