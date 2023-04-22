@@ -490,7 +490,7 @@ header a {
     margin-top: 1%;
   }
 
-  .procedure:nth-last-of-type(2) {
+  .procedure:nth-last-of-type(1) {
     margin-bottom: 1%;
   }
 
