@@ -72,39 +72,38 @@ headerNavIcon.addEventListener('keydown', function(event) {
       event.preventDefault();
       navLinks[0].focus();
     }
+    for(var i = 0; i < navLinks.length; i++) {
+      (function(index) {
+        navLinks[index].addEventListener('keydown', function(event) {
+          if (event.keyCode === 9 || event.keyCode === 32) {
+            event.preventDefault();
+          }
+          if (event.keyCode === 27) {
+            headerNavIcon.classList.remove('open');
+            headerNavMenu.classList.remove('visible');
+            headerNavIcon.focus();
+          }
+          if(event.keyCode === 38) {
+            event.preventDefault();
+            if (index !== 0) {
+              navLinks[index-1].focus();
+            } else {
+              navLinks[navLinks.length-1].focus();
+            }
+          }
+          if (event.keyCode === 40) {
+            event.preventDefault();
+            if (index < navLinks.length - 1) {
+              navLinks[index+1].focus();
+            } else {
+              navLinks[0].focus();
+            }
+          }
+        });
+      })(i);
+    }
   }
 })
-
-for(var i = 0; i < navLinks.length; i++) {
-  (function(index) {
-    navLinks[index].addEventListener('keydown', function(event) {
-      if (event.keyCode === 9 || event.keyCode === 32) {
-        event.preventDefault();
-      }
-      if (event.keyCode === 27) {
-        headerNavIcon.classList.remove('open');
-        headerNavMenu.classList.remove('visible');
-        headerNavIcon.focus();
-      }
-      if(event.keyCode === 38) {
-        event.preventDefault();
-        if (index !== 0) {
-          navLinks[index-1].focus();
-        } else {
-          navLinks[navLinks.length-1].focus();
-        }
-      }
-      if (event.keyCode === 40) {
-        event.preventDefault();
-        if (index < navLinks.length - 1) {
-          navLinks[index+1].focus();
-        } else {
-          navLinks[0].focus();
-        }
-      }
-    });
-  })(i);
-}
 
 //Banner registration button
 var registrationSection = document.querySelector('#registration-section');
