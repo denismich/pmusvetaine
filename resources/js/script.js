@@ -225,7 +225,7 @@ for (var i = 0; i < dots.length; i++) {
     dots[index].addEventListener('click', function() {showSlides(slideIndex = index + 1)});
     dots[index].addEventListener('keydown', function(event) {
       if (event.keyCode === 13) {
-        showSlides(slideIndex = index + 1);
+        dots[index].click();
       }
     });
   })(i);
