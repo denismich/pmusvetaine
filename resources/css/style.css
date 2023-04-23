@@ -725,10 +725,16 @@ header a {
   font-size: 2em;
   line-height: .03125em;
   vertical-align: -.1875em;
+  cursor: pointer;
 }
 
 .full-screen-nav:hover {
   color: gray;
+}
+
+#close-button {
+  top: 2vw;
+  right: 2%;
 }
 
 #prev-button {
