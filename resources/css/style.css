@@ -713,22 +713,27 @@ header a {
           transform: translate(-50%, -50%);
   max-width: 100%;
   max-height: 90%;
+  
 }
 
-.full-screen-nav.fa {
+.full-screen-nav {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(0,-50%);
       -ms-transform: translate(0,-50%);
           transform: translate(0,-50%);
+  background-color: transparent;
+  border: none;
+}
+
+.full-screen-nav .fa {
   color: white;
   font-size: 2em;
   line-height: .03125em;
   vertical-align: -.1875em;
-  cursor: pointer;
 }
 
-.full-screen-nav:hover {
+.full-screen-nav .fa:hover {
   color: gray;
 }
 
@@ -783,7 +788,7 @@ header a {
     height: 48vw;
   }
 
-  .full-screen-nav {
+  .full-screen-nav .fa {
     font-size: 4rem !important;
   }
 }
@@ -815,7 +820,7 @@ header a {
     height: 96vw;
   }
 
-  .full-screen-nav {
+  .full-screen-nav .fa {
     font-size: 5rem !important;
   }
 }
