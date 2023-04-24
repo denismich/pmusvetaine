@@ -863,8 +863,8 @@ header a {
 }
 
 .slide {
+  width: 100%;
   position: absolute;
-  margin: 4vw 21vw 5.25vw;
   font-size: 1.5rem;
   text-align: center;
   font-style: italic;
@@ -876,6 +876,10 @@ header a {
           animation-name: fade;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
+}
+
+.slide-text {
+  margin: 4vw 21vw 5.25vw;
 }
 
 @-webkit-keyframes fade {
@@ -929,7 +933,7 @@ header a {
     font-size: 3rem;
   }
 
-  .slide {
+  .slide-text {
     margin: 4vw 10vw 5.25vw;
     font-size: 1.75rem;
   }
@@ -938,10 +942,6 @@ header a {
 @media only screen and (max-width: 600px) {
   .testimonials-header {
     font-size: 3.75rem;
-  }
-  
-  .slide {
-    font-size: 1.75rem;
   }
 }
 
