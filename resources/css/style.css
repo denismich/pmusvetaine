@@ -850,6 +850,7 @@ header a {
 }
 
 #slideshow-container {
+  width: 100%;
   height: 18em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -857,10 +858,12 @@ header a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .slide {
-  display: none;
+  position: absolute;
   margin: 4vw 21vw 5.25vw;
   font-size: 1.5rem;
   text-align: center;

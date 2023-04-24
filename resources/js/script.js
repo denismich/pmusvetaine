@@ -243,11 +243,10 @@ var showSlides = function(n) {
   n < 1 && (slideIndex = slides.length);
 
   for (var i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
+      slides[i].style.transform = 'translateX(200%)';
       dots[i].classList.remove('active');
   }
-      
-  slides[slideIndex-1].style.display = 'block';
+  slides[slideIndex-1].style.transform = 'translateX(0)';
   dots[slideIndex-1].className += ' active';
 }
 
