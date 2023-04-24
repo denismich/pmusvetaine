@@ -1325,9 +1325,6 @@ header a {
 
 .privacy-policy {
   float: right;
-}
-
-.copyright-privacy-info a {
   color: gray;
   text-decoration: none;
 }
