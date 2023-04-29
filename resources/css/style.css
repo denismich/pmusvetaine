@@ -138,7 +138,7 @@ body {
 }
 
 header {
-  background-color: white;
+  background-color: hsl(210, 33%, 99%);
   position: fixed;
   z-index: 10;
   height: 5.25vw;
@@ -174,7 +174,7 @@ header a {
 }
 
 #header-nav-icon {
-  background-color: white;
+  background-color: hsl(210, 33%, 99%);
 }
 
 #header-nav-icon.open {
@@ -388,7 +388,7 @@ header a {
 }
 
 .procedures-section {
-  background-color: white;
+  background-color: hsl(210, 33%, 99%);
 }
 
 .procedures-header {
@@ -599,7 +599,7 @@ header a {
 
 .gallery {
   padding: 5%;
-  background-color: white;
+  background-color: hsl(210, 33%, 99%);
 }
 
 .gallery-header {
@@ -946,231 +946,63 @@ header a {
 }
 
 #registration-section {
-  padding: 5.5% 5% 5%;
-  background-color: white;
+  padding-top: 60px;
+  background-color: hsl(210, 33%, 99%);
 }
 
-.registration-header h2 {
+#registration-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.25rem;
   text-align: center;
 }
 
-.registration-header p {
-  margin: 1rem 0 2.5rem;
-  font-size: 1rem;
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
+.calendly-inline-widget {
+  height: 850px;
 }
 
-.registration-form-container {
-  width: 45%;
-  margin: 0 auto;
-}
-
-.registration-form-container .input-field {
-  padding: 1.5%;
-  margin: 1.5% 0;
-  border: 1px solid hsla(0, 0%, 17%, 0.15);
-  color: hsl(0, 0%, 42%);
-  font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
-  outline: none;
-  background-color: white;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 0;
-}
-
-.registration-form-container .input-field::-webkit-input-placeholder {
-  color:hsl(0, 0%, 42%);
-  opacity: 1;
-}
-
-.registration-form-container .input-field::-moz-placeholder {
-  opacity: 1;
-}
-
-.registration-form-container .input-field:-ms-input-placeholder {
-  opacity: 1;
-}
-
-.registration-form-container .input-field::-ms-input-placeholder {
-  opacity: 1;
-}
-
-.registration-form-container .input-field::placeholder {
-  opacity: 1;
-}
-
-.registration-form-container input {
-  width: 48%;
-  height: 3rem;
-  position: relative;
-  z-index: 5;
-}
-
-.registration-form-container select {
-  width: 100%;
-  height: 3rem;
-}
-
-.registration-form-container textarea {
-  width: 100%;
-  resize: none;
-}
-
-#name,
-#phone {
-    float: left;
-}
-
-#email,
-#date {
-    float: right;
-}
-
-.registration-select-container {
-  position: relative;
-}
-
-#custom-dropdown {
-  width: 100%;
-  position: absolute;
-  background-color: white;
-  visibility: hidden;
-  list-style: none;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
-  border: 2px solid hsla(0, 0%, 17%, 0.15);
-}
-
-#custom-dropdown.opened {
-  visibility: visible;
-  z-index: 5;
-}
-
-#custom-dropdown .option {
-  padding: 10px;
-}
-
-#custom-dropdown .option:hover,
-#custom-dropdown .option:focus {
-  color: white;
-  background: hsl(271, 65%, 60%);
-  border: none;
+#registration-board:focus {
   outline: none;
 }
 
-#submit {
-  color: white;
-  background-color:hsl(271, 76%, 70%);
-  border: none;
-  width: 35%;
-  height: 3rem;
-  font-size: 1.1rem;
-  font-family: 'Open Sans', sans-serif;
-  cursor: pointer;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: hsla(0, 0%, 0%, 0.4);
-  font-family: 'Open Sans', sans-serif;
-}
-
-.modal-content {
-  background-color: white;
-  padding: 1.25rem;
-  border: 1px solid hsl(0, 0%, 53%);
-  width: 80%;
-  text-align: center;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.modal-close-button {
-  color: hsl(0, 0%, 67%);
-  font-weight: bold;
-  margin-top: 1.25rem;
-}
-
-.modal-close-button:hover {
-  color: black;
-  cursor: pointer;
+@media only screen and (max-width: 1015px) {
+  .calendly-inline-widget {
+    height: 1000px;
+  }
 }
 
 @media only screen and (max-width: 900px) {
-  .registration-header h2 {
+  #registration-section h2 {
     font-size: 3rem;
   }
-  
-  .registration-header p {
-    font-size: 1.75rem;
-  }
-  
-  .registration-form-container {
-    width: 70%;
-  }
+}
 
-  .registration-form-container .input-field {
-    font-size: 2rem;
-    padding: 3%;
-    width: 100%;
+@media only screen and (max-width: 725px) {
+  .calendly-inline-widget {
+    height: 1050px;
   }
+}
 
-  .registration-form-container input {
-    height: 2em;
-  }
-
-  .registration-form-container select {
-    height: 2em;
-    padding: 0 2% !important;
-  }
-
-  #custom-dropdown {
-    font-size: 2rem;
-    border-width: 1px;
-  }
-
-  #date {
-    padding: 1.5%;
-  }
-
-  #submit {
-    font-size: 2rem;
-    height: auto;
-    width: auto;
-    padding: 0.5em 1em;
-  }
-
-  .modal {
-    font-size: 1.75rem;
+@media only screen and (max-width: 665px) {
+  .calendly-inline-widget {
+    height: 950px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .registration-header h2 {
+  #registration-section h2 {
     font-size: 3.75rem;
   }
-  
-  .registration-header p {
-    font-size: 2rem;
-  }
+}
 
-  .registration-form-container {
-    width: 80%;
+@media only screen and (max-width: 416px) {
+  .calendly-inline-widget {
+    height: 1050px;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .calendly-inline-widget {
+    height: 1150px;
   }
 }
 
@@ -1316,7 +1148,7 @@ header a {
   padding: 0 10%;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9rem;
-  background-color: white;
+  background-color: hsl(210, 33%, 99%);
 }
 
 .copyright {
