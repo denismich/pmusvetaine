@@ -490,5 +490,11 @@ scrollToTopButton.addEventListener('click', function() {
   } catch(err) {
     window.scrollTo(0, 0)
   }
-  setTimeout(function() {bannerRegistrationButton.focus();}, 500);
+  setTimeout(function() {
+    if (headerNavIcon.style.display !== 'none') {
+      headerNavIcon.focus();
+    } else {
+      document.querySelector('#first-link').focus();
+    }
+  }, 500);
 });
