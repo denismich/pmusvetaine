@@ -51,7 +51,6 @@
   font-size: 2rem;
   font-family: 'Playfair Display', serif;
   margin-bottom: 1rem;
-  font-style: italic;
 }
 
 .procedure-description p {
@@ -60,6 +59,7 @@
   font-size: 1.25rem;
   line-height: 1.5;
   font-style: italic;
+  margin: 0.5rem 0;
 }
 
 .registration-button {
