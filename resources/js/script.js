@@ -113,7 +113,8 @@ window.addEventListener('load', function() {
   }
 });
 
-document.querySelector('#banner-registration-button').addEventListener('click', function() {
+var bannerRegistrationButton = document.querySelector('#banner-registration-button');
+bannerRegistrationButton.addEventListener('click', function() {
     try {
       registrationSection.scrollIntoView({behavior: 'smooth'});
   } catch(error) {
@@ -489,4 +490,5 @@ scrollToTopButton.addEventListener('click', function() {
   } catch(err) {
     window.scrollTo(0, 0)
   }
-  });
+  setTimeout(function() {bannerRegistrationButton.focus();}, 500);
+});
