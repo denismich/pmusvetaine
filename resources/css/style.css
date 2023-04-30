@@ -964,7 +964,7 @@ header a {
   outline: none;
 }
 
-@media only screen and (max-width: 1015px) {
+@media only screen and (max-width: 998px) {
   .calendly-inline-widget {
     height: 1000px;
   }
@@ -976,15 +976,25 @@ header a {
   }
 }
 
-@media only screen and (max-width: 725px) {
+@media only screen and (max-width: 708px) {
   .calendly-inline-widget {
     height: 1050px;
   }
 }
 
-@media only screen and (max-width: 665px) {
+@media only screen and (max-width: 648px) {
+  header,
+  #header-nav-icon,
+  .procedures-section,
+  .gallery,
+  #registration-section,
+  .copyright-privacy-info {
+    background-color: white;
+  }
+
   .calendly-inline-widget {
-    height: 950px;
+    height: 924px;
+    margin-top: 30px;
   }
 }
 
@@ -994,15 +1004,9 @@ header a {
   }
 }
 
-@media only screen and (max-width: 416px) {
+@media only screen and (max-width: 400px) {
   .calendly-inline-widget {
-    height: 1050px;
-  }
-}
-
-@media only screen and (max-width: 325px) {
-  .calendly-inline-widget {
-    height: 1150px;
+    height: 1029px;
   }
 }
 
