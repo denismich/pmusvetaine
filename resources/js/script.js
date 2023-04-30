@@ -106,7 +106,13 @@ headerNavIcon.addEventListener('keydown', function(event) {
 })
 
 //Banner registration button
-var registrationSection = document.querySelector('#registration-section') || document.querySelector('#registration-section-old');
+var registrationSection = document.querySelector('#registration-section');
+window.addEventListener('load', function() {
+  if (typeof Calendly === 'undefined') {
+    registrationSection = document.querySelector('#registration-section-old');
+  }
+});
+
 document.querySelector('#banner-registration-button').addEventListener('click', function() {
     try {
       registrationSection.scrollIntoView({behavior: 'smooth'});
