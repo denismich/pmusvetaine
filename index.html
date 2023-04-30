@@ -262,6 +262,74 @@
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 <!-- Calendly inline widget end -->
             </section>
+
+            <section id="registration-section-old" aria-label="Registracija">
+                <div class="registration-header">
+                    <h2>REGISTRACIJA</h2>
+                    <p>Užpildžius registracijos formą susisieksime per 24 valandas</p>
+                </div>
+                <div class="registration-form-container">
+                    <form id="registration-form" method="POST" onsubmit="sendEmail(); return false;" aria-label="Forma">
+                        <div>
+                            <input type="text" name="name" id="name" class="input-field" placeholder="Vardas" required aria-label="Vardas">
+                            <input type="email" name="email" id="email" class="input-field" placeholder="El. paštas" required aria-label="El. paštas">
+                        </div>
+                        <div>
+                            <input type="tel" name="phone" id="phone" class="input-field" placeholder="Telefonas" required aria-label="Telefonas">
+                            <input type="date" name="date" id="date" class="input-field" placeholder="Data" required aria-label="Data">
+                        </div>
+
+                        <div class="registration-select-container">
+                            <select name="procedure" id="procedure" class="input-field" required aria-label="Pasirinkite procedūrą">
+                                <option value="" disabled selected hidden>Pasirinkite procedūrą</option>
+                                <option value="Antakių permanentas">Antakių permanentas</option>
+                                <option value="Lūpų permanentas">Lūpų permanentas</option>
+                                <option value="Akių pravedimas">Akių pravedimas</option>
+                                <option value="Antakių korekcija/laminavimas">Antakių korekcija/laminavimas</option>
+                            </select>
+                            <ul id="custom-dropdown">
+                                <li class="option" tabindex="0">Antakių permanentas</li>
+                                <li class="option" tabindex="0">Lūpų permanentas</li>
+                                <li class="option" tabindex="0">Akių pravedimas</li>
+                                <li class="option" tabindex="0">Antakių korekcija/laminavimas</li>
+                            </ul>
+                        </div>
+
+                        <textarea name="message" id="message" class="input-field" placeholder="Žinutė" rows="5" aria-label="Žinutė"></textarea>
+                        <button id="submit" type="submit">REGISTRUOTIS</button>
+
+                        <div id="success-modal" class="modal" tabindex="0" role="dialog">
+                            <div class="modal-content">
+                                <p>Registracijos užklausa išsiųsta sėkmingai!</p>
+                                <p class="modal-close-button" tabindex="0" role="button">Uždaryti langą</p>
+                            </div>
+                        </div>
+                        <div id="error-modal" class="modal" tabindex="0"  role="dialog">
+                            <div class="modal-content">
+                                <p>Nepavyko išsiųsti registracijos užklausos, prašome bandyti vėliau arba susisiekti su meistre
+                                    nurodytais kontaktais. Atsiprašome už nepatogumus.
+                                </p>
+                                <p class="modal-close-button" tabindex="0" role="button">Uždaryti langą</p>
+                            </div>
+                        </div>
+                        <div id="old-browsers-error-modal" class="modal" tabindex="0"  role="dialog">
+                            <div class="modal-content">
+                                <p>Nepavyko išsiųsti registracijos užklausos, pabandykite naujesnę naršyklės versiją arba kitą 
+                                    naršyklę. Atsiprašome už nepatogumus.
+                                </p>
+                                <p class="modal-close-button" tabindex="0" role="button">Uždaryti langą</p>
+                            </div>
+                        </div>
+                        <div id="validation-error-modal" class="modal" tabindex="0"  role="dialog">
+                            <div class="modal-content">
+                                <p>Prašome užpildyti visus privalomus laukelius (Vardas, El. paštas, Telefonas, Data, Procedūra)
+                                </p>
+                                <p class="modal-close-button" tabindex="0" role="button">Uždaryti langą</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </main>
 
         <footer>
