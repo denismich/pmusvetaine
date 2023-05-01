@@ -299,19 +299,12 @@ var scrollToTopButton = document.querySelector('#scroll-to-top-button');
 window.addEventListener("scroll", function() {window.scrollY > 1000 ? scrollToTopButton.classList.add("show") : scrollToTopButton.classList.remove("show")});
 
 scrollToTopButton.addEventListener('click', function() {
-  try {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  } catch(err) {
-    window.scrollTo(0, 0)
-  }
+  window.scrollTo(0, 0)
   setTimeout(function() {
     if (headerNavIcon.style.display !== 'none') {
       headerNavIcon.focus();
     } else {
       document.querySelector('#first-link').focus();
     }
-  }, 500);
+  }, 100);
 });

@@ -13,11 +13,7 @@ window.addEventListener('load', function() {
 
 var bannerRegistrationButton = document.querySelector('#banner-registration-button');
 bannerRegistrationButton.addEventListener('click', function() {
-    if ('scrollBehavior' in document.documentElement.style) {
-      window.scrollBy({top: registrationSection.getBoundingClientRect().top - headerHeight, behavior: 'smooth'});
-  } else {
-      window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
-  }
+  window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
   setTimeout(function() {
     if (typeof Calendly !== 'undefined') {
       document.querySelector('#registration-board').focus();
@@ -25,7 +21,7 @@ bannerRegistrationButton.addEventListener('click', function() {
       document.querySelector('#name').focus();
     }
     window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
-  }, 1000);
+  }, 100);
 });
 
 //Gallery images enlarging
