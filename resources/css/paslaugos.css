@@ -86,3 +86,23 @@
   background-color: hsl(271, 76%, 60%);
   color:white;
 }
+
+@media only screen and (max-width: 1024px) {
+  .procedure-description-container.odd {
+    flex-direction: column;
+  }
+
+  .procedure-description-container.even {
+    flex-direction: column-reverse;
+  }
+
+  .procedure-description-container img {
+    width: 36vw;
+    height: 23vw;
+    margin-top: 4rem;
+  }
+
+  .procedure-description {
+    padding-top: 3.5%;
+  }
+}
