@@ -24,7 +24,8 @@ bannerRegistrationButton.addEventListener('click', function() {
     } else {
       document.querySelector('#name').focus();
     }
-  }, 500);
+    window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
+  }, 1000);
 });
 
 //Gallery images enlarging

@@ -87,7 +87,7 @@
   color:white;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1100px) {
   .procedure-description-container.odd {
     flex-direction: column;
   }
@@ -97,8 +97,8 @@
   }
 
   .procedure-description-container img {
-    width: 36vw;
-    height: 24vw;
+    width: 30vw;
+    height: 20vw;
     margin-top: 4rem;
   }
 
@@ -107,20 +107,44 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
+  .procedures-list h1 {
+    font-size: 3rem;
+  }
+
   .procedure-description {
     width: 70%;
   }
+  
+  .procedure-description h2 {
+    font-size: 2.5rem;
+  }
+
+  .procedure-description p {
+    font-size: 1.5rem;
+  }
+  
+  .registration-button {
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+  }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 700px) {
+  .procedure-description-container img {
+    width: 40vw;
+    height: 26.67vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
   .procedures-list h1 {
     font-size: 5rem;
   }
 
   .procedure-description-container img {
-    width: 80vw;
-    height: 56.67vw;
+    width: 75vw;
+    height: 50vw;
     -webkit-box-shadow: 10px 10px 10px hsl(271, 65%, 60%);
           box-shadow: 10px 10px 10px hsl(271, 65%, 60%);
   }
@@ -139,7 +163,6 @@
   }
   
   .registration-button {
-    padding: 0.75rem 1rem;
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }

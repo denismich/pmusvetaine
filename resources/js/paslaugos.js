@@ -31,10 +31,11 @@ for (var i = 0; i < registrationButtons.length; i++) {
         }
         setTimeout(function() {
           if (typeof Calendly !== 'undefined') {
-            document.querySelector('#registration-board').focus();
+            document.querySelector('#registration-section').focus();
           } else {
             document.querySelector('#name').focus();
           }
-        }, 500);
+          window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
+        }, 1000);
     })
 }
