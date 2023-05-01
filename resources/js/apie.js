@@ -1,5 +1,7 @@
 "use strict";
 
+var headerHeight = document.querySelector('header').clientHeight;
+
 //Banner registration button
 var registrationSection = document.querySelector('#registration-section');
 window.addEventListener('load', function() {
@@ -11,9 +13,9 @@ window.addEventListener('load', function() {
 var bannerRegistrationButton = document.querySelector('#banner-registration-button');
 bannerRegistrationButton.addEventListener('click', function() {
     try {
-      registrationSection.scrollIntoView({behavior: 'smooth'});
+      window.scrollTo({top: registrationSection.getBoundingClientRect().y - headerHeight, behavior: 'smooth'});
   } catch(error) {
-      registrationSection.scrollIntoView();
+      window.scrollTo(0, registrationSection.getBoundingClientRect().y - headerHeight);
   }
   setTimeout(function() {
     if (typeof Calendly !== 'undefined') {
