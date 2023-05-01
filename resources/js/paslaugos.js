@@ -5,17 +5,13 @@ var headerHeight = document.querySelector('header').clientHeight;
 
 //Adjusting procedure container position when redirected from links
 window.addEventListener('DOMContentLoaded', function() {
-    var targetId = '';
-    if (window.location.hash.indexOf('#') === 0) {
-    targetId = window.location.hash.substr(1);
-    }
-
+    var targetId = window.location.hash.substring(1);
     if (targetId !== '') {
-    var target = document.getElementById(targetId);
-    var targetTop = target.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo(0, targetTop - headerHeight);
+      var target = document.querySelector('#' + targetId);
+      var targetTop = target.getBoundingClientRect().top + document.documentElement.scrollTop;
+      window.scrollTo(0, targetTop - headerHeight);
     }
-    });
+  });
 
 //Registration buttons
 var registrationSection = document.querySelector('#registration-section');
