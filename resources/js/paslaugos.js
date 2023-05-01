@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var targetId = window.location.hash.substring(1);
     if (targetId !== '') {
         var target = document.querySelector('#' + targetId);
-        window.scrollBy(0, target.getBoundingClientRect().top - headerHeight);
+        setTimeout(function() {window.scrollBy(0, target.getBoundingClientRect().top - headerHeight);}, 100);
     }
 });
 
