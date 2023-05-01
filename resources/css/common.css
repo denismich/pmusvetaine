@@ -349,10 +349,12 @@ header a {
 @media only screen and (max-width: 648px) {
   header,
   #header-nav-icon,
+  #registration-section,
+  .copyright-privacy-info,
   .procedures-section,
   .gallery,
-  #registration-section,
-  .copyright-privacy-info {
+  .procedures-list,
+  .procedure-description-container.even {
     background-color: white;
   }
 

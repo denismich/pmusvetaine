@@ -98,11 +98,48 @@
 
   .procedure-description-container img {
     width: 36vw;
-    height: 23vw;
+    height: 24vw;
     margin-top: 4rem;
   }
 
   .procedure-description {
     padding-top: 3.5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .procedure-description {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .procedures-list h1 {
+    font-size: 5rem;
+  }
+
+  .procedure-description-container img {
+    width: 80vw;
+    height: 56.67vw;
+    -webkit-box-shadow: 10px 10px 10px hsl(271, 65%, 60%);
+          box-shadow: 10px 10px 10px hsl(271, 65%, 60%);
+  }
+
+  .procedure-description {
+    width: 80vw;
+    padding-top: 5%;
+  }
+
+  .procedure-description h2 {
+    font-size: 4rem;
+  }
+  
+  .procedure-description p {
+    font-size: 2rem;
+  }
+  
+  .registration-button {
+    padding: 0.75rem 1rem;
+    font-size: 2rem;
   }
 }
