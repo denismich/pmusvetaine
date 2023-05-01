@@ -15,7 +15,7 @@ bannerRegistrationButton.addEventListener('click', function() {
     try {
       window.scrollTo({top: registrationSection.getBoundingClientRect().y - headerHeight, behavior: 'smooth'});
   } catch(error) {
-      window.scrollTo(0, registrationSection.getBoundingClientRect().y - headerHeight);
+      window.scrollTo(0, 2000);
   }
   setTimeout(function() {
     if (typeof Calendly !== 'undefined') {
