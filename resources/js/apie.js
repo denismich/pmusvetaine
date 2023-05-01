@@ -1,5 +1,3 @@
-"use strict";
-
 //Header height for scrolling/links to elements
 var headerHeight = document.querySelector('header').clientHeight;
 
