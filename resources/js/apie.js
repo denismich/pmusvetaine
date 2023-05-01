@@ -1,5 +1,6 @@
 "use strict";
 
+//Header height for scrolling/links to elements
 var headerHeight = document.querySelector('header').clientHeight;
 
 //Banner registration button
@@ -13,9 +14,9 @@ window.addEventListener('load', function() {
 var bannerRegistrationButton = document.querySelector('#banner-registration-button');
 bannerRegistrationButton.addEventListener('click', function() {
     if ('scrollBehavior' in document.documentElement.style) {
-      window.scrollTo({top: registrationSection.getBoundingClientRect().top - headerHeight, behavior: 'smooth'});
+      window.scrollBy({top: registrationSection.getBoundingClientRect().top - headerHeight, behavior: 'smooth'});
   } else {
-      window.scrollTo(0, registrationSection.getBoundingClientRect().top - headerHeight);
+      window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
   }
   setTimeout(function() {
     if (typeof Calendly !== 'undefined') {
