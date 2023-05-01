@@ -5,7 +5,7 @@ var headerHeight = document.querySelector('header').clientHeight;
 
 //Adjusting procedure container position when redirected from links
 window.addEventListener('DOMContentLoaded', function() {
-    var targetId = window.location.hash.substring(1);
+    var targetId = 'antakiu-permanentas';//window.location.hash.substring(1);
     if (targetId !== '') {
       var target = document.querySelector('#' + targetId);
       var targetTop = target.getBoundingClientRect().top + document.documentElement.scrollTop;
