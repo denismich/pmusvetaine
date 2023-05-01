@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var targetId = window.location.hash.slice(1);
     if (targetId) {
       var target = document.getElementById(targetId);
-      var targetTop = target.getBoundingClientRect().top + window.scrollY;
+      var targetTop = target.getBoundingClientRect().top + document.documentElement.scrollTop;
       window.scrollTo(0, targetTop - headerHeight);
     }
   });
