@@ -13,9 +13,9 @@ window.addEventListener('load', function() {
 var bannerRegistrationButton = document.querySelector('#banner-registration-button');
 bannerRegistrationButton.addEventListener('click', function() {
     try {
-      window.scrollTo({top: registrationSection.getBoundingClientRect().y - headerHeight, behavior: 'smooth'});
+      window.scroll({top: registrationSection.getBoundingClientRect().y - headerHeight, behavior: 'smooth'});
   } catch(error) {
-      window.scrollTo(0, 5000);
+      window.scroll(0, registrationSection.getBoundingClientRect().y - headerHeight);
   }
   setTimeout(function() {
     if (typeof Calendly !== 'undefined') {
