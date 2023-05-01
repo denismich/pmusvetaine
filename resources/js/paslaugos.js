@@ -1,12 +1,14 @@
+"use strict";
+
 //Header height for scrolling/links to elements
 var headerHeight = document.querySelector('header').clientHeight;
 
 //Adjusting procedure container position when redirected from links
 window.addEventListener('DOMContentLoaded', function() {
-    const targetId = window.location.hash.slice(1);
+    var targetId = window.location.hash.slice(1);
     if (targetId) {
-      const target = document.getElementById(targetId);
-      const targetTop = target.getBoundingClientRect().top + window.scrollY;
+      var target = document.getElementById(targetId);
+      var targetTop = target.getBoundingClientRect().top + window.scrollY;
       window.scrollTo(0, targetTop - headerHeight);
     }
   });
