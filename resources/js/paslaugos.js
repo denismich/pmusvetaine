@@ -5,7 +5,7 @@ var headerHeight = document.querySelector('header').clientHeight;
 
 //Adjusting procedure container position when redirected from links
 window.addEventListener('DOMContentLoaded', function() {
-    var targetId = window.location.hash.slice(1);
+    var targetId = window.location.hash.substring(1);
     if (targetId) {
       var target = document.getElementById(targetId);
       var targetTop = target.getBoundingClientRect().top + document.documentElement.scrollTop;
