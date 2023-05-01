@@ -12,9 +12,11 @@ window.addEventListener('load', function() {
 
 var bannerRegistrationButton = document.querySelector('#banner-registration-button');
 bannerRegistrationButton.addEventListener('click', function() {
-    
-      window.scroll(0, registrationSection.getBoundingClientRect().top - headerHeight);
-
+    if ('scrollBehavior' in document.documentElement.style) {
+      window.scrollTo({top: registrationSection.getBoundingClientRect().top - headerHeight, behavior: 'smooth'});
+  } else {
+      window.scrollTo(0, registrationSection.getBoundingClientRect().top - headerHeight);
+  }
   setTimeout(function() {
     if (typeof Calendly !== 'undefined') {
       document.querySelector('#registration-board').focus();
