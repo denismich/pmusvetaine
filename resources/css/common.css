@@ -323,7 +323,6 @@ header a {
 .calendly-inline-widget {
   height: 850px;
   overflow: hidden !important;
-  overscroll-behavior-y: none;
 }
 
 #registration-board:focus {
