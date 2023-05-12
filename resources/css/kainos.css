@@ -30,8 +30,8 @@
 }
 
 .note-important {
-  text-decoration: underline 1.5px;
-  font-weight: bold;
+  border-bottom: 2px solid white;
+  font-weight: 600;
 }
 
 .prices-container {
