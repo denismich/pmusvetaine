@@ -13,9 +13,25 @@
 
 .pricelist h1 {
   text-align: center;
-  padding-bottom: 4%;
+  padding-bottom: 2%;
   font-size: 2.5rem;
   font-family: 'Playfair Display', serif;
+}
+
+.pricelist-notes-container {
+  margin-bottom: 2%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+}
+
+.pricelist-note {
+  margin: 10px 0;
+}
+
+.note-important {
+  text-decoration: underline 1.5px;
+  font-weight: bold;
 }
 
 .prices-container {
