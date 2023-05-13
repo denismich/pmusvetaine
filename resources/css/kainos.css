@@ -32,6 +32,7 @@
 
 .note-important {
   font-weight: 600;
+  display: inline;
 }
 
 .prices-container {
@@ -62,6 +63,10 @@
 
 .procedure-duration {
   font-family: 'Raleway', sans-serif;
+}
+
+br {
+  display: none;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -103,7 +108,8 @@
   }
 
   .pricelist-notes-container {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+    padding: 0 20px;
   }
 
   .prices-container.column {
@@ -119,7 +125,7 @@
   }
 
   .procedure-price {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 
   .procedure-duration {
@@ -127,19 +133,34 @@
   }
 }
 
+@media only screen and (max-width: 650px) {
+  .pricelist-notes-container {
+    font-size: 1.4rem;
+    padding: 0;
+  }
+}
+
 @media only screen and (max-width: 600px) {
+  .pricelist h1 {
+    font-size: 3.5rem;
+  }
+
   .price-container {
     padding: 20px 10px;
   }
 
   .procedure-price {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
+  }
+
+  br.first {
+    display: inline;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .pricelist-notes-container {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
   }
 
   .pricelist-note {
@@ -147,13 +168,9 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 475px) {
   .pricelist h1 {
-    font-size: 5rem;
-  }
-
-  .pricelist-notes-container {
-    font-size: 1.5rem;
+    font-size: 4rem;
   }
 }
 
@@ -165,6 +182,10 @@
 
   .procedure-duration {
     font-size: 2rem;
+  }
+
+  br.second {
+    display: inline;
   }
 }
 
