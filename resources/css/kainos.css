@@ -36,13 +36,19 @@
 }
 
 .prices-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .prices-container.column {
   display: none;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .price-container {
@@ -113,6 +119,8 @@ br {
   }
 
   .prices-container.column {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 

@@ -1,0 +1,234 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.gallery {
+  padding: 5%;
+  background-color: hsl(210, 33%, 99%);
+}
+
+.gallery-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 8.5% 4%;
+}
+
+.gallery-header h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+.follow-button {
+    padding: 1rem;
+    margin: 0 0.5rem;
+    color: white;
+    text-decoration: none;
+    background-color: hsl(271, 76%, 70%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+}
+
+.follow-button .svg-tiktok-icon {
+  background-color: hsl(271, 76%, 70%);
+  height: 1.4rem;
+  width: auto;
+  vertical-align: -0.3vw;
+}
+
+.follow-button .fa-instagram {
+  font-size: 1.5em;
+  line-height: .0467em;
+  vertical-align: -.125em;
+}
+
+@media only screen and (max-width: 1050px) {
+  .follow-button {
+    font-size: 0.9rem;
+  }
+
+  .follow-button .svg-tiktok-icon {
+    height: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .follow-button .svg-tiktok-icon {
+    height: 2.2rem;
+    vertical-align: -0.6vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .follow-button .svg-tiktok-icon {
+    height: 2.5rem;
+    vertical-align: -0.8vw;
+  }
+}
+
+#gallery-photos-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery-photo {
+  width: 20%;
+  margin: 0.5%;
+  cursor: pointer;
+}
+
+.gallery-photo.square {
+  height: 18vw;
+}
+
+.gallery-photo.rectangle {
+  height: 24vw;
+}
+
+#full-screen-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(0, 0%, 0%, 0.9);
+  z-index: 10;
+}
+
+#full-screen-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 90%;
+  
+}
+
+.full-screen-nav {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+      -ms-transform: translate(0,-50%);
+          transform: translate(0,-50%);
+  background-color: transparent;
+  border: none;
+}
+
+.full-screen-nav .fa {
+  color: white;
+  font-size: 2em;
+  line-height: .03125em;
+  vertical-align: -.1875em;
+}
+
+.full-screen-nav .fa:hover {
+  color: gray;
+}
+
+#close-button {
+  top: 4vw;
+  right: 4%;
+}
+
+#prev-button {
+  left: 2%;
+}
+
+#next-button {
+  right: 2%;
+}
+
+@media only screen and (max-width: 900px) {
+  .gallery-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 0 3rem;
+  }
+
+  .gallery-header h1 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .follow-buttons {
+    width: 80%;
+    text-align: center;
+  }
+
+  .follow-button {
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.75rem;
+  }
+
+  .gallery-photo {
+    width: 40%;
+  }
+
+  .gallery-photo.square {
+    height: 36vw;
+  }
+
+  .gallery-photo.rectangle {
+    height: 48vw;
+  }
+
+  .full-screen-nav .fa {
+    font-size: 4rem !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .gallery-header h1 {
+    font-size: 5rem;
+  }
+
+  .follow-buttons {
+    width: 60%;
+  }
+
+  .follow-button {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .gallery-photo {
+    width: 80%;
+    margin-bottom: 3rem;
+  }
+
+  .gallery-photo.square {
+    height: 72vw;
+  }
+
+  .gallery-photo.rectangle {
+    height: 96vw;
+  }
+
+  .full-screen-nav .fa {
+    font-size: 5rem !important;
+  }
+}
