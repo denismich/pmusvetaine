@@ -1,5 +1,47 @@
 "use strict";
 
+//Header height for scrolling/links to elements
+var headerHeight = document.querySelector('header').clientHeight;
+
+//Gallery registration button
+var registrationSection = document.querySelector('#registration-section');
+window.addEventListener('load', function() {
+  if (typeof Calendly === 'undefined') {
+    registrationSection = document.querySelector('#registration-section-old');
+  }
+});
+
+var galleryRegistrationButton = document.querySelector('#gallery-registration-button');
+galleryRegistrationButton.addEventListener('click', function() {
+  window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
+  setTimeout(function() {
+    if (typeof Calendly !== 'undefined') {
+      document.querySelector('#registration-board').focus();
+    } else {
+      document.querySelector('#name').focus();
+    }
+    window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
+  }, 100);
+});
+
+//Gallery filters
+var galleryImages = document.querySelectorAll('.gallery-photo');
+var galleryFilters = document.querySelectorAll('.gallery-filter');
+
+for (var i = 0; i < galleryFilters.length; i++) {
+  galleryFilters[i].addEventListener('click', function() {
+    document.querySelector('.focused-filter').classList.remove('focused-filter');
+    event.target.classList.add('focused-filter');
+    for (var j = 0; j < galleryImages.length; j++) {
+      if (galleryImages[j].classList.contains(event.target.id) || event.target.id === 'visos') {
+        galleryImages[j].style.display = 'inline-block';
+      } else {
+        galleryImages[j].style.display = 'none';
+      }
+    }
+  });
+}
+
 //Gallery images enlarging
 var imageContainer = document.querySelector('#gallery-photos-container');
 var fullScreenContainer = document.querySelector('#full-screen-container');
@@ -102,11 +144,15 @@ closeButton.addEventListener('click', function() {
 });
 
 prevButton.addEventListener('click', function() {
-  currentImageIndex = (currentImageIndex + imageContainer.children.length - 1) % imageContainer.children.length;
+  do {
+    currentImageIndex = (currentImageIndex + imageContainer.children.length - 1) % imageContainer.children.length;
+  } while (imageContainer.children[currentImageIndex].style.display === 'none');
   fullScreenImage.src = imageContainer.children[currentImageIndex].src;
 });
 
 nextButton.addEventListener('click', function() {
-  currentImageIndex = (currentImageIndex + 1) % imageContainer.children.length;
+  do {
+    currentImageIndex = (currentImageIndex + 1) % imageContainer.children.length;
+  } while (imageContainer.children[currentImageIndex].style.display === 'none');
   fullScreenImage.src = imageContainer.children[currentImageIndex].src;
 });

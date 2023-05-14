@@ -341,6 +341,7 @@
     background-color: hsl(271, 76%, 70%);
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1rem;
+    border-radius: 1.25rem;
 }
 
 .follow-button .svg-tiktok-icon {
@@ -374,6 +375,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .follow-button {
+    border-radius: 1.5rem;
+  }
+
   .follow-button .svg-tiktok-icon {
     height: 2.5rem;
     vertical-align: -0.8vw;
