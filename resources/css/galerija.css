@@ -152,6 +152,7 @@ br {
   bottom: 2.1vw;
   left: 2.1vw;
   opacity: 0.75;
+  display: inline-block;
 }
 
 #gallery-registration-button.hide {

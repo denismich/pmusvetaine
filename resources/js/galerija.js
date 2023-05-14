@@ -1,29 +1,5 @@
 "use strict";
 
-//Header height for scrolling/links to elements
-var headerHeight = document.querySelector('header').clientHeight;
-
-//Gallery registration button
-var registrationSection = document.querySelector('#registration-section');
-window.addEventListener('load', function() {
-  if (typeof Calendly === 'undefined') {
-    registrationSection = document.querySelector('#registration-section-old');
-  }
-});
-
-var galleryRegistrationButton = document.querySelector('#gallery-registration-button');
-galleryRegistrationButton.addEventListener('click', function() {
-  window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
-  setTimeout(function() {
-    if (typeof Calendly !== 'undefined') {
-      document.querySelector('#registration-board').focus();
-    } else {
-      document.querySelector('#name').focus();
-    }
-    window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
-  }, 100);
-});
-
 //Gallery filters
 var galleryImages = document.querySelectorAll('.gallery-photo');
 var galleryFilters = document.querySelectorAll('.gallery-filter');
@@ -155,4 +131,34 @@ nextButton.addEventListener('click', function() {
     currentImageIndex = (currentImageIndex + 1) % imageContainer.children.length;
   } while (imageContainer.children[currentImageIndex].style.display === 'none');
   fullScreenImage.src = imageContainer.children[currentImageIndex].src;
+});
+
+//Header height for scrolling/links to elements
+var headerHeight = document.querySelector('header').clientHeight;
+
+//Gallery registration button
+var registrationSection = document.querySelector('#registration-section');
+var registrationTitle = document.querySelector('#registration-title');
+window.addEventListener('load', function() {
+  if (typeof Calendly === 'undefined') {
+    registrationSection = document.querySelector('#registration-section-old');
+    registrationTitle = document.querySelector('#registration-title-old');
+  }
+});
+
+var galleryRegistrationButton = document.querySelector('#gallery-registration-button');
+galleryRegistrationButton.addEventListener('click', function() {
+  window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
+  setTimeout(function() {
+    if (typeof Calendly !== 'undefined') {
+      document.querySelector('#registration-board').focus();
+    } else {
+      document.querySelector('#name').focus();
+    }
+    window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
+  }, 100);
+});
+
+window.addEventListener("scroll", function() {
+  registrationTitle.getBoundingClientRect().bottom - window.innerHeight < 0 ? galleryRegistrationButton.classList.add("hide") : galleryRegistrationButton.classList.remove("hide")
 });
