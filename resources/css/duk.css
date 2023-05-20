@@ -57,12 +57,14 @@
   max-height: 0;
   padding: 0 1%;
   overflow: hidden;
+  visibility: collapse;
   transition: all 0.25s cubic-bezier(0, 1, 0, 1);
 }
 
 .answer.open {
-  max-height: 500px;
+  max-height: 1000px;
   padding: 1%;
+  visibility: visible;
   transition: max-height 1s, padding 0.5s;
   transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
 }
