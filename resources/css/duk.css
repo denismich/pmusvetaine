@@ -48,7 +48,9 @@
   position: absolute;
   right: 1%;
   top: 50%;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   font-size: 1.5rem;
   color: hsla(0, 0%, 0%, 0.5);
 }
@@ -58,6 +60,8 @@
   padding: 0 1%;
   overflow: hidden;
   visibility: collapse;
+  -webkit-transition: all 0.25s cubic-bezier(0, 1, 0, 1);
+  -o-transition: all 0.25s cubic-bezier(0, 1, 0, 1);
   transition: all 0.25s cubic-bezier(0, 1, 0, 1);
 }
 
@@ -65,8 +69,12 @@
   max-height: 1000px;
   padding: 1%;
   visibility: visible;
+  -webkit-transition: max-height 1s, padding 0.5s;
+  -o-transition: max-height 1s, padding 0.5s;
   transition: max-height 1s, padding 0.5s;
-  transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+       -o-transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+          transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 .faq-images-container {
