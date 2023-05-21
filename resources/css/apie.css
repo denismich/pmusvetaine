@@ -544,7 +544,7 @@
 
 /* Testimonials */
 
-.testimonials-section {
+#testimonials-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

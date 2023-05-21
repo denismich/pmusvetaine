@@ -182,3 +182,20 @@ for (var i = 0; i < dots.length; i++) {
     });
   })(i);
 }
+
+//Adjusting testimonials section position when redirected from links
+window.addEventListener('DOMContentLoaded', function() {
+  var targetId = window.location.hash.substring(1);
+  if (targetId !== '') {
+      var target = document.querySelector('#' + targetId);
+      setTimeout(function() {window.scrollBy(0, target.getBoundingClientRect().top - headerHeight);}, 100);
+  }
+});
+
+document.querySelector('#testimonials-link').addEventListener('click', function() {
+  var targetId = window.location.hash.substring(1);
+  if (targetId !== '') {
+      var target = document.querySelector('#' + targetId);
+      setTimeout(function() {window.scrollBy(0, target.getBoundingClientRect().top - headerHeight);}, 100);
+  }
+});
