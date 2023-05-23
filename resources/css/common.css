@@ -355,7 +355,8 @@ header a {
   .procedures-section,
   .gallery,
   .procedures-list,
-  .procedure-description-container.even {
+  .procedure-description-container.even,
+  .contacts {
     background-color: white;
   }
 
