@@ -10,7 +10,7 @@ async function initMap() {
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
   map = new Map(document.getElementById("map"), {
-    zoom: 17,
+    zoom: 16,
     center: position,
     mapId: "CHIC_BEAUTY_HOUSE_MAP_ID",
   });
