@@ -46,7 +46,7 @@ var headerNavIcon = document.querySelector('#header-nav-icon');
 var headerNavMenu = document.querySelector('#header-nav-menu');
 
 headerNavIcon.addEventListener('click', function() {
-  document.querySelector('#header-nav-menu').classList.toggle('visible');
+  headerNavMenu.classList.toggle('visible');
   headerNavIcon.classList.toggle('open');
 });
 var navLinks = document.querySelectorAll('.nav-link');
