@@ -21,7 +21,7 @@
   margin-bottom: 5%;
 }
 
-#map {
+#map, iframe {
   display: inline-block;
   width: 75%;
   height: 27vw;
