@@ -1,0 +1,92 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.privacy-policy-section {
+  padding: 5% 4.5%;
+  background-color: hsl(210, 33%, 99%);
+}
+
+.privacy-policy-section h1 {
+  font-size: 2.75rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.privacy-policy-section h4 {
+  font-size: 1.4rem;
+  font-family: 'Playfair Display', serif;
+  margin-top: 1rem;
+}
+
+.privacy-policy-section h4:nth-of-type(1) {
+  margin-top: 0;
+}
+
+.privacy-policy-section p {
+  line-height: 2;
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 950px) {
+  .privacy-policy-section h4 {
+    font-size: 2rem;
+  }
+
+  .privacy-policy-section p {
+    font-size: 1.25rem;
+    line-height: 2;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .privacy-policy-section {
+    padding: 5%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .privacy-policy-section p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .privacy-policy-section {
+    padding: 5% 10%;
+  }
+
+  .privacy-policy-section h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .privacy-policy-section h1 {
+    font-size: 4rem;
+  }
+
+  .privacy-policy-section h4 {
+    font-size: 3rem;
+  }
+
+  .privacy-policy-section p {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .privacy-policy-section h4 {
+    font-size: 3.25rem;
+  }
+
+  .privacy-policy-section p {
+    font-size: 2.25rem;
+  }
+}
