@@ -323,6 +323,8 @@ header a {
 .calendly-inline-widget {
   height: 850px;
   overflow: hidden !important;
+  -ms-scroll-chaining: none !important;
+      overscroll-behavior: none !important;
 }
 
 #registration-board:focus {
@@ -356,7 +358,8 @@ header a {
   .gallery,
   .procedures-list,
   .procedure-description-container.even,
-  .contacts {
+  .contacts,
+  .privacy-policy-section {
     background-color: white;
   }
 
