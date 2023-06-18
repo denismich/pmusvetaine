@@ -109,6 +109,8 @@
 
 html {
   font-size: 1.05vw;
+  -ms-scroll-chaining: none !important;
+      overscroll-behavior: none !important;
 }
 
 @media only screen and (max-width: 1050px) {
