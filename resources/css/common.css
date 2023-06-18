@@ -109,8 +109,6 @@
 
 html {
   font-size: 1.05vw;
-  -ms-scroll-chaining: none !important;
-      overscroll-behavior: none !important;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -127,8 +125,6 @@ html {
 
 body {
   -webkit-tap-highlight-color: transparent;
-  -ms-scroll-chaining: none !important;
-      overscroll-behavior: none !important;
 }
 
 ::-moz-selection {
@@ -327,8 +323,6 @@ header a {
 .calendly-inline-widget {
   height: 850px;
   overflow: hidden !important;
-  -ms-scroll-chaining: none !important;
-      overscroll-behavior: none !important;
 }
 
 #registration-board:focus {
