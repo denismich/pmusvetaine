@@ -125,6 +125,8 @@ html {
 
 body {
   -webkit-tap-highlight-color: transparent;
+  -ms-scroll-chaining: none !important;
+      overscroll-behavior: none !important;
 }
 
 ::-moz-selection {
