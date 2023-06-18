@@ -139,33 +139,9 @@ br {
   right: 2%;
 }
 
-#gallery-registration-button {
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  color: white;
-  background-color: hsl(271, 65%, 50%);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 1.25rem;
-  position: fixed;
-  bottom: 2.1vw;
-  left: 2.1vw;
-  opacity: 0.75;
-  display: inline-block;
-}
-
-#gallery-registration-button.hide {
-  display: none;
-}
-
 @media only screen and (max-width: 1050px) {
   br.first {
     display: inline;
-  }
-
-  #gallery-registration-button {
-    font-size: 1rem;
   }
 }
 
@@ -202,10 +178,6 @@ br {
   .full-screen-nav .fa {
     font-size: 4rem !important;
   }
-
-  #gallery-registration-button {
-    font-size: 1.25rem;
-  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -237,29 +209,11 @@ br {
   .full-screen-nav .fa {
     font-size: 5rem !important;
   }
-
-  #gallery-registration-button {
-    font-size: 1.5rem;
-    border-radius: 1.5rem;
-    bottom: 3vw;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  #gallery-registration-button {
-    font-size: 2rem;
-  }
 }
 
 @media only screen and (max-width: 400px) {
   .gallery-filter {
     font-size: 1.75rem;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  #gallery-registration-button {
-    font-size: 2.5rem;
   }
 }
 
