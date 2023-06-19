@@ -140,7 +140,7 @@ body {
 /* Header navigation*/
 
 header {
-  background-color: hsl(210, 33%, 99%);
+  background-color: white;
   position: fixed;
   z-index: 10;
   height: 5.25vw;
@@ -177,7 +177,7 @@ header a {
 }
 
 #header-nav-icon {
-  background-color: hsl(210, 33%, 99%);
+  background-color: white;
 }
 
 #header-nav-icon.open {
@@ -311,7 +311,7 @@ header a {
 
 #registration-section {
   padding-top: 60px;
-  background-color: hsl(210, 33%, 99%);
+  background-color: white;
 }
 
 #registration-section h2 {
@@ -348,19 +348,6 @@ header a {
 }
 
 @media only screen and (max-width: 648px) {
-  header,
-  #header-nav-icon,
-  #registration-section,
-  .copyright-privacy-info,
-  .procedures-section,
-  .gallery,
-  .procedures-list,
-  .procedure-description-container.even,
-  .contacts,
-  .privacy-policy-section {
-    background-color: white;
-  }
-
   .calendly-inline-widget {
     height: 924px;
     margin-top: 30px;
@@ -755,7 +742,7 @@ header a {
   padding: 0 10%;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9rem;
-  background-color: hsl(210, 33%, 99%);
+  background-color: white;
 }
 
 .copyright {
@@ -777,6 +764,8 @@ header a {
 
 @media only screen and (max-width: 600px) {
   .copyright-privacy-info {
+    width: 50%;
+    margin: 0 auto;
     font-size: 1.5rem;
     text-align: center;
   }
@@ -799,8 +788,8 @@ header a {
   border: none;
   border-radius: 1.25rem;
   position: fixed;
-  bottom: 2.1vw;
-  left: 2.1vw;
+  bottom: 1.4vw;
+  left: 1.4vw;
   opacity: 0.75;
   display: inline-block;
 }
@@ -811,8 +800,8 @@ header a {
 
 #scroll-to-top-button {
   position: fixed;
-  bottom: 2.1vw;
-  right: 2.1vw;
+  bottom: 1.4vw;
+  right: 1.4vw;
   width: 4.2vw;
   height: 4.2vw;
   border-radius: 50%;
@@ -849,17 +838,40 @@ footer {
 @media only screen and (max-width: 1050px) {
   #main-registration-button {
     font-size: 1rem;
+    bottom: 2.1vw;
+    left: 2.1vw;
+  }
+
+  #scroll-to-top-button {
+    bottom: 2.1vw;
+    right: 2.1vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #main-registration-button {
+    bottom: 1.6vw;
+    left: 1.6vw;
+  }
+
+  #scroll-to-top-button {
+    bottom: 1.6vw;
+    right: 1.6vw;
   }
 }
 
 @media only screen and (max-width: 900px) {
   #main-registration-button {
     font-size: 1.25rem;
+    bottom: 2.3vw;
+    left: 2.3vw;
   }
 
   #scroll-to-top-button {
     width: 7.5vw;
     height: 7.5vw;
+    bottom: 2.3vw;
+    right: 2.3vw;
   }
 }
  
@@ -867,7 +879,6 @@ footer {
   #main-registration-button {
     font-size: 1.5rem;
     border-radius: 1.5rem;
-    bottom: 3vw;
   }
 
   #scroll-to-top-button {

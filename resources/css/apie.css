@@ -95,7 +95,7 @@
 /* Procedures */
 
 .procedures-section {
-  background-color: hsl(210, 33%, 99%);
+  background-color: white;
 }
 
 .procedures-header {
@@ -311,7 +311,7 @@
 
 .gallery {
   padding: 5%;
-  background-color: hsl(210, 33%, 99%);
+  background-color: white;
 }
 
 .gallery-header {
@@ -561,6 +561,9 @@
   padding: 5% 0;
   background-color: hsl(271, 76%, 70%);
   color: white;
+  -webkit-box-shadow: 0px 5px 16px hsl(271, 65%, 60%);
+  box-shadow: 0px 5px 16px hsl(271, 65%, 60%);
+  margin-bottom: 30px;
 }
 
 .testimonials-header {

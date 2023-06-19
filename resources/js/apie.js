@@ -4,7 +4,7 @@
 var headerHeight = document.querySelector('header').clientHeight;
 
 //Banner registration button
-var registrationSection = document.querySelector('#registration-section');
+/*var registrationSection = document.querySelector('#registration-section');
 window.addEventListener('load', function() {
   if (typeof Calendly === 'undefined') {
     registrationSection = document.querySelector('#registration-section-old');
@@ -22,7 +22,7 @@ bannerRegistrationButton.addEventListener('click', function() {
     }
     window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
   }, 100);
-});
+});*/
 
 //Gallery images enlarging
 var imageContainer = document.querySelector('#gallery-photos-container');

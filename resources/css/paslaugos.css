@@ -6,7 +6,7 @@
 */
 
 .procedures-list {
-  background-color: hsl(210, 33%, 99%);
+  background-color: white;
 }
 
 .procedures-list h1 {
@@ -14,6 +14,7 @@
   padding: 4% 0;
   font-size: 2.5rem;
   font-family: 'Playfair Display', serif;
+  border-bottom: 2px solid hsla(0, 0%, 50%, 0.1);
 }
 
 .procedure-description-container {
@@ -30,13 +31,13 @@
           justify-content: space-evenly;
 }
 
-.procedure-description-container.odd {
+.procedure-description-container.even {
   background-color: hsl(271, 76%, 70%);
   color: white;
 }
 
-.procedure-description-container.even {
-  background-color: hsl(210, 33%, 99%);
+.procedure-description-container.odd {
+  background-color: white;
   color: black;
 }
 
@@ -77,14 +78,15 @@
   border: none;
   cursor: pointer;
   margin: 1rem;
+  display: none;
 }
 
-.registration-button.odd {
+.registration-button.even {
   color: hsl(271, 76%, 70%);
   background-color: white;
 }
 
-.registration-button.even {
+.registration-button.odd {
   background-color: hsl(271, 76%, 70%);
   color: white;
 }

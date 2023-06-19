@@ -137,7 +137,7 @@ nextButton.addEventListener('click', function() {
 var headerHeight = document.querySelector('header').clientHeight;
 
 //Gallery registration button
-var registrationSection = document.querySelector('#registration-section');
+/*var registrationSection = document.querySelector('#registration-section');
 var registrationTitle = document.querySelector('#registration-title');
 window.addEventListener('load', function() {
   if (typeof Calendly === 'undefined') {
@@ -161,4 +161,4 @@ galleryRegistrationButton.addEventListener('click', function() {
 
 window.addEventListener("scroll", function() {
   registrationTitle.getBoundingClientRect().bottom - window.innerHeight < 0 ? galleryRegistrationButton.classList.add("hide") : galleryRegistrationButton.classList.remove("hide")
-});
+});*/

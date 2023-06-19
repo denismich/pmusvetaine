@@ -10,6 +10,8 @@
         <link href="resources/css/reset.css" rel="stylesheet" type="text/css">
         <link href="resources/css/common.css" rel="stylesheet" type="text/css">
         <link href="resources/css/duk.css" rel="stylesheet" type="text/css">
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
         <script src="resources/js/common.js" defer></script>
         <script src="resources/js/duk.js" defer></script>
         <script src="https://use.fontawesome.com/e657b4494b.js"></script>
@@ -167,14 +169,6 @@
                 </div>
             </section>
 
-            <section id="registration-section" aria-label="Registracija">
-                <h2 id="registration-title">REGISTRACIJA</h2>
-                <!-- Calendly inline widget begin -->
-                <div tabindex="0" id="registration-board" class="calendly-inline-widget" data-url="https://calendly.com/dmichailovskij?hide_landing_page_details=1&primary_color=ff00ea"></div>
-                <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                <!-- Calendly inline widget end -->
-            </section>
-
             <section id="registration-section-old" aria-label="Registracija">
                 <div class="registration-header">
                     <h2 id="registration-title-old">REGISTRACIJA</h2>
@@ -279,7 +273,7 @@
             </div>
         </footer>
 
-        <button id="main-registration-button">REGISTRUOTIS</button>
+        <button id="main-registration-button" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dmichailovskij?hide_landing_page_details=1&primary_color=ff00ea'});return false;">REGISTRUOTIS</button>
 
         <button id="scroll-to-top-button" aria-label="Grįžti į viršų">
             <i class="fa fa-solid fa-chevron-up"></i>
