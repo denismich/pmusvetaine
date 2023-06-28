@@ -105,13 +105,17 @@ headerNavIcon.addEventListener('keydown', function(event) {
   }
 })
 
-//Registration section appearance
+//Registration section appearance/main registration button
 window.addEventListener('load', function() {
   if (typeof Calendly !== 'undefined') {
-    document.querySelector('#registration-section').style.display = 'block';
+    document.querySelector('#main-registration-button').style.display = 'inline-block';
     document.querySelector('#registration-section-old').style.display = 'none';
+    document.querySelector('#main-registration-button').addEventListener('click', function() {
+      Calendly.initPopupWidget({url: 'https://calendly.com/dmichailovskij?hide_landing_page_details=1&primary_color=ff00ea'});
+      return false;
+    });
   } else {
-    document.querySelector('#registration-section').style.display = 'none';
+    document.querySelector('#main-registration-button').style.display = 'none';
     document.querySelector('#registration-section-old').style.display = 'block';
   }
 });
