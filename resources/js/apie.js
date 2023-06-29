@@ -6,20 +6,24 @@ var headerHeight = document.querySelector('header').clientHeight;
 //Banner registration button
 var registrationSection = document.querySelector('#registration-section-old');
 var bannerRegistrationButton = document.querySelector('#banner-registration-button');
+var initCalendlyPopupWidget = function() {
+  Calendly.initPopupWidget({url: 'https://calendly.com/dmichailovskij?hide_landing_page_details=1&primary_color=ff00ea'});
+  return false;
+}
+
+bannerRegistrationButton.addEventListener('click', initCalendlyPopupWidget);
 
 window.addEventListener('load', function() {
-  bannerRegistrationButton.addEventListener('click', function() {
-    if (typeof Calendly !== undefined) {
-      Calendly.initPopupWidget({url: 'https://calendly.com/dmichailovskij?hide_landing_page_details=1&primary_color=ff00ea'});
-      return false;
-    } else {
-    window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
-    setTimeout(function() {
-      document.querySelector('#name').focus();
+  if (typeof Calendly === 'undefined') {
+    bannerRegistrationButton.removeEventListener('click', initCalendlyPopupWidget);
+    bannerRegistrationButton.addEventListener('click', function() {
       window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
-    }, 100);
+      setTimeout(function() {
+        document.querySelector('#name').focus();
+        window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
+      }, 100);
+    });
   }
-  });
 });
 
 //Gallery images enlarging

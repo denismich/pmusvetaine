@@ -137,28 +137,25 @@ nextButton.addEventListener('click', function() {
 var headerHeight = document.querySelector('header').clientHeight;
 
 //Gallery registration button
-/*var registrationSection = document.querySelector('#registration-section');
-var registrationTitle = document.querySelector('#registration-title');
+var registrationSection = document.querySelector('#registration-section-old');
+var registrationTitle = document.querySelector('#registration-title-old');
+
+var galleryRegistrationButton = document.querySelector('#gallery-registration-button');
+
 window.addEventListener('load', function() {
   if (typeof Calendly === 'undefined') {
-    registrationSection = document.querySelector('#registration-section-old');
-    registrationTitle = document.querySelector('#registration-title-old');
+    galleryRegistrationButton.style.display = 'inline-block';
   }
 });
 
-var galleryRegistrationButton = document.querySelector('#gallery-registration-button');
 galleryRegistrationButton.addEventListener('click', function() {
   window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
   setTimeout(function() {
-    if (typeof Calendly !== 'undefined') {
-      document.querySelector('#registration-board').focus();
-    } else {
-      document.querySelector('#name').focus();
-    }
+    document.querySelector('#name').focus();
     window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
   }, 100);
 });
 
 window.addEventListener("scroll", function() {
   registrationTitle.getBoundingClientRect().bottom - window.innerHeight < 0 ? galleryRegistrationButton.classList.add("hide") : galleryRegistrationButton.classList.remove("hide")
-});*/
+});

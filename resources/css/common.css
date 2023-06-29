@@ -309,63 +309,6 @@ header a {
 
 /* Registration */
 
-#registration-section {
-  padding-top: 60px;
-  background-color: white;
-}
-
-#registration-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.25rem;
-  text-align: center;
-}
-
-.calendly-inline-widget {
-  height: 850px;
-  overflow: hidden !important;
-}
-
-#registration-board:focus {
-  outline: none;
-}
-
-@media only screen and (max-width: 998px) {
-  .calendly-inline-widget {
-    height: 1000px;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  #registration-section h2 {
-    font-size: 3rem;
-  }
-}
-
-@media only screen and (max-width: 708px) {
-  .calendly-inline-widget {
-    height: 1050px;
-  }
-}
-
-@media only screen and (max-width: 648px) {
-  .calendly-inline-widget {
-    height: 924px;
-    margin-top: 30px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #registration-section h2 {
-    font-size: 3.75rem;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .calendly-inline-widget {
-    height: 1029px;
-  }
-}
-
 #registration-section-old {
   padding: 5.5% 5% 5%;
   background-color: white;
@@ -792,10 +735,6 @@ header a {
   left: 1.4vw;
   opacity: 0.75;
   display: inline-block;
-}
-
-#main-registration-button.hide {
-  display: none;
 }
 
 #scroll-to-top-button {

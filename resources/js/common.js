@@ -106,17 +106,19 @@ headerNavIcon.addEventListener('keydown', function(event) {
 })
 
 //Registration section appearance/main registration button
+var registrationSectionOld = document.querySelector('#registration-section-old');
+var mainRegistrationButton = document.querySelector('#main-registration-button');
+var initCalendlyPopupWidget = function() {
+  Calendly.initPopupWidget({url: 'https://calendly.com/dmichailovskij?hide_landing_page_details=1&primary_color=ff00ea'});
+  return false;
+};
+
+mainRegistrationButton.addEventListener('click', initCalendlyPopupWidget);
+
 window.addEventListener('load', function() {
-  if (typeof Calendly !== 'undefined') {
-    document.querySelector('#main-registration-button').style.display = 'inline-block';
-    document.querySelector('#registration-section-old').style.display = 'none';
-    document.querySelector('#main-registration-button').addEventListener('click', function() {
-      Calendly.initPopupWidget({url: 'https://calendly.com/dmichailovskij?hide_landing_page_details=1&primary_color=ff00ea'});
-      return false;
-    });
-  } else {
-    document.querySelector('#main-registration-button').style.display = 'none';
-    document.querySelector('#registration-section-old').style.display = 'block';
+  if (typeof Calendly === 'undefined') {
+    mainRegistrationButton.style.display = 'none';
+    registrationSectionOld.style.display = 'block';
   }
 });
 
