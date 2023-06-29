@@ -13,25 +13,21 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 //Registration buttons
-var registrationSection = document.querySelector('#registration-section');
-window.addEventListener('load', function() {
-  if (typeof Calendly === 'undefined') {
-    registrationSection = document.querySelector('#registration-section-old');
-  }
-});
+var registrationSection = document.querySelector('#registration-section-old');
 
 var registrationButtons = document.querySelectorAll('.registration-button');
 
-for (var i = 0; i < registrationButtons.length; i++) {
-    registrationButtons[i].addEventListener('click', function() {
-        window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
-        setTimeout(function() {
-          if (typeof Calendly !== 'undefined') {
-            document.querySelector('#registration-board').focus();
-          } else {
-            document.querySelector('#name').focus();
-          }
+window.addEventListener('load', function() {
+  if (typeof Calendly === 'undefined') {
+    for (var i = 0; i < registrationButtons.length; i++) {
+      registrationButtons[i].style.display = 'inline-block';
+      registrationButtons[i].addEventListener('click', function() {
           window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
-        }, 100);
-    })
-}
+          setTimeout(function() {
+            document.querySelector('#name').focus();
+            window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
+          }, 100);
+      })
+  }
+  }
+});
