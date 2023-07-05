@@ -836,9 +836,3 @@ footer {
     font-size: 2rem;
   }
 }
-
-@media only screen and (max-width: 375px) {
-  #main-registration-button {
-    font-size: 2.5rem;
-  }
-}
