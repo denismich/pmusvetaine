@@ -192,9 +192,7 @@ window.addEventListener('DOMContentLoaded', function() {
   if (targetId !== '') {
       var target = document.querySelector('#' + targetId);
       setTimeout(function() {window.scrollBy(0, target.getBoundingClientRect().top - headerHeight);}, 100);
-  }
-  if (targetId === 'testimonials-section') {
-    document.querySelector('#testimonials-section-header').focus();
+      target.focus();
   }
 });
 
