@@ -31,6 +31,10 @@
           justify-content: space-evenly;
 }
 
+.procedure-description-container:focus {
+  outline: none;
+}
+
 .procedure-description-container.even {
   background-color: hsl(271, 76%, 70%);
   color: white;

@@ -596,6 +596,10 @@
   margin-bottom: 30px;
 }
 
+#testimonials-section:focus {
+  outline: none;
+}
+
 .testimonials-header {
   font-size: 3rem;
   font-family: 'Playfair Display', serif;

@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', function() {
     if (targetId !== '') {
         var target = document.querySelector('#' + targetId);
         setTimeout(function() {window.scrollBy(0, target.getBoundingClientRect().top - headerHeight);}, 100);
+        target.focus();
     }
 });
 
