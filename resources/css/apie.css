@@ -508,6 +508,31 @@
   .full-screen-nav .fa {
     font-size: 4rem !important;
   }
+
+  #close-button {
+    top: 6vw;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #close-button {
+    top: 5vw;
+    right: 3vw;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  #close-button {
+    top: 4vw;
+    right: 2vw;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #close-button {
+    top: 3vw;
+    right: 1vw;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -539,6 +564,11 @@
 
   .full-screen-nav .fa {
     font-size: 5rem !important;
+  }
+
+  #close-button {
+    top: 6vw;
+    right: 2vw;
   }
 }
 
