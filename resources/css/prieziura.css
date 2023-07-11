@@ -5,12 +5,12 @@
 * Browsers: last 4 version
 */
 
-.contacts {
+.care {
   padding: 5% 4.5%;
   background-color: white;
 }
 
-.contacts h1 {
+.care h1 {
   font-size: 2.75rem;
   font-family: 'Playfair Display', serif;
   font-weight: 500;
@@ -18,55 +18,40 @@
   margin-bottom: 5%;
 }
 
-#map {
-  display: inline-block;
-  width: 75%;
-  height: 27vw;
+.care h2 {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  text-align: center;
+  margin: 4% 0 3%;
 }
 
-#contacts-info-container {
-  display: inline-block;
-  margin-left: 3%;
-  vertical-align: top;
-}
-
-#contacts-info-container h4 {
+.care h4 {
   font-size: 1.4rem;
   font-family: 'Playfair Display', serif;
-  margin-top: 1rem;
+  margin: 1.25rem 0 0.25rem;
 }
 
-#contacts-info-container h4:nth-of-type(1) {
+.care h4:nth-of-type(1) {
   margin-top: 0;
 }
 
-#contacts-info-container p {
+.care p,
+.care li {
   line-height: 2;
   font-family: 'Open Sans', sans-serif;
 }
 
-.contacts-social-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  font-size: 1.5rem;
-  margin-top: 0.25rem;
-  width: 50%;
+.care-important-info {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.contacts-social-links i,
-.contacts-social-links svg {
-  color: black;
-  margin: 0 0.375rem;
-}
-
-.contacts-social-links .svg-tiktok-icon {
-  height: 1.5rem;
-  width: auto;
-  vertical-align: -0.2vw;
+.care-p-heading {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 @media only screen and (max-width: 1050px) {
