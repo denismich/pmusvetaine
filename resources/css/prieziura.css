@@ -11,7 +11,7 @@
 }
 
 .care h1 {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   font-family: 'Playfair Display', serif;
   font-weight: 500;
   text-align: center;
@@ -23,7 +23,7 @@
   font-family: 'Playfair Display', serif;
   font-weight: 500;
   text-align: center;
-  margin: 4% 0 3%;
+  margin-top: 4%;
 }
 
 .care h4 {
@@ -46,153 +46,113 @@
   font-size: 1.25rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
-.care-p-heading {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-@media only screen and (max-width: 1050px) {
-  .contacts {
-    padding: 5% 3% 5% 7%;
+@media only screen and (max-width: 900px) {
+  .care {
+    padding: 5% 5% 5% 7%;
   }
 
-  #map {
-    width: 65%;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .contacts {
-    padding: 5%;
+  .care h4 {
+    font-size: 1.75rem;
   }
 
-  #map {
-    width: 100%;
-    height: 45vw;
-    margin-bottom: 30px;
+  .care p,
+  .care li {
+    font-size: 1.25rem;
   }
 
-  #contacts-info-container {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  #contacts-info-container h4 {
-    font-size: 2rem;
-  }
-
-  #contacts-info-container p {
-    font-size: 1rem;
-  }
-
-  .contacts-info {
-    display: inline-block;
-    width: 33%;
-    vertical-align: top;
+  .care-important-info {
+    font-size: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  #contacts-info-container p {
-    font-size: 1.125rem;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  #contacts-info-container h4 {
-    font-size: 2.25rem;
+  .care h4 {
+    font-size: 2rem;
   }
 
-  #contacts-info-container p {
-    font-size: 1.25rem;
+  .care p,
+  .care li {
+    font-size: 1.5rem;
   }
 
-  .contacts-info {
-    width: 49%;
-    text-align: center;
-  }
-
-  .contacts-social-links {
-    width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .care-important-info {
+    font-size: 1.75rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .contacts h1 {
+  .care h1 {
     font-size: 3.5rem;
   }
 
-  #map {
-    height: 60vw;
+  .care h2 {
+    font-size: 3rem;
   }
 
-  .contacts-social-links {
-    font-size: 2.25rem;
-    margin-top: 0.25rem;
+  .care h4 {
+    margin-top: 1.5rem;
   }
-
-  .contacts-social-links i,
-  .contacts-social-links svg {
-    margin: 0 0.5rem;
-  }
-
-  .contacts-social-links .svg-tiktok-icon {
-    height: 2.25rem;
-    vertical-align: -0.35vw;
+  
+  .care h4:nth-of-type(1) {
+    margin-top: 0;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .contacts h1 {
+  .care h1 {
     font-size: 4rem;
   }
 
-  #map {
-    height: 90vw;
-    margin-bottom: 10px;
+  .care h2 {
+    font-size: 3.75rem;
+    margin-top: 10%;
   }
 
-  .contacts-info {
-    width: 100%;
-    margin-top: 20px;
+  .care h4 {
+    font-size: 2.25rem;
+    margin-top: 2rem;
   }
 
-  #contacts-info-container h4 {
-    font-size: 3rem;
+  .care h4:nth-of-type(1) {
+    margin-top: 0;
   }
 
-  #contacts-info-container p {
+  .care p,
+  .care li {
+    font-size: 1.75rem;
+  }
+
+  .care-important-info {
     font-size: 2rem;
   }
+}
 
-  .contacts-social-links {
-    margin-top: 0.25rem;
-    font-size: 3.25rem;
+@media only screen and (max-width: 450px) {
+  .care h4 {
+    font-size: 2.5rem;
+    margin-top: 2.5rem;
   }
 
-  .contacts-social-links i,
-  .contacts-social-links svg {
-    margin: 0 0.75rem;
+  .care h4:nth-of-type(1) {
+    margin-top: 0;
   }
 
-  .contacts-social-links .svg-tiktok-icon {
-    height: 3.25rem;
-    vertical-align: -0.8vw;
+  .care p,
+  .care li {
+    font-size: 2rem;
   }
 }
 
 @media only screen and (max-width: 375px) {
-  #contacts-info-container h4 {
+  .care h4 {
     font-size: 3.25rem;
   }
 
-  #contacts-info-container p {
+  .care p,
+  .care li {
     font-size: 2.25rem;
   }
 }
