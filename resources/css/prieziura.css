@@ -84,10 +84,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .care h1 {
-    font-size: 3.5rem;
-  }
-
+  .care h1,
   .care h2 {
     font-size: 3rem;
   }
@@ -102,12 +99,9 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .care h1 {
-    font-size: 4rem;
-  }
-
+  .care h1,
   .care h2 {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
     margin-top: 10%;
   }
 
