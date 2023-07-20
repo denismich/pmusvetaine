@@ -110,6 +110,7 @@ br {
           transform: translate(0,-50%);
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .full-screen-nav .fa {
