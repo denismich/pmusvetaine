@@ -126,7 +126,7 @@
   height: 15.33vw;
 }
 
-.procedure h4 {
+.procedure h3 {
   font-size: 2rem;
   font-weight: normal;
   margin-top: 1em;
@@ -170,7 +170,7 @@
     height: 28.43vw;
   }
 
-  .procedure h4 {
+  .procedure h3 {
     font-size: 3rem;
     color: white;
     position: absolute;
@@ -210,7 +210,7 @@
     margin-right: 0;
   }
 
-  .procedure h4 {
+  .procedure h3 {
     font-size: 4rem;
   }
 
@@ -249,7 +249,7 @@
   width: 40%;
 }
 
-.about-me-content h2 {
+.about-me-content h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   margin: 1rem 0 3rem;
@@ -283,7 +283,7 @@
     width: 80%;
   }
 
-  .about-me-content h2 {
+  .about-me-content h1 {
     font-size: 4rem;
   }
 
@@ -298,7 +298,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .about-me-content h2 {
+  .about-me-content h1 {
     font-size: 5rem;
   }
 

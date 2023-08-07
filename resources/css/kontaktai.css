@@ -30,13 +30,13 @@
   vertical-align: top;
 }
 
-#contacts-info-container h4 {
+#contacts-info-container h2 {
   font-size: 1.4rem;
   font-family: 'Playfair Display', serif;
   margin-top: 1rem;
 }
 
-#contacts-info-container h4:nth-of-type(1) {
+#contacts-info-container h2:nth-of-type(1) {
   margin-top: 0;
 }
 
@@ -95,7 +95,7 @@
     margin-left: 0;
   }
 
-  #contacts-info-container h4 {
+  #contacts-info-container h2 {
     font-size: 2rem;
   }
 
@@ -117,7 +117,7 @@
 }
 
 @media only screen and (max-width: 650px) {
-  #contacts-info-container h4 {
+  #contacts-info-container h2 {
     font-size: 2.25rem;
   }
 
@@ -178,7 +178,7 @@
     margin-top: 20px;
   }
 
-  #contacts-info-container h4 {
+  #contacts-info-container h2 {
     font-size: 3rem;
   }
 
@@ -203,7 +203,7 @@
 }
 
 @media only screen and (max-width: 375px) {
-  #contacts-info-container h4 {
+  #contacts-info-container h2 {
     font-size: 3.25rem;
   }
 
