@@ -113,10 +113,12 @@ var initCalendlyPopupWidget = function() {
   return false;
 };
 
-mainRegistrationButton.addEventListener('click', initCalendlyPopupWidget);
+if (mainRegistrationButton !== null) {
+  mainRegistrationButton.addEventListener('click', initCalendlyPopupWidget);
+}
 
 window.addEventListener('load', function() {
-  if (typeof Calendly === 'undefined') {
+  if (typeof Calendly === 'undefined' && mainRegistrationButton !== null) {
     mainRegistrationButton.style.display = 'none';
     registrationSectionOld.style.display = 'block';
   }
@@ -147,7 +149,8 @@ var closeDropdownFromOutside = function(event) {event.target !== select && dropd
 
 var selectOption = function(event) {select.value = event.currentTarget.textContent};
 
-select.addEventListener('mousedown', function(event) {event.preventDefault()});
+if (select !== null) {
+  select.addEventListener('mousedown', function(event) {event.preventDefault()});
 select.addEventListener('keydown', function(event) {
   if (event.keyCode === 13 || event.keyCode === 32) {
     event.preventDefault();
@@ -167,6 +170,7 @@ select.addEventListener('keydown', function(event) {
 });
 
 select.addEventListener('click', toggleDropdown);
+}
 
 document.body.addEventListener('click', closeDropdownFromOutside);
 
