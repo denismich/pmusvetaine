@@ -37,7 +37,7 @@ imageContainer.addEventListener('click', function(event) {
   if (event.target.tagName === 'IMG') {
       imageToFocus = event.target;
       currentImageIndex = imageArray.indexOf(event.target);
-      fullScreenImage.src = event.target.src;
+      fullScreenImage.src = event.target.src.replace('/gallery/', '/gallery-enlarged/');
       fullScreenContainer.style.display = 'block';
       fullScreenImage.focus();
   }
@@ -123,14 +123,14 @@ prevButton.addEventListener('click', function() {
   do {
     currentImageIndex = (currentImageIndex + imageContainer.children.length - 1) % imageContainer.children.length;
   } while (imageContainer.children[currentImageIndex].style.display === 'none');
-  fullScreenImage.src = imageContainer.children[currentImageIndex].src;
+  fullScreenImage.src = imageContainer.children[currentImageIndex].src.replace('/gallery/', '/gallery-enlarged/');
 });
 
 nextButton.addEventListener('click', function() {
   do {
     currentImageIndex = (currentImageIndex + 1) % imageContainer.children.length;
   } while (imageContainer.children[currentImageIndex].style.display === 'none');
-  fullScreenImage.src = imageContainer.children[currentImageIndex].src;
+  fullScreenImage.src = imageContainer.children[currentImageIndex].src.replace('/gallery/', '/gallery-enlarged/');
 });
 
 //Header height for scrolling/links to elements
