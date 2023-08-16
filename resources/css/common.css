@@ -137,6 +137,16 @@ body {
   color: white;
 }
 
+picture {
+  display: inline-block;
+}
+
+picture source,
+picture img {
+  height: 100%;
+  width: 100%;
+}
+
 /* Header navigation*/
 
 header {
@@ -556,7 +566,7 @@ header a {
           align-items: start;
 }
 
-.working-info-container img {
+.working-info-container picture {
   width: 15%;
   height: 10.26vw;
 }
@@ -572,7 +582,7 @@ header a {
 }
 
 @media only screen and (max-width: 1050px) {
-  .working-info-container img {
+  .working-info-container picture {
     width: 18%;
     height: 12.31vw;
   }
@@ -613,7 +623,7 @@ header a {
     padding: 5%;
   }
 
-  .working-info-container img {
+  .working-info-container picture {
     display: none;
   }
 

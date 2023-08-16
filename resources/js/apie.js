@@ -44,7 +44,7 @@ var currentImageIndex = 0;
 imageContainer.addEventListener('click', function(event) {
   if (event.target.tagName === 'IMG') {
       imageToFocus = event.target;
-      currentImageIndex = imageArray.indexOf(event.target);
+      currentImageIndex = imageArray.indexOf(event.target.parentElement);
       fullScreenImage.src = event.target.src.replace('/gallery/', '/gallery-enlarged/');
       fullScreenContainer.style.display = 'block';
       fullScreenImage.focus();
@@ -129,12 +129,12 @@ closeButton.addEventListener('click', function() {
 
 prevButton.addEventListener('click', function() {
   currentImageIndex = (currentImageIndex + imageContainer.children.length - 1) % imageContainer.children.length;
-  fullScreenImage.src = imageContainer.children[currentImageIndex].src.replace('/gallery/', '/gallery-enlarged/');
+  fullScreenImage.src = imageContainer.children[currentImageIndex].children[2].src.replace('/gallery/', '/gallery-enlarged/');
 });
 
 nextButton.addEventListener('click', function() {
   currentImageIndex = (currentImageIndex + 1) % imageContainer.children.length;
-  fullScreenImage.src = imageContainer.children[currentImageIndex].src.replace('/gallery/', '/gallery-enlarged/');
+  fullScreenImage.src = imageContainer.children[currentImageIndex].children[2].src.replace('/gallery/', '/gallery-enlarged/');
 });
 
 //Testimonials slides
