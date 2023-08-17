@@ -27,6 +27,14 @@ var nextButton = document.querySelector('#next-button');
 var closeButton = document.querySelector('#close-button');
 var imageToFocus = null;
 var imageArray = [];
+var imageIndex = 0;
+var srcType = 'srcset';
+if (fullScreenImage.src.endsWith('webp')) {
+  imageIndex = 1;
+} else if (fullScreenImage.src.endsWith('jpg')) {
+  imageIndex = 2;
+  srcType = 'src';
+}
 for(var i = 0; i < imageContainer.children.length; i++) {
   imageArray.push(imageContainer.children[i]);
 }
@@ -36,10 +44,12 @@ var currentImageIndex = 0;
 imageContainer.addEventListener('click', function(event) {
   if (event.target.tagName === 'IMG') {
       imageToFocus = event.target;
-      currentImageIndex = imageArray.indexOf(event.target);
+      setTimeout(function() {
+        fullScreenContainer.style.display = 'block';
+        fullScreenImage.focus();
+      }, 100);
       fullScreenImage.src = event.target.src.replace('/gallery/', '/gallery-enlarged/');
-      fullScreenContainer.style.display = 'block';
-      fullScreenImage.focus();
+      currentImageIndex = imageArray.indexOf(event.target.parentElement);
   }
 });
 
@@ -123,14 +133,14 @@ prevButton.addEventListener('click', function() {
   do {
     currentImageIndex = (currentImageIndex + imageContainer.children.length - 1) % imageContainer.children.length;
   } while (imageContainer.children[currentImageIndex].style.display === 'none');
-  fullScreenImage.src = imageContainer.children[currentImageIndex].src.replace('/gallery/', '/gallery-enlarged/');
+  fullScreenImage.src = imageContainer.children[currentImageIndex].children[imageIndex][srcType].replace('/gallery/', '/gallery-enlarged/');
 });
 
 nextButton.addEventListener('click', function() {
   do {
     currentImageIndex = (currentImageIndex + 1) % imageContainer.children.length;
   } while (imageContainer.children[currentImageIndex].style.display === 'none');
-  fullScreenImage.src = imageContainer.children[currentImageIndex].src.replace('/gallery/', '/gallery-enlarged/');
+  fullScreenImage.src = imageContainer.children[currentImageIndex].children[imageIndex][srcType].replace('/gallery/', '/gallery-enlarged/');
 });
 
 //Header height for scrolling/links to elements

@@ -141,7 +141,6 @@ picture {
   display: inline-block;
 }
 
-picture source,
 picture img {
   height: 100%;
   width: 100%;

@@ -98,12 +98,15 @@
 .faq-images-container picture {
   max-width: 100%;
   margin-top: 20px;
-  -webkit-box-shadow: 16px 16px 16px hsl(271, 65%, 50%);
-          box-shadow: 16px 16px 16px hsl(271, 65%, 50%);
 }
 
 .faq-images-container picture:nth-of-type(1) {
   margin: 0;
+}
+
+.faq-images-container img {
+  -webkit-box-shadow: 16px 16px 16px hsl(271, 65%, 50%);
+          box-shadow: 16px 16px 16px hsl(271, 65%, 50%);
 }
 
 @media only screen and (max-width: 900px) {
