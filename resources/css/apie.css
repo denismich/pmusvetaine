@@ -239,9 +239,12 @@
 .about-me-photo {
   max-width: 35%;
   margin-right: 5%;
+  max-height: 80vh;
+}
+
+.about-me-photo img {
   -webkit-box-shadow: 16px 16px 16px hsl(271, 65%, 60%);
           box-shadow: 16px 16px 16px hsl(271, 65%, 60%);
-  max-height: 80vh;
 }
 
 .about-me-content {
