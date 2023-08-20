@@ -318,3 +318,16 @@ scrollToTopButton.addEventListener('click', function() {
     }
   }, 100);
 });
+
+//Fonts observer
+const openSansObserver = new FontFaceObserver('Open Sans');
+const playfairDisplayObserver = new FontFaceObserver('Playfair Display');
+const ralewayObserver = new FontFaceObserver('Raleway');
+
+Promise.all([
+  openSansObserver.load(),
+  playfairDisplayObserver.load(),
+  ralewayObserver.load()
+]).then(function(){
+  document.documentElement.className += " fonts-loaded";
+});
