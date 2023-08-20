@@ -41,6 +41,36 @@ createCORSRequest: function (e, n) {
 }
 };
 
+//Fonts observer
+const openSansObserver = new FontFaceObserver('Open Sans');
+const playfairDisplayObserver = new FontFaceObserver('Playfair Display');
+const ralewayObserver = new FontFaceObserver('Raleway');
+
+Promise.all([
+  openSansObserver.load(),
+  playfairDisplayObserver.load(),
+  ralewayObserver.load()
+]).then(function(){
+  document.documentElement.className += " fonts-loaded";
+});
+
+//Passive detector for event listeners
+var supportsPassive = false;
+var passiveArgument = false;
+try {
+  var opts = Object.defineProperty({}, 'passive', {
+    get: function() {
+      supportsPassive = true;
+    }
+  });
+  window.addEventListener("testPassive", null, opts);
+  window.removeEventListener("testPassive", null, opts);
+} catch (e) {};
+
+if (supportsPassive === true) {
+  passiveArgument = { passive: true };
+};
+
 //Header navigation bar icon
 var headerNavIcon = document.querySelector('#header-nav-icon');
 var headerNavMenu = document.querySelector('#header-nav-menu');
@@ -317,17 +347,4 @@ scrollToTopButton.addEventListener('click', function() {
       document.querySelector('#first-link').focus();
     }
   }, 100);
-});
-
-//Fonts observer
-const openSansObserver = new FontFaceObserver('Open Sans');
-const playfairDisplayObserver = new FontFaceObserver('Playfair Display');
-const ralewayObserver = new FontFaceObserver('Raleway');
-
-Promise.all([
-  openSansObserver.load(),
-  playfairDisplayObserver.load(),
-  ralewayObserver.load()
-]).then(function(){
-  document.documentElement.className += " fonts-loaded";
 });

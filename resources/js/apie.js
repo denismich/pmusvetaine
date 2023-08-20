@@ -189,7 +189,7 @@ window.addEventListener('DOMContentLoaded', function() {
   slideshowContainer.addEventListener('mouseleave', resume);
   slideshowContainer.addEventListener('touchstart', pause);
   slideshowContainer.addEventListener('touchend', resume);
-});
+}, passiveArgument);
 
 for (var i = 0; i < dots.length; i++) {
   (function(index) {
