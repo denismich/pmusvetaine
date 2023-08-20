@@ -39,9 +39,6 @@ var imageIndex = 0;
 var srcType = 'srcset';
 if (fullScreenImage.src.endsWith('webp')) {
   imageIndex = 1;
-} else if (fullScreenImage.src.endsWith('jpg')) {
-  imageIndex = 2;
-  srcType = 'src';
 }
 for(var i = 0; i < imageContainer.children.length; i++) {
   imageArray.push(imageContainer.children[i]);
@@ -139,12 +136,22 @@ closeButton.addEventListener('click', function() {
 
 prevButton.addEventListener('click', function() {
   currentImageIndex = (currentImageIndex + imageContainer.children.length - 1) % imageContainer.children.length;
-  fullScreenImage.src = imageContainer.children[currentImageIndex].children[imageIndex][srcType].replace('/gallery/', '/gallery-enlarged/');
+  if (fullScreenImage.src.endsWith('jpg')) {
+    fullScreenImage.src = imageContainer.children[currentImageIndex].children[0].srcset.replace('/gallery/', '/gallery-enlarged/')
+    .replace('.avif', '.jpg');
+  } else {
+    fullScreenImage.src = imageContainer.children[currentImageIndex].children[imageIndex].srcset.replace('/gallery/', '/gallery-enlarged/');
+  }
 });
 
 nextButton.addEventListener('click', function() {
   currentImageIndex = (currentImageIndex + 1) % imageContainer.children.length;
-  fullScreenImage.src = imageContainer.children[currentImageIndex].children[imageIndex][srcType].replace('/gallery/', '/gallery-enlarged/');
+  if (fullScreenImage.src.endsWith('jpg')) {
+    fullScreenImage.src = imageContainer.children[currentImageIndex].children[0].srcset.replace('/gallery/', '/gallery-enlarged/')
+    .replace('.avif', '.jpg');
+  } else {
+    fullScreenImage.src = imageContainer.children[currentImageIndex].children[imageIndex].srcset.replace('/gallery/', '/gallery-enlarged/');
+  }
 });
 
 //Testimonials slides
