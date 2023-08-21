@@ -127,11 +127,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-::-moz-selection {
-  background-color:hsl(271, 65%, 50%);
-  color: white;
-}
-
+::-moz-selection,
 ::selection {
   background-color:hsl(271, 65%, 50%);
   color: white;
@@ -141,7 +137,7 @@ picture {
   display: inline-block;
 }
 
-picture img {
+img {
   height: 100%;
   width: 100%;
 }
@@ -180,6 +176,7 @@ header a {
 #header-nav-icon {
   font-size: 3.5rem;
   color: hsl(271, 76%, 70%);
+  background-color: white;
   display: none;
   height: 100%;
   padding: 1rem 2rem;
@@ -187,10 +184,6 @@ header a {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-}
-
-#header-nav-icon {
-  background-color: white;
 }
 
 #header-nav-icon.open {
@@ -231,10 +224,7 @@ header a {
     display: inline-flex;
   }
 
-  #header-nav-icon::-moz-selection {
-    background-color: transparent;
-  }
-
+  #header-nav-icon::-moz-selection,
   #header-nav-icon::selection {
     background-color: transparent;
   }
@@ -268,10 +258,7 @@ header a {
     color: white;
   }
 
-  header a::-moz-selection {
-    background-color: transparent;
-  }
-
+  header a::-moz-selection,
   header a::selection {
     background-color: transparent;
   }
@@ -355,7 +342,7 @@ html.fonts-loaded .registration-header p {
   margin: 0 auto;
 }
 
-.registration-form-container .input-field {
+.input-field {
   padding: 1.5%;
   margin: 1.5% 0;
   border: 1px solid hsla(0, 0%, 17%, 0.15);
@@ -370,44 +357,33 @@ html.fonts-loaded .registration-header p {
   border-radius: 0;
 }
 
-html.fonts-loaded .registration-form-container .input-field {
+html.fonts-loaded .input-field {
   font-family: 'Raleway';
 }
 
-.registration-form-container .input-field::-webkit-input-placeholder {
+.input-field::-webkit-input-placeholder,
+.input-field::-moz-placeholder,
+.input-field:-ms-input-placeholder,
+.input-field::-ms-input-placeholder,
+.input-field::placeholder
+ {
   color:hsl(0, 0%, 42%);
   opacity: 1;
 }
 
-.registration-form-container .input-field::-moz-placeholder {
-  opacity: 1;
-}
-
-.registration-form-container .input-field:-ms-input-placeholder {
-  opacity: 1;
-}
-
-.registration-form-container .input-field::-ms-input-placeholder {
-  opacity: 1;
-}
-
-.registration-form-container .input-field::placeholder {
-  opacity: 1;
-}
-
-.registration-form-container input {
+input {
   width: 48%;
   height: 3rem;
   position: relative;
   z-index: 5;
 }
 
-.registration-form-container select {
+select {
   width: 100%;
   height: 3rem;
 }
 
-.registration-form-container textarea {
+textarea {
   width: 100%;
   resize: none;
 }
@@ -446,12 +422,12 @@ html.fonts-loaded #custom-dropdown {
   z-index: 5;
 }
 
-#custom-dropdown .option {
+.option {
   padding: 10px;
 }
 
-#custom-dropdown .option:hover,
-#custom-dropdown .option:focus {
+.option:hover,
+.option:focus {
   color: white;
   background: hsl(271, 65%, 60%);
   border: none;
@@ -527,17 +503,17 @@ html.fonts-loaded .modal {
     width: 70%;
   }
 
-  .registration-form-container .input-field {
+  .input-field {
     font-size: 2rem;
     padding: 3%;
     width: 100%;
   }
 
-  .registration-form-container input {
+  input {
     height: 2em;
   }
 
-  .registration-form-container select {
+  select {
     height: 2em;
     padding: 0 2% !important;
   }

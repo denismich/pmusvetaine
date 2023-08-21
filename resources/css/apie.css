@@ -162,14 +162,14 @@ html.fonts-loaded .procedures-header {
     display: flex;
   }
 
-  .procedure:nth-last-of-type(1),
-  .procedure:nth-last-of-type(2) {
-    margin-bottom: 0.5%;
+  .pr-first,
+  .pr-third {
+    margin-right: 0.5%;
   }
 
-  .procedure:nth-last-of-type(2),
-  .procedure:nth-last-of-type(4) {
-    margin-right: 0.5%;
+  .pr-third,
+  .pr-fourth {
+    margin-bottom: 0.5%;
   }
 
   .procedure picture {
@@ -209,17 +209,17 @@ html.fonts-loaded .procedures-header {
     margin-top: 1%;
   }
 
-  .procedure:nth-last-of-type(1) {
-    margin-bottom: 1%;
+  .pr-first,
+  .pr-third {
+    margin-right: 0;
   }
 
-  .procedure:nth-last-of-type(2) {
+  .pr-third {
     margin-bottom: 0;
   }
 
-  .procedure:nth-last-of-type(2),
-  .procedure:nth-last-of-type(4) {
-    margin-right: 0;
+  .pr-fourth {
+    margin-bottom: 1%;
   }
 
   .procedure h3 {
@@ -429,11 +429,11 @@ html.fonts-loaded .follow-button {
   cursor: pointer;
 }
 
-.gallery-photo.square {
+.square {
   height: 18vw;
 }
 
-.gallery-photo.rectangle {
+.rectangle {
   height: 24vw;
 }
 
@@ -457,7 +457,7 @@ html.fonts-loaded .follow-button {
           transform: translate(-50%, -50%);
   max-width: 100%;
   max-height: 90%;
-  
+  width: auto;
 }
 
 .full-screen-nav {
@@ -525,11 +525,11 @@ html.fonts-loaded .follow-button {
     width: 40%;
   }
 
-  .gallery-photo.square {
+  .square {
     height: 36vw;
   }
 
-  .gallery-photo.rectangle {
+  .rectangle {
     height: 48vw;
   }
 
@@ -582,11 +582,11 @@ html.fonts-loaded .follow-button {
     margin-bottom: 3rem;
   }
 
-  .gallery-photo.square {
+  .square {
     height: 72vw;
   }
 
-  .gallery-photo.rectangle {
+  .rectangle {
     height: 96vw;
   }
 
@@ -659,7 +659,7 @@ html.fonts-loaded .testimonials-header {
   font-family: 'Raleway', sans-serif;
 }
 
-.slide.fade {
+.fade {
   -webkit-animation-name: fade;
           animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -698,7 +698,7 @@ html.fonts-loaded .testimonials-header {
   vertical-align: middle;
 }
 
-.dot.active {
+.active {
   background-color: white;
   height: 16px;
   width: 16px;
@@ -710,7 +710,7 @@ html.fonts-loaded .testimonials-header {
     width: 8px;
   }
 
-  .dot.active {
+  .active {
     height: 10px;
     width: 10px;
   }
