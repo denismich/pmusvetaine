@@ -41,6 +41,24 @@ for(var i = 0; i < imageContainer.children.length; i++) {
 }
 
 var currentImageIndex = 0;
+var enlargedImageSrcs = [
+  'resources/images/gallery-enlarged/antakiu-permanentas-1.jpg',
+  'resources/images/gallery-enlarged/akiu-permanentas-1.jpg',
+  'resources/images/gallery-enlarged/antakiu-permanentas-2.jpg',
+  'resources/images/gallery-enlarged/antakiu-permanentas-3.jpg',
+  'resources/images/gallery-enlarged/lupu-permanentas-1.jpg',
+  'resources/images/gallery-enlarged/antakiu-permanentas-4.jpg',
+  'resources/images/gallery-enlarged/lupu-permanentas-2.jpg',
+  'resources/images/gallery-enlarged/antakiu-permanentas-5.jpg',
+  'resources/images/gallery-enlarged/akiu-permanentas-2.jpg',
+  'resources/images/gallery-enlarged/antakiu-permanentas-6.jpg',
+  'resources/images/gallery-enlarged/antakiu-permanentas-7.jpg',
+  'resources/images/gallery-enlarged/lupu-permanentas-3.jpg',
+  'resources/images/gallery-enlarged/lupu-permanentas-4.jpg',
+  'resources/images/gallery-enlarged/antakiu-permanentas-8.jpg',
+  'resources/images/gallery-enlarged/antakiu-permanentas-9.jpg',
+  'resources/images/gallery-enlarged/antakiu-permanentas-10.jpg',
+]
 
 imageContainer.addEventListener('click', function(event) {
   if (event.target.tagName === 'IMG') {
@@ -132,12 +150,12 @@ closeButton.addEventListener('click', function() {
 
 prevButton.addEventListener('click', function() {
   currentImageIndex = (currentImageIndex + imageContainer.children.length - 1) % imageContainer.children.length;
-  fullScreenImage.src = imageContainer.children[currentImageIndex].children[2].src.replace('/gallery/', '/gallery-enlarged/');
+  fullScreenImage.src = enlargedImageSrcs[currentImageIndex];
 });
 
 nextButton.addEventListener('click', function() {
   currentImageIndex = (currentImageIndex + 1) % imageContainer.children.length;
-  fullScreenImage.src = imageContainer.children[currentImageIndex].children[2].src.replace('/gallery/', '/gallery-enlarged/');
+  fullScreenImage.src = enlargedImageSrcs[currentImageIndex];
 });
 
 //Testimonials slides
