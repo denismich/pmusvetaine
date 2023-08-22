@@ -202,7 +202,6 @@ html.fonts-loaded .procedures-header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 233.56vw;
   }
 
   .procedure {
@@ -577,10 +576,6 @@ html.fonts-loaded .follow-button {
   .follow-button {
     display: block;
     font-size: 2rem;
-  }
-
-  #gallery-photos-container {
-    height: 1430.4vw;
   }
 
   .gallery-photo {
