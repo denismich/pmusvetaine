@@ -699,6 +699,11 @@ html.fonts-loaded .working-info-container p {
     font-size: 3.25rem;
   }
 
+  .social-links i,
+  .social-links svg {
+    margin-right: 3rem;
+  }
+
   .working-contacts .svg-tiktok-icon {
     height: 3.25rem;
     vertical-align: -0.8vw;
