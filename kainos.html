@@ -17,6 +17,7 @@
         <link rel="preload" href="resources/css/calendly.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="resources/css/calendly.css"></noscript>
         <script src="resources/js/fontfaceobserver.js" type="text/javascript" defer></script>
+        <script src="resources/js/lazysizes.min.js"></script>
         <script src="resources/js/common.js" defer></script>
         <script src="resources/js/calendly.js" async></script>
         <script src="resources/js/fontawesome.js" async></script>
@@ -233,7 +234,7 @@
                 <picture width="1389" height="1000">
                     <source srcset="resources/images/logotipas.avif" type="image/avif"/>
                     <source srcset="resources/images/logotipas.webp" type="image/webp"/>
-                    <img width="1389" height="1000" src="resources/images/logotipas.jpg" alt="">
+                    <img class="lazyload" width="1389" height="1000" data-src="resources/images/logotipas.jpg" alt="">
                 </picture>
                 <div class="working-time">
                     <h3>DARBO LAIKAS</h3>
