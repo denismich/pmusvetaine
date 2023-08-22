@@ -709,6 +709,20 @@ html.fonts-loaded .testimonials-header {
   transition: all 0.6s linear;
   background-color: white;
   transform: scale(1.33);
+  -webkit-animation-name: background-color;
+          animation-name: background-color;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes background-color {
+  from {background-color: #717171;}
+  to {background-color: white;}
+}
+
+@keyframes background-color {
+  from {background-color: #717171;}
+  to {background-color: white;}
 }
 
 @media only screen and (max-width: 1050px) {
