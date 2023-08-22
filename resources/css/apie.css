@@ -695,35 +695,21 @@ html.fonts-loaded .testimonials-header {
   height: 12px;
   width: 12px;
   margin: 0 2.25px;
-  background-color: #717171;
   border-radius: 50%;
   display: inline-block;
   -webkit-transition: all 0.6s linear;
   -o-transition: all 0.6s linear;
   transition: all 0.6s linear;
   vertical-align: middle;
+  background-color: #717171;
 }
 
 .active {
   -webkit-transition: all 0.6s linear;
   -o-transition: all 0.6s linear;
   transition: all 0.6s linear;
-  background-color: white;
   transform: scale(1.33);
-  -webkit-animation-name: background-color;
-          animation-name: background-color;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-@-webkit-keyframes background-color {
-  from {background-color: #717171;}
-  to {background-color: white;}
-}
-
-@keyframes background-color {
-  from {background-color: #717171;}
-  to {background-color: white;}
+  background-color: white;
 }
 
 @media only screen and (max-width: 1050px) {
