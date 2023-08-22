@@ -18,15 +18,23 @@
   text-align: center;
   padding-bottom: 0.875%;
   font-size: 2.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: serif;
+}
+
+html.fonts-loaded .pricelist h1 {
+  font-family: 'Playfair Display';
 }
 
 .pricelist-notes-container {
   margin-bottom: 3.5%;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
   font-size: 0.9375rem;
   font-style: italic;
+}
+
+html.fonts-loaded .pricelist-notes-container {
+  font-family: 'Open Sans';
 }
 
 .pricelist-note {
@@ -63,7 +71,11 @@
 .procedure-price {
   border-bottom: 2px solid white;
   font-size: 1.5rem;
-  font-family: 'Open Sans', sans-serif; 
+  font-family: sans-serif; 
+}
+
+html.fonts-loaded .procedure-price {
+  font-family: 'Open Sans';
 }
 
 .price {
@@ -71,7 +83,11 @@
 }
 
 .procedure-duration {
-  font-family: 'Raleway', sans-serif;
+  font-family: sans-serif;
+}
+
+html.fonts-loaded .procedure-duration {
+  font-family: 'Raleway';
 }
 
 br {
