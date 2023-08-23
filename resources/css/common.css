@@ -757,31 +757,7 @@ html.fonts-loaded .copyright-privacy-info {
 
 @media only screen and (max-width: 485px) {
   .copyright-privacy-info {
-    font-size: 1.75rem;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .copyright-privacy-info {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (max-width: 365px) {
-  .copyright-privacy-info {
-    font-size: 2.1rem;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  .copyright-privacy-info {
-    font-size: 2.2rem;
-  }
-}
-
-@media only screen and (max-width: 335px) {
-  .copyright-privacy-info {
-    font-size: 2.3rem;
+    font-size: 12px;
   }
 }
 
