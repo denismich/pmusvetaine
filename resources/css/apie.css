@@ -264,14 +264,14 @@ html.fonts-loaded .procedures-header {
   width: 40%;
 }
 
-.about-me-content h1 {
+h1 {
   font-family: serif;
   font-size: 3rem;
   margin: 1rem 0 3rem;
   text-align: center;
 }
 
-html.fonts-loaded .about-me-content h1 {
+html.fonts-loaded h1 {
   font-family: 'Playfair Display';
 }
 
@@ -302,7 +302,7 @@ html.fonts-loaded .about-me-content h1 {
     width: 80%;
   }
 
-  .about-me-content h1 {
+  h1 {
     font-size: 4rem;
   }
 
@@ -317,7 +317,7 @@ html.fonts-loaded .about-me-content h1 {
 }
 
 @media only screen and (max-width: 600px) {
-  .about-me-content h1 {
+  h1 {
     font-size: 5rem;
   }
 

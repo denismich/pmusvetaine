@@ -9,7 +9,7 @@
   background-color: white;
 }
 
-.procedures-list h1 {
+h1 {
   text-align: center;
   padding: 4% 0;
   font-size: 2.5rem;
@@ -17,7 +17,7 @@
   border-bottom: 2px solid hsla(0, 0%, 50%, 0.1);
 }
 
-html.fonts-loaded .procedures-list h1 {
+html.fonts-loaded h1 {
   font-family: 'Playfair Display';
 }
 
@@ -143,7 +143,7 @@ html.fonts-loaded .registration-button {
 }
 
 @media only screen and (max-width: 800px) {
-  .procedures-list h1 {
+  h1 {
     font-size: 3rem;
   }
 
@@ -173,7 +173,7 @@ html.fonts-loaded .registration-button {
 }
 
 @media only screen and (max-width: 450px) {
-  .procedures-list h1 {
+  h1 {
     font-size: 5rem;
   }
 

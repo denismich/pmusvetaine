@@ -14,14 +14,14 @@
   margin-bottom: 30px;
 }
 
-.pricelist h1 {
+h1 {
   text-align: center;
   padding-bottom: 0.875%;
   font-size: 2.5rem;
   font-family: serif;
 }
 
-html.fonts-loaded .pricelist h1 {
+html.fonts-loaded h1 {
   font-family: 'Playfair Display';
 }
 
@@ -110,7 +110,7 @@ br {
 }
 
 @media only screen and (max-width: 800px) {
-  .pricelist h1 {
+  h1 {
     font-size: 3rem;
   }
 
@@ -128,7 +128,7 @@ br {
 }
 
 @media only screen and (max-width: 700px) {
-  .pricelist h1 {
+  h1 {
     font-size: 4rem;
   }
 
@@ -168,7 +168,7 @@ br {
 }
 
 @media only screen and (max-width: 600px) {
-  .pricelist h1 {
+  h1 {
     font-size: 3.5rem;
   }
 
