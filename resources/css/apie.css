@@ -459,6 +459,7 @@ html.fonts-loaded .follow-button {
   max-height: 90%;
   width: auto;
   height: auto;
+  aspect-ratio: auto;
 }
 
 .full-screen-nav {
