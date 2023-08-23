@@ -8,16 +8,20 @@
             Mikropigmentacija | Ilgalaikis Makiažas</title>
         <link rel="canonical" href=".">
         <link rel="icon" type="image/x-icon" href="resources/images/puslapio-ikona.ico">
-        <link rel="preload" href="resources/css/reset.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <!-- <link rel="preload" href="resources/css/reset.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link href="resources/css/reset.css" rel="stylesheet" type="text/css"></noscript>
         <link rel="preload" href="resources/css/common.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link href="resources/css/common.css" rel="stylesheet" type="text/css"></noscript>
         <link rel="preload" href="resources/css/apie.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link href="resources/css/apie.css" rel="stylesheet" type="text/css"></noscript>
         <link rel="preload" href="resources/css/calendly.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="resources/css/calendly.css"></noscript>
-        <script src="resources/js/fontfaceobserver.js" type="text/javascript" defer></script>
-        <script src="resources/js/lazysizes.min.js" async></script>
+        <noscript><link rel="stylesheet" href="resources/css/calendly.css"></noscript> -->
+        <!-- <script src="resources/js/fontfaceobserver.js" type="text/javascript" defer></script> -->
+        <link href="resources/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/common.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/apie.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/calendly.css" rel="stylesheet" type="text/css">
+        <script src="resources/js/lazysizes.min.js"></script>
         <script src="resources/js/common.js" defer></script>
         <script src="resources/js/apie.js" defer></script>
         <script src="resources/js/calendly.js" async></script>
@@ -74,15 +78,15 @@
         <main>
             <div class="banner" role="banner">
                 <picture class="banner-photo">
-                    <source class="lazyload" data-srcset="resources/images/tituline-nuotrauka.avif" type="image/avif"/>
-                    <source class="lazyload" data-srcset="resources/images/tituline-nuotrauka.webp" type="image/webp"/>
-                    <img width="982" height="1000" class="lazyload" data-src="resources/images/tituline-nuotrauka.jpg" alt="">
+                    <source srcset="resources/images/tituline-nuotrauka.avif" type="image/avif"/>
+                    <source srcset="resources/images/tituline-nuotrauka.webp" type="image/webp"/>
+                    <img width="982" height="1000" src="resources/images/tituline-nuotrauka.jpg" alt="">
                 </picture>
                 <div class="banner-logo-container">
                     <picture class="banner-logo">
-                        <source class="lazyload" data-srcset="resources/images/logotipas.avif" type="image/avif"/>
-                        <source class="lazyload" data-srcset="resources/images/logotipas.webp" type="image/webp"/>
-                        <img width="1463" height="1000" class="lazyload" data-src="resources/images/logotipas.jpg" alt="">
+                        <source srcset="resources/images/logotipas.avif" type="image/avif"/>
+                        <source srcset="resources/images/logotipas.webp" type="image/webp"/>
+                        <img width="1463" height="1000" src="resources/images/logotipas.jpg" alt="">
                     </picture>
                     <button id="banner-registration-button">REGISTRUOKIS JAU DABAR</button>
                 </div>
