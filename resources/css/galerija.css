@@ -40,7 +40,7 @@ html.fonts-loaded h1 {
 }
 
 .gallery-filter-container {
-  width: 80%;
+  width: 82.5%;
   text-align: center;
   margin: 0 auto 20px;
 }
@@ -169,7 +169,17 @@ html.fonts-loaded #gallery-registration-button {
   display: none;
 }
 
+@media only screen and (max-width: 1145px) {
+  .gallery-filter {
+    font-size: 12px;
+  }
+}
+
 @media only screen and (max-width: 1050px) {
+  .gallery-filter {
+    font-size: 1rem;
+  }
+
   br.first {
     display: inline;
   }
@@ -254,6 +264,12 @@ html.fonts-loaded #gallery-registration-button {
   }
 }
 
+@media only screen and (max-width: 715px) {
+  .gallery-filter {
+    font-size: 12px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .gallery-filter {
     font-size: 1.5rem;
@@ -301,20 +317,20 @@ html.fonts-loaded #gallery-registration-button {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 485px) {
   .gallery-filter {
-    font-size: 1.75rem;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  br.first, br.third {
+    display: inline;
   }
 }
 
 @media only screen and (max-width: 375px) {
   #gallery-registration-button {
     font-size: 2.5rem;
-  }
-}
-
-@media only screen and (max-width: 330px) {
-  br.first, br.third {
-    display: inline;
   }
 }
