@@ -42,13 +42,13 @@ html.fonts-loaded h1 {
 .gallery-filter-container {
   width: 82.5%;
   text-align: center;
-  margin: 0 auto 20px;
+  margin: 0 auto 15px;
 }
 
 .gallery-filter {
   background-color: white;
   border: none;
-  margin: 5px 10px;
+  margin: 5px 10px 10px;
   cursor: pointer;
   font-family: sans-serif;
   font-size: 1rem;
