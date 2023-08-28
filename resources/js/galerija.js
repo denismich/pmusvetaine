@@ -9,7 +9,7 @@ for (var i = 0; i < galleryFilters.length; i++) {
     document.querySelector('.focused-filter').classList.remove('focused-filter');
     event.target.classList.add('focused-filter');
     for (var j = 0; j < galleryImages.length; j++) {
-      if (galleryImages[j].classList.contains(event.target.id) || event.target.id === 'visos') {
+      if (galleryImages[j].classList.contains(event.target.id) || event.target.id === 'visi') {
         galleryImages[j].style.display = 'inline-block';
       } else {
         galleryImages[j].style.display = 'none';
@@ -27,14 +27,7 @@ var nextButton = document.querySelector('#next-button');
 var closeButton = document.querySelector('#close-button');
 var imageToFocus = null;
 var imageArray = [];
-var imageIndex = 0;
-var srcType = 'srcset';
-if (fullScreenImage.src.endsWith('webp')) {
-  imageIndex = 1;
-} else if (fullScreenImage.src.endsWith('jpg')) {
-  imageIndex = 2;
-  srcType = 'src';
-}
+
 for(var i = 0; i < imageContainer.children.length; i++) {
   imageArray.push(imageContainer.children[i]);
 }
@@ -133,14 +126,14 @@ prevButton.addEventListener('click', function() {
   do {
     currentImageIndex = (currentImageIndex + imageContainer.children.length - 1) % imageContainer.children.length;
   } while (imageContainer.children[currentImageIndex].style.display === 'none');
-  fullScreenImage.src = imageContainer.children[currentImageIndex].children[imageIndex][srcType].replace('/gallery/', '/gallery-enlarged/');
+  fullScreenImage.src = imageContainer.children[currentImageIndex].children[2].src.replace('/gallery/', '/gallery-enlarged/');
 });
 
 nextButton.addEventListener('click', function() {
   do {
     currentImageIndex = (currentImageIndex + 1) % imageContainer.children.length;
   } while (imageContainer.children[currentImageIndex].style.display === 'none');
-  fullScreenImage.src = imageContainer.children[currentImageIndex].children[imageIndex][srcType].replace('/gallery/', '/gallery-enlarged/');
+  fullScreenImage.src = imageContainer.children[currentImageIndex].children[2].src.replace('/gallery/', '/gallery-enlarged/');
 });
 
 //Header height for scrolling/links to elements
