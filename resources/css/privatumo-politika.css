@@ -10,32 +10,44 @@
   background-color: white;
 }
 
-.privacy-policy-section h1 {
+h1 {
   font-size: 2.75rem;
-  font-family: 'Playfair Display', serif;
+  font-family: serif;
   font-weight: 500;
   text-align: center;
   margin-bottom: 5%;
 }
 
-.privacy-policy-section h2 {
+html.font-loaded h1 {
+  font-family: 'Playfair Display';
+}
+
+.privacy-policy-h2 {
   font-size: 1.4rem;
-  font-family: 'Playfair Display', serif;
+  font-family: serif;
   margin-top: 1rem;
 }
 
-.privacy-policy-section h2:nth-of-type(1) {
+html.font-loaded .privacy-policy-h2 {
+  font-family: 'Playfair Display';
+}
+
+.first-privacy-policy-h2 {
   margin-top: 0;
 }
 
 .privacy-policy-section p {
   line-height: 2;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
   text-align: justify;
 }
 
+html.fonts-loaded .privacy-policy-section p {
+  font-family: 'Open Sans';
+}
+
 @media only screen and (max-width: 950px) {
-  .privacy-policy-section h2 {
+  .privacy-policy-h2 {
     font-size: 2rem;
   }
 
@@ -62,17 +74,17 @@
     padding: 5% 10%;
   }
 
-  .privacy-policy-section h1 {
+  h1 {
     font-size: 3.5rem;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .privacy-policy-section h1 {
+  h1 {
     font-size: 4rem;
   }
 
-  .privacy-policy-section h2 {
+  .privacy-policy-h2 {
     font-size: 3rem;
   }
 
@@ -88,7 +100,7 @@
 }
 
 @media only screen and (max-width: 375px) {
-  .privacy-policy-section h2 {
+  .privacy-policy-h2 {
     font-size: 3.25rem;
   }
 

@@ -10,38 +10,54 @@
   background-color: white;
 }
 
-.care h1 {
+h1 {
   font-size: 2.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: serif;
   font-weight: 500;
   text-align: center;
   margin-bottom: 5%;
 }
 
-.care h2.general-info {
+html.fonts-loaded h1 {
+  font-family: 'Playfair Display';
+}
+
+h2.general-info {
   font-size: 2.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: serif;
   font-weight: 500;
   text-align: center;
   margin-top: 4%;
 }
 
-.care h2,
-.care h3 {
+html.fonts-loaded h2.general-info {
+  font-family: 'Playfair Display';
+}
+
+.care-h2-h3 {
   font-size: 1.4rem;
-  font-family: 'Playfair Display', serif;
+  font-family: serif;
   margin: 1.25rem 0 0.25rem;
 }
 
-.care h2:nth-of-type(1),
-.care h3:nth-of-type(1) {
+html.fonts-loaded .care-h2-h3 {
+  font-family: 'Playfair Display';
+}
+
+.first-care-h2,
+.first-care-h3 {
   margin-top: 0;
 }
 
 .care p,
 .care li {
   line-height: 2;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
+}
+
+html.fonts-loaded .care p,
+html.fonts-loaded .care li {
+  font-family: 'Open Sans';
 }
 
 .care-important-info {
@@ -56,8 +72,7 @@
     padding: 5% 5% 5% 7%;
   }
 
-  .care h2,
-  .care h3 {
+  .care-h2-h3 {
     font-size: 1.75rem;
   }
 
@@ -72,8 +87,7 @@
 }
 
 @media only screen and (max-width: 700px) {
-  .care h2,
-  .care h3 {
+  .care-h2-h3 {
     font-size: 2rem;
   }
 
@@ -88,37 +102,35 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .care h1,
-  .care h2.general-info {
+  h1,
+  h2.general-info {
     font-size: 3rem;
   }
 
-  .care h2,
-  .care h3 {
+  .care-h2-h3 {
     margin-top: 1.5rem;
   }
   
-  .care h2:nth-of-type(1),
-  .care h3:nth-of-type(1) {
+  .first-care-h2,
+  .first-care-h3 {
     margin-top: 0;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .care h1,
-  .care h2.general-info {
+  h1,
+  h2.general-info {
     font-size: 3.5rem;
     margin-top: 10%;
   }
 
-  .care h2,
-  .care h3 {
+  .care-h2-h3 {
     font-size: 2.25rem;
     margin-top: 2rem;
   }
 
-  .care h2:nth-of-type(1),
-  .care h3:nth-of-type(1) {
+  .first-care-h2,
+  .first-care-h3 {
     margin-top: 0;
   }
 
@@ -133,14 +145,13 @@
 }
 
 @media only screen and (max-width: 450px) {
-  .care h2,
-  .care h3 {
+  .care-h2-h3 {
     font-size: 2.5rem;
     margin-top: 2.5rem;
   }
 
-  .care h2:nth-of-type(1),
-  .care h3:nth-of-type(1) {
+  .first-care-h2,
+  .first-care-h3 {
     margin-top: 0;
   }
 
@@ -151,8 +162,7 @@
 }
 
 @media only screen and (max-width: 375px) {
-  .care h2,
-  .care h3 {
+  .care-h2-h3 {
     font-size: 3.25rem;
   }
 

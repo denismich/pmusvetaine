@@ -10,12 +10,16 @@
   background-color: white;
 }
 
-.contacts h1 {
+h1 {
   font-size: 2.75rem;
-  font-family: 'Playfair Display', serif;
+  font-family: serif;
   font-weight: 500;
   text-align: center;
   margin-bottom: 5%;
+}
+
+html.fonts-loaded h1 {
+  font-family: 'Playfair Display';
 }
 
 #map {
@@ -30,19 +34,27 @@
   vertical-align: top;
 }
 
-#contacts-info-container h2 {
+.contacts-info h2 {
   font-size: 1.4rem;
-  font-family: 'Playfair Display', serif;
+  font-family: serif;
   margin-top: 1rem;
 }
 
-#contacts-info-container h2:nth-of-type(1) {
+html.fonts-loaded .contacts-info h2 {
+  font-family: 'Playfair Display';
+}
+
+.first-contacts-info h2 {
   margin-top: 0;
 }
 
-#contacts-info-container p {
+.contacts-info p {
   line-height: 2;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
+}
+
+html.fonts-loaded .contacts-info p {
+  font-family: 'Open Sans';
 }
 
 .contacts-social-links {
@@ -95,11 +107,11 @@
     margin-left: 0;
   }
 
-  #contacts-info-container h2 {
+  .contacts-info h2 {
     font-size: 2rem;
   }
 
-  #contacts-info-container p {
+  .contacts-info p {
     font-size: 1rem;
   }
 
@@ -111,17 +123,17 @@
 }
 
 @media only screen and (max-width: 700px) {
-  #contacts-info-container p {
+  .contacts-info p {
     font-size: 1.125rem;
   }
 }
 
 @media only screen and (max-width: 650px) {
-  #contacts-info-container h2 {
+  .contacts-info h2 {
     font-size: 2.25rem;
   }
 
-  #contacts-info-container p {
+  .contacts-info p {
     font-size: 1.25rem;
   }
 
@@ -139,7 +151,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .contacts h1 {
+  h1 {
     font-size: 3.5rem;
   }
 
@@ -164,7 +176,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .contacts h1 {
+  h1 {
     font-size: 4rem;
   }
 
@@ -178,11 +190,11 @@
     margin-top: 20px;
   }
 
-  #contacts-info-container h2 {
+  .contacts-info h2 {
     font-size: 3rem;
   }
 
-  #contacts-info-container p {
+  .contacts-info p {
     font-size: 2rem;
   }
 
@@ -203,11 +215,11 @@
 }
 
 @media only screen and (max-width: 375px) {
-  #contacts-info-container h2 {
+  .contacts-info h2 {
     font-size: 3.25rem;
   }
 
-  #contacts-info-container p {
+  .contacts-info p {
     font-size: 2.25rem;
   }
 }
