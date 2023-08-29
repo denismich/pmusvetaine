@@ -108,6 +108,10 @@ html.fonts-loaded .contacts-info p {
     margin-left: 0;
   }
 
+  .first-contacts-info h2 {
+    margin-top: 1rem;
+  }
+
   .contacts-info h2 {
     font-size: 2rem;
   }
