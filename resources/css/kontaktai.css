@@ -127,6 +127,15 @@ html.fonts-loaded .contacts-info p {
   .contacts-info p {
     font-size: 1.125rem;
   }
+
+  .contacts-social-links {
+    font-size: 1.75rem;
+  }
+
+  .contacts-social-links .svg-tiktok-icon {
+    height: 1.65rem;
+    vertical-align: -0.25vw;
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -148,6 +157,11 @@ html.fonts-loaded .contacts-info p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    font-size: 2rem;
+  }
+
+  .contacts-social-links .svg-tiktok-icon {
+    height: 1.75rem;
   }
 }
 
