@@ -18,7 +18,7 @@ h1 {
   margin-bottom: 5%;
 }
 
-html.font-loaded h1 {
+html.fonts-loaded h1 {
   font-family: 'Playfair Display';
 }
 
@@ -28,7 +28,7 @@ html.font-loaded h1 {
   margin-top: 1rem;
 }
 
-html.font-loaded .privacy-policy-h2 {
+html.fonts-loaded .privacy-policy-h2 {
   font-family: 'Playfair Display';
 }
 
