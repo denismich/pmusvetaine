@@ -79,7 +79,6 @@ html.fonts-loaded .contacts-info p {
   height: 1.5rem;
   width: auto;
   vertical-align: -0.2vw;
-  margin: 0 1rem;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -185,13 +184,12 @@ html.fonts-loaded .contacts-info p {
 
   .contacts-social-links i,
   .contacts-social-links svg {
-    margin: 0 1rem;
+    margin: 0 1.25rem;
   }
 
   .contacts-social-links .svg-tiktok-icon {
     height: 2.25rem;
     vertical-align: -0.35vw;
-    margin: 0 1.75rem;
   }
 }
 
@@ -225,13 +223,12 @@ html.fonts-loaded .contacts-info p {
 
   .contacts-social-links i,
   .contacts-social-links svg {
-    margin: 0 1.25rem;
+    margin: 0 1.5rem;
   }
 
   .contacts-social-links .svg-tiktok-icon {
     height: 3.25rem;
     vertical-align: -0.8vw;
-    margin: 0 2rem;
   }
 }
 
