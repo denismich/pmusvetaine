@@ -123,6 +123,12 @@ html.fonts-loaded .question-answer-container {
   }
 }
 
+@media only screen and (max-width: 715px) {
+  .question-answer-container {
+    font-size: 12px;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .faq-container {
     width: 100%;
@@ -155,6 +161,12 @@ html.fonts-loaded .question-answer-container {
   }
 }
 
+@media only screen and (max-width: 485px) {
+  .question-answer-container {
+    font-size: 12px;
+  }
+}
+
 @media only screen and (max-width: 450px) {
   .question-answer-container {
     font-size: 1.75rem;
@@ -164,6 +176,12 @@ html.fonts-loaded .question-answer-container {
 @media only screen and (max-width: 425px) {
   .answer ul {
     padding-left: 3rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .question-answer-container {
+    font-size: 12px;
   }
 }
 
@@ -177,8 +195,20 @@ html.fonts-loaded .question-answer-container {
   }
 }
 
+@media only screen and (max-width: 365px) {
+  .question-answer-container {
+    font-size: 12px;
+  }
+}
+
 @media only screen and (max-width: 350px) {
   .question-answer-container {
     font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .question-answer-container {
+    font-size: 12px;
   }
 }
