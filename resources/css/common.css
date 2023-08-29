@@ -201,9 +201,27 @@ header a {
   padding: 1rem;
 }
 
+@media only screen and (max-width: 1145px) {
+  #header-nav-menu li {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  #header-nav-menu li {
+    font-size: 1rem;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   #header-nav-menu li {
     font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  #header-nav-menu li {
+    font-size: 12px;
   }
 }
 
@@ -271,6 +289,12 @@ header a {
   }
 }
 
+@media only screen and (max-width: 365px) {
+  #header-nav-menu li {
+    font-size: 12px;
+  }
+}
+
 /* Header contact information */
 
 .contact-info-container {
@@ -285,6 +309,18 @@ header a {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   height: 100%;
+}
+
+@media only screen and (max-width: 1145px) {
+  .contact-info-container {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .contact-info-container {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -306,6 +342,18 @@ header a {
 
 .contact-info-delimiter {
   margin: 0 0.125rem;
+}
+
+@media only screen and (max-width: 1145px) {
+  .contact-info-icon.svg-tiktok-icon {
+    height: 12px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .contact-info-icon.svg-tiktok-icon {
+    height: 1rem;
+  }
 }
 
 /* Registration */
@@ -491,6 +539,24 @@ html.fonts-loaded .modal {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1145px) {
+  .registration-header p,
+  .input-field,
+  #custom-dropdown,
+  .modal {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .registration-header p,
+  .input-field,
+  #custom-dropdown,
+  .modal {
+    font-size: 1rem;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .registration-header h2 {
     font-size: 3rem;
@@ -551,6 +617,16 @@ html.fonts-loaded .modal {
 
   .registration-form-container {
     width: 80%;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .registration-header p,
+  .input-field,
+  #custom-dropdown,
+  #submit,
+  .modal {
+    font-size: 12px;
   }
 }
 
