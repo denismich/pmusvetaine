@@ -96,6 +96,12 @@ html.fonts-loaded #banner-registration-button {
   }
 }
 
+@media only screen and (max-width: 365px) {
+  #banner-registration-button {
+    font-size: 12px;
+  }
+}
+
 /* Procedures */
 
 .procedures-section {
@@ -326,6 +332,12 @@ html.fonts-loaded h1 {
   }
 }
 
+@media only screen and (max-width: 365px) {
+  .about-me-content p {
+    font-size: 12px;
+  }
+}
+
 /* Gallery */
 
 .gallery {
@@ -382,34 +394,6 @@ html.fonts-loaded .follow-button {
   font-size: 1.5em;
   line-height: .0467em;
   vertical-align: -.125em;
-}
-
-@media only screen and (max-width: 1050px) {
-  .follow-button {
-    font-size: 0.9rem;
-  }
-
-  .follow-button .svg-tiktok-icon {
-    height: 1.2rem;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .follow-button .svg-tiktok-icon {
-    height: 2.2rem;
-    vertical-align: -0.6vw;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .follow-button {
-    border-radius: 1.5rem;
-  }
-
-  .follow-button .svg-tiktok-icon {
-    height: 2.5rem;
-    vertical-align: -0.8vw;
-  }
 }
 
 #gallery-photos-container {
@@ -497,6 +481,22 @@ html.fonts-loaded .follow-button {
   right: 2%;
 }
 
+@media only screen and (max-width: 1050px) {
+  .follow-button {
+    font-size: 0.9rem;
+  }
+
+  .follow-button .svg-tiktok-icon {
+    height: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .follow-button {
+    font-size: 12px;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .gallery-header {
     -webkit-box-orient: vertical;
@@ -521,6 +521,12 @@ html.fonts-loaded .follow-button {
     margin-bottom: 1rem;
     text-align: center;
     font-size: 1.75rem;
+    padding: 1.5rem;
+  }
+
+  .follow-button .svg-tiktok-icon {
+    height: 2.2rem;
+    vertical-align: -0.6vw;
   }
 
   .gallery-photo {
@@ -577,6 +583,12 @@ html.fonts-loaded .follow-button {
   .follow-button {
     display: block;
     font-size: 2rem;
+    border-radius: 1.5rem;
+  }
+
+  .follow-button .svg-tiktok-icon {
+    height: 2.5rem;
+    vertical-align: -0.8vw;
   }
 
   .gallery-photo {
@@ -599,6 +611,18 @@ html.fonts-loaded .follow-button {
   #close-button {
     top: 6vw;
     right: 2vw;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .follow-button {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .follow-buttons {
+    width: 70%;
   }
 }
 
@@ -721,7 +745,7 @@ html.fonts-loaded .testimonials-header {
 
 @media only screen and (max-width: 900px) {
   .testimonials-header {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .slide-text {
@@ -731,7 +755,23 @@ html.fonts-loaded .testimonials-header {
 }
 
 @media only screen and (max-width: 600px) {
+  #testimonials-section {
+    padding: 7.5% 0;
+  }
+
   .testimonials-header {
-    font-size: 3.75rem;
+    font-size: 4.25rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .slide-text {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #slideshow-container {
+    height: 30em;
   }
 }
