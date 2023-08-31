@@ -26,7 +26,7 @@ html.fonts-loaded h1 {
 }
 
 .pricelist-notes-container {
-  margin-bottom: 3.5%;
+  margin-bottom: 1%;
   text-align: center;
   font-family: sans-serif;
   font-size: 0.9375rem;
@@ -140,18 +140,16 @@ br {
 }
 
 @media only screen and (max-width: 890px) {
-  .procedure-duration {
-    font-size: 12px;
-  }
-}
-
-@media only screen and (max-width: 800px) {
   .price-container {
     padding: 20px 20px;
   }
 
   .procedure-price {
     font-size: 1.375rem;
+  }
+
+  .procedure-duration {
+    font-size: 12px;
   }
 }
 
@@ -203,7 +201,6 @@ br {
 @media only screen and (max-width: 650px) {
   .pricelist-notes-container {
     font-size: 1.4rem;
-    padding: 0;
   }
 }
 
@@ -213,7 +210,17 @@ br {
   }
 }
 
+@media only screen and (max-width: 615px) {
+  .pricelist-notes-container {
+    margin-top: 3%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
+  .pricelist-note {
+    margin: 10px 0;
+  }
+
   .price-container {
     padding: 20px 10px;
   }
@@ -233,13 +240,20 @@ br {
   }
 
   .pricelist-note {
-    margin: 6px 0;
+    margin: 15px 0;
+  }
+
+  .procedure-price {
+    font-size: 2.5rem;
+  }
+
+  .procedure-duration {
+    font-size: 1.75rem;
   }
 }
 
 @media only screen and (max-width: 485px) {
-  .pricelist-notes-container,
-  .procedure-duration {
+  .pricelist-notes-container {
     font-size: 12px;
   }
 }
@@ -273,9 +287,5 @@ br {
 @media only screen and (max-width: 350px) {
   .pricelist-notes-container {
     padding: 0 10px;
-  }
-
-  .procedure-price {
-    font-size: 12px;
   }
 }
