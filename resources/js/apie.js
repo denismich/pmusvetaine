@@ -146,12 +146,8 @@ var slidesContainerWidth = slideshowContainer.clientWidth;
 var dots = document.getElementsByClassName('dot');
 
 var slideIndex = 1;
-var myTimer;
 
 var showSlides = function(n) {
-  clearInterval(myTimer);
-  myTimer = setInterval(function() {showSlides(slideIndex += 1)}, 4000);
-
   var slides = document.getElementsByClassName('slide');
   
   n > slides.length && (slideIndex = 1);
@@ -164,6 +160,8 @@ var showSlides = function(n) {
   slides[slideIndex-1].style.transform = 'translateX(0)';
   dots[slideIndex-1].className += ' active';
 }
+
+var myTimer = setInterval(function() {showSlides(slideIndex += 1)}, 4000);
 
 var pause = function() {clearInterval(myTimer)};
 var resume = function() {myTimer = setInterval(function() {showSlides(slideIndex += 1)}, 4000)};
@@ -188,10 +186,12 @@ window.addEventListener('DOMContentLoaded', function() {
     deltaX = touchEndX - touchStartX;
     if (slidesTouchStartInContainer === true) {
       slidesTouchStartInContainer = null;
-      if (deltaX >= slidesContainerWidth * 0.25) {
+      if (deltaX >= slidesContainerWidth * -0.25) {
         showSlides(slideIndex += 1);
-      } else if (deltaX <= slidesContainerWidth * -0.25) {
+        clearInterval(myTimer);
+      } else if (deltaX <= slidesContainerWidth * 0.25) {
         showSlides(slideIndex -= 1);
+        clearInterval(myTimer);
       }
     }
   });
@@ -199,7 +199,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
 for (var i = 0; i < dots.length; i++) {
   (function(index) {
-    dots[index].addEventListener('click', function() {showSlides(slideIndex = index + 1)});
+    dots[index].addEventListener('click', function() {
+      showSlides(slideIndex = index + 1);
+      clearInterval(myTimer);
+    });
     dots[index].addEventListener('keydown', function(event) {
       if (event.keyCode === 13) {
         dots[index].click();
