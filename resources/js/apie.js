@@ -186,10 +186,10 @@ window.addEventListener('DOMContentLoaded', function() {
     deltaX = touchEndX - touchStartX;
     if (slidesTouchStartInContainer === true) {
       slidesTouchStartInContainer = null;
-      if (deltaX >= slidesContainerWidth * -0.25) {
+      if (deltaX <= slidesContainerWidth * -0.25) {
         showSlides(slideIndex += 1);
         clearInterval(myTimer);
-      } else if (deltaX <= slidesContainerWidth * 0.25) {
+      } else if (deltaX >= slidesContainerWidth * 0.25) {
         showSlides(slideIndex -= 1);
         clearInterval(myTimer);
       }
