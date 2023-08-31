@@ -170,32 +170,50 @@ var touchStartX;
 var touchEndX;
 var deltaX;
 var slidesTouchStartInContainer;
+var touchStartsCount = 0;
+var maxTouchStartsCount = 0;
+
+window.addEventListener('touchstart', function() {
+  touchStartsCount += 1;
+  maxTouchStartsCount += 1;
+} ,passiveArgument)
+
+window.addEventListener('touchend', function() {
+  setTimeout(function() {
+    if (touchStartsCount === 1) {
+      maxTouchStartsCount = 0;
+    }
+    touchStartsCount -= 1;
+  }, 100);
+} ,passiveArgument)
 
 window.addEventListener('DOMContentLoaded', function() {
   showSlides(slideIndex);
 
   slideshowContainer.addEventListener('mouseenter', pause);
   slideshowContainer.addEventListener('mouseleave', resume);
-  slideshowContainer.addEventListener('touch', pause);
+  slideshowContainer.addEventListener('touch', pause, passiveArgument);
   slideshowContainer.addEventListener('touchstart', function(event) {
     slidesTouchStartInContainer = true;
     touchStartX = event.changedTouches[0].pageX;
   }, passiveArgument);
   slideshowContainer.addEventListener('touchend', function(event) {
-    touchEndX = event.changedTouches[0].pageX;
-    deltaX = touchEndX - touchStartX;
-    if (slidesTouchStartInContainer === true) {
-      slidesTouchStartInContainer = null;
-      if (deltaX <= slidesContainerWidth * -0.25) {
-        showSlides(slideIndex += 1);
-        clearInterval(myTimer);
-      } else if (deltaX >= slidesContainerWidth * 0.25) {
-        showSlides(slideIndex -= 1);
-        clearInterval(myTimer);
+    if (maxTouchStartsCount === 1) {
+      touchEndX = event.changedTouches[0].pageX;
+      deltaX = touchEndX - touchStartX;
+      if (slidesTouchStartInContainer === true) {
+        slidesTouchStartInContainer = null;
+        if (deltaX <= slidesContainerWidth * -0.25) {
+          showSlides(slideIndex += 1);
+          clearInterval(myTimer);
+        } else if (deltaX >= slidesContainerWidth * 0.25) {
+          showSlides(slideIndex -= 1);
+          clearInterval(myTimer);
+        }
       }
     }
-  });
-}, passiveArgument);
+  }, passiveArgument);
+});
 
 for (var i = 0; i < dots.length; i++) {
   (function(index) {
