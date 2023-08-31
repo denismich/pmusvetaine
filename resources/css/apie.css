@@ -673,12 +673,7 @@ html.fonts-loaded .testimonials-header {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-#slideshow-container::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
 }
 
 .slide {

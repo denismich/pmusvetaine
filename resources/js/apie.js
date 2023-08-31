@@ -173,7 +173,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   slideshowContainer.addEventListener('mouseenter', pause);
   slideshowContainer.addEventListener('mouseleave', resume);
-  // slideshowContainer.addEventListener('touchstart', pause, passiveArgument);
+  slideshowContainer.addEventListener('touch', pause, passiveArgument);
   // slideshowContainer.addEventListener('touchend', resume);
 }, passiveArgument);
 
