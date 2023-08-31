@@ -12,7 +12,7 @@
 h1 {
   text-align: center;
   padding: 4% 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: serif;
   border-bottom: 2px solid hsla(0, 0%, 50%, 0.1);
 }
@@ -142,11 +142,13 @@ html.fonts-loaded .registration-button {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
+}
 
+@media only screen and (max-width: 800px) {
   .procedure-description {
     width: 70%;
   }
@@ -166,9 +168,19 @@ html.fonts-loaded .registration-button {
 }
 
 @media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 4rem;
+  }
+
   .procedure-description-container picture {
     width: 40vw;
     height: 26.67vw;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .procedure-description p {
+    font-size: 12px;
   }
 }
 
@@ -199,5 +211,11 @@ html.fonts-loaded .registration-button {
   
   .registration-button {
     font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .procedure-description p {
+    font-size: 12px;
   }
 }

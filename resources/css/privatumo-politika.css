@@ -11,7 +11,7 @@
 }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-family: serif;
   font-weight: 500;
   text-align: center;
@@ -58,8 +58,18 @@ html.fonts-loaded .privacy-policy-section p {
 }
 
 @media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
   .privacy-policy-section {
     padding: 5%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 4rem;
   }
 }
 
@@ -73,17 +83,9 @@ html.fonts-loaded .privacy-policy-section p {
   .privacy-policy-section {
     padding: 5% 10%;
   }
-
-  h1 {
-    font-size: 3.5rem;
-  }
 }
 
 @media only screen and (max-width: 500px) {
-  h1 {
-    font-size: 4rem;
-  }
-
   .privacy-policy-h2 {
     font-size: 3rem;
   }
@@ -96,6 +98,12 @@ html.fonts-loaded .privacy-policy-section p {
 @media only screen and (max-width: 475px) {
   .privacy-policy-section p {
     font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 5rem;
   }
 }
 

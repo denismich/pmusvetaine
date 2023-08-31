@@ -15,7 +15,7 @@
 }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-family: serif;
   font-weight: 500;
   text-align: center;
@@ -259,16 +259,20 @@ html.fonts-loaded #gallery-registration-button {
   }
 }
 
-@media only screen and (max-width: 700px) {
-  #close-button {
-    top: 3vw;
-    right: 1vw;
-  }
-}
-
 @media only screen and (max-width: 715px) {
   .gallery-filter {
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  #close-button {
+    top: 3vw;
+    right: 1vw;
   }
 }
 
@@ -322,6 +326,12 @@ html.fonts-loaded #gallery-registration-button {
 @media only screen and (max-width: 485px) {
   .gallery-filter {
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 5rem;
   }
 }
 
