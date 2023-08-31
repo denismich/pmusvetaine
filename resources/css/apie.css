@@ -674,6 +674,9 @@ html.fonts-loaded .testimonials-header {
           align-items: center;
   position: relative;
   overflow: hidden;
+  visibility: hidden;
+  user-select: none;
+  cursor: pointer;
 }
 
 .slide {

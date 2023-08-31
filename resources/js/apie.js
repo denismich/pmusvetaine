@@ -161,10 +161,11 @@ var showSlides = function(n) {
   dots[slideIndex-1].className += ' active';
 }
 
+showSlides(slideIndex);
+
 var myTimer = setInterval(function() {showSlides(slideIndex += 1)}, 4000);
 
 var pause = function() {clearInterval(myTimer)};
-var resume = function() {myTimer = setInterval(function() {showSlides(slideIndex += 1)}, 4000)};
 
 var touchStartX;
 var touchEndX;
@@ -188,10 +189,26 @@ window.addEventListener('touchend', function() {
 } ,passiveArgument)
 
 window.addEventListener('DOMContentLoaded', function() {
-  showSlides(slideIndex);
-
-  slideshowContainer.addEventListener('mouseenter', pause);
-  slideshowContainer.addEventListener('mouseleave', resume);
+  slideshowContainer.style.visibility = 'visible';
+  slideshowContainer.addEventListener('click', pause);
+  slideshowContainer.addEventListener('mousedown', function(event) {
+    slidesTouchStartInContainer = true;
+    touchStartX = event.pageX;
+  }, passiveArgument);
+  slideshowContainer.addEventListener('mouseup', function(event) {
+    touchEndX = event.pageX;
+    deltaX = touchEndX - touchStartX;
+    if (slidesTouchStartInContainer === true) {
+      slidesTouchStartInContainer = null;
+      if (deltaX <= slidesContainerWidth * -0.20) {
+        showSlides(slideIndex += 1);
+        clearInterval(myTimer);
+      } else if (deltaX >= slidesContainerWidth * 0.20) {
+        showSlides(slideIndex -= 1);
+        clearInterval(myTimer);
+      }
+    }
+  });
   slideshowContainer.addEventListener('touch', pause, passiveArgument);
   slideshowContainer.addEventListener('touchstart', function(event) {
     slidesTouchStartInContainer = true;
