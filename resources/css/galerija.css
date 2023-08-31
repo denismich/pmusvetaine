@@ -42,7 +42,7 @@ html.fonts-loaded h1 {
 .gallery-filter-container {
   width: 82.5%;
   text-align: center;
-  margin: 0 auto 15px;
+  margin: 0 auto;
 }
 
 .gallery-filter {
