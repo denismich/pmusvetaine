@@ -171,10 +171,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
   var slideshowContainer = document.querySelector('#slideshow-container');
 
-  // slideshowContainer.addEventListener('mouseenter', pause);
-  // slideshowContainer.addEventListener('mouseleave', resume);
-  slideshowContainer.addEventListener('touchstart', pause, passiveArgument);
-  slideshowContainer.addEventListener('touchend', resume);
+  slideshowContainer.addEventListener('mouseenter', pause);
+  slideshowContainer.addEventListener('mouseleave', resume);
+  // slideshowContainer.addEventListener('touchstart', pause, passiveArgument);
+  // slideshowContainer.addEventListener('touchend', resume);
 }, passiveArgument);
 
 for (var i = 0; i < dots.length; i++) {
