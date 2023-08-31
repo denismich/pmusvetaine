@@ -81,9 +81,31 @@ html.fonts-loaded .contacts-info p {
   vertical-align: -0.2vw;
 }
 
+@media only screen and (max-width: 1145px) {
+  #map {
+    width: 73%;
+  }
+
+  .contacts-info h2 {
+    font-size: 16.8px;
+  }
+
+  .contacts-info p {
+    font-size: 12px;
+  }
+}
+
 @media only screen and (max-width: 1050px) {
   .contacts {
     padding: 5% 3% 5% 7%;
+  }
+
+  .contacts-info h2 {
+    font-size: 1.4rem;
+  }
+
+  .contacts-info p {
+    font-size: 1rem;
   }
 
   #map {
@@ -94,6 +116,16 @@ html.fonts-loaded .contacts-info p {
 @media only screen and (max-width: 900px) {
   h1 {
     font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .contacts-info h2 {
+    font-size: 16.8px;
+  }
+
+  .contacts-info p {
+    font-size: 12px;
   }
 }
 
@@ -121,10 +153,6 @@ html.fonts-loaded .contacts-info p {
     font-size: 2rem;
   }
 
-  .contacts-info p {
-    font-size: 1rem;
-  }
-
   .contacts-info {
     display: inline-block;
     width: 33%;
@@ -135,10 +163,6 @@ html.fonts-loaded .contacts-info p {
 @media only screen and (max-width: 700px) {
   h1 {
     font-size: 4rem;
-  }
-
-  .contacts-info p {
-    font-size: 1.125rem;
   }
 
   .contacts-social-links {
@@ -154,10 +178,6 @@ html.fonts-loaded .contacts-info p {
 @media only screen and (max-width: 650px) {
   .contacts-info h2 {
     font-size: 2.25rem;
-  }
-
-  .contacts-info p {
-    font-size: 1.25rem;
   }
 
   .contacts-info {
@@ -247,5 +267,15 @@ html.fonts-loaded .contacts-info p {
 
   .contacts-info p {
     font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .contacts-info h2 {
+    font-size: 16.8px;
+  }
+
+  .contacts-info p {
+    font-size: 12px;
   }
 }
