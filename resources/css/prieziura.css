@@ -60,11 +60,37 @@ html.fonts-loaded .care li {
   font-family: 'Open Sans';
 }
 
-.care-important-info {
+p.care-important-info {
   font-size: 1.25rem;
   font-weight: bold;
   text-align: center;
   margin: 2rem 0;
+}
+
+@media only screen and (max-width: 1145px) {
+  .care-h2-h3 {
+    font-size: 16.8px;
+  }
+
+  .care p,
+  .care li {
+    font-size: 12px;
+  }
+
+  p.care-important-info {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .care-h2-h3 {
+    font-size: 1.4rem;
+  }
+
+  .care p,
+  .care li {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -76,8 +102,16 @@ html.fonts-loaded .care li {
     padding: 5% 5% 5% 7%;
   }
 
-  .care-h2-h3 {
+  h2.care-h2-h3 {
+    font-size: 2rem;
+  }
+
+  h3.care-h2-h3 {
     font-size: 1.75rem;
+  }
+
+  h2.general-info {
+    font-size: 3rem;
   }
 
   .care p,
@@ -85,7 +119,23 @@ html.fonts-loaded .care li {
     font-size: 1.25rem;
   }
 
-  .care-important-info {
+  p.care-important-info {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  h2.care-h2-h3,
+  h3.care-h2-h3 {
+    font-size: 16.8px;
+  }
+
+  .care p,
+  .care li {
+    font-size: 12px;
+  }
+
+  p.care-important-info {
     font-size: 1.5rem;
   }
 }
@@ -95,8 +145,16 @@ html.fonts-loaded .care li {
     font-size: 4rem;
   }
 
-  .care-h2-h3 {
-    font-size: 2rem;
+  h2.care-h2-h3 {
+    font-size: 2.5rem;
+  }
+
+  h3.care-h2-h3 {
+    font-size: 2.25rem;
+  }
+
+  h2.general-info {
+    font-size: 3.75rem;
   }
 
   .care p,
@@ -104,14 +162,22 @@ html.fonts-loaded .care li {
     font-size: 1.5rem;
   }
 
-  .care-important-info {
+  p.care-important-info {
     font-size: 1.75rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  h1 {
+    margin-bottom: 10%;
+  }
+
   h2.general-info {
-    font-size: 3rem;
+    margin-top: 10%;
+  }
+
+  p.care-important-info {
+    margin: 3rem 0;
   }
 
   .care-h2-h3 {
@@ -125,19 +191,10 @@ html.fonts-loaded .care li {
 }
 
 @media only screen and (max-width: 500px) {
-  h2.general-info {
-    font-size: 3.5rem;
-    margin-top: 10%;
-  }
-
-  .care-h2-h3 {
-    font-size: 2.25rem;
+  h2.care-h2-h3,
+  h3.care-h2-h3 {
+    font-size: 2.45rem;
     margin-top: 2rem;
-  }
-
-  .first-care-h2,
-  .first-care-h3 {
-    margin-top: 0;
   }
 
   .care p,
@@ -145,7 +202,7 @@ html.fonts-loaded .care li {
     font-size: 1.75rem;
   }
 
-  .care-important-info {
+  p.care-important-info {
     font-size: 2rem;
   }
 }
@@ -155,8 +212,13 @@ html.fonts-loaded .care li {
     font-size: 4.2rem;
   }
 
-  .care-h2-h3 {
-    font-size: 2.5rem;
+  h2.general-info {
+    font-size: 4rem;
+  }
+
+  h2.care-h2-h3,
+  h3.care-h2-h3 {
+    font-size: 2.8rem;
     margin-top: 2.5rem;
   }
 
@@ -172,12 +234,20 @@ html.fonts-loaded .care li {
 }
 
 @media only screen and (max-width: 375px) {
-  .care-h2-h3 {
+  h2.care-h2-h3,
+  h3.care-h2-h3 {
     font-size: 3.25rem;
   }
 
   .care p,
   .care li {
     font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .care p,
+  .care li {
+    font-size: 12px;
   }
 }
