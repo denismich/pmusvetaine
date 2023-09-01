@@ -25,7 +25,7 @@ html.fonts-loaded h1 {
 .privacy-policy-h2 {
   font-size: 1.4rem;
   font-family: serif;
-  margin-top: 1rem;
+  margin: 1rem 0 0.25rem;
 }
 
 html.fonts-loaded .privacy-policy-h2 {
@@ -63,12 +63,6 @@ html.fonts-loaded .privacy-policy-section p {
 
   .privacy-policy-section p {
     font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 950px) {
-  .privacy-policy-section p {
-    line-height: 2;
   }
 }
 
@@ -123,6 +117,11 @@ html.fonts-loaded .privacy-policy-section p {
 @media only screen and (max-width: 500px) {
   .privacy-policy-h2 {
     font-size: 2.45rem;
+    margin-top: 2rem;
+  }
+
+  .first-privacy-policy-h2 {
+    margin-top: 4rem;
   }
 
   .privacy-policy-section p {
