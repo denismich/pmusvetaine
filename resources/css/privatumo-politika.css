@@ -46,13 +46,28 @@ html.fonts-loaded .privacy-policy-section p {
   font-family: 'Open Sans';
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1145px) {
   .privacy-policy-h2 {
-    font-size: 2rem;
+    font-size: 16.8px;
   }
 
   .privacy-policy-section p {
-    font-size: 1.25rem;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .privacy-policy-h2 {
+    font-size: 1.4rem;
+  }
+
+  .privacy-policy-section p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .privacy-policy-section p {
     line-height: 2;
   }
 }
@@ -65,15 +80,35 @@ html.fonts-loaded .privacy-policy-section p {
   .privacy-policy-section {
     padding: 5%;
   }
+
+  .privacy-policy-h2 {
+    font-size: 1.75rem;
+  }
+
+  .privacy-policy-section p {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  .privacy-policy-h2 {
+    font-size: 16.8px;
+  }
+
+  .privacy-policy-section p {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
   h1 {
     font-size: 4rem;
   }
-}
 
-@media only screen and (max-width: 650px) {
+  .privacy-policy-h2 {
+    font-size: 2.25rem;
+  }
+
   .privacy-policy-section p {
     font-size: 1.5rem;
   }
@@ -87,7 +122,7 @@ html.fonts-loaded .privacy-policy-section p {
 
 @media only screen and (max-width: 500px) {
   .privacy-policy-h2 {
-    font-size: 3rem;
+    font-size: 2.45rem;
   }
 
   .privacy-policy-section p {
@@ -95,15 +130,17 @@ html.fonts-loaded .privacy-policy-section p {
   }
 }
 
-@media only screen and (max-width: 475px) {
-  .privacy-policy-section p {
-    font-size: 2rem;
-  }
-}
-
 @media only screen and (max-width: 450px) {
   h1 {
     font-size: 5rem;
+  }
+
+  .privacy-policy-h2 {
+    font-size: 2.8rem;
+  }
+
+  .privacy-policy-section p {
+    font-size: 2rem;
   }
 }
 
@@ -114,5 +151,11 @@ html.fonts-loaded .privacy-policy-section p {
 
   .privacy-policy-section p {
     font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .privacy-policy-section p {
+    font-size: 12px;
   }
 }
