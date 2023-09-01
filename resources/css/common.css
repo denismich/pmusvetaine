@@ -697,7 +697,7 @@ html.fonts-loaded .working-info-container p {
 .social-links i,
 .social-links svg {
   color: white;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 @media only screen and (max-width: 1145px) {
@@ -751,6 +751,13 @@ html.fonts-loaded .working-info-container p {
   }
 }
 
+@media only screen and (max-width: 650px) {
+  .social-links i,
+  .social-links svg {
+    margin-right: 3rem;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .working-info-container {
     padding: 7% 10%;
@@ -792,14 +799,16 @@ html.fonts-loaded .working-info-container p {
     font-size: 3.25rem;
   }
 
-  .social-links i,
-  .social-links svg {
-    margin-right: 3rem;
-  }
-
   .working-contacts .svg-tiktok-icon {
     height: 3.25rem;
     vertical-align: -0.8vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .social-links i,
+  .social-links svg {
+    margin-right: 4rem;
   }
 }
 

@@ -245,11 +245,6 @@ html.fonts-loaded .contacts-info p {
     font-size: 2.25rem;
   }
 
-  .contacts-social-links i,
-  .contacts-social-links svg {
-    margin: 0 1.5rem;
-  }
-
   .contacts-social-links .svg-tiktok-icon {
     height: 2.25rem;
     vertical-align: -0.35vw;
