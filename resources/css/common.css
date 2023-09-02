@@ -715,6 +715,21 @@ html.fonts-loaded .working-info-container p {
     width: 18%;
     height: 12.31vw;
   }
+
+  .social-links {
+    font-size: 2.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links i,
+  .social-links svg {
+    margin-right: 2rem;
+  }
+
+  .working-contacts .svg-tiktok-icon {
+    height: 2.25rem;
+    vertical-align: -0.35vw;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -733,21 +748,6 @@ html.fonts-loaded .working-info-container p {
 
   .working-info-container p {
     font-size: 1.5rem;
-  }
-
-  .social-links {
-    font-size: 2.25rem;
-    margin-top: 1.5rem;
-  }
-
-  .social-links i,
-  .social-links svg {
-    margin-right: 2rem;
-  }
-
-  .working-contacts .svg-tiktok-icon {
-    height: 2.25rem;
-    vertical-align: -0.35vw;
   }
 }
 
@@ -784,6 +784,11 @@ html.fonts-loaded .working-info-container p {
     font-size: 3.25rem;
   }
 
+  .social-links i,
+  .social-links svg {
+    margin-right: 4rem;
+  }
+
   .working-contacts .svg-tiktok-icon {
     height: 3.25rem;
     vertical-align: -0.8vw;
@@ -804,13 +809,6 @@ html.fonts-loaded .working-info-container p {
 
   .working-info-container p {
     font-size: 2rem;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .social-links i,
-  .social-links svg {
-    margin-right: 4rem;
   }
 }
 
