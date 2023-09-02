@@ -656,7 +656,7 @@ html.fonts-loaded .modal {
 }
 
 .working-contacts .svg-tiktok-icon {
-  height: 2.5rem;
+  height: 2rem;
   width: auto;
   vertical-align: -0.3vw;
 }
@@ -689,7 +689,7 @@ html.fonts-loaded .working-info-container p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 0.75rem;
   width: 50%;
 }
