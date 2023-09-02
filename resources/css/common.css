@@ -656,9 +656,9 @@ html.fonts-loaded .modal {
 }
 
 .working-contacts .svg-tiktok-icon {
-  height: 1.5rem;
+  height: 2.5rem;
   width: auto;
-  vertical-align: -0.2vw;
+  vertical-align: -0.3vw;
 }
 
 .working-info-container h3,
@@ -689,7 +689,7 @@ html.fonts-loaded .working-info-container p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-top: 0.75rem;
   width: 50%;
 }
@@ -697,7 +697,7 @@ html.fonts-loaded .working-info-container p {
 .social-links i,
 .social-links svg {
   color: white;
-  margin-right: 1.5rem;
+  margin-right: 2.5rem;
 }
 
 @media only screen and (max-width: 1145px) {
