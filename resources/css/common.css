@@ -751,7 +751,7 @@ html.fonts-loaded .working-info-container p {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 800px) {
   .social-links i,
   .social-links svg {
     margin-right: 3rem;
