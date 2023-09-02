@@ -779,6 +779,17 @@ html.fonts-loaded .working-info-container p {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .social-links {
+    font-size: 3.25rem;
+  }
+
+  .working-contacts .svg-tiktok-icon {
+    height: 3.25rem;
+    vertical-align: -0.8vw;
+  }
+}
+
 @media only screen and (max-width: 485px) {
   .working-info-container p {
     font-size: 12px;
@@ -793,15 +804,6 @@ html.fonts-loaded .working-info-container p {
 
   .working-info-container p {
     font-size: 2rem;
-  }
-
-  .social-links {
-    font-size: 3.25rem;
-  }
-
-  .working-contacts .svg-tiktok-icon {
-    height: 3.25rem;
-    vertical-align: -0.8vw;
   }
 }
 
