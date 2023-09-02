@@ -109,7 +109,7 @@ html.fonts-loaded .contacts-info p {
   }
 
   .contacts-social-links {
-    font-size: 2.25rem;
+    font-size: 32px;
     margin-top: 1rem;
   }
   
@@ -119,7 +119,7 @@ html.fonts-loaded .contacts-info p {
   }
 
   .contacts-social-links .svg-tiktok-icon {
-    height: 2.25rem;
+    height: 32px;
     vertical-align: -0.35vw;
   }
 
@@ -250,24 +250,26 @@ html.fonts-loaded .contacts-info p {
     font-size: 2rem;
   }
 
-  .contacts-social-links {
-    font-size: 3.25rem;
-  }
-
   .contacts-social-links i,
   .contacts-social-links svg {
     margin: 0 2rem;
-  }
-
-  .contacts-social-links .svg-tiktok-icon {
-    height: 3.25rem;
-    vertical-align: -0.8vw;
   }
 }
 
 @media only screen and (max-width: 450px) {
   h1 {
     font-size: 5rem;
+  }
+
+  .contacts-social-links i,
+  .contacts-social-links svg {
+    margin: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .contacts-social-links {
+    margin-top: 2rem;
   }
 }
 
