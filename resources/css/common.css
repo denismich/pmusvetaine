@@ -723,7 +723,7 @@ html.fonts-loaded .working-info-container p {
 
   .social-links i,
   .social-links svg {
-    margin-right: 2rem;
+    margin-right: 3rem;
   }
 
   .working-contacts .svg-tiktok-icon {
@@ -748,13 +748,6 @@ html.fonts-loaded .working-info-container p {
 
   .working-info-container p {
     font-size: 1.5rem;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .social-links i,
-  .social-links svg {
-    margin-right: 3rem;
   }
 }
 

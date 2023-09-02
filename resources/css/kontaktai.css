@@ -115,7 +115,7 @@ html.fonts-loaded .contacts-info p {
   
   .contacts-social-links i,
   .contacts-social-links svg {
-    margin-right: 2rem;
+    margin-right: 3rem;
   }
 
   .contacts-social-links .svg-tiktok-icon {
@@ -177,11 +177,6 @@ html.fonts-loaded .contacts-info p {
 
   .third-contacts-info {
     padding-left: 2.5rem;
-  }
-
-  .contacts-social-links i,
-  .contacts-social-links svg {
-    margin-right: 3rem;
   }
 }
 
