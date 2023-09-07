@@ -20,6 +20,21 @@
           align-items: flex-end;
   background-color: hsl(271, 76%, 70%);
   padding-right: 5%;
+  position: relative;
+}
+
+.banner h1 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  text-align: left;
+  font-style: italic;
+  font-weight: normal;
+  margin: 1rem 0 3rem;
+}
+
+html.fonts-loaded .banner h1 {
+  font-family: 'Raleway';
 }
 
 .banner-photo {
@@ -45,7 +60,7 @@
 
 .banner-logo {
   height: 55%;
-  margin-bottom: 10%;
+  margin-bottom: 3%;
 }
 
 #banner-registration-button {
@@ -57,6 +72,8 @@
   font-size: 1.25rem;
   border: none;
   cursor: pointer;
+  position: relative;
+  bottom: 3%;
 }
 
 html.fonts-loaded #banner-registration-button {
@@ -144,7 +161,11 @@ html.fonts-loaded .procedures-header {
   font-size: 2rem;
   font-weight: normal;
   margin-top: 1em;
-  font-family: 'Raleway', sans-serif;
+  font-family: sans-serif;
+}
+
+html.fonts-loaded .procedure h3 {
+  font-family: 'Raleway';
 }
 
 @media only screen and (max-width: 900px) {
@@ -254,6 +275,17 @@ html.fonts-loaded .procedures-header {
           align-items: center;
 }
 
+.about-me h2 {
+  font-family: serif;
+  font-size: 3rem;
+  margin: 1rem 0 3rem;
+  text-align: center;
+}
+
+html.fonts-loaded .about-me h2 {
+  font-family: 'Playfair Display';
+}
+
 .about-me-photo {
   max-width: 35%;
   margin-right: 5%;
@@ -270,24 +302,17 @@ html.fonts-loaded .procedures-header {
   width: 40%;
 }
 
-h1 {
-  font-family: serif;
-  font-size: 3rem;
-  margin: 1rem 0 3rem;
-  text-align: center;
-}
-
-html.fonts-loaded h1 {
-  font-family: 'Playfair Display';
-}
-
 .about-me-content p {
-  font-family: 'Raleway', sans-serif;
+  font-family: sans-serif;
   font-style: italic;
   line-height: 1.5;
   font-size: 1.4rem;
   margin-bottom: 2rem;
   text-align: justify;
+}
+
+html.fonts-loaded .about-me-content p {
+  font-family: 'Raleway';
 }
 
 @media only screen and (max-width: 1050px) {
@@ -685,7 +710,11 @@ html.fonts-loaded .testimonials-header {
   font-size: 1.5rem;
   text-align: center;
   font-style: italic;
-  font-family: 'Raleway', sans-serif;
+  font-family: sans-serif;
+}
+
+html.fonts-loaded .slide {
+  font-family: 'Raleway';
 }
 
 .fade {
