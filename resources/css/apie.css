@@ -85,9 +85,43 @@ html.fonts-loaded #banner-registration-button {
   color:white;
 }
 
+@media only screen and (max-width: 1050px) {
+  .banner {
+    padding-top: 2.5%;
+  }
+
+  .banner-photo {
+    height: 100%;
+  }
+
+  .banner-logo {
+    margin-bottom: 2.5%;
+  }
+
+  .banner h1 {
+    margin-bottom: 3rem;
+    position: relative;
+    bottom: 2%;
+  }
+
+  #banner-registration-button {
+    bottom: 8%;
+  }
+}
+
 @media only screen and (max-width: 900px) {
+  .banner-photo {
+    height: 105%;
+  }
+
   #banner-registration-button {
     font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 685px) {
+  .banner h1 {
+    font-size: 12px;
   }
 }
 
@@ -97,6 +131,11 @@ html.fonts-loaded #banner-registration-button {
     height: auto;
   }
 
+  .banner h1 {
+    font-size: 2rem;
+    margin: 0 0 4rem;
+  }
+
   .banner-photo {
     display: none;
   }
@@ -104,7 +143,7 @@ html.fonts-loaded #banner-registration-button {
   .banner-logo {
     width: 52.5%;
     height: auto;
-    margin-bottom: 7.5%;
+    margin-bottom: 6%;
   }
 
   #banner-registration-button {
@@ -114,6 +153,11 @@ html.fonts-loaded #banner-registration-button {
 }
 
 @media only screen and (max-width: 365px) {
+  .banner h1 {
+    font-size: 12px;
+    text-align: center;
+  }
+
   #banner-registration-button {
     font-size: 12px;
   }
@@ -329,12 +373,12 @@ html.fonts-loaded .about-me-content p {
             flex-direction: column-reverse;
   }
 
-  .about-me-content {
-    width: 80%;
+  .about-me h2 {
+    font-size: 4rem;
   }
 
-  h1 {
-    font-size: 4rem;
+  .about-me-content {
+    width: 80%;
   }
 
   .about-me-content p {
@@ -348,7 +392,7 @@ html.fonts-loaded .about-me-content p {
 }
 
 @media only screen and (max-width: 600px) {
-  h1 {
+  .about-me h2 {
     font-size: 5rem;
   }
 
