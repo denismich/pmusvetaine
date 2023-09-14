@@ -697,7 +697,7 @@ html.fonts-loaded .follow-button {
 
 /* Testimonials */
 
-#testimonials-section {
+#klientu-atsiliepimai {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -719,7 +719,7 @@ html.fonts-loaded .follow-button {
   margin-bottom: 30px;
 }
 
-#testimonials-section:focus {
+#klientu-atsiliepimai:focus {
   outline: none;
 }
 
@@ -831,7 +831,7 @@ html.fonts-loaded .slide {
 }
 
 @media only screen and (max-width: 600px) {
-  #testimonials-section {
+  #klientu-atsiliepimai {
     padding: 7.5% 0;
   }
 
