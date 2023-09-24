@@ -910,6 +910,7 @@ html.fonts-loaded .copyright-privacy-info {
   bottom: 1.4vw;
   left: 1.4vw;
   display: inline-block;
+  z-index: 1;
 }
 
 html.fonts-loaded #main-registration-button {
