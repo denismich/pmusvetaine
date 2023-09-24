@@ -1,5 +1,11 @@
 "use strict";
 
+// Event keycode variable
+var keyCode = "code";
+if (KeyboardEvent.code === undefined) {
+  keyCode = "keyCode";
+}
+
 /* SmtpJS.com - v3.0.0 */
 var Email;
 if (typeof Calendly === 'undefined') {
@@ -85,38 +91,38 @@ headerNavIcon.addEventListener('click', function() {
 var navLinks = document.querySelectorAll('.nav-link');
 
 headerNavIcon.addEventListener('keydown', function(event) {
-  if (event.keyCode === 13 || event.keyCode === 32) {
+  if (event[keyCode] === 13 || event[keyCode] === 32) {
     event.preventDefault();
     headerNavIcon.click();
   }
   if (headerNavIcon.classList.contains('open')) {
-    if (event.keyCode === 9) {
+    if (event[keyCode] === 9) {
       event.preventDefault();
     }
-    if (event.keyCode === 27) {
+    if (event[keyCode] === 27) {
       headerNavIcon.classList.remove('open');
       headerNavMenu.classList.remove('visible');
     }
-    if (event.keyCode === 38) {
+    if (event[keyCode] === 38) {
       event.preventDefault();
       navLinks[navLinks.length-1].focus();
     }
-    if (event.keyCode === 40) {
+    if (event[keyCode] === 40) {
       event.preventDefault();
       navLinks[0].focus();
     }
     for(var i = 0; i < navLinks.length; i++) {
       (function(index) {
         navLinks[index].addEventListener('keydown', function(event) {
-          if (event.keyCode === 9 || event.keyCode === 32) {
+          if (event[keyCode] === 9 || event[keyCode] === 32) {
             event.preventDefault();
           }
-          if (event.keyCode === 27) {
+          if (event[keyCode] === 27) {
             headerNavIcon.classList.remove('open');
             headerNavMenu.classList.remove('visible');
             headerNavIcon.focus();
           }
-          if(event.keyCode === 38) {
+          if(event[keyCode] === 38) {
             event.preventDefault();
             if (index !== 0) {
               navLinks[index-1].focus();
@@ -124,7 +130,7 @@ headerNavIcon.addEventListener('keydown', function(event) {
               navLinks[navLinks.length-1].focus();
             }
           }
-          if (event.keyCode === 40) {
+          if (event[keyCode] === 40) {
             event.preventDefault();
             if (index < navLinks.length - 1) {
               navLinks[index+1].focus();
@@ -185,18 +191,18 @@ var selectOption = function(event) {select.value = event.currentTarget.textConte
 if (select !== null) {
   select.addEventListener('mousedown', function(event) {event.preventDefault()});
 select.addEventListener('keydown', function(event) {
-  if (event.keyCode === 13 || event.keyCode === 32) {
+  if (event[keyCode] === 13 || event[keyCode] === 32) {
     event.preventDefault();
     toggleDropdown();
   }
-  if (event.keyCode === 27) {
+  if (event[keyCode] === 27) {
     dropdown.classList.remove('opened');
   }
-  if (event.keyCode === 38) {
+  if (event[keyCode] === 38) {
     event.preventDefault();
     dropdownOptions[dropdownOptions.length-1].focus();
   }
-  if (event.keyCode === 40) {
+  if (event[keyCode] === 40) {
     event.preventDefault();
     dropdownOptions[0].focus();
   }
@@ -211,15 +217,15 @@ for(var i = 0; i < dropdownOptions.length; i++) {
   dropdownOptions[i].addEventListener('click', selectOption);
   (function(index) {
     dropdownOptions[index].addEventListener('keydown', function(event) {
-      if (event.keyCode === 9 || event.keyCode === 32) {
+      if (event[keyCode] === 9 || event[keyCode] === 32) {
         event.preventDefault();
       }
-      if (event.keyCode === 13 || event.keyCode === 27) {
+      if (event[keyCode] === 13 || event[keyCode] === 27) {
         selectOption(event);
         closeDropdownFromOutside(event);
         select.focus();
       }
-      if(event.keyCode === 38) {
+      if(event[keyCode] === 38) {
         event.preventDefault();
         if (index !== 0) {
           dropdownOptions[index-1].focus();
@@ -227,7 +233,7 @@ for(var i = 0; i < dropdownOptions.length; i++) {
           dropdownOptions[dropdownOptions.length-1].focus();
         }
       }
-      if (event.keyCode === 40) {
+      if (event[keyCode] === 40) {
         event.preventDefault();
         if (index < dropdownOptions.length - 1) {
           dropdownOptions[index+1].focus();
@@ -313,13 +319,13 @@ document.body.addEventListener('click', closeModalFromOutside);
 window.addEventListener('keydown', function(event) {
   if (successModal.style.display === 'block' || errorModal.style.display === 'block' || 
   oldBrowsersErrorModal.style.display === 'block' || validationErrorModal.style.display === 'block') {
-    if (event.keyCode === 32 || event.keyCode === 38 || event.keyCode === 40) {
+    if (event[keyCode] === 32 || event[keyCode] === 38 || event[keyCode] === 40) {
       event.preventDefault();
     }
-    if (event.keyCode === 27) {
+    if (event[keyCode] === 27) {
       closeModal();
     }
-    if (event.keyCode === 9) {
+    if (event[keyCode] === 9) {
       event.preventDefault();
       for (var i = 0; i < modalCloseButtons.length; i++) {
         if (modals[i].style.display === 'block') {

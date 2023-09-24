@@ -9,7 +9,7 @@ for (var i = 0; i < faqToggles.length; i++) {
       answers[index].classList.toggle('open');
     });
     faqToggles[index].addEventListener('keydown', function(event) {
-      if (event.keyCode === 13) {
+      if (event[keyCode] === 13) {
         answers[index].classList.toggle('open');
       }
     });

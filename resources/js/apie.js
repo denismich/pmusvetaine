@@ -55,7 +55,7 @@ imageContainer.addEventListener('click', function(event) {
 });
 
 imageContainer.addEventListener('keydown', function(event) {
-  if (event.keyCode === 13) {
+  if (event[keyCode] === 13) {
     event.preventDefault();
     event.target.click();
   }
@@ -69,56 +69,56 @@ fullScreenContainer.addEventListener('click', function(event) {
 });
 
 fullScreenImage.addEventListener('keydown', function(event) {
-  if (event.keyCode === 9) {
+  if (event[keyCode] === 9) {
     closeButton.focus();
   }
-  if (event.keyCode === 13) {
+  if (event[keyCode] === 13) {
     nextButton.click();
   }
 });
 
 closeButton.addEventListener('keydown', function(event) {
-  if (event.keyCode === 9) {
+  if (event[keyCode] === 9) {
     prevButton.focus();
   }
-  if (event.keyCode === 13) {
+  if (event[keyCode] === 13) {
     event.target.click();
   }
 });
 
 prevButton.addEventListener('keydown', function(event) {
-  if (event.keyCode === 9) {
+  if (event[keyCode] === 9) {
     nextButton.focus();
   }
-  if (event.keyCode === 13) {
+  if (event[keyCode] === 13) {
     event.target.click();
   }
 });
 
 nextButton.addEventListener('keydown', function(event) {
-  if (event.keyCode === 9) {
+  if (event[keyCode] === 9) {
     fullScreenImage.focus();
   }
-  if (event.keyCode === 13) {
+  if (event[keyCode] === 13) {
     event.target.click();
   }
 });
 
 window.addEventListener('keydown', function(event) {
   if (fullScreenContainer.style.display === 'block') {
-    if (event.keyCode === 27) {
+    if (event[keyCode] === 27) {
       event.preventDefault();
       fullScreenContainer.style.display = 'none';
       imageToFocus.focus();
     }
-    if (event.keyCode === 9 || event.keyCode === 32 || event.keyCode === 38 || event.keyCode === 40) {
+    if (event[keyCode] === 9 || event[keyCode] === 32 || event[keyCode] === 38 || event[keyCode] === 40) {
       event.preventDefault();
     }
-    if (event.keyCode === 39) {
+    if (event[keyCode] === 39) {
       event.preventDefault();
       nextButton.click();
     }
-    if (event.keyCode === 37) {
+    if (event[keyCode] === 37) {
       event.preventDefault();
       prevButton.click();
     }
@@ -239,7 +239,7 @@ for (var i = 0; i < dots.length; i++) {
       clearInterval(myTimer);
     });
     dots[index].addEventListener('keydown', function(event) {
-      if (event.keyCode === 13) {
+      if (event[keyCode] === 13) {
         dots[index].click();
       }
     });
