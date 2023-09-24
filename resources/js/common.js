@@ -356,36 +356,29 @@ scrollToTopButton.addEventListener('click', function() {
 var cookiesDialog = document.querySelector('#cookies-dialog');
 
 function setCookie(cookie_name, value) {
-    document.cookie = cookie_name + "=" + encodeURIComponent(value) + "; max-age=" + 180*24*60*60 + "; path=/";
+    document.cookie = cookie_name + "=" + encodeURIComponent(value) + "; max-age=" + 24*60*60 + "; path=/; Secure";
 };
 
-function getCookie(cookie_name)
-{
-    if (document.cookie.length>0)
-    {
-        var cookie_start = document.cookie.indexOf(cookie_name + "=");
-        if (cookie_start != -1)
-        {
-            cookie_start = cookie_start + cookie_name.length+1;
-            var cookie_end = document.cookie.indexOf(";",cookie_start);
-            if (cookie_end == -1)
-            {
-                cookie_end = document.cookie.length;
-            }
-            return decodeURIComponent(document.cookie.substring(cookie_start,cookie_end));
-        }
-    }
+function getCookie(cookie_name) {
+  var cookie = document.cookie
+  .split("; ")
+  .find(function(row) { return row.startsWith(cookie_name+"=") });
+
+  if (cookie === undefined) {
     return "";
+  }
+
+  return cookie.split("=")[1];
 };
 
 
 window.addEventListener('DOMContentLoaded', function() {
   console.log(document.cookie);
-  if(getCookie('show_cookie_message') != 'no') {
+  if(getCookie('show_cookie_message') !== 'no') {
     setTimeout(function() {
       cookiesDialog.classList.add('displayed');
       cookiesDialog.focus();
-    }, 2000);
+    }, 1000);
   }
 });
 
