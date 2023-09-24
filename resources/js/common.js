@@ -60,7 +60,7 @@ Promise.all([
   playfairDisplayObserver.load(),
   ralewayObserver.load()
 ]).then(function(){
-  document.documentElement.className += " fonts-loaded";
+  document.documentElement.className += ' fonts-loaded';
 });
 
 //Passive detector for event listeners
@@ -72,8 +72,8 @@ try {
       supportsPassive = true;
     }
   });
-  window.addEventListener("testPassive", null, opts);
-  window.removeEventListener("testPassive", null, opts);
+  window.addEventListener('testPassive', null, opts);
+  window.removeEventListener('testPassive', null, opts);
 } catch (e) {};
 
 if (supportsPassive === true) {
@@ -379,7 +379,6 @@ function getCookie(cookie_name) {
 
 
 window.addEventListener('DOMContentLoaded', function() {
-  console.log(document.cookie);
   if(getCookie('show_cookie_message') !== 'no') {
     setTimeout(function() {
       cookiesDialog.classList.add('displayed');
@@ -388,7 +387,11 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-document.querySelector('#cookies-dialog-confirm-button').addEventListener('click', function() {
-  cookiesDialog.classList.remove('displayed');
-  setCookie('show_cookie_message','no');
-});
+var cookiesConfirmButton = document.querySelector('#cookies-dialog-confirm-button');
+
+if (cookiesConfirmButton !== null) {
+  cookiesConfirmButton.addEventListener('click', function() {
+    cookiesDialog.classList.remove('displayed');
+    setCookie('show_cookie_message','no');
+  });
+}

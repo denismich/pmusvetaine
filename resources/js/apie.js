@@ -208,7 +208,7 @@ window.addEventListener('DOMContentLoaded', function() {
         clearInterval(myTimer);
       }
     }
-  });
+  }, passiveArgument);
   slideshowContainer.addEventListener('touch', pause, passiveArgument);
   slideshowContainer.addEventListener('touchstart', function(event) {
     slidesTouchStartInContainer = true;
