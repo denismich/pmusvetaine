@@ -7,9 +7,7 @@ if (KeyboardEvent.code === undefined) {
 }
 
 /* SmtpJS.com - v3.0.0 */
-var Email;
-if (typeof Calendly === 'undefined') {
-  Email = { send: function (a) {
+var Email = { send: function (a) {
     return new Promise(function (n, e) {
       a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send";
       var t = JSON.stringify(a);
@@ -47,8 +45,7 @@ if (typeof Calendly === 'undefined') {
     var t = new XMLHttpRequest;
     return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t;
   }
-  };
-}
+};
 
 //Fonts observer
 const openSansObserver = new FontFaceObserver('Open Sans');
@@ -157,7 +154,7 @@ if (mainRegistrationButton !== null) {
 }
 
 window.addEventListener('load', function() {
-  if (typeof Calendly === 'undefined' && mainRegistrationButton !== null) {
+  if (typeof Calendly !== 'undefined' && mainRegistrationButton !== null) {
     mainRegistrationButton.style.display = 'none';
     registrationSectionOld.style.display = 'block';
   }
