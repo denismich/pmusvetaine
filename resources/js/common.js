@@ -377,10 +377,8 @@ function getCookie(cookie_name) {
 
 window.addEventListener('DOMContentLoaded', function() {
   if(getCookie('show_cookie_message') !== 'no') {
-    setTimeout(function() {
-      cookiesDialog.classList.add('displayed');
-      cookiesDialog.focus();
-    }, 1000);
+    cookiesDialog.classList.add('displayed');
+    cookiesDialog.focus();
   }
 });
 
