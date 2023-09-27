@@ -154,7 +154,7 @@ if (mainRegistrationButton !== null) {
 }
 
 window.addEventListener('load', function() {
-  if (typeof Calendly !== 'undefined' && mainRegistrationButton !== null) {
+  if (typeof Calendly === 'undefined' && mainRegistrationButton !== null) {
     mainRegistrationButton.style.display = 'none';
     registrationSectionOld.style.display = 'block';
   }
