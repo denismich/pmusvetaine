@@ -311,6 +311,8 @@ for(var i = 0; i < modalCloseButtons.length; i++) {
   modalCloseButtons[i].addEventListener('click', closeModal);
 }
 
+form.onsubmit = function() {sendEmail(); return false;};
+
 document.body.addEventListener('click', closeModalFromOutside);
 
 window.addEventListener('keydown', function(event) {

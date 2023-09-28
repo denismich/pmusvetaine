@@ -3,9 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://calendly.com; font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com; 
-        style-src 'self' https://use.fontawesome.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://smtpjs.com;
-        img-src 'self' https://assets.calendly.com">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://calendly.com https://www.google.com;
+        font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com; 
+        style-src 'self' 'unsafe-inline' https://use.fontawesome.com;
+        script-src 'self';
+        connect-src 'self' https://smtpjs.com;
+        img-src 'self' https://assets.calendly.com;
+        base-uri 'self';
+        object-src 'self'">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Priežiūra po procedūros | Permanentinis makiažas Vilniuje | Indrė Ivanovaitė</title>
         <meta name="title" content="Priežiūra po procedūros | Permanentinis makiažas Vilniuje | Indrė Ivanovaitė">
@@ -149,13 +154,13 @@
                     <p>Užpildžius registracijos formą susisieksime per 24 valandas</p>
                 </div>
                 <div class="registration-form-container">
-                    <form id="registration-form" method="POST" onsubmit="sendEmail(); return false;" aria-label="Forma">
+                    <form id="registration-form" method="POST" aria-label="Forma">
                         <div>
-                            <input type="text" name="name" id="name" class="input-field" placeholder="Vardas" required aria-label="Vardas">
-                            <input type="email" name="email" id="email" class="input-field" placeholder="El. paštas" required aria-label="El. paštas">
+                            <input type="text" name="name" id="name" class="input-field" placeholder="Vardas" required aria-label="Vardas" autocomplete="name">
+                            <input type="email" name="email" id="email" class="input-field" placeholder="El. paštas" required aria-label="El. paštas" autocomplete="email">
                         </div>
                         <div>
-                            <input type="tel" name="phone" id="phone" class="input-field" placeholder="Telefonas" required aria-label="Telefonas">
+                            <input type="tel" name="phone" id="phone" class="input-field" placeholder="Telefonas" required aria-label="Telefonas" autocomplete="tel">
                             <input type="date" name="date" id="date" class="input-field" required aria-label="Data">
                         </div>
 
