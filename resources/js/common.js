@@ -376,7 +376,7 @@ function getCookie(cookie_name) {
 
 
 window.addEventListener('DOMContentLoaded', function() {
-  if(getCookie('show_cookie_message') !== 'no') {
+  if(cookiesDialog !== null && getCookie('show_cookie_message') !== 'no') {
     cookiesDialog.classList.add('displayed');
     cookiesDialog.focus();
   }
@@ -384,7 +384,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 var cookiesConfirmButton = document.querySelector('#cookies-dialog-confirm-button');
 
-if (cookiesConfirmButton !== null) {
+if (cookiesDialog !== null) {
   cookiesConfirmButton.addEventListener('click', function() {
     cookiesDialog.classList.remove('displayed');
     setCookie('show_cookie_message','no');

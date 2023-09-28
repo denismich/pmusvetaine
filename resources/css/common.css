@@ -1161,6 +1161,11 @@ html.fonts-loaded #cookies-dialog-confirm-button {
 @media only screen and (max-width: 600px) {
   #cookies-dialog {
     width: 100%;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 }
 
