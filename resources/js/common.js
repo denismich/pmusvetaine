@@ -145,7 +145,7 @@ headerNavIcon.addEventListener('keydown', function(event) {
 var registrationSectionOld = document.querySelector('#registration-section-old');
 var mainRegistrationButton = document.querySelector('#main-registration-button');
 var initCalendlyPopupWidget = function() {
-  Calendly.initPopupWidget({url: 'https://calendly.com/dmichailovskij?hide_landing_page_details=1&primary_color=ff00ea'});
+  Calendly.initPopupWidget({url: 'https://calendly.com/indre-ivanovaite?hide_landing_page_details=1&hide_gdpr_banner=1'});
   return false;
 };
 
