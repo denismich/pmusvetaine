@@ -4,6 +4,8 @@
 var headerHeight = document.querySelector('header').clientHeight;
 
 //Adjusting procedure container position when redirected from links
+var procedureDescriptionContainers = document.querySelectorAll('.procedure-description-container');
+
 window.addEventListener('DOMContentLoaded', function() {
     var targetId = window.location.hash.substring(1);
     if (targetId !== '') {
@@ -13,13 +15,12 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-for (var container of document.querySelectorAll('.procedure-description-container')) {
+for (var i = 0; i < procedureDescriptionContainers.length; i++) {
   (function (element) {
-    if (element.addEventListener !== undefined) {
     element.addEventListener('focus', function() {
       setTimeout(function() {window.scrollBy(0, element.getBoundingClientRect().top - headerHeight);}, 100);
     }); 
-  }})(container);
+  })(procedureDescriptionContainers[i]);
 };
 
 //Registration buttons
