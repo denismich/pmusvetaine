@@ -15,10 +15,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
 for (var container of document.querySelectorAll('.procedure-description-container')) {
   (function (element) {
+    if (element.addEventListener !== undefined) {
     element.addEventListener('focus', function() {
       setTimeout(function() {window.scrollBy(0, element.getBoundingClientRect().top - headerHeight);}, 100);
-    });
-  })(container);
+    }); 
+  }})(container);
 };
 
 //Registration buttons
