@@ -544,8 +544,6 @@ html.fonts-loaded .follow-button {
 .full-screen-nav .fa {
   color: white;
   font-size: 2em;
-  line-height: .03125em;
-  vertical-align: -.1875em;
 }
 
 .full-screen-nav .fa:hover {
