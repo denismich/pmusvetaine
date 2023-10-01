@@ -525,10 +525,6 @@ html.fonts-loaded .follow-button {
   aspect-ratio: auto;
 }
 
-#full-screen-image:focus {
-  outline: none;
-}
-
 .full-screen-nav {
   position: absolute;
   top: 50%;
@@ -538,11 +534,6 @@ html.fonts-loaded .follow-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-.full-screen-nav:focus {
-  outline: none;
-  color: gray;
 }
 
 .full-screen-nav .fa {

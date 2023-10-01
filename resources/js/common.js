@@ -362,14 +362,21 @@ scrollToTopButton.addEventListener('click', function() {
 // Cookies dialog
 var cookiesDialog = document.querySelector('#cookies-dialog');
 
+function find(arr, f) {
+  for (var i = 0; i < arr.length; i++) {
+    if (f(arr[i]) === true) {
+      return arr[i];
+    }
+  }
+}
+
 function setCookie(cookie_name, value) {
     document.cookie = cookie_name + "=" + encodeURIComponent(value) + "; max-age=" + 24*60*60 + "; path=/; Secure";
 };
 
 function getCookie(cookie_name) {
-  var cookie = document.cookie
-  .split("; ")
-  .find(function(row) { return row.startsWith(cookie_name+"=") });
+  var cookie = find(document.cookie
+  .split("; "), function(row) { return row.startsWith(cookie_name+"=") });
 
   if (cookie === undefined) {
     return "";
