@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-for (var container of document.querySelectorAll('.procedure-description-container')) {
+for (var container of document.getElementsByClassName('procedure-description-container')) {
   (function (element) {
     element.addEventListener('focus', function() {
       setTimeout(function() {window.scrollBy(0, element.getBoundingClientRect().top - headerHeight);}, 100);
