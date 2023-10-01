@@ -30,9 +30,10 @@ html.fonts-loaded h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  padding: 0 1.625%;
+  -webkit-box-pack: space-around;
+      -ms-flex-pack: space-around;
+          justify-content: space-around;
 }
 
 .procedure-description-container:focus {
@@ -122,6 +123,7 @@ html.fonts-loaded .registration-button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0;
   }
 
   .procedure-description-container.even {
@@ -129,6 +131,7 @@ html.fonts-loaded .registration-button {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    padding: 0;
   }
 
   .procedure-description-container picture {

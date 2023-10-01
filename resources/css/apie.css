@@ -12,9 +12,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  padding: 0 3.25%;
+  -webkit-box-pack: space-around;
+      -ms-flex-pack: space-around;
+          justify-content: space-around;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -149,6 +150,10 @@ html.fonts-loaded #banner-registration-button {
     width: 52.5%;
     height: auto;
     margin-bottom: 6%;
+  }
+
+  .banner-logo img {
+    width: 100%;
   }
 
   #banner-registration-button {
