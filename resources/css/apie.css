@@ -12,9 +12,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-around;
-      -ms-flex-pack: space-around;
-          justify-content: space-around;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -42,7 +39,6 @@ html.fonts-loaded .banner h1 {
 
 .banner-photo {
   height: 95%;
-  width: auto;
 }
 
 .banner-logo-container {
@@ -64,8 +60,12 @@ html.fonts-loaded .banner h1 {
 
 .banner-logo {
   height: 55%;
-  width: auto;
   margin-bottom: 3%;
+}
+
+.banner-photo img,
+.banner-logo img {
+  width: auto;
 }
 
 #banner-registration-button {
