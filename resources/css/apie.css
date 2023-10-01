@@ -536,6 +536,11 @@ html.fonts-loaded .follow-button {
   cursor: pointer;
 }
 
+#full-screen-image:focus,
+.full-screen-nav:focus {
+  outline: none;
+}
+
 .full-screen-nav .fa {
   color: white;
   font-size: 2em;
