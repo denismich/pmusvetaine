@@ -26,6 +26,11 @@ window.addEventListener('load', function() {
   }
 });
 
+//About photo max-width setting for older browser support
+
+var aboutPhoto = document.querySelector('#about-me-photo img');
+aboutPhoto.style.maxWidth = aboutPhoto.style.width / aboutPhoto.style.height * aboutPhoto.style.maxHeight;
+
 //Gallery images enlarging
 var imageContainer = document.querySelector('#gallery-photos-container');
 var fullScreenContainer = document.querySelector('#full-screen-container');
