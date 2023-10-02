@@ -145,7 +145,7 @@ headerNavIcon.addEventListener('keydown', function(event) {
 var registrationSectionOld = document.querySelector('#registration-section-old');
 var mainRegistrationButton = document.querySelector('#main-registration-button');
 var initCalendlyPopupWidget = function() {
-  Calendly.initPopupWidget({url: 'https://calendly.com/indre-ivanovaite?hide_landing_page_details=1&hide_gdpr_banner=1'});
+  Calendly.initPopupWidget({url: 'https://calendly.com/indre-ivanovaite'});
   return false;
 };
 
