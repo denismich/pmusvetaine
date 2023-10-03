@@ -379,7 +379,7 @@ html.fonts-loaded .about-me-content p {
   }
 }
 
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 900px) {
   .about-me {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
