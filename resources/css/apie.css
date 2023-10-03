@@ -346,7 +346,6 @@ html.fonts-loaded .about-me h2 {
 }
 
 .about-me-photo img {
-  max-height: 80vh;
   -webkit-box-shadow: 16px 16px 16px hsl(271, 65%, 60%);
           box-shadow: 16px 16px 16px hsl(271, 65%, 60%);
 }
@@ -375,7 +374,7 @@ html.fonts-loaded .about-me-content p {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 810px) {
   .about-me {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
