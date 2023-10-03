@@ -28,12 +28,14 @@ window.addEventListener('load', function() {
 
 //Handling about me photo height
 var aboutMePhoto = document.querySelector('.about-me-photo img');
-window.addEventListener('resize', function() {
+var resizeAboutMePhoto = function() {
   aboutMePhoto.classList.remove('with-max-height');
   if (aboutMePhoto.clientHeight > document.documentElement.clientHeight * 0.8) {
     aboutMePhoto.classList.add('with-max-height');
   }
-});
+};
+window.addEventListener('load', resizeAboutMePhoto);
+window.addEventListener('resize', resizeAboutMePhoto);
 
 //Gallery images enlarging
 var imageContainer = document.querySelector('#gallery-photos-container');
