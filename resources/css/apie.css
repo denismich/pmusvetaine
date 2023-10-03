@@ -244,7 +244,7 @@ html.fonts-loaded .procedure h3 {
 
   .pr-first,
   .pr-third {
-    margin-right: 0.5%;
+    margin-right: 0.5vw;
   }
 
   .pr-third,
@@ -341,7 +341,7 @@ html.fonts-loaded .about-me h2 {
 
 .about-me-photo {
   max-width: 35%;
-  margin-right: 5%;
+  margin-right: 5vw;
 }
 
 .about-me-photo img {

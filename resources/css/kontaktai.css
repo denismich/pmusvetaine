@@ -31,7 +31,7 @@ html.fonts-loaded h1 {
 
 #contacts-info-container {
   display: inline-block;
-  margin-left: 3%;
+  margin-left: 2.73vw;
   vertical-align: top;
 }
 
@@ -126,6 +126,10 @@ html.fonts-loaded .contacts-info p {
 
   #map {
     width: 65%;
+  }
+
+  #contacts-info-container {
+    margin-left: 2.7vw;
   }
 }
 
