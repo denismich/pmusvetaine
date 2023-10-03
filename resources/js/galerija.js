@@ -5,7 +5,7 @@ var galleryImages = document.querySelectorAll('.gallery-photo');
 var galleryFilters = document.querySelectorAll('.gallery-filter');
 
 for (var i = 0; i < galleryFilters.length; i++) {
-  galleryFilters[i].addEventListener('click', function() {
+  galleryFilters[i].addEventListener('click', function(event) {
     document.querySelector('.focused-filter').classList.remove('focused-filter');
     event.target.classList.add('focused-filter');
     for (var j = 0; j < galleryImages.length; j++) {

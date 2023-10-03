@@ -11,7 +11,7 @@
 }
 
 .gallery-header {
-  margin: 0 8.5% 4%;
+  margin: 0 7.65vw 3.6vw;
 }
 
 h1 {
@@ -75,7 +75,7 @@ br {
 
 .gallery-photo {
   width: 20%;
-  margin: 0.5%;
+  margin: 0.45vw;
   cursor: pointer;
 }
 

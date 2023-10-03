@@ -200,7 +200,7 @@ html.fonts-loaded .procedures-header {
 
 .procedure {
   width: 23%;
-  margin: 5% 0;
+  margin: 5vw 0;
   color: black;
   text-align: center;
   text-decoration: none;
@@ -224,7 +224,6 @@ html.fonts-loaded .procedure h3 {
 
 @media only screen and (max-width: 900px) {
   .procedures-container {
-    padding: 0;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -438,7 +437,7 @@ html.fonts-loaded .about-me-content p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 8.5% 4%;
+  margin: 0 7.65vw 3.6vw;
 }
 
 .gallery-header h2 {
@@ -492,7 +491,7 @@ html.fonts-loaded .follow-button {
 
 .gallery-photo {
   width: 20%;
-  margin: 0.5%;
+  margin: 0.45vw;
   cursor: pointer;
 }
 

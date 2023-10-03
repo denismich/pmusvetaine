@@ -400,7 +400,7 @@ html.fonts-loaded .registration-header p {
 
 .input-field {
   padding: 1.5%;
-  margin: 1.5% 0;
+  margin: 0.6075vw 0;
   border: 1px solid hsla(0, 0%, 17%, 0.15);
   color: hsl(0, 0%, 42%);
   font-family: sans-serif;
@@ -581,6 +581,7 @@ html.fonts-loaded .modal {
     font-size: 2rem;
     padding: 3%;
     width: 100%;
+    margin: 0.945vw 0;
   }
 
   input {
@@ -624,6 +625,10 @@ html.fonts-loaded .modal {
 
   .registration-form-container {
     width: 80%;
+  }
+
+  .input-field {
+    margin: 1.08vw 0;
   }
 }
 
