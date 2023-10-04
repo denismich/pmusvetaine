@@ -59,7 +59,7 @@ html.fonts-loaded h1 {
 
 .procedure-description {
   width: 60%;
-  padding: 2.5% 0;
+  padding: 2.41875vw 0;
   text-align: center;
 }
 
@@ -141,7 +141,7 @@ html.fonts-loaded .registration-button {
   }
 
   .procedure-description {
-    padding-top: 3.5%;
+    padding-top: 3.38625vw;
   }
 }
 
@@ -201,7 +201,7 @@ html.fonts-loaded .registration-button {
 
   .procedure-description {
     width: 80vw;
-    padding-top: 5%;
+    padding-top: 4.8375vw;
   }
 
   .procedure-description h2 {
