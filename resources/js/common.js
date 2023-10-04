@@ -1,5 +1,9 @@
 "use strict";
 
+//Variables to get the Firefox version from the userAgent string
+var userAgent = navigator.userAgent;
+var firefoxVersion = userAgent.match(/Firefox\/(\d+)/);
+
 // Event keycode variable
 var keyCode = "code";
 if (KeyboardEvent.code === undefined) {
@@ -154,7 +158,7 @@ if (mainRegistrationButton !== null) {
 }
 
 window.addEventListener('load', function() {
-  if (typeof Calendly === 'undefined' && mainRegistrationButton !== null) {
+  if ((typeof Calendly === 'undefined' || (firefoxVersion && firefoxVersion[1] >= 72 && firefoxVersion[1] <= 73)) && mainRegistrationButton !== null) {
     mainRegistrationButton.style.display = 'none';
     registrationSectionOld.style.display = 'block';
   }

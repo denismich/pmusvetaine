@@ -1,5 +1,9 @@
 "use strict";
 
+//Variables to get the Firefox version from the userAgent string
+var userAgent = navigator.userAgent;
+var firefoxVersion = userAgent.match(/Firefox\/(\d+)/);
+
 //Header height for scrolling/links to elements
 var headerHeight = document.querySelector('header').clientHeight;
 
@@ -14,7 +18,7 @@ var initCalendlyPopupWidget = function() {
 bannerRegistrationButton.addEventListener('click', initCalendlyPopupWidget);
 
 window.addEventListener('load', function() {
-  if (typeof Calendly === 'undefined') {
+  if (typeof Calendly === 'undefined' || (firefoxVersion && firefoxVersion[1] >= 72 && firefoxVersion[1] <= 73)) {
     bannerRegistrationButton.removeEventListener('click', initCalendlyPopupWidget);
     bannerRegistrationButton.addEventListener('click', function() {
       window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
