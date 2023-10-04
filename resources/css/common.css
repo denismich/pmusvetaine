@@ -1115,7 +1115,7 @@ footer {
 }
 
 #cookies-dialog-confirm-button {
-  margin-top: 1%;
+  margin-top: 0.68vw;
   border: none;
   background-color: hsl(271, 65%, 50%);
   padding: 0.625rem 1.25rem;
@@ -1145,12 +1145,17 @@ html.fonts-loaded #cookies-dialog-confirm-button {
 
   #cookies-dialog-confirm-button {
     padding: 8px 16px;
+    margin-top: 0.63vw;
   }
 }
 
 @media only screen and (max-width: 900px) {
   #cookies-dialog {
     width: 55%;
+  }
+
+  #cookies-dialog-confirm-button {
+    margin-top: 0.53vw;
   }
 }
 
