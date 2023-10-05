@@ -29,7 +29,7 @@ var registrationSection = document.querySelector('#registration-section-old');
 var registrationButtons = document.querySelectorAll('.registration-button');
 
 window.addEventListener('load', function() {
-  if (typeof Calendly === 'undefined') {
+  if (typeof Calendly === 'undefined' || (firefoxVersion && firefoxVersion[1] >= 72 && firefoxVersion[1] <= 73)) {
     for (var i = 0; i < registrationButtons.length; i++) {
       registrationButtons[i].style.display = 'inline-block';
       registrationButtons[i].addEventListener('click', function() {

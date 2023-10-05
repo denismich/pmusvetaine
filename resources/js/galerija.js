@@ -146,7 +146,7 @@ var registrationTitle = document.querySelector('#registration-title-old');
 var galleryRegistrationButton = document.querySelector('#gallery-registration-button');
 
 window.addEventListener('load', function() {
-  if (typeof Calendly === 'undefined') {
+  if (typeof Calendly === 'undefined' || (firefoxVersion && firefoxVersion[1] >= 72 && firefoxVersion[1] <= 73)) {
     galleryRegistrationButton.style.display = 'inline-block';
   }
 });
