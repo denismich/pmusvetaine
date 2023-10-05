@@ -58,6 +58,10 @@ html.fonts-loaded .contacts-info p {
   font-family: 'Open Sans';
 }
 
+.phone {
+  color: black;
+}
+
 .contacts-social-links {
   display: -webkit-box;
   display: -ms-flexbox;
