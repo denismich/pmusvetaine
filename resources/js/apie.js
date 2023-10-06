@@ -38,7 +38,7 @@ var resizeAboutMePhoto = function() {
   if (aboutMePhoto.clientHeight > document.documentElement.clientHeight * 0.8) {
     aboutMePhoto.classList.add('with-max-height');
   }
-  if (aboutMePhoto.clientWidth > document.documentElement.clientWidth * 0.35) {
+  if (document.documentElement.clientWidth > 900 && aboutMePhoto.clientWidth > document.documentElement.clientWidth * 0.35) {
     aboutMePhoto.classList.add('with-max-width');
   }
 };
