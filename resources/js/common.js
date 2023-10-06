@@ -380,7 +380,7 @@ function setCookie(cookie_name, value) {
 
 function getCookie(cookie_name) {
   var cookie = find(document.cookie
-  .split("; "), function(row) { return row.startsWith(cookie_name+"=") });
+  .split("; "), function(row) { return row === cookie_name+"=no" || row === cookie_name+"=yes" });
 
   if (cookie === undefined) {
     return "";
