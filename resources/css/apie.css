@@ -342,6 +342,7 @@ html.fonts-loaded .about-me h2 {
 .about-me-photo {
   max-width: 35%;
   margin-right: 5vw;
+  border: 1px solid black;
 }
 
 .about-me-photo img {
