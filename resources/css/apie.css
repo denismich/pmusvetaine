@@ -353,7 +353,11 @@ html.fonts-loaded .about-me h2 {
 .about-me-photo img.with-max-height {
   height: 80vh;
   width: auto;
-  max-width: 100%;
+}
+
+.about-me-photo img.with-max-width {
+  height: auto;
+  width: 100%;
 }
 
 .about-me-content {
