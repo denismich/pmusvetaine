@@ -347,16 +347,12 @@ html.fonts-loaded .about-me h2 {
 .about-me-photo img {
   -webkit-box-shadow: 16px 16px 16px hsl(271, 65%, 60%);
           box-shadow: 16px 16px 16px hsl(271, 65%, 60%);
+  max-height: 80vh;
 }
 
 .about-me-photo img.with-max-height {
   height: 80vh;
   width: auto;
-}
-
-.about-me-photo img.with-max-width {
-  height: auto;
-  width: 100%;
 }
 
 .about-me-content {
