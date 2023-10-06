@@ -193,62 +193,62 @@ var slidesTouchStartInContainer;
 var touchStartsCount = 0;
 var maxTouchStartsCount = 0;
 
-// window.addEventListener('touchstart', function() {
-//   touchStartsCount += 1;
-//   maxTouchStartsCount += 1;
-// } ,passiveArgument)
+window.addEventListener('touchstart', function() {
+  touchStartsCount += 1;
+  maxTouchStartsCount += 1;
+} ,passiveArgument)
 
-// window.addEventListener('touchend', function() {
-//   setTimeout(function() {
-//     if (touchStartsCount === 1) {
-//       maxTouchStartsCount = 0;
-//     }
-//     touchStartsCount -= 1;
-//   }, 100);
-// } ,passiveArgument)
+window.addEventListener('touchend', function() {
+  setTimeout(function() {
+    if (touchStartsCount === 1) {
+      maxTouchStartsCount = 0;
+    }
+    touchStartsCount -= 1;
+  }, 100);
+} ,passiveArgument)
 
 window.addEventListener('DOMContentLoaded', function() {
   slideshowContainer.style.visibility = 'visible';
   slideshowContainer.addEventListener('click', pause);
-  slideshowContainer.addEventListener('mousedown', function(event) {
-    slidesTouchStartInContainer = true;
-    touchStartX = event.pageX;
-  }, passiveArgument);
-  slideshowContainer.addEventListener('mouseup', function(event) {
-    touchEndX = event.pageX;
-    deltaX = touchEndX - touchStartX;
-    if (slidesTouchStartInContainer === true) {
-      slidesTouchStartInContainer = null;
-      if (deltaX <= slidesContainerWidth * -0.20) {
-        showSlides(slideIndex += 1);
-        clearInterval(myTimer);
-      } else if (deltaX >= slidesContainerWidth * 0.20) {
-        showSlides(slideIndex -= 1);
-        clearInterval(myTimer);
-      }
-    }
-  }, passiveArgument);
+  // slideshowContainer.addEventListener('mousedown', function(event) {
+  //   slidesTouchStartInContainer = true;
+  //   touchStartX = event.pageX;
+  // }, passiveArgument);
+  // slideshowContainer.addEventListener('mouseup', function(event) {
+  //   touchEndX = event.pageX;
+  //   deltaX = touchEndX - touchStartX;
+  //   if (slidesTouchStartInContainer === true) {
+  //     slidesTouchStartInContainer = null;
+  //     if (deltaX <= slidesContainerWidth * -0.20) {
+  //       showSlides(slideIndex += 1);
+  //       clearInterval(myTimer);
+  //     } else if (deltaX >= slidesContainerWidth * 0.20) {
+  //       showSlides(slideIndex -= 1);
+  //       clearInterval(myTimer);
+  //     }
+  //   }
+  // }, passiveArgument);
   slideshowContainer.addEventListener('touch', pause, passiveArgument);
-  slideshowContainer.addEventListener('touchstart', function(event) {
-    slidesTouchStartInContainer = true;
-    touchStartX = event.changedTouches[0].pageX;
-  }, passiveArgument);
-  slideshowContainer.addEventListener('touchend', function(event) {
-    if (maxTouchStartsCount === 1) {
-      touchEndX = event.changedTouches[0].pageX;
-      deltaX = touchEndX - touchStartX;
-      if (slidesTouchStartInContainer === true) {
-        slidesTouchStartInContainer = null;
-        if (deltaX <= slidesContainerWidth * -0.25) {
-          showSlides(slideIndex += 1);
-          clearInterval(myTimer);
-        } else if (deltaX >= slidesContainerWidth * 0.25) {
-          showSlides(slideIndex -= 1);
-          clearInterval(myTimer);
-        }
-      }
-    }
-  }, passiveArgument);
+  // slideshowContainer.addEventListener('touchstart', function(event) {
+  //   slidesTouchStartInContainer = true;
+  //   touchStartX = event.changedTouches[0].pageX;
+  // }, passiveArgument);
+  // slideshowContainer.addEventListener('touchend', function(event) {
+  //   if (maxTouchStartsCount === 1) {
+  //     touchEndX = event.changedTouches[0].pageX;
+  //     deltaX = touchEndX - touchStartX;
+  //     if (slidesTouchStartInContainer === true) {
+  //       slidesTouchStartInContainer = null;
+  //       if (deltaX <= slidesContainerWidth * -0.25) {
+  //         showSlides(slideIndex += 1);
+  //         clearInterval(myTimer);
+  //       } else if (deltaX >= slidesContainerWidth * 0.25) {
+  //         showSlides(slideIndex -= 1);
+  //         clearInterval(myTimer);
+  //       }
+  //     }
+  //   }
+  // }, passiveArgument);
 });
 
 for (var i = 0; i < dots.length; i++) {
