@@ -159,39 +159,39 @@ nextButton.addEventListener('click', function() {
   fullScreenImage.src = imageArray[currentImageIndex].children[2].src.replace('/gallery/', '/gallery-enlarged/');
 });
 
-// //Testimonials slides
-// var slideshowContainer = document.querySelector('#slideshow-container');
-// var slidesContainerWidth = slideshowContainer.clientWidth;
-// var dots = document.getElementsByClassName('dot');
+//Testimonials slides
+var slideshowContainer = document.querySelector('#slideshow-container');
+var slidesContainerWidth = slideshowContainer.clientWidth;
+var dots = document.getElementsByClassName('dot');
 
-// var slideIndex = 1;
+var slideIndex = 1;
 
-// var showSlides = function(n) {
-//   var slides = document.getElementsByClassName('slide');
+var showSlides = function(n) {
+  var slides = document.getElementsByClassName('slide');
   
-//   n > slides.length && (slideIndex = 1);
-//   n < 1 && (slideIndex = slides.length);
+  n > slides.length && (slideIndex = 1);
+  n < 1 && (slideIndex = slides.length);
 
-//   for (var i = 0; i < slides.length; i++) {
-//       slides[i].style.transform = `translateX(${(i+slideIndex-1) * 100}%)`;
-//       dots[i].classList.remove('active');
-//   }
-//   slides[slideIndex-1].style.transform = 'translateX(0)';
-//   dots[slideIndex-1].className += ' active';
-// }
+  for (var i = 0; i < slides.length; i++) {
+      slides[i].style.transform = `translateX(${(i+slideIndex-1) * 100}%)`;
+      dots[i].classList.remove('active');
+  }
+  slides[slideIndex-1].style.transform = 'translateX(0)';
+  dots[slideIndex-1].className += ' active';
+}
 
-// showSlides(slideIndex);
+showSlides(slideIndex);
 
-// var myTimer = setInterval(function() {showSlides(slideIndex += 1)}, 4000);
+var myTimer = setInterval(function() {showSlides(slideIndex += 1)}, 4000);
 
-// var pause = function() {clearInterval(myTimer)};
+var pause = function() {clearInterval(myTimer)};
 
-// var touchStartX;
-// var touchEndX;
-// var deltaX;
-// var slidesTouchStartInContainer;
-// var touchStartsCount = 0;
-// var maxTouchStartsCount = 0;
+var touchStartX;
+var touchEndX;
+var deltaX;
+var slidesTouchStartInContainer;
+var touchStartsCount = 0;
+var maxTouchStartsCount = 0;
 
 // window.addEventListener('touchstart', function() {
 //   touchStartsCount += 1;
@@ -207,63 +207,63 @@ nextButton.addEventListener('click', function() {
 //   }, 100);
 // } ,passiveArgument)
 
-// window.addEventListener('DOMContentLoaded', function() {
-//   slideshowContainer.style.visibility = 'visible';
-//   slideshowContainer.addEventListener('click', pause);
-//   slideshowContainer.addEventListener('mousedown', function(event) {
-//     slidesTouchStartInContainer = true;
-//     touchStartX = event.pageX;
-//   }, passiveArgument);
-//   slideshowContainer.addEventListener('mouseup', function(event) {
-//     touchEndX = event.pageX;
-//     deltaX = touchEndX - touchStartX;
-//     if (slidesTouchStartInContainer === true) {
-//       slidesTouchStartInContainer = null;
-//       if (deltaX <= slidesContainerWidth * -0.20) {
-//         showSlides(slideIndex += 1);
-//         clearInterval(myTimer);
-//       } else if (deltaX >= slidesContainerWidth * 0.20) {
-//         showSlides(slideIndex -= 1);
-//         clearInterval(myTimer);
-//       }
-//     }
-//   }, passiveArgument);
-//   slideshowContainer.addEventListener('touch', pause, passiveArgument);
-//   slideshowContainer.addEventListener('touchstart', function(event) {
-//     slidesTouchStartInContainer = true;
-//     touchStartX = event.changedTouches[0].pageX;
-//   }, passiveArgument);
-//   slideshowContainer.addEventListener('touchend', function(event) {
-//     if (maxTouchStartsCount === 1) {
-//       touchEndX = event.changedTouches[0].pageX;
-//       deltaX = touchEndX - touchStartX;
-//       if (slidesTouchStartInContainer === true) {
-//         slidesTouchStartInContainer = null;
-//         if (deltaX <= slidesContainerWidth * -0.25) {
-//           showSlides(slideIndex += 1);
-//           clearInterval(myTimer);
-//         } else if (deltaX >= slidesContainerWidth * 0.25) {
-//           showSlides(slideIndex -= 1);
-//           clearInterval(myTimer);
-//         }
-//       }
-//     }
-//   }, passiveArgument);
-// });
+window.addEventListener('DOMContentLoaded', function() {
+  slideshowContainer.style.visibility = 'visible';
+  slideshowContainer.addEventListener('click', pause);
+  slideshowContainer.addEventListener('mousedown', function(event) {
+    slidesTouchStartInContainer = true;
+    touchStartX = event.pageX;
+  }, passiveArgument);
+  slideshowContainer.addEventListener('mouseup', function(event) {
+    touchEndX = event.pageX;
+    deltaX = touchEndX - touchStartX;
+    if (slidesTouchStartInContainer === true) {
+      slidesTouchStartInContainer = null;
+      if (deltaX <= slidesContainerWidth * -0.20) {
+        showSlides(slideIndex += 1);
+        clearInterval(myTimer);
+      } else if (deltaX >= slidesContainerWidth * 0.20) {
+        showSlides(slideIndex -= 1);
+        clearInterval(myTimer);
+      }
+    }
+  }, passiveArgument);
+  slideshowContainer.addEventListener('touch', pause, passiveArgument);
+  slideshowContainer.addEventListener('touchstart', function(event) {
+    slidesTouchStartInContainer = true;
+    touchStartX = event.changedTouches[0].pageX;
+  }, passiveArgument);
+  slideshowContainer.addEventListener('touchend', function(event) {
+    if (maxTouchStartsCount === 1) {
+      touchEndX = event.changedTouches[0].pageX;
+      deltaX = touchEndX - touchStartX;
+      if (slidesTouchStartInContainer === true) {
+        slidesTouchStartInContainer = null;
+        if (deltaX <= slidesContainerWidth * -0.25) {
+          showSlides(slideIndex += 1);
+          clearInterval(myTimer);
+        } else if (deltaX >= slidesContainerWidth * 0.25) {
+          showSlides(slideIndex -= 1);
+          clearInterval(myTimer);
+        }
+      }
+    }
+  }, passiveArgument);
+});
 
-// for (var i = 0; i < dots.length; i++) {
-//   (function(index) {
-//     dots[index].addEventListener('click', function() {
-//       showSlides(slideIndex = index + 1);
-//       clearInterval(myTimer);
-//     });
-//     dots[index].addEventListener('keydown', function(event) {
-//       if (event[keyCode] === 13) {
-//         dots[index].click();
-//       }
-//     });
-//   })(i);
-// }
+for (var i = 0; i < dots.length; i++) {
+  (function(index) {
+    dots[index].addEventListener('click', function() {
+      showSlides(slideIndex = index + 1);
+      clearInterval(myTimer);
+    });
+    dots[index].addEventListener('keydown', function(event) {
+      if (event[keyCode] === 13) {
+        dots[index].click();
+      }
+    });
+  })(i);
+}
 
 //Adjusting testimonials section position when redirected from links
 window.addEventListener('DOMContentLoaded', function() {
