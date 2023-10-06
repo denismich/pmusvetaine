@@ -172,12 +172,12 @@ var showSlides = function(n) {
   n > slides.length && (slideIndex = 1);
   n < 1 && (slideIndex = slides.length);
 
-//   for (var i = 0; i < slides.length; i++) {
-//       slides[i].style.transform = `translateX(${(i+slideIndex-1) * 100}%)`;
-//       dots[i].classList.remove('active');
-//   }
-//   slides[slideIndex-1].style.transform = 'translateX(0)';
-//   dots[slideIndex-1].className += ' active';
+  for (var i = 0; i < slides.length; i++) {
+      slides[i].style.transform = 'translateX('+(i+slideIndex-1)*100+'%)';
+      dots[i].classList.remove('active');
+  }
+  slides[slideIndex-1].style.transform = 'translateX(0)';
+  dots[slideIndex-1].className += ' active';
 }
 
 showSlides(slideIndex);
