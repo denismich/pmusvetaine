@@ -172,13 +172,13 @@ var showSlides = function(n) {
   n > slides.length && (slideIndex = 1);
   n < 1 && (slideIndex = slides.length);
 
-  for (var i = 0; i < slides.length; i++) {
-      slides[i].style.transform = `translateX(${(i+slideIndex-1) * 100}%)`;
-      dots[i].classList.remove('active');
-  }
-  slides[slideIndex-1].style.transform = 'translateX(0)';
-  dots[slideIndex-1].className += ' active';
-}
+//   for (var i = 0; i < slides.length; i++) {
+//       slides[i].style.transform = `translateX(${(i+slideIndex-1) * 100}%)`;
+//       dots[i].classList.remove('active');
+//   }
+//   slides[slideIndex-1].style.transform = 'translateX(0)';
+//   dots[slideIndex-1].className += ' active';
+// }
 
 showSlides(slideIndex);
 
@@ -210,45 +210,45 @@ window.addEventListener('touchend', function() {
 window.addEventListener('DOMContentLoaded', function() {
   slideshowContainer.style.visibility = 'visible';
   slideshowContainer.addEventListener('click', pause);
-  // slideshowContainer.addEventListener('mousedown', function(event) {
-  //   slidesTouchStartInContainer = true;
-  //   touchStartX = event.pageX;
-  // }, passiveArgument);
-  // slideshowContainer.addEventListener('mouseup', function(event) {
-  //   touchEndX = event.pageX;
-  //   deltaX = touchEndX - touchStartX;
-  //   if (slidesTouchStartInContainer === true) {
-  //     slidesTouchStartInContainer = null;
-  //     if (deltaX <= slidesContainerWidth * -0.20) {
-  //       showSlides(slideIndex += 1);
-  //       clearInterval(myTimer);
-  //     } else if (deltaX >= slidesContainerWidth * 0.20) {
-  //       showSlides(slideIndex -= 1);
-  //       clearInterval(myTimer);
-  //     }
-  //   }
-  // }, passiveArgument);
+  slideshowContainer.addEventListener('mousedown', function(event) {
+    slidesTouchStartInContainer = true;
+    touchStartX = event.pageX;
+  }, passiveArgument);
+  slideshowContainer.addEventListener('mouseup', function(event) {
+    touchEndX = event.pageX;
+    deltaX = touchEndX - touchStartX;
+    if (slidesTouchStartInContainer === true) {
+      slidesTouchStartInContainer = null;
+      if (deltaX <= slidesContainerWidth * -0.20) {
+        showSlides(slideIndex += 1);
+        clearInterval(myTimer);
+      } else if (deltaX >= slidesContainerWidth * 0.20) {
+        showSlides(slideIndex -= 1);
+        clearInterval(myTimer);
+      }
+    }
+  }, passiveArgument);
   slideshowContainer.addEventListener('touch', pause, passiveArgument);
-  // slideshowContainer.addEventListener('touchstart', function(event) {
-  //   slidesTouchStartInContainer = true;
-  //   touchStartX = event.changedTouches[0].pageX;
-  // }, passiveArgument);
-  // slideshowContainer.addEventListener('touchend', function(event) {
-  //   if (maxTouchStartsCount === 1) {
-  //     touchEndX = event.changedTouches[0].pageX;
-  //     deltaX = touchEndX - touchStartX;
-  //     if (slidesTouchStartInContainer === true) {
-  //       slidesTouchStartInContainer = null;
-  //       if (deltaX <= slidesContainerWidth * -0.25) {
-  //         showSlides(slideIndex += 1);
-  //         clearInterval(myTimer);
-  //       } else if (deltaX >= slidesContainerWidth * 0.25) {
-  //         showSlides(slideIndex -= 1);
-  //         clearInterval(myTimer);
-  //       }
-  //     }
-  //   }
-  // }, passiveArgument);
+  slideshowContainer.addEventListener('touchstart', function(event) {
+    slidesTouchStartInContainer = true;
+    touchStartX = event.changedTouches[0].pageX;
+  }, passiveArgument);
+  slideshowContainer.addEventListener('touchend', function(event) {
+    if (maxTouchStartsCount === 1) {
+      touchEndX = event.changedTouches[0].pageX;
+      deltaX = touchEndX - touchStartX;
+      if (slidesTouchStartInContainer === true) {
+        slidesTouchStartInContainer = null;
+        if (deltaX <= slidesContainerWidth * -0.25) {
+          showSlides(slideIndex += 1);
+          clearInterval(myTimer);
+        } else if (deltaX >= slidesContainerWidth * 0.25) {
+          showSlides(slideIndex -= 1);
+          clearInterval(myTimer);
+        }
+      }
+    }
+  }, passiveArgument);
 });
 
 for (var i = 0; i < dots.length; i++) {
