@@ -1,5 +1,12 @@
 "use strict";
 
+//Handling errors
+window.onerror = function(event, source) {
+  if (source.includes("calendly.js")) {
+    console.log(event);
+  }
+}
+
 //Variables to get the Firefox version from the userAgent string
 var userAgent = navigator.userAgent;
 var firefoxVersion = userAgent.match(/Firefox\/(\d+)/);
