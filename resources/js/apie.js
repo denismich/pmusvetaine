@@ -1,49 +1,49 @@
 "use strict";
 
 //Variables to get the Firefox version from the userAgent string
-var userAgent = navigator.userAgent;
-var firefoxVersion = userAgent.match(/Firefox\/(\d+)/);
+// var userAgent = navigator.userAgent;
+// var firefoxVersion = userAgent.match(/Firefox\/(\d+)/);
 
-//Header height for scrolling/links to elements
-var headerHeight = document.querySelector('header').clientHeight;
+// //Header height for scrolling/links to elements
+// var headerHeight = document.querySelector('header').clientHeight;
 
-//Banner registration button
-var registrationSection = document.getElementById('registration-section-old');
-var bannerRegistrationButton = document.getElementById('banner-registration-button');
-var initCalendlyPopupWidget = function() {
-  Calendly.initPopupWidget({url: 'https://calendly.com/indre-ivanovaite?hide_landing_page_details=1&hide_gdpr_banner=1'});
-  return false;
-}
+// //Banner registration button
+// var registrationSection = document.querySelector('#registration-section-old');
+// var bannerRegistrationButton = document.querySelector('#banner-registration-button');
+// var initCalendlyPopupWidget = function() {
+//   Calendly.initPopupWidget({url: 'https://calendly.com/indre-ivanovaite?hide_landing_page_details=1&hide_gdpr_banner=1'});
+//   return false;
+// }
 
-bannerRegistrationButton.addEventListener('click', initCalendlyPopupWidget);
+// bannerRegistrationButton.addEventListener('click', initCalendlyPopupWidget);
 
-window.addEventListener('load', function() {
-  if (typeof Calendly === 'undefined' || (firefoxVersion && firefoxVersion[1] >= 72 && firefoxVersion[1] <= 73)) {
-    bannerRegistrationButton.removeEventListener('click', initCalendlyPopupWidget);
-    bannerRegistrationButton.addEventListener('click', function() {
-      window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
-      setTimeout(function() {
-        document.getElementById('name').focus();
-        window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
-      }, 100);
-    });
-  }
-});
+// window.addEventListener('load', function() {
+//   if (typeof Calendly === 'undefined' || (firefoxVersion && firefoxVersion[1] >= 72 && firefoxVersion[1] <= 73)) {
+//     bannerRegistrationButton.removeEventListener('click', initCalendlyPopupWidget);
+//     bannerRegistrationButton.addEventListener('click', function() {
+//       window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
+//       setTimeout(function() {
+//         document.querySelector('#name').focus();
+//         window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
+//       }, 100);
+//     });
+//   }
+// });
 
-//Handling about me photo height
-var aboutMePhoto = document.querySelector('.about-me-photo img');
-var resizeAboutMePhoto = function() {
-  aboutMePhoto.classList.remove('with-max-height');
-  aboutMePhoto.classList.remove('with-max-width');
-  if (aboutMePhoto.clientHeight > document.documentElement.clientHeight * 0.8) {
-    aboutMePhoto.classList.add('with-max-height');
-  }
-  if (document.documentElement.clientWidth > 900 && aboutMePhoto.clientWidth > document.documentElement.clientWidth * 0.35) {
-    aboutMePhoto.classList.add('with-max-width');
-  }
-};
-window.addEventListener('load', resizeAboutMePhoto);
-window.addEventListener('resize', resizeAboutMePhoto);
+// //Handling about me photo height
+// var aboutMePhoto = document.querySelector('.about-me-photo img');
+// var resizeAboutMePhoto = function() {
+//   aboutMePhoto.classList.remove('with-max-height');
+//   aboutMePhoto.classList.remove('with-max-width');
+//   if (aboutMePhoto.clientHeight > document.documentElement.clientHeight * 0.8) {
+//     aboutMePhoto.classList.add('with-max-height');
+//   }
+//   if (document.documentElement.clientWidth > 900 && aboutMePhoto.clientWidth > document.documentElement.clientWidth * 0.35) {
+//     aboutMePhoto.classList.add('with-max-width');
+//   }
+// };
+// window.addEventListener('load', resizeAboutMePhoto);
+// window.addEventListener('resize', resizeAboutMePhoto);
 
 //Gallery images enlarging
 var imageContainer = document.querySelector('#gallery-photos-container');
