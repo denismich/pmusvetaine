@@ -17,18 +17,18 @@ var initCalendlyPopupWidget = function() {
 
 bannerRegistrationButton.addEventListener('click', initCalendlyPopupWidget);
 
-// window.addEventListener('load', function() {
-//   if (typeof Calendly === 'undefined' || (firefoxVersion && firefoxVersion[1] >= 72 && firefoxVersion[1] <= 73)) {
-//     bannerRegistrationButton.removeEventListener('click', initCalendlyPopupWidget);
-//     bannerRegistrationButton.addEventListener('click', function() {
-//       window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
-//       setTimeout(function() {
-//         document.querySelector('#name').focus();
-//         window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
-//       }, 100);
-//     });
-//   }
-// });
+window.addEventListener('load', function() {
+  if (true) {
+    bannerRegistrationButton.removeEventListener('click', initCalendlyPopupWidget);
+    bannerRegistrationButton.addEventListener('click', function() {
+      window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
+      setTimeout(function() {
+        document.querySelector('#name').focus();
+        window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
+      }, 100);
+    });
+  }
+});
 
 //Handling about me photo height
 var aboutMePhoto = document.querySelector('.about-me-photo img');
