@@ -159,6 +159,7 @@ br {
   left: 1.4vw;
   opacity: 0.75;
   display: none;
+  z-index: 6;
 }
 
 html.fonts-loaded #gallery-registration-button {
