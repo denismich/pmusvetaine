@@ -1,8 +1,8 @@
 "use strict";
 
-//Variables to get the Firefox version from the userAgent string
-var userAgent = navigator.userAgent;
-var firefoxVersion = userAgent.match(/Firefox\/(\d+)/);
+// //Variables to get the Firefox version from the userAgent string
+// var userAgent = navigator.userAgent;
+// var firefoxVersion = userAgent.match(/Firefox\/(\d+)/);
 
 //Header height for scrolling/links to elements
 var headerHeight = document.querySelector('header').clientHeight;
