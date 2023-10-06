@@ -1,15 +1,15 @@
 "use strict";
 
-// //Variables to get the Firefox version from the userAgent string
-// var userAgent = navigator.userAgent;
-// var firefoxVersion = userAgent.match(/Firefox\/(\d+)/);
+//Variables to get the Firefox version from the userAgent string
+var userAgent = navigator.userAgent;
+var firefoxVersion = userAgent.match(/Firefox\/(\d+)/);
 
 //Header height for scrolling/links to elements
 var headerHeight = document.querySelector('header').clientHeight;
 
 //Banner registration button
-var registrationSection = document.querySelector('#registration-section-old');
-var bannerRegistrationButton = document.querySelector('#banner-registration-button');
+var registrationSection = document.getElementById('registration-section-old');
+var bannerRegistrationButton = document.getElementById('banner-registration-button');
 var initCalendlyPopupWidget = function() {
   Calendly.initPopupWidget({url: 'https://calendly.com/indre-ivanovaite?hide_landing_page_details=1&hide_gdpr_banner=1'});
   return false;
@@ -23,7 +23,7 @@ window.addEventListener('load', function() {
     bannerRegistrationButton.addEventListener('click', function() {
       window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
       setTimeout(function() {
-        document.querySelector('#name').focus();
+        document.getElementById('name').focus();
         window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
       }, 100);
     });
