@@ -37,9 +37,9 @@ var resizeAboutMePhoto = function() {
   aboutMePhoto.classList.remove('with-max-width');
   if (aboutMePhoto.clientHeight > document.documentElement.clientHeight * 0.8) {
     aboutMePhoto.classList.add('with-max-height');
-    if (aboutMePhoto.clientWidth > document.documentElement.clientWidth * 0.35) {
-      aboutMePhoto.classList.add('with-max-width');
-    }
+  }
+  if (aboutMePhoto.clientWidth > document.documentElement.clientWidth * 0.35) {
+    aboutMePhoto.classList.add('with-max-width');
   }
 };
 window.addEventListener('load', resizeAboutMePhoto);
