@@ -192,7 +192,7 @@ var toggleDropdown = function() {
     dropdown.style.top = ((spaceBelow >= dropdownRect.height || spaceAbove < dropdownRect.height) ? distanceDownward : distanceUpward) + 'px';
   }
 }
-var closeDropdownFromOutside = function(event) {event.target !== select && dropdown.classList.remove('opened')};
+var closeDropdownFromOutside = function(event) {event.target !== select && dropdown.classList && dropdown.classList.remove('opened')};
 
 var selectOption = function(event) {select.value = event.currentTarget.textContent};
 
