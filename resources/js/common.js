@@ -59,9 +59,9 @@ var Email = { send: function (a) {
 };
 
 //Fonts observer
-const openSansObserver = new FontFaceObserver('Open Sans');
-const playfairDisplayObserver = new FontFaceObserver('Playfair Display');
-const ralewayObserver = new FontFaceObserver('Raleway');
+var openSansObserver = new FontFaceObserver('Open Sans');
+var playfairDisplayObserver = new FontFaceObserver('Playfair Display');
+var ralewayObserver = new FontFaceObserver('Raleway');
 
 Promise.all([
   openSansObserver.load(),
