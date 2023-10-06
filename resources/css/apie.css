@@ -347,7 +347,7 @@ html.fonts-loaded .about-me h2 {
 .about-me-photo img {
   -webkit-box-shadow: 16px 16px 16px hsl(271, 65%, 60%);
           box-shadow: 16px 16px 16px hsl(271, 65%, 60%);
-  max-height: 80vh;
+  border: 1px solid black;
 }
 
 .about-me-photo img.with-max-height {
