@@ -10,16 +10,16 @@ var headerHeight = document.querySelector('header').clientHeight;
 //Banner registration button
 var registrationSection = document.querySelector('#registration-section-old');
 var bannerRegistrationButton = document.querySelector('#banner-registration-button');
-var initCalendlyPopupWidget = function() {
-  Calendly.initPopupWidget({url: 'https://calendly.com/indre-ivanovaite?hide_landing_page_details=1&hide_gdpr_banner=1'});
-  return false;
-}
+// var initCalendlyPopupWidget = function() {
+//   Calendly.initPopupWidget({url: 'https://calendly.com/indre-ivanovaite?hide_landing_page_details=1&hide_gdpr_banner=1'});
+//   return false;
+// }
 
-bannerRegistrationButton.addEventListener('click', initCalendlyPopupWidget);
+// bannerRegistrationButton.addEventListener('click', initCalendlyPopupWidget);
 
 window.addEventListener('load', function() {
   if (true) {
-    bannerRegistrationButton.removeEventListener('click', initCalendlyPopupWidget);
+    // bannerRegistrationButton.removeEventListener('click', initCalendlyPopupWidget);
     bannerRegistrationButton.addEventListener('click', function() {
       window.scrollBy(0, registrationSection.getBoundingClientRect().top - headerHeight);
       setTimeout(function() {
