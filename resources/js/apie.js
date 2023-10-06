@@ -178,7 +178,7 @@ var showSlides = function(n) {
 //   }
 //   slides[slideIndex-1].style.transform = 'translateX(0)';
 //   dots[slideIndex-1].className += ' active';
-// }
+}
 
 showSlides(slideIndex);
 
