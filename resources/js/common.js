@@ -185,7 +185,7 @@ var toggleDropdown = function() {
     dropdown.style.top = ((spaceBelow >= dropdownRect.height || spaceAbove < dropdownRect.height) ? distanceDownward : distanceUpward) + 'px';
   }
 }
-var closeDropdownFromOutside = function(event) {event.target !== select && dropdown.classList && dropdown.classList.remove('opened')};
+var closeDropdownFromOutside = function(event) {event.target !== select && dropdown && dropdown.classList && dropdown.classList.remove('opened')};
 
 var selectOption = function(event) {select.value = event.currentTarget.textContent};
 
@@ -322,25 +322,27 @@ if (form !== null) {
 document.body.addEventListener('click', closeModalFromOutside);
 
 window.addEventListener('keydown', function(event) {
-  if (successModal.style.display === 'block' || errorModal.style.display === 'block' || 
-  oldBrowsersErrorModal.style.display === 'block' || validationErrorModal.style.display === 'block') {
-    if (event[keyCode] === 32 || event[keyCode] === 38 || event[keyCode] === 40) {
-      event.preventDefault();
-    }
-    if (event[keyCode] === 27) {
-      closeModal();
-    }
-    if (event[keyCode] === 9) {
-      event.preventDefault();
-      for (var i = 0; i < modalCloseButtons.length; i++) {
-        if (modals[i].style.display === 'block') {
-          modalCloseButtons[i].focus();
-          modalCloseButtons[i].addEventListener('keydown', function(e) {
-            if (e.keyCode === 13 || e.keyCode === 32) {
-              e.preventDefault();
-              closeModal();
-            }
-          });
+  if (registrationSectionOld) {
+    if (successModal.style.display === 'block' || errorModal.style.display === 'block' || 
+    oldBrowsersErrorModal.style.display === 'block' || validationErrorModal.style.display === 'block') {
+      if (event[keyCode] === 32 || event[keyCode] === 38 || event[keyCode] === 40) {
+        event.preventDefault();
+      }
+      if (event[keyCode] === 27) {
+        closeModal();
+      }
+      if (event[keyCode] === 9) {
+        event.preventDefault();
+        for (var i = 0; i < modalCloseButtons.length; i++) {
+          if (modals[i].style.display === 'block') {
+            modalCloseButtons[i].focus();
+            modalCloseButtons[i].addEventListener('keydown', function(e) {
+              if (e.keyCode === 13 || e.keyCode === 32) {
+                e.preventDefault();
+                closeModal();
+              }
+            });
+          }
         }
       }
     }
@@ -375,7 +377,7 @@ function find(arr, f) {
 }
 
 function setCookie(cookie_name, value) {
-    document.cookie = cookie_name + "=" + encodeURIComponent(value) + "; max-age=" + 24*60*60 + "; path=/; Secure";
+  document.cookie = cookie_name + "=" + encodeURIComponent(value) + "; max-age=" + 24*60*60 + "; path=/; Secure";
 };
 
 function getCookie(cookie_name) {

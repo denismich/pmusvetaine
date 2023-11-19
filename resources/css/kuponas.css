@@ -1,0 +1,109 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.permanento-dovanu-kuponas {
+    padding: 5%;
+    padding-top: 3%;
+}
+
+h1 {
+    font-size: 2.9rem;
+    font-family: serif;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3vw;
+}
+  
+html.fonts-loaded h1 {
+    font-family: 'Playfair Display';
+}
+
+.kuponas-turinys {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.kuponas-nuotrauka {
+    max-width: 25%;
+    margin-right: 5vw;
+}
+
+.kuponas-tekstas {
+    display: inline-block;
+    width: 45%;
+    color: black;
+    font-family: sans-serif;
+    font-size: 1.25rem;
+    line-height: 2;
+}
+  
+html.fonts-loaded .kuponas-tekstas {
+    font-family: 'Raleway';
+}
+
+.kuponas-tekstas p {
+    margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    .kuponas-turinys {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .kuponas-nuotrauka {
+        max-width: 60%;
+        margin: 3rem auto;
+    }
+
+    .kuponas-tekstas {
+        width: 80%;
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    h1 {
+      font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .permanento-dovanu-kuponas {
+        padding-top: 5%;
+    }
+
+    .kuponas-tekstas {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    h1 {
+      font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .kuponas-tekstas {
+      font-size: 12px;
+    }
+}

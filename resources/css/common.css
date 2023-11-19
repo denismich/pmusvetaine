@@ -231,12 +231,13 @@ header a {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   header {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
     height: 45px;
+    padding-right: 0;
   }
 
   header nav {
@@ -325,12 +326,6 @@ header a {
 }
 
 @media only screen and (max-width: 1050px) {
-  .contact-info-container {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 900px) {
   .contact-info-container {
     display: none;
   }
@@ -1190,4 +1185,10 @@ html.fonts-loaded #cookies-dialog-confirm-button {
   #cookies-dialog {
     padding: 2%;
   }
+}
+
+/* Noscript iframe */
+noscript iframe {
+  display: none;
+  visibility: hidden;
 }
