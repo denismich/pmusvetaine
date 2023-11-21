@@ -362,6 +362,7 @@ html.fonts-loaded .about-me h2 {
 .about-me-content {
   display: inline-block;
   width: 40%;
+  position: relative;
 }
 
 .about-me-content p {
@@ -375,6 +376,14 @@ html.fonts-loaded .about-me h2 {
 
 html.fonts-loaded .about-me-content p {
   font-family: 'Raleway';
+}
+
+.accreditation-logo {
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+  width: 14vw;
+  height: auto;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -403,6 +412,12 @@ html.fonts-loaded .about-me-content p {
     font-size: 2rem;
   }
 
+  .accreditation-logo {
+    bottom: -10%;
+    right: -10%;
+    width: 22vw;
+  }
+
   .about-me-photo {
     margin: 3rem auto;
     max-width: 80%;
@@ -412,6 +427,18 @@ html.fonts-loaded .about-me-content p {
 @media only screen and (max-width: 600px) {
   .about-me h2 {
     font-size: 5rem;
+  }
+
+  .accreditation-logo {
+    bottom: -7%;
+    right: -5%;
+    width: 25vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .accreditation-logo {
+    bottom: -5%;
   }
 }
 
