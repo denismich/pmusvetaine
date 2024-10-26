@@ -87,6 +87,10 @@ html.fonts-loaded .procedure-description p {
   font-family: 'Raleway';
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .registration-button {
   padding: 0.5rem 0.75rem;
   border-radius: 1rem;
